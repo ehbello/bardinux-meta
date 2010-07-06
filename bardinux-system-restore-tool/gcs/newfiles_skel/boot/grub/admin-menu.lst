@@ -1,0 +1,22 @@
+password --md5 {{superpasswd}}
+
+title           - Borrar usuarios
+root            {{grubdev}}
+kernel          /vmlinuz root={{rootdev}} ro quiet boot=bull-borra-usuarios
+initrd          /initrd.img
+quiet
+
+title           - Restaurar sistema
+root            {{grubdev}}
+kernel          /vmlinuz root={{rootdev}} ro quiet boot=bull-restore
+initrd          /initrd.img
+quiet
+
+#title           - Clonar maquina
+#root            {{grubdev}}
+#kernel          /vmlinuz root={{rootdev}} ro quiet boot=udpcast
+#initrd          /initrd.img
+#quiet
+
+title		[Volver]
+configfile	{{grubdev}}/boot/grub/menu.lst

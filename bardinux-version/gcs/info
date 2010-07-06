@@ -1,0 +1,29 @@
+# YAML 1.1
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: bardinux-version
+
+# Autor
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: config
+
+# Task
+task: bardinux-desktop
+
+# Descripción corta
+shortdesc: "Paquete de versión."
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "Contiene las configuraciones necesarias para determinar \n que Bardinux es la distribución instalada."
+
+# Versión del paquete
+version: 1.0~dev1
+
+# Cambios en esta versión
+changes:
+    - Initial package

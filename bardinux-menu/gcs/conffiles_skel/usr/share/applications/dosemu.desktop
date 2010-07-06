@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=DOS emulator
+Name[lt]=DOS emuliatorius
+Comment=DOS emulator "dosemu"
+Comment[lt]=DOS emuliatorius "dosemu"
+TryExec=/usr/bin/xdosemu
+Exec=/usr/bin/xdosemu
+Icon=/usr/share/pixmaps/dosemu.xpm
+Terminal=false
+MultipleArgs=false
+Type=Application
+Categories=Application;Emulator;Education

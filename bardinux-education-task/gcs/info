@@ -1,0 +1,26 @@
+# YAML 1.1
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: bardinux-education-task
+
+# Autor
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: metapackages
+
+# Descripción corta
+shortdesc: "Metapaquete de Software Educativo."
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "Instala aplicaciones útiles para la creación y ejecución \n de unidades didácticas multimedias así como la enseñanza \n de los diferentes tipos de colectivos en la Educación."
+
+# Versión del paquete
+version: 1.0~dev1
+
+# Cambios en esta versión
+changes:
+    - Initial package

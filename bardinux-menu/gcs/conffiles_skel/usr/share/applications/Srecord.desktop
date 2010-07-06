@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Trabajo con Eproms (Srecord)
+Comment=Conjunto de utilidades para trabajar con Eproms
+TryExec=/usr/bin/srec_info
+Exec=/usr/bin/srec_info
+Terminal=true
+Type=Application
+Categories=Education;Electronics;
+Icon=/usr/share/pixmaps/bardinux/electronics.png

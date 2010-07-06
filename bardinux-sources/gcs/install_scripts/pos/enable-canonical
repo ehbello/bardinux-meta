@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if grep -q '^ *#.*deb.*archive\.canonical\.com/ubuntu.*' /etc/apt/sources.list; then
+	echo "Enabling Canonical sources ..."
+	sed '/^ *#.*deb.*archive\.canonical\.com/ s|^.*\(deb.*\)|\1|' -i /etc/apt/sources.list
+fi

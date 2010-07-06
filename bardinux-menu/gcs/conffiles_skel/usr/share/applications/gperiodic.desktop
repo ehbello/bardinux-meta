@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Comment=A program for looking up data of elements from the periodic table.
+Comment[da]=Et program til at vise data om grundstofferne i det priodiske system.
+TryExec=gperiodic
+Exec=gperiodic
+Icon=gperiodic
+Name=Tabla Periódica (Gperiodic)
+Name[es_ES]=Tabla Periódica (Gperiodic)
+Name[es]=Tabla Periódica (Gperiodic)
+Terminal=false
+Type=Application
+Categories=Education;Chemistry;

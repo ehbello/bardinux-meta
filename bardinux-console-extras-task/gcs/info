@@ -1,0 +1,29 @@
+# YAML 1.1
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: bardinux-console-extras-task
+
+# Autor
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: metapackages
+
+# Task
+task: bardinux-desktop
+
+# Descripción corta
+shortdesc: "Utilidades para consola."
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "This package doesnt have description yet"
+
+# Versión del paquete
+version: 1.0~dev1
+
+# Cambios en esta versión
+changes:
+    - Initial package

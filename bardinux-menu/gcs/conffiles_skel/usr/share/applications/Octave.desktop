@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Álgebra computacional (Octave)
+Comment=Álgebra computacional
+TryExec=/usr/bin/octave
+Exec=/usr/bin/octave
+Terminal=true
+Type=Application
+Categories=Education;Math;
+Icon=/usr/share/pixmaps/bardinux/math.png

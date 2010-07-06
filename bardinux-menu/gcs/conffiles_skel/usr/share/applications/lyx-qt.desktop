@@ -1,0 +1,15 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Name=Editor de documentación (LyX)
+GenericName=Structured Word Processor
+Comment=WYSIWYM (What You See Is What You Mean) word processor with LaTeX output
+Exec=lyx-qt %F
+TryExec=lyx-qt
+Icon=/usr/share/pixmaps/bardinux/publishing.png
+StartupNotify=false
+StartupWMClass=Lyx-qt
+Terminal=false
+Categories=Education;Publishing;
+MimeType=text/x-lyx;application/x-lyx;

@@ -1,0 +1,29 @@
+# YAML 1.1
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: bardinux-keyring
+
+# Autor
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: base
+
+# Task
+task: bardinux-desktop
+
+# Descripción corta
+shortdesc: "GnuPG key of the Bardinux repository"
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "The Bardinux repository digitally signs its Release files. This package\n contains the repository key used for that."
+
+# Versión del paquete
+version: 1.0~dev1
+
+# Cambios en esta versión
+changes:
+    - Initial package

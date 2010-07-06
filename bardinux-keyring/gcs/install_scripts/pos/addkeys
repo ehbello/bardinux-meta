@@ -1,0 +1,3 @@
+#!/bin/sh
+
+apt-key add /usr/share/keyrings/bardinux-keyring-2007.12.13.gpg

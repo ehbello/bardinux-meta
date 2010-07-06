@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Visualizador gráfico de moléculas (RasMol)
+Name[en_GB]=RasMol Molecular Graphics Visualisation
+GenericName=Molecular Graphics Visualization
+GenericName[en_GB]=Molecular Graphics Visualisation
+Comment=View macro-molecules and prepare publication-quality images of them
+Type=Application
+TryExec=rasmol
+Exec=rasmol
+Icon=rasmol
+Terminal=true
+Categories=Education;Chemistry;

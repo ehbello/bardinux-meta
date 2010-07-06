@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Editor de esquemas (Geda)
+GenericName=GSchem
+Comment=Use the GNU Eda Schematic editor
+Type=Application
+TryExec=gschem
+Exec=gschem
+Icon=/usr/share/pixmaps/bardinux/electronics.png
+Categories=Education;Electronics;
+

@@ -1,0 +1,14 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Sistema CAD profesional (Qcad)
+Comment=A professional CAD System
+Comment[en_CA]=A professional CAD System
+Comment[en_GB]=A professional CAD System
+Comment[es]=Sistema de diseño CAD profesional
+TryExec=qcad
+Exec=qcad %U
+Icon=/usr/share/pixmaps/qcad.xpm
+Terminal=false
+Type=Application
+Categories=Education;CAD;
+StartupNotify=false

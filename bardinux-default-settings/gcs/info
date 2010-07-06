@@ -1,0 +1,26 @@
+# YAML 1.1
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: bardinux-default-settings
+
+# Autor
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: misc
+
+# Descripción corta
+shortdesc: "Default settings and artwork for the Bardinux desktop system (KDE Version)."
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "This package contains the default settings and used by Bardinux. It also\n includes artwork and Bardinux branding."
+
+# Versión del paquete
+version: 1.0~dev1
+
+# Cambios en esta versión
+changes:
+    - Initial package

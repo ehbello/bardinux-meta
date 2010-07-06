@@ -1,0 +1,4 @@
+Template: bardinux-system-restore-tool/rootdev
+Type: string
+Description: Specify root device
+ Ej. /dev/sda

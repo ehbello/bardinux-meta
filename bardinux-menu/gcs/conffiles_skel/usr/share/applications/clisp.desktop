@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Intérprete de Lisp (Clisp)
+Comment=clisp
+TryExec=/usr/bin/clisp
+Exec=/usr/bin/clisp
+Terminal=true
+Type=Application
+Categories=Education;Development;
+Icon=/usr/share/pixmaps/bardinux/development.png
+

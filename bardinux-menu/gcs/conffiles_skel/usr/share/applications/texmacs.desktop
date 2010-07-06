@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Editor científico (TeXmacs)
+GenericName=TeXmacs Editor
+Comment=A structured wysiwyg scientific text editor
+MimeType=text/texmacs;text/english;text/plain;text/x-tex;
+TryExec=texmacs
+Exec=texmacs %f
+Icon=TeXmacs
+Path=
+Type=Application
+Terminal=false
+Categories=Education;Publishing;

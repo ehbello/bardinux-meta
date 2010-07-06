@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Bardinux
+
+X-KDE-PluginInfo-Name=bardinux
+X-KDE-PluginInfo-Author=Enrique Hernández Bello
+X-KDE-PluginInfo-Email=quique@osl.ull.es
+X-KDE-PluginInfo-License=LGPLv3
+X-Ubuntu-Gettext-Domain=desktop_kdebase-workspace

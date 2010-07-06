@@ -1,0 +1,47 @@
+#!/bin/bash
+# Local filesystem mounting			-*- shell-script -*-
+
+# Parameter: Where to mount the filesystem
+#
+
+SRC="/dev/sda2"
+DST="/dev/sda1"
+
+syncronize () {
+	echo "Restaurando desde $1 hasta $2"
+	mkdir -p /source
+	mkdir -p /target
+	mount -t ext3 -o ro $1 /source
+	mount -t ext3 -o rw $2 /target
+	rsync -ax --progress --delete --exclude=/home /source/* /target/
+	umount /source
+	umount /target
+}
+
+mountroot () {
+	dialog --title "Restauración del sistema" \
+		--infobox \
+		"\n\n\n   Comprobando dispositivos..."\
+		10 80
+
+	slumber=600
+	while [ ! -e "$SRC" ]; do
+		/bin/sleep 0.1
+		slumber=$(( ${slumber} - 1 ))
+		[ ${slumber} -gt 0 ] || panic "No hay dispositivos"
+	done
+	dialog --title "Restauración del sistema" \
+		--yesno \
+		"\n\n\n   Se va a iniciar el proceso para restaurar la copia del sistema. ¿Desea continuar? "\
+		10 80
+	if [[ $? == 0 ]]; then
+		clear
+		syncronize $SRC $DST
+	fi
+
+	dialog --title "Restauración del sistema" \
+		--msgbox "\n\n\n    Proceso terminado, pulse enter para reiniciar." \
+		10 60
+
+	reboot
+}

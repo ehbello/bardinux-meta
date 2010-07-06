@@ -1,0 +1,3 @@
+## Please report any bug on http://bardinux.ull.es/forum
+deb http://archive.osl.ull.es/bardinux/ lucid main
+deb-src http://archive.osl.ull.es/bardinux/ lucid main

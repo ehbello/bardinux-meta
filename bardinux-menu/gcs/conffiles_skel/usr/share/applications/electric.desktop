@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Diseño de circuitos (Electric)
+GenericName=Electric
+Comment=Electrical CAD System
+Type=Application
+TryExec=electric
+Exec=electric
+Icon=/usr/share/applications/electric_icon.svg
+Categories=Education;Electronics;

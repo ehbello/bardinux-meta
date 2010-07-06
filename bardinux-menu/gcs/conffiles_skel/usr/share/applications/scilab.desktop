@@ -1,0 +1,15 @@
+[Desktop Entry]
+Comment=a scientific software package for numerical computations
+Comment[de]=eine Wissenschaftssoftware für numerische Berechnungen
+Encoding=UTF-8
+TryExec=scilab
+Exec=scilab
+GenericName=Scientific Software Package
+GenericName[de]=Wissenschaftssoftware
+Icon=/usr/share/pixmaps/bardinux/math.png
+Name=Programa de cálculo numérico (Scilab)
+Name[de]=Scilab
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=Education;Math;

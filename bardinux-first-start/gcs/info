@@ -1,0 +1,26 @@
+# YAML 1.1
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: bardinux-first-start
+
+# Autor 
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: metapackages
+
+# Descripción corta
+shortdesc: "Bardinux First Start dialog and webpage"
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "This package contains the aplication and webpage that is showed on the first \n  Bardinux start."
+
+# Versión del paquete
+version: 1.0~dev1
+
+# Cambios en esta versión
+changes:
+    - Initial package

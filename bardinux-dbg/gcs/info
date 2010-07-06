@@ -1,0 +1,27 @@
+# YAML 1.1
+# Fichero de configuración de paquetes de personalización de Guadalinex v6
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: bardinux-dbg
+
+# Autor 
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: utils
+
+# Descripción corta
+shortdesc: "Debug symbols and related packages for Bardinux debug"
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "This package contains all the necessary for debug the Bardinux distributions. It allows users to\n generate good crash reports against distribution packages."
+
+# Versión del paquete
+version: 1.0~dev1
+
+# Cambios en esta versión
+changes:
+    - Initial release.

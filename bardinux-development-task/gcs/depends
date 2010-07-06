@@ -1,0 +1,16 @@
+#kdevelop
+autoconf
+automake
+build-essential
+cmake
+ddd
+eclipse
+eric
+gdb
+kdesvn
+kdesvn-kio-plugins
+lokalize
+monodevelop
+monodevelop-versioncontrol
+sun-java6-jdk
+valgrind

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Editor de estructuras químicas (Chemtool)
+GenericName=Chemistry Structure Editor
+Comment=Draw and make calculations on chemical structures
+Type=Application
+TryExec=/usr/bin/chemtool
+Exec=chemtool
+Icon=chemtool
+Categories=Education;Chemistry;

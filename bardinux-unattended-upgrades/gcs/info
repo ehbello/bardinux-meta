@@ -1,0 +1,26 @@
+# YAML 1.1
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: bardinux-unattended-upgrades
+
+# Autor
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: base
+
+# Descripción corta
+shortdesc: "automatic installation of package upgrades for Bardinux"
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "This package configures the backend script for the APT::Periodic::Unattended-Upgrade for download and install all package upgrades automatically\n and unattended, taking care to only install packages from the\n configured APT source, recognizing also the Bardinux repositories."
+
+# Versión del paquete
+version: 1.0~dev1
+
+# Cambios en esta versión
+changes:
+    - Initial package

@@ -1,0 +1,16 @@
+db_get bardinux-system-restore-tool/rootdev
+ROOTDEV=$RET
+
+db_get bardinux-system-restore-tool/adminpasswd
+ADMINPASSWD=$RET
+
+db_get bardinux-system-restore-tool/grubdev
+GRUBDEV=$RET
+
+db_get bardinux-system-restore-tool/superpasswd
+SUPERPASSWD=$RET
+
+sed "s|{{rootdev}}|${ROOTDEV}|g" -i /boot/grub/menu.lst || true
+sed "s|{{adminpasswd}}|${ADMINPASSWD}|g" -i /boot/grub/menu.lst || true
+sed "s|{{grubdev}}|${GRUBDEV}|g" -i /boot/grub/menu.lst /boot/grub/admin-menu.lst || true
+sed "s|{{superpasswd}}|${SUPERPASSWD}|g" -i /boot/grub/admin-menu.lst || true

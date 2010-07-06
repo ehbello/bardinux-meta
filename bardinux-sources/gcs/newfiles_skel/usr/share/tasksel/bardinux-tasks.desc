@@ -1,0 +1,17 @@
+Task: bardinux-desktop-kde
+Section: user
+Description: Bardinux KDE desktop
+ This task provides the Bardinux desktop environment (KDE variant).
+Key: 
+ bardinux-desktop
+Packages: task-fields
+
+Task: bardinux-live
+Section: user
+Relevance: 2
+Description: Bardinux live CD
+ This task provides the extra packages installed on the Bardinux live CD. It is neither useful nor recommended to install this task in other environments.
+Key:
+ ubiquity-frontend-kde
+Packages: task-fields
+Test-new-install: skip show

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Álgebra (Yacas)
+Comment=Álgebra con Yacas
+TryExec=/usr/bin/proteusworksheet
+Exec=/usr/bin/proteusworksheet
+Terminal=true
+Type=Application
+Categories=Education;Math;
+Icon=/usr/share/pixmaps/bardinux/math.png

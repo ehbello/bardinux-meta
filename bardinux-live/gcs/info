@@ -1,0 +1,26 @@
+# YAML 1.1
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: bardinux-live
+
+# Autor
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: base
+
+# Descripción corta
+shortdesc: "Metapackage to create a Bardinux Live distribution (KDE Version)"
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "This package doesnt have description yet"
+
+# Versión del paquete
+version: 1.0~dev1
+
+# Cambios en esta versión
+changes:
+    - Initial package

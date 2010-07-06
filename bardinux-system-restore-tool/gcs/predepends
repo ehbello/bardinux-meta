@@ -1,0 +1,6 @@
+coreutils
+dialog
+e2fsprogs
+grub|grub-pc
+initramfs-tools
+rsync

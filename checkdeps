@@ -1,0 +1,47 @@
+#!/bin/bash
+DIST=${DIST:-$(lsb_release -cs)}
+ARCH=${ARCH:-$(dpkg --print-architecture)}
+COMPONENTS=${COMPONENTS:-"main universe multiverse restricted partner free non-free"}
+MIRRORS=${MIRRORS:-"http://archive.ubuntu.com/ubuntu http://archive.canonical.com http://packages.medibuntu.org"}
+FILELIST=$(tempfile)
+
+echo -e "Using the following mirrors: \n - ${MIRRORS// /\n - }"
+
+PACKAGES_ENABLED=$(grep -vh "^#" */gcs/{depends,recommends,suggests} 2> /dev/null | cut -d " " -f 1 | sort -u)
+PACKAGES_DISABLED=$(grep -h "^#" */gcs/{depends,recommends,suggests} 2> /dev/null | cut -d " " -f 1 | sort -u | sed 's/#//g')
+
+rm -f ${FILELIST}
+echo -n "Downloading package list: "
+for COMPONENT in ${COMPONENTS}; do
+	echo -n "${COMPONENT} "
+	for MIRROR in ${MIRRORS//,/ }; do
+		wget "${MIRROR}/dists/${DIST}/${COMPONENT}/binary-${ARCH}/Packages.gz" -q -O - | gunzip 2> /dev/null | awk -F ": " '$1 == "Package" || $1 == "Provides" { print $2 }' | sed 's/,//g' | sort -u >> ${FILELIST}
+	done
+done
+echo ""
+
+unset FOUND
+echo "Unmet dependences: "
+for PKG in $PACKAGES_ENABLED; do
+	if ! grep -q "^${PKG}$" ${FILELIST} && ! grep -q "^name: *${PKG}$" */gcs/info && ! grep -Eq "^${PKG}($| )" */gcs/provides; then
+		egrep --color "^${PKG}($| )" */gcs/{depends,recommends,suggests} 2> /dev/null
+		FOUND=true
+	fi
+done
+
+if [ ! $FOUND ]; then
+	echo "None."
+fi
+
+unset FOUND
+echo "Disabled dependences available: "
+for PKG in $PACKAGES_DISABLED; do
+	if grep -q "^${PKG}$" ${FILELIST} || grep -q "^name: *${PKG}$" */gcs/info || grep -Eq "^${PKG}($| )" */gcs/provides; then
+		egrep --color "^#${PKG}($| )" */gcs/{depends,recommends,suggests} 2> /dev/null
+		FOUND=true
+	fi
+done
+
+if [ ! $FOUND ]; then
+	echo "None."
+fi

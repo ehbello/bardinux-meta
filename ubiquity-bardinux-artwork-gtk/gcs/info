@@ -1,0 +1,29 @@
+# YAML 1.1
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: ubiquity-bardinux-artwork-gtk
+
+# Autor
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: admin
+
+# Task
+task: bardinux-live
+
+# Descripción corta
+shortdesc: "Bardinux artwork for Ubiqutiy live installer."
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "This package provides Bardinux-themed user interface artwork, help files, and\n user interface text for the Ubiquity live CD installer."
+
+# Versión del paquete
+version: 2.0.10
+
+# Cambios en esta versión
+changes:
+    - Initial package

@@ -1,0 +1,26 @@
+# YAML 1.1
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: bardinux-biology-task
+
+# Autor
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: metapackages
+
+# Descripción corta
+shortdesc: "Metapaquete de Software para Biología."
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "Instala herramientas para áreas de conocimiento relacionadas \n con la Biologia. Herramientas de análisis, Visualización \n molecular y Estadística."
+
+# Versión del paquete
+version: 1.0~dev1
+
+# Cambios en esta versión
+changes:
+    - Initial package

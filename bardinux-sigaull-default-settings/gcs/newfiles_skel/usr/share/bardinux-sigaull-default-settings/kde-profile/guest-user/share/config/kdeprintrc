@@ -1,0 +1,6 @@
+[CUPS]
+Host=localhost
+Port=631
+
+[General]
+PrintSystem=cups

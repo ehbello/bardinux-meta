@@ -1,0 +1,9 @@
+[KSplash Theme: bardinux]
+Name = Bardinux Splash Screen
+Description = Bardinux Splash Screen
+Version = 1.0
+Author = Enrique Hernández Bello <quique@osl.ull.es>
+Homepage = http://osl.ull.es
+
+# Theme behaviour settings.
+Engine = KSplashX

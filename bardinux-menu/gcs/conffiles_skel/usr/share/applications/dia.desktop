@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Editor de diagramas (Dia)
+Comment=Editor de diagramas de diversos tipos
+TryExec=/usr/bin/dia
+Exec=/usr/bin/dia
+Terminal=false
+Icon=/usr/share/pixmaps/dia.xpm
+Type=Application
+Categories=Education;CAD;

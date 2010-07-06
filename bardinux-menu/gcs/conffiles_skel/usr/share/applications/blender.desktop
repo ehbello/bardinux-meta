@@ -1,0 +1,16 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Diseño en 3D (Blender)
+Name[ru]=Редактор 3D-моделей Blender
+Name[fr]=Blender modeleur 3D
+Comment=Create and edit 3D models and animations
+Comment[ru]=Создание и редактирование трёхмерных моделей и анимаций
+Comment[fr]=Création et édition d'objets 3D et animations
+TryExec=blender
+Exec=blender
+Icon=blender
+Terminal=false
+Type=Application
+Categories=Education;CAD;
+StartupNotify=false
+MimeType=application/x-blender

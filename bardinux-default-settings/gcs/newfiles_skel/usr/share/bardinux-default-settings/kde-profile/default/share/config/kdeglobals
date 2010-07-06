@@ -1,0 +1,5 @@
+[Icons]
+Theme=oxygen
+
+[General]
+BrowserApplication[$e]=!firefox

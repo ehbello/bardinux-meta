@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Intérprete de Prolog (SWI)
+Comment=Versión SwI de Prolog
+TryExec=/usr/bin/swipl
+Exec=/usr/bin/swipl
+Terminal=true
+Type=Application
+Categories=Education;Development;
+Icon=/usr/share/pixmaps/bardinux/development.png

@@ -1,0 +1,27 @@
+# YAML 1.1
+# Fichero de configuración de paquetes de personalización de Guadalinex v6
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: apport-hooks-bardinux
+
+# Autor 
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: utils
+
+# Descripción corta
+shortdesc: "Apport hooks for Bardinux"
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "This package contains apport hooks for Bardinux, which allow users to\n generate crash reports against Bardinux packages and submit them to the\n Bardinux bugtracker."
+
+# Versión del paquete
+version: 1bardinux1
+
+# Cambios en esta versión
+changes:
+    - Initial release based on appport-hooks-medibuntu from\n Medibuntu. Thanks to Lionel Le Folgoc <mrpouit@ubuntu.com>

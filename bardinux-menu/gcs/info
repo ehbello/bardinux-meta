@@ -1,0 +1,26 @@
+# YAML 1.1
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: bardinux-menu
+
+# Autor
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: kde
+
+# Descripción corta
+shortdesc: "Entradas de menú para Bardinux."
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "Este paquete provee los datos de menú del escritorio que presenta las \n aplicaciones proporcionadas por Bardinux a los usuarios."
+
+# Versión del paquete
+version: 1.0~dev1
+
+# Cambios en esta versión
+changes:
+    - Initial package

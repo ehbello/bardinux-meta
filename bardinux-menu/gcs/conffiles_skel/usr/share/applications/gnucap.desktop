@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Análisis de circuitos (GnuCap)
+Comment=Analizador de circuítos GNU
+TryExec=/usr/bin/gnucap
+Exec=/usr/bin/gnucap
+Terminal=true
+Type=Application
+Categories=Education;Electronics;
+Icon=/usr/share/pixmaps/bardinux/electronics.png

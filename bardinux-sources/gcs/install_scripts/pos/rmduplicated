@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if grep -q 'deb.*archive\.\(o\|s\)sl\.ull\.es\/bardinux.*' /etc/apt/sources.list; then
+	echo "Removing older Bardinux sources to avoid duplicated ..."
+	sed '/deb.*archive\.\(o\|s\)sl\.ull\.es\/bardinux.*/d' -i /etc/apt/sources.list
+fi

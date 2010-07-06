@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Programa estadístico (R)
+Comment=Lenguaje de estadístico parecido al S
+TryExec=/usr/bin/R
+Exec=/usr/bin/R
+Terminal=true
+Type=Application
+Categories=Education;Math;
+Icon=/usr/share/pixmaps/bardinux/math.png

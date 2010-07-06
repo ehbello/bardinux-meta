@@ -1,0 +1,26 @@
+# YAML 1.1
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: bardinux-fonts-task
+
+# Autor
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: metapackages
+
+# Descripción corta
+shortdesc: "Metapaquete recopilatorio de tipografías."
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "Este paquete recopila todas las tipografías existentes en el \n repositorio para su instalación en bruto. Algo bastante útil \n para cuando quieres disponer de todas las fuentes posibles \n sin tener que seleccionar una por una."
+
+# Versión del paquete
+version: 1.0~dev1
+
+# Cambios en esta versión
+changes:
+    - Initial package

@@ -1,0 +1,8 @@
+UseTheme="true"
+Theme="/usr/share/kde4/apps/kdm/themes/bardinux/"
+#USEBACKGROUND="true"
+#WALLPAPER="/usr/share/kde4/apps/kdm/themes/bardinux/1280x800.jpg"
+#USESYSTEMLOCALE="true"
+#FACESOURCE="PreferUser"
+#AUTOLOGINUSER="bardinux"
+#AUTOLOGINAGAIN="true"

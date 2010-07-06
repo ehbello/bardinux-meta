@@ -1,0 +1,26 @@
+# YAML 1.1
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: bardinux-scientific-task
+
+# Autor
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: base
+
+# Descripción corta
+shortdesc: "Metapaquete de Software Técnico Científico."
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "Instala herramientas para preparación de documentos \n electrónicos y científicos de alta calidad así como \n herramientas de cálculos numérico y estadísticos, \n comúnmente usadas en los primeros años de titulación \n de carreras como Matemáticas, Física y/o Astrofísica."
+
+# Versión del paquete
+version: 1.0~dev1
+
+# Cambios en esta versión
+changes:
+    - Initial package

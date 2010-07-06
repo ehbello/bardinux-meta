@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=QGIS Geographic Information System
+GenericName=Geographic Information System
+Comment=View and manipulate detailed geographical information
+Type=Application
+TryExec=/usr/bin/qgis
+Exec=/usr/bin/qgis
+Icon=qgis-icon
+Categories=Applications;Education;Qt;Science;Geography

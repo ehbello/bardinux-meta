@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Editor de diagramas (Xfig)
+Comment=Diagram editor
+Exec=xfig
+TryExec=xfig
+Icon=xfig
+Terminal=false
+Type=Application
+Categories=Education;CAD;
+MimeType=image/x-fig;

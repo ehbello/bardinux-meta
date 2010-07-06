@@ -1,0 +1,8 @@
+[ScreenSaver][$i]
+AutoLogout=true
+AutoLogoutTimeout=600
+Enabled=true
+Lock=false
+LockGrace=60000
+Timeout=180
+Saver=KEuphoria.desktop

@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Bardinux Logo
+Description=A theme that features a blank background with a logo.
+ModuleName=script
+
+[script]
+ImageDir=/lib/plymouth/themes/bardinux-logo
+ScriptFile=/lib/plymouth/themes/bardinux-logo/bardinux-logo.script

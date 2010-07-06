@@ -1,0 +1,23 @@
+[Directories]
+kioskadmin=root:
+userProfileMapFile=/etc/kde-user-profile
+
+[Directories-default]
+ProfileDescription=Kubuntu default profile
+ProfileDescription[es]=Perfil predeterminado de Kubuntu
+prefixes=/usr/share/kubuntu-default-settings/kde-profile/default/
+
+[Directories-bardinux-default]
+ProfileDescription=Bardinux default profile
+ProfileDescription[es]=Perfil predeterminado de Bardinux
+prefixes=/usr/share/bardinux-default-settings/kde-profile/default/
+
+[Directories-sigaull-default]
+ProfileDescription=SIGA default profile
+ProfileDescription[es]=Perfil predeterminado de SIGA
+prefixes=/usr/share/bardinux-sigaull-default-settings/kde-profile/default/
+
+[Directories-guest-default]
+ProfileDescription=Guest user default profile
+ProfileDescription[es]=Perfil predeterminado de usuario invitado
+prefixes=/usr/share/bardinux-sigaull-default-settings/kde-profile/guest-user/

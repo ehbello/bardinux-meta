@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Simulador de circuitos (Tkgate)
+GenericName=Circuit Simulator
+Comment=Event driven digital circuit simulator with Tcl/Tk
+TryExec=tkgate
+Exec=tkgate
+Icon=tkgate
+Type=Application
+Categories=Education;Electronics;

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Análisis geográfico (Grass)
+Comment=
+TryExec=/usr/bin/grass5
+Exec=/usr/bin/grass5
+Terminal=true
+Type=Application
+Categories=Education;Geography;
+Icon=/usr/share/pixmaps/bardinux/geography.png

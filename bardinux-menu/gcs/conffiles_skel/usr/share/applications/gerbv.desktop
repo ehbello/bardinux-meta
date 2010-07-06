@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Visor de archivos Gerber (Gerbv)
+GenericName=Gerber File Viewer
+Comment=Gerber file viewer for PCB design
+Type=Application
+TryExec=gerbv
+Exec=gerbv
+Icon=gerbv
+Categories=Education;Electronics;

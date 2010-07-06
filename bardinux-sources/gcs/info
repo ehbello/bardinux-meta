@@ -1,0 +1,29 @@
+# YAML 1.1
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: bardinux-sources
+
+# Autor
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: misc
+
+# Task
+task: bardinux-desktop
+
+# Descripción corta
+shortdesc: "Paquete de repositorios."
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "Instala archivos fuente para permitir al gestor de paquetes instalar software desde los repositorios de Bardinux."
+
+# Versión del paquete
+version: 1.0~dev1
+
+# Cambios en esta versión
+changes:
+    - Initial package

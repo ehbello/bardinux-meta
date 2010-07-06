@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name= Editor de funciones (XMaxima) 
+Comment=
+Exec=/usr/bin/xmaxima
+TryExec=/usr/bin/xmaxima
+Terminal=false
+Type=Application
+Categories=Education;Math;
+Icon=/usr/share/pixmaps/bardinux/math.png

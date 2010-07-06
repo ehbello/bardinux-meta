@@ -1,0 +1,9 @@
+[KSplash Theme: bardinux]
+Name = GCDS 2009 Splash Screen
+Description = Gran Canaria Desktop Summit Splash Screen
+Version = 1.0
+Author = Enrique Hernández Bello <quique@osl.ull.es>
+Homepage = http://osl.ull.es
+
+# Theme behaviour settings.
+Engine = KSplashX

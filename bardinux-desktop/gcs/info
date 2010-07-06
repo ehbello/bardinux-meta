@@ -1,0 +1,26 @@
+# YAML 1.1
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: bardinux-desktop
+
+# Autor
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: misc
+
+# Descripción corta
+shortdesc: "Bardinux desktop system (KDE Version)"
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "This package depends on all of the packages in the Bardinux desktop system.\n Installing this package will include the default Bardinux KDE installation.\n It is safe to remove this package if some of the desktop system packages are\n not desired."
+
+# Versión del paquete
+version: 1.0~dev1
+
+# Cambios en esta versión
+changes:
+    - Initial package

@@ -1,0 +1,126 @@
+#!/bin/bash
+# Local filesystem mounting			-*- shell-script -*-
+
+# Parameter: Where to mount the filesystem
+#
+
+cancelmsg () {
+	dialog --title "Ordenadores de la BULL" \
+		--msgbox "\n\n\n    Proceso cancelado, pulse enter para reiniciar." \
+		10 60  
+	umount /source/home
+	umount /source/var
+	umount /source
+	reboot
+}
+
+mountroot () {
+	dialog --title "Ordenadores de la BULL" \
+		--infobox \
+		"\n\n\n        Bienvenido a la herramienta para crear nuevas cuentas\n    personales en los ordenadores de usuarios de la biblioteca\n    de la Universidad de La Laguna.\n\n       Seguidamente le solicitaremos un nombre de usuario y una\n    clave de acceso para el sistema.\n\n\n\n\n        Oficina de Software Libre de la Universidad de La Laguna."\
+		20 70
+
+	slumber=600
+	while [ ! -e "/dev/sda5" ]; do
+		/bin/sleep 0.1
+		slumber=$(( ${slumber} - 1 ))
+		[ ${slumber} -gt 0 ] || panic "No hay dispositivos"
+	done
+
+	dialog --title "Ordenadores de la BULL" \
+		--msgbox \
+		"\n\n\n        Bienvenido a la herramienta para crear nuevas cuentas\n    personales en los ordenadores de usuarios de la biblioteca\n    de la Universidad de La Laguna.\n\n       Seguidamente le solicitaremos un nombre de usuario y una\n    clave de acceso para el sistema.\n\n\n\n\n        Oficina de Software Libre de la Universidad de La Laguna."\
+		20 70
+
+	mkdir -p /source
+	mount -t ext3 -o rw /dev/sda5 /source
+	mount -t ext3 -o rw /dev/sda6 /source/home
+	mount -t ext3 -o rw /dev/sda7 /source/var
+	USERNAME=""
+	PASS1=""
+	PASS2="OTRO"
+	while [ ! $USEROK ]; do
+		dialog --title "Nuevo usuario para el portatil de la BULL" \
+			--inputbox \
+			"Escriba su nombre de usuario:\nDebe contener al menos 6 caracteres\ny menos de 13.\n   Ej: alberto, rmartin, etc..." \
+			10 60 2> /tmp/username
+		[[ $? != 0 ]] && cancelmsg
+
+		USERNAME=`cat /tmp/username`
+		LEN=`echo -n $USERNAME | wc -c` 
+		if test $LEN -lt 6 -o $LEN -ge 12; then
+			dialog --title "Nuevo usuario para el portatil de la BULL" \
+				--msgbox \
+				"Su nombre de usuario es demasiado largo o demasiado corto ha de tener entre 6 y 12 caracteres" \
+				10 60
+			[[ $? != 0 ]] && cancelmsg
+		elif (echo -n $USERNAME | egrep -q -v '^[0-9a-z]*$'); then
+			dialog --title "Nuevo usuario para el portatil de la BULL" \
+				--msgbox \
+				"Su nombre solo puede contener digitos y caracteres alfanumericos" \
+				10 60
+			[[ $? != 0 ]] && cancelmsg
+		elif (`grep -q "^${USERNAME}:" /source/etc/passwd `); then
+			dialog --title "Nuevo usuario para el portatil de la BULL" \
+				--msgbox \
+				"Este nombre de usuario ya existe, elija otro" \
+				10 60
+			[[ $? != 0 ]] && cancelmsg
+		else
+			USEROK=1
+		fi
+	done
+
+	while [ "$PASS1" != "$PASS2" ]; do
+		dialog --title "Nuevo usuario para el portatil de la BULL" \
+			--insecure --passwordbox \
+			"Escriba su clave de acceso:\nSu clave debe contener al menos 6 caracteres." \
+			10 60 2> /tmp/password1
+		[[ $? != 0 ]] && cancelmsg
+		PASS1=`cat /tmp/password1`
+		LEN=`echo -n $PASS1 | wc -c` 
+		if test $LEN -lt 6; then
+			dialog --title "Nuevo usuario para el portatil de la BULL" \
+				--msgbox \
+				"Su clave de acceso debe contener al menos 6 caracteres" \
+				10 60
+			[[ $? != 0 ]] && cancelmsg
+			$PASS1="UNO"
+			$PASS2="OTRO"
+			continue
+		fi
+		dialog --title "Nuevo usuario para el portatil de la BULL" \
+			--insecure --passwordbox \
+			"Confirme su clave de acceso:" \
+			10 60 2> /tmp/password2
+		[[ $? != 0 ]] && cancelmsg
+		PASS2=`cat /tmp/password2`
+		if test "$PASS1" != "$PASS2"; then
+			dialog --title "Nuevo usuario para el portatil de la BULL" \
+				--msgbox \
+				"Las claves de acceso no coinciden" \
+				10 60
+			[[ $? != 0 ]] && cancelmsg
+			$PASS1="UNO"
+			$PASS2="OTRO"
+			continue
+		fi
+
+	done
+	chroot /source /usr/local/sbin/crea_usuario_bull $USERNAME $PASS1
+	ERROR=$?
+		
+	#for i in `mount|tr -s "(" " "|tr -s ")" " "|tr -s " " "#"|sed s/on//`;do echo "$i 0 0"|tr -s "#" " ";done > /etc/mtab
+	ln -s /proc/mounts /etc/mtab
+	if [[ $ERROR == 0 ]]; then
+		LIBRE=$(df -h /dev/sda6|tr -s " " "#"|grep home|cut -d "#" -f 4)
+		dialog --msgbox "Usuario correctamente creado.\n Dispone de $LIBRE de espacio libre.\n\n\n    Pulse Enter para reiniciar" 10 40
+	else
+		dialog --msgbox "No se pudo crear el usuario. Contacte con el administrador del sistema.\n\n\n    Pulse Enter para reiniciar" 10 40
+	fi
+	umount /source/home
+	umount /source/var
+	umount /source
+	
+	reboot
+}
