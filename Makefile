@@ -1,54 +1,42 @@
 #!/bin/make -f
 
-ifeq ($(DEBTOOL),)
-	DEBTOOL = dpkg-buildpackage -rfakeroot
-endif
+.SILENT:
+
+DEBTOOL ?= dpkg-buildpackage -rfakeroot
+PKGNAME = $*
+DATE = $(shell date +"%b %d %T")
 
 .PHONY: all
-all: debs
+all: $(patsubst %/gcs,%.build,$(wildcard */gcs))
 
-svgz:
-	rm -f svg
-	find -iname "*.svg" \
+%.build: %/svgz %/debian/changelog
+	$(info [$(DATE)] $(PKGNAME): starting build process...)
+	(cd $(PKGNAME); $(DEBTOOL))
+	touch $(PKGNAME).build
+
+%/debian/changelog: %/gcs/info
+	$(info [$(DATE)] $(PKGNAME): building debian files...)
+	(cd $(PKGNAME); gcs_build -S)
+
+%/svgz:
+	$(info [$(DATE)] $(PKGNAME): gzipping SVG files...)
+	find $(PKGNAME) -iname "*.svg" \
 		-exec gzip '{}' \; \
 		-exec mv '{}.gz' '{}z' \;
-	touch svgz
 
 svg:
-	rm -f svg
 	find -iname "*.svgz" \
 		-exec mv '{}' '{}.gz' \; \
 		-exec gunzip '{}.gz' \; \
 		-exec rename 's/\.svgz$$/\.svg/' {} \;
-	touch svg
-
-gcs:
-	@for i in $(dir $(wildcard */gcs)); do \
-		cd $$i; \
-		echo -n "[*] Building debian files for $$i... "; \
-		gcs_build -S || exit; \
-		echo "[ OK ]"; \
-		cd - > /dev/null; \
-	done
-	touch gcs
-
-debs: svgz gcs
-	@for i in $(dir $(wildcard */gcs)); do \
-		cd $$i; \
-		echo "[*] Starting build proccess for $$i debian package"; \
-		$(DEBTOOL) || exit; \
-		echo "Done."; \
-		cd - > /dev/null; \
-	done
-	touch debs
 
 .PHONY: clean
 clean: svg
-	-rm -f gcs debs svg svgz
-	-rm -rf */debian
 	-find -iname "*.gcs" -delete
 	-rm -f *.build *.dsc *.changes *.tar.gz *.deb
 
-.PHONY: cleanall
-cleanall: clean
+.PHONY: realclean
+realclean: clean
+	-rm -rf */debian
 	-rm -f */gcs/changelog
+
