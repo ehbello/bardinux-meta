@@ -7,10 +7,10 @@ name: bardinux-dbg
 author: Enrique Hernández Bello <quique@osl.ull.es>
 
 # Priority
-priority: optional
+priority: extra
 
 # Section
-section: utils
+section: debug
 
 # Descripción corta
 shortdesc: "Debug symbols and related packages for Bardinux debug"
