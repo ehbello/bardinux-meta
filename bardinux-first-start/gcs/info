@@ -16,7 +16,7 @@ section: metapackages
 shortdesc: "Bardinux First Start dialog and webpage"
 
 # Descipción larga, las lineas han de estar separadas por "\n "
-longdesc: "This package contains the aplication and webpage that is showed on the first \n  Bardinux start."
+longdesc: "This package contains the application and webpage that is showed on the first \n  Bardinux start."
 
 # Versión del paquete
 version: 1.0~dev1
