@@ -7,7 +7,6 @@ fontypython
 otf-thai-tlwg
 sun-java6-fonts
 t1-thai-tlwg
-t1-xfree86-nonfree
 ttf-adf-accanthis
 ttf-adf-baskervald
 ttf-adf-berenis
@@ -100,9 +99,6 @@ ttf-komatuna
 ttf-konatu
 ttf-kouzan-mouhitsu
 ttf-lao
-ttf-larabie-deco
-ttf-larabie-straight
-ttf-larabie-uncommon
 ttf-levien-museum
 ttf-levien-typoscript
 ttf-lg-aboriginal
@@ -115,13 +111,11 @@ ttf-manchufont
 ttf-marvosym
 ttf-mathematica4.1
 ttf-mgopen
-ttf-mikachan
 ttf-misaki
 ttf-mona
 ttf-monapo
 ttf-mph-2b-damase
 ttf-mplus
-ttf-mscorefonts-installer
 ttf-nafees
 ttf-ocr-a
 ttf-oflb-asana-math
@@ -134,7 +128,6 @@ ttf-oriya-fonts
 ttf-paktype
 ttf-punjabi-fonts
 ttf-radisnoir
-ttf-root-installer
 ttf-rufscript
 ttf-sawarabi-gothic
 ttf-sazanami-gothic
@@ -183,6 +176,4 @@ ttf-uralic
 ttf-vlgothic
 ttf-wqy-microhei
 ttf-wqy-zenhei
-ttf-xfree86-nonfree
-ttf-xfree86-nonfree-syriac
 ttfm
