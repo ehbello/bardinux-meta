@@ -1,0 +1,7 @@
+apport-hooks-bardinux (1bardinux1) lucid; urgency=low
+
+  * Initial release based on appport-hooks-medibuntu from\n Medibuntu. Thanks to Lionel Le Folgoc <mrpouit@ubuntu.com>
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 19 Jul 2010 13:50:31 +0100
+
+

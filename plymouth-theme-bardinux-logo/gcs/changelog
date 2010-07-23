@@ -1,0 +1,7 @@
+plymouth-theme-bardinux-logo (1.0~dev1) lucid; urgency=low
+
+  * Initial release based on plymouth-theme-kubuntu-logo
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 19 Jul 2010 14:15:21 +0100
+
+
