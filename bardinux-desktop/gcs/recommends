@@ -74,7 +74,7 @@ network-manager-kde
 okular-extra-backends
 openoffice.org-calc
 openoffice.org-impress
-openoffice.org-kde
+#openoffice.org-kde
 openoffice.org-style-oxygen
 openoffice.org-writer
 oxygen-cursor-theme
@@ -106,7 +106,7 @@ system-config-printer-kde
 #ttf-thai-tlwg
 #ttf-unfonts-core
 #ttf-wqy-microhei
-usb-creator-kde
+#usb-creator-kde
 userconfig
 wodim
 #xcursor-themes
