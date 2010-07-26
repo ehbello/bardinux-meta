@@ -1,3 +1,11 @@
+bardinux-default-settings (1.0~dev4) lucid; urgency=low
+
+  * Override variables for KDM must be in uppercase.
+  * Fixed KDM upstart script.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 26 Jul 2010 17:43:16 +0100
+
+
 bardinux-default-settings (1.0~dev1) lucid; urgency=low
 
   * Initial package
