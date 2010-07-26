@@ -1,3 +1,12 @@
+plymouth-theme-bardinux-logo (1.0~dev2) lucid; urgency=low
+
+  * Changed color of progress dot on to magenta.
+  * Removed blur of Bardinux logo.
+  * Added vectorial source in SVG of Bardinux logo.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 26 Jul 2010 19:08:20 +0100
+
+
 plymouth-theme-bardinux-logo (1.0~dev1) lucid; urgency=low
 
   * Initial release based on plymouth-theme-kubuntu-logo
