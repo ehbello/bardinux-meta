@@ -1,3 +1,10 @@
+bardinux-design-task (1.0~dev2) lucid; urgency=low
+
+  * Added synfig dependence.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 01 Sep 2010 13:46:06 +0100
+
+
 bardinux-design-task (1.0~dev1) lucid; urgency=low
 
   * Initial package

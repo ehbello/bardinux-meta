@@ -1,3 +1,10 @@
+bardinux-default-settings (1.0~dev5) lucid; urgency=low
+
+  * Fine tuned the KDM theme for Bardinux.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 01 Sep 2010 13:44:54 +0100
+
+
 bardinux-default-settings (1.0~dev4) lucid; urgency=low
 
   * Override variables for KDM must be in uppercase.

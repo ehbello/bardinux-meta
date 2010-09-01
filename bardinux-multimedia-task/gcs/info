@@ -22,8 +22,8 @@ shortdesc: "Metapaquete de Codecs Multimedia."
 longdesc: "Este paquete instala todo lo necesario para poder hacer \n un uso confortable de la multimedia de tu ordenador. \n Contiene codecs de reprodución de vídeo, audio y flash."
 
 # Versión del paquete
-version: 1.0~dev1
+version: 1.0~dev2
 
 # Cambios en esta versión
 changes:
-    - Initial package
+    - Added moonlight-plugin-mozilla dependence.
