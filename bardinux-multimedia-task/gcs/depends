@@ -1,7 +1,8 @@
 faad
 ffmpeg
-#flasphplugin-installer
+#flashplugin-installer
 swfdec-mozilla
+moonlight-plugin-mozilla
 gstreamer0.10-ffmpeg
 gstreamer0.10-plugins-ugly
 gstreamer0.10-plugins-ugly-multiverse
