@@ -2,9 +2,8 @@
 # it as such
 
 [KdmGreeterTheme]
-Greeter=oxygen-air-bardinux.xml
-Name=Oxygen-Air-for-Bardinux
-Author=Xavier Araque
-Copyright=GPL 2008 Xavier Araque | xavieraraque@gmail.com
+Greeter=ethais-bardinux.xml
+Name=Ethais-for-Bardinux
+Author=Enrique Hernández Bello
+Copyright=GPL 2010 Enrique Hernández Bello | quique@osl.ull.es
 Screenshot=screenshot.png
-X-Ubuntu-Gettext-Domain=desktop_kdebase-workspace

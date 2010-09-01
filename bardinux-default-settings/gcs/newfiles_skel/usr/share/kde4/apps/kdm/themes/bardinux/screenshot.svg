@@ -32756,6 +32756,48 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 0.5 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective6419"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective6529-8"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective7215"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective11047"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective11123"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective15873"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -32767,7 +32809,7 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.91875"
+     inkscape:zoom="0.9175"
      inkscape:cx="640"
      inkscape:cy="400"
      inkscape:document-units="px"
@@ -32775,8 +32817,8 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1280"
-     inkscape:window-height="1004"
-     inkscape:window-x="1276"
+     inkscape:window-height="976"
+     inkscape:window-x="-4"
      inkscape:window-y="-3"
      showgrid="false"
      inkscape:window-maximized="1" />
@@ -32799,7 +32841,7 @@
      transform="translate(712.68732,369.80627)">
     <image
        sodipodi:absref="/home/quique/src/bzr/bardinux-meta/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/1280x800.jpg"
-       xlink:href="1280x800.jpg"
+       xlink:href="/home/quique/src/bzr/bardinux-meta/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/1280x800.jpg"
        width="1280"
        height="800"
        id="image6410"
@@ -32810,62 +32852,86 @@
        transform="matrix(0.6801762,0,0,0.6801762,-222.71201,28.172019)"
        style="opacity:0.2;fill:none;stroke:#ffffff;stroke-width:5.88082933;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <image
-       sodipodi:absref="/home/quique/src/bzr/bardinux-meta/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/win-login.png"
-       xlink:href="win-login.png"
-       y="-228.30627"
-       x="-380.18732"
-       id="image9876"
-       height="401"
-       width="615" />
-    <image
-       sodipodi:absref="/home/quique/src/bzr/bardinux-meta/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/icon-bardinux.png"
-       xlink:href="icon-bardinux.png"
-       y="-179.80627"
-       x="-112.68732"
-       id="image9910"
-       height="82"
-       width="82" />
-    <image
-       sodipodi:absref="/home/quique/src/bzr/bardinux-meta/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/system_button.png"
-       xlink:href="system_button.png"
-       y="125.19373"
-       x="-357.68732"
-       id="image9938"
-       height="32"
-       width="32" />
-    <image
-       y="126.69373"
-       x="-317.18732"
-       id="image9952"
-       height="32"
+       sodipodi:absref="/home/quique/src/bzr/bardinux-meta/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/ethais-new/session_normal.png"
+       xlink:href="session_normal.png"
        width="32"
-       xlink:href="file:///home/quique/src/svn/bardinux-trunk/metapkgs/bardinux-kde-desktop/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/session_button.png"
-       sodipodi:absref="/home/quique/src/bzr/bardinux-meta/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/session_button.png" />
+       height="32"
+       id="image9938"
+       x="-677.68732"
+       y="366.69373" />
     <image
-       sodipodi:absref="/home/quique/src/bzr/bardinux-meta/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/user-entry.png"
-       xlink:href="user-entry.png"
-       y="-27.181271"
-       x="-178.81232"
+       sodipodi:absref="/home/quique/src/bzr/bardinux-meta/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/ethais-new/system_normal.png"
+       xlink:href="system_normal.png"
+       width="32"
+       height="32"
+       id="image9952"
+       x="-637.18732"
+       y="366.69373" />
+    <image
+       sodipodi:absref="/home/quique/src/bzr/bardinux-meta/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/ethais-new/rectangle_overlay.png"
+       xlink:href="rectangle_overlay.png"
+       style="opacity:0.5"
+       width="1280"
+       height="262"
+       id="image11125"
+       x="-712.68732"
+       y="-112.80627" />
+    <image
+       sodipodi:absref="/home/quique/src/bzr/bardinux-meta/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/ethais-new/login_normal.png"
+       xlink:href="login_normal.png"
+       width="64"
+       height="64"
+       id="image6421"
+       x="55.312672"
+       y="-15.243771" />
+    <image
+       sodipodi:absref="/home/quique/src/bzr/bardinux-meta/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/ethais-new/lineedit_active.png"
+       xlink:href="lineedit_active.png"
+       width="219"
+       height="44"
        id="image9980"
-       height="44"
-       width="219" />
+       x="-178.81232"
+       y="-27.181271" />
     <image
-       sodipodi:absref="/home/quique/src/bzr/bardinux-meta/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/pw-entry.png"
-       xlink:href="pw-entry.png"
-       y="16.693729"
-       x="-179.18732"
-       id="image9994"
+       sodipodi:absref="/home/quique/src/bzr/bardinux-meta/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/ethais-new/lineedit_normal.png"
+       xlink:href="lineedit_normal.png"
+       width="219"
        height="44"
-       width="219" />
-    <text
-       xml:space="preserve"
-       style="font-size:24.81519508px;font-style:normal;font-weight:normal;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="-141.8456"
-       y="-77.343163"
-       id="text9998"><tspan
-         sodipodi:role="line"
-         id="tspan10000"
-         x="-141.8456"
-         y="-77.343163">Bienvenido</tspan></text>
+       id="image9994"
+       x="-179.18732"
+       y="16.693729" />
+    <image
+       sodipodi:absref="/home/quique/src/bzr/bardinux-meta/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/ethais-new/user_icon.png"
+       xlink:href="user_icon.png"
+       width="44"
+       height="44"
+       id="image6531"
+       x="-222.388"
+       y="-27.181271" />
+    <image
+       sodipodi:absref="/home/quique/src/bzr/bardinux-meta/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/ethais-new/lock.png"
+       xlink:href="lock.png"
+       width="44"
+       height="44"
+       id="image7217"
+       x="-222.388"
+       y="16.693729" />
+    <image
+       sodipodi:absref="/home/quique/src/bzr/bardinux-meta/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/ethais-new/branding-icon.png"
+       xlink:href="branding-icon.png"
+       width="82"
+       height="82"
+       id="image11049"
+       x="-313.21115"
+       y="-24.243771" />
+    <image
+       sodipodi:absref="/home/quique/src/bzr/bardinux-meta/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/ethais-new/branding.png"
+       xlink:href="branding.png"
+       style="opacity:0.8"
+       width="320"
+       height="59"
+       id="image15875"
+       x="-232.68732"
+       y="311.01685" />
   </g>
 </svg>
