@@ -22,7 +22,7 @@ shortdesc: "Bardinux artwork for Ubiqutiy live installer."
 longdesc: "This package provides Bardinux-themed user interface artwork, help files, and\n user interface text for the Ubiquity live CD installer."
 
 # Versión del paquete
-version: 2.0.10
+version: 1.0~dev1
 
 # Cambios en esta versión
 changes:
