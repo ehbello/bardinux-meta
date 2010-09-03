@@ -1,0 +1,11 @@
+APT {
+	Install-Recommends "false";
+	Install-Suggests "false";
+
+	Get {
+		AutomaticRemove "true";
+		Purge "true";
+		ReInstall "true";
+	};
+};
+Aptitude::Recommends-Important "false";
