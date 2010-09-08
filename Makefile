@@ -33,10 +33,10 @@ svg:
 .PHONY: clean
 clean: svg
 	-find -iname "*.gcs" -delete
+	-rm -rf */debian
 	-rm -f *.build *.dsc *.changes *.tar.gz *.deb
 
 .PHONY: realclean
 realclean: clean
-	-rm -rf */debian
 	-rm -f */gcs/changelog
 
