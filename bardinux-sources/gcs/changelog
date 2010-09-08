@@ -1,3 +1,10 @@
+bardinux-sources (1.0~dev2) lucid; urgency=low
+
+  * Configured APT for better managing of dependences.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 03 Sep 2010 15:45:50 +0100
+
+
 bardinux-sources (1.0~dev1) lucid; urgency=low
 
   * Initial package

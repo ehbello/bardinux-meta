@@ -1,0 +1,14 @@
+ubiquity-bardinux-artwork-gtk (1.0~dev2) lucid; urgency=low
+
+  * Rebuilt to fix the conflict problem with ubiquity.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 08 Sep 2010 12:12:25 +0100
+
+
+ubiquity-bardinux-artwork-gtk (1.0~dev1) lucid; urgency=low
+
+  * Initial package
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 02 Sep 2010 14:12:30 +0100
+
+
