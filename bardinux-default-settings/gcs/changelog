@@ -1,3 +1,10 @@
+bardinux-default-settings (1.0~dev6) lucid; urgency=low
+
+  * Deleted plasma desktop default configuration.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 09 Sep 2010 09:57:40 +0100
+
+
 bardinux-default-settings (1.0~dev5) lucid; urgency=low
 
   * Fine tuned the KDM theme for Bardinux.
