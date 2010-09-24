@@ -1,3 +1,11 @@
+bardinux-default-settings (1.0~dev7) lucid; urgency=low
+
+  * Added kwinrc to get a paginator with two more desktops.
+  * Added javascript to configure the default panels and widgets of the initial desktop.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 24 Sep 2010 18:21:19 +0100
+
+
 bardinux-default-settings (1.0~dev6) lucid; urgency=low
 
   * Deleted plasma desktop default configuration.
