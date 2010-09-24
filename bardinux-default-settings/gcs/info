@@ -24,3 +24,4 @@ version: 1.0~dev7
 # Cambios en esta versión
 changes:
     - Added kwinrc to get a paginator with two more desktops.
+    - Added javascript to configure the default panels and widgets of the initial desktop.
