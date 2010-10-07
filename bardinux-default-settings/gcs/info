@@ -23,4 +23,4 @@ version: 1.0~dev8
 
 # Cambios en esta versión
 changes:
-	- Added defaultSuffix to metadata.desktop to get the default wallpaper to work.
+    - Added defaultSuffix to metadata.desktop to get the default wallpaper to work.
