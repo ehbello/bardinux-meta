@@ -24,3 +24,4 @@ version: 1.0~dev2
 # Cambios en esta versión
 changes:
     - Added metadata.desktop to define default desktop wallpaper in both profiles.
+    - Changed default ntp server of ntpdate to ntp.ccti.ull.es
