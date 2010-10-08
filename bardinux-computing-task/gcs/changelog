@@ -1,3 +1,10 @@
+bardinux-computing-task (1.0~dev2) lucid; urgency=low
+
+  * Added doxygen to dependences.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 07 Oct 2010 17:24:47 +0100
+
+
 bardinux-computing-task (1.0~dev1) lucid; urgency=low
 
   * Initial package

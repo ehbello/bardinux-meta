@@ -1,3 +1,10 @@
+bardinux-default-settings (1.0~dev8) lucid; urgency=low
+
+  * Added defaultSuffix to metadata.desktop to get the default wallpaper to work.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 07 Oct 2010 20:07:10 +0100
+
+
 bardinux-default-settings (1.0~dev7) lucid; urgency=low
 
   * Added kwinrc to get a paginator with two more desktops.

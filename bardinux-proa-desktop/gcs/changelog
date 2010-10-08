@@ -1,3 +1,10 @@
+bardinux-proa-desktop (1.0~dev2) lucid; urgency=low
+
+  * Deleted provides file because this package does not provide nothing.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 07 Oct 2010 20:08:32 +0100
+
+
 bardinux-proa-desktop (1.0~dev1) lucid; urgency=low
 
   * Initial package

@@ -1,3 +1,11 @@
+bardinux-sigaull-default-settings (1.0~dev2) lucid; urgency=low
+
+  * Added metadata.desktop to define default desktop wallpaper in both profiles.
+  * Changed default ntp server of ntpdate to ntp.ccti.ull.es
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 07 Oct 2010 20:09:05 +0100
+
+
 bardinux-sigaull-default-settings (1.0~dev1) lucid; urgency=low
 
   * Initial package
