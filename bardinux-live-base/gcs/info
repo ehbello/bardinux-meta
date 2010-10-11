@@ -19,8 +19,8 @@ shortdesc: "Metapackage to create an Bardinux distribution."
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev2
+version: 1.0~dev3
 
 # Cambios en esta versión
 changes:
-    - Added casper.conf to configure username and hostname of the system.
+    - Fixed BUILD_SYSTEM variable of casper.conf to get casper to work correctly.
