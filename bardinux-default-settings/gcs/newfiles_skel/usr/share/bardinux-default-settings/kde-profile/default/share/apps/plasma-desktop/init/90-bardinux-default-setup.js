@@ -1,3 +1,13 @@
+/* Due Bardinux overlap of configurations we need to remove
+all previous elements of the desktop. This script rebuilds
+the plasma desktop completely.
+
+Works perfectly in Plasma Desktop version 0.3
+
+Enrique Hernández Bello, quique@osl.ull.es 2010-10-11
+Copyright OSL-ULL, may be copied under the GNU GPL 2 or later
+*/
+
 for (var i = 0; i < panelIds.length; ++i) {
     var panel = panelById(panelIds[i]);
     panel.remove();
@@ -5,21 +15,15 @@ for (var i = 0; i < panelIds.length; ++i) {
 
 for (var i = 0; i < activityIds.length; ++i) {
     var activity = activityById(activityIds[i]);
-    var widgetIds = activity.widgetIds;
 
-    if (activity && (activity.type == "desktop")) {
-        for (var j = 0; j < widgetIds.length; ++j) {
-            var widget = activity.widgetById(widgetIds[j]);
-
-            if (widget) {
-                widget.remove();
-            }
-        }
+    if (activity) {
+        activity.screen=1; // ugly workaround to avoid
+                           // the segmentation fault
+        activity.remove();
     }
 } // for activity
 
 var activity = new Activity("folderview");
-//activity.writeConfig("wallpaper", "/usr/share/wallpapers/bardinux/");
 
 var panel = new Panel("panel");
 panel.location = "bottom";
