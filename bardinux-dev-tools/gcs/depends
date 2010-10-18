@@ -1,0 +1,11 @@
+build-essential
+ccache
+cdbs
+cowdancer
+debhelper
+devscripts
+fakeroot
+pbuilder
+reprepro
+rsync
+sudo

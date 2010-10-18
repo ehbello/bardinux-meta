@@ -1,0 +1,26 @@
+# YAML 1.1
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: bardinux-dev-tools
+
+# Autor
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: universe/devel
+
+# Descripción corta
+shortdesc: "useful tools for Bardinux developers"
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: " This is a collection of useful tools that Bardinux developers use to make their\n packaging work a lot easier."
+
+# Versión del paquete
+version: 1.0
+
+# Cambios en esta versión
+changes:
+    - Initial release.

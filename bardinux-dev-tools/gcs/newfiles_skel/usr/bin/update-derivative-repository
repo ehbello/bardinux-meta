@@ -1,0 +1,84 @@
+#!/bin/bash
+
+set -e
+
+CODENAME=${DIST:-$(lsb_release -cs)}
+NAME=${CODENAME}${ARCH:+-${ARCH}}
+
+MAIN_DIR=/usr/share/bardinux-dev-tools
+
+DERIVATIVE_PACKAGES=$(ls /var/tmp/pbuilder/${NAME}/result/*.*{deb,dsc})
+DERIVATIVE_REPOSITORY=/var/pbuilder/archive/
+REPREPRO=/usr/bin/reprepro
+REPREPRO_CONF=${MAIN_DIR}/config/distributions
+LOG_FILE=/var/log/$0.log
+
+if egrep -q ^SignWith $DERIVATIVE_REPOSITORY/conf/distributions; then
+	SIGNKEY=--ask-passphrase
+fi
+
+OPTIONS="-Vb $DERIVATIVE_REPOSITORY --ignore=wrongdistribution $SIGNKEY"
+
+until [ -z $1 ]; do
+	case $1 in
+		--force)
+			FORCE=true
+			;;
+		--replace)
+			REPLACE=true
+			;;
+		--rsync)
+			RSYNC=true; shift
+			REMOTE_REPOSITORY=$1
+			;;
+		--help)
+			echo "Usage: $0 [--force] [--replace] [--rsync repository] [file.{dsc,udeb,deb}]"
+			exit
+			;;
+		*)
+			if [[ $1 =~ ^- ]]; then
+				echo "Wrong option: $1"
+				exit
+			fi
+			ARGS="$ARGS $1"
+			;;
+	esac
+	shift
+done
+
+if [ $FORCE ]; then
+	rm -rvf $DERIVATIVE_REPOSITORY/*
+fi
+
+if [ ! -e $DERIVATIVE_REPOSITORY/conf/distributions ]; then
+	mkdir -p $DERIVATIVE_REPOSITORY/conf
+	cp -v $REPREPRO_CONF $DERIVATIVE_REPOSITORY/conf
+fi
+
+# Ready...
+# Including packages
+for pkg in ${ARGS:-$DERIVATIVE_PACKAGES}; do
+	if [ $REPLACE ]; then
+		$REPREPRO $OPTIONS remove $CODENAME $(basename ${pkg/_*//})
+	fi
+	if [[ $pkg =~ \.dsc$ ]]; then
+		echo '# dsc #'
+		$REPREPRO $OPTIONS -S bardinux -P low includedsc $CODENAME $pkg | tee -a $LOG_FILE
+	else	
+		if [[ $pkg =~ \.udeb$ ]]; then
+			echo '# udeb #'
+			$REPREPRO $OPTIONS includeudeb $CODENAME $pkg | tee -a $LOG_FILE
+		else
+			echo '# deb #'
+			$REPREPRO $OPTIONS includedeb $CODENAME $pkg | tee -a $LOG_FILE
+		fi
+	fi
+done
+
+chmod 755 -R $DERIVATIVE_REPOSITORY
+
+
+if [ $RSYNC ]; then
+	echo "Rsyncing to ${REMOTE_REPOSITORY}..."
+	rsync -avx --delete ${DERIVATIVE_REPOSITORY} ${REMOTE_REPOSITORY}
+fi

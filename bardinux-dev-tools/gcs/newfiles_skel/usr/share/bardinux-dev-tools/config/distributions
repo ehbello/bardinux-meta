@@ -1,0 +1,9 @@
+Codename: lucid
+Suite: bardinux
+Components: main restricted universe multiverse
+UDebComponents: main restricted
+Architectures: amd64 i386 source
+Origin: Ubuntu
+Version: 2010
+Description: Repositorio de Bardinux 2010
+SignWith: C4673343
