@@ -9,12 +9,12 @@ DATE = $(shell date +"%b %d %T")
 .PHONY: all
 all: $(patsubst %/gcs,%.build,$(wildcard */gcs))
 
-%.build: %/svgz %/debian/changelog
+%.build: %/svgz %/gcs/changelog
 	$(info [$(DATE)] $(PKGNAME): starting build process...)
 	(cd $(PKGNAME); $(DEBTOOL))
 	touch $(PKGNAME).build
 
-%/debian/changelog: %/gcs/info
+%/gcs/changelog: %/gcs/info %/clean
 	$(info [$(DATE)] $(PKGNAME): building debian files...)
 	(cd $(PKGNAME); gcs_build -S)
 
@@ -24,19 +24,29 @@ all: $(patsubst %/gcs,%.build,$(wildcard */gcs))
 		-exec gzip '{}' \; \
 		-exec mv '{}.gz' '{}z' \;
 
-svg:
-	find -iname "*.svgz" \
+%/svg:
+	$(info [$(DATE)] $(PKGNAME): gunzipping SVGZ files...)
+	find $(PKGNAME) -iname "*.svgz" \
 		-exec mv '{}' '{}.gz' \; \
 		-exec gunzip '{}.gz' \; \
 		-exec rename 's/\.svgz$$/\.svg/' {} \;
 
+%/clean:
+	$(info [$(DATE)] $(PKGNAME): cleanning useless files...)
+	-find $(PKGNAME) -iname "*.gcs" -delete
+	-rm -rf $(PKGNAME)/debian
+
+%/realclean: %/svg
+	$(info [$(DATE)] $(PKGNAME): removing all output files...)
+	-rm -f $(PKGNAME)*.build
+	-rm -f $(PKGNAME)*.dsc
+	-rm -f $(PKGNAME)*.changes
+	-rm -f $(PKGNAME)*.tar.gz
+	-rm -f $(PKGNAME)*.deb
+
 .PHONY: clean
-clean: svg
-	-find -iname "*.gcs" -delete
-	-rm -rf */debian
-	-rm -f *.build *.dsc *.changes *.tar.gz *.deb
+clean: $(patsubst %/gcs,%/clean,$(wildcard */gcs))
 
 .PHONY: realclean
-realclean: clean
-	-rm -f */gcs/changelog
+realclean: $(patsubst %/gcs,%/realclean,$(wildcard */gcs)) clean
 
