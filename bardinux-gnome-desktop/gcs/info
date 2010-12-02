@@ -19,8 +19,8 @@ shortdesc: "The Bardinux desktop system (GNOME Version)."
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev1
+version: 1.0~dev2
 
 # Cambios en esta versión
 changes:
-    - Initial package
+    - Deleted mozilla dependences. It must be in Bardinux base metapackages.
