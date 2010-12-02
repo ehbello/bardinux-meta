@@ -19,8 +19,8 @@ shortdesc: "Metapackage to create a Bardinux Live distribution (GNOME Version)"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev1
+version: 1.0~dev2
 
 # Cambios en esta versión
 changes:
-    - Initial package
+    - Disabled ubiquity artwork for Bardinux until it works.
