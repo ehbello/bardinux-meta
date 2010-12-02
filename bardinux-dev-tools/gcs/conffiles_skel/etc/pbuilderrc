@@ -12,9 +12,10 @@ case ${TYPE} in
 		COMPONENTS="main restricted universe multiverse"
 		;;
 	*)
-		echo "Warning: Distribution type not defined."
+		TYPE="not defined."
 		;;
 esac
+echo "Distribution type: ${TYPE}"
 
 DEBBUILDOPTS="-I.bzr -I.svn -I.git"
 DEBOOTSTRAPOPT[0]='--variant=buildd'
@@ -35,17 +36,21 @@ BUILDRESULT=${BASEDIR}/pbuilder/${NAME}/result/
 #HOOKDIR=${BASEDIR}/pbuilder/hooks/
 HOOKDIR=/usr/share/bardinux-dev-tools/config/pbuilder-hooks/
 
-sudo mkdir -p $BASEPATH
+if [ ! -d ${BASEPATH} ]; then
+	sudo mkdir -p ${BASEPATH}
+fi
 
 PBUILDERSATISFYDEPENDSCMD="/usr/lib/pbuilder/pbuilder-satisfydepends-gdebi"
 PDEBUILD_PBUILDER="cowbuilder"
 
 # CCache setup
-sudo mkdir -p /var/cache/pbuilder/ccache
-sudo chown 1234 /var/cache/pbuilder/ccache
-
 export CCACHE_DIR="/var/cache/pbuilder/ccache"
 export PATH="/usr/lib/ccache:${PATH}"
 
-EXTRAPACKAGES=ccache
+if [ ! -d ${CACHE_DIR} ]; then
+	sudo mkdir -p ${CACHE_DIR}
+	sudo chown 1234 ${CACHE_DIR}
+fi
+
+EXTRAPACKAGES="ccache gdebi-core"
 BINDMOUNTS="${CCACHE_DIR}"

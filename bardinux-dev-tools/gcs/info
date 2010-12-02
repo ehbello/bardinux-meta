@@ -19,8 +19,10 @@ shortdesc: "useful tools for Bardinux developers"
 longdesc: " This is a collection of useful tools that Bardinux developers use to make their\n packaging work a lot easier."
 
 # Versión del paquete
-version: 1.0
+version: 1.0.1
 
 # Cambios en esta versión
 changes:
-    - Initial release.
+    - Added gdebi-core to EXTRAPACKAGES of pbuilder chroots.
+    - Added confirmation before force the update of derivative repository.
+    - Fixed some permissions aspects about making needed directories in pbuilder configuration.

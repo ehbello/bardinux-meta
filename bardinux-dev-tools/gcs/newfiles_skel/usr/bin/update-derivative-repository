@@ -7,11 +7,13 @@ NAME=${CODENAME}${ARCH:+-${ARCH}}
 
 MAIN_DIR=/usr/share/bardinux-dev-tools
 
-DERIVATIVE_PACKAGES=$(ls /var/tmp/pbuilder/${NAME}/result/*.*{deb,dsc})
+if [ -d /var/pbuilder/${NAME}/result ]; then
+	DERIVATIVE_PACKAGES=$(ls /var/pbuilder/${NAME}/result/*.*{deb,dsc})
+fi
 DERIVATIVE_REPOSITORY=/var/pbuilder/archive/
 REPREPRO=/usr/bin/reprepro
 REPREPRO_CONF=${MAIN_DIR}/config/distributions
-LOG_FILE=/var/log/$0.log
+LOG_FILE=/var/log/$(basename $0).log
 
 if egrep -q ^SignWith $DERIVATIVE_REPOSITORY/conf/distributions; then
 	SIGNKEY=--ask-passphrase
@@ -47,7 +49,11 @@ until [ -z $1 ]; do
 done
 
 if [ $FORCE ]; then
-	rm -rvf $DERIVATIVE_REPOSITORY/*
+	echo -n "Do you really want to delete the derivative repository directory? [y/N]"
+	read answer
+	if [ "${answer}" = 'y' ] || [ "${answer}" = 'Y' ]; then
+		rm -rvf $DERIVATIVE_REPOSITORY/*
+	fi
 fi
 
 if [ ! -e $DERIVATIVE_REPOSITORY/conf/distributions ]; then
@@ -76,7 +82,6 @@ for pkg in ${ARGS:-$DERIVATIVE_PACKAGES}; do
 done
 
 chmod 755 -R $DERIVATIVE_REPOSITORY
-
 
 if [ $RSYNC ]; then
 	echo "Rsyncing to ${REMOTE_REPOSITORY}..."
