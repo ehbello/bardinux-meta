@@ -1,10 +1,8 @@
 #sunbird
 bardinux-default-settings
 bardinux-desktop-base
-firefox
 openoffice.org-kde
 #smb4k
-thunderbird
 usb-creator-kde
 zim
 ## kubuntu-desktop
@@ -31,6 +29,7 @@ kdemultimedia-kio-plugins
 kdepasswd
 kde-window-manager
 kde-zeroconf
+kde-l10n-es
 kdm
 khelpcenter4
 klipper
@@ -129,7 +128,7 @@ kppp
 kubuntu-docs
 #kubuntu-firefox-installer
 #kubuntu-konqueror-shortcuts
-kubuntu-notification-helper
+#kubuntu-notification-helper
 kvkbd
 kwalletmanager
 laptop-detect
@@ -178,3 +177,4 @@ userconfig
 wodim
 #xcursor-themes
 xdg-utils
+virtuoso-nepomuk
