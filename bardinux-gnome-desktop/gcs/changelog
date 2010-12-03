@@ -1,3 +1,10 @@
+bardinux-gnome-desktop (1.0~dev2) lucid; urgency=low
+
+  * Deleted mozilla dependences. It must be in Bardinux base metapackages.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 02 Dec 2010 17:16:56 +0000
+
+
 bardinux-gnome-desktop (1.0~dev1) lucid; urgency=low
 
   * Initial package

@@ -1,3 +1,10 @@
+bardinux-live-base (1.0~dev3) lucid; urgency=low
+
+  * Fixed BUILD_SYSTEM variable of casper.conf to get casper to work correctly.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 11 Oct 2010 20:29:28 +0100
+
+
 bardinux-live-base (1.0~dev2) lucid; urgency=low
 
   * Added casper.conf to configure username and hostname of the system.

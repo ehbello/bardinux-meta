@@ -1,3 +1,10 @@
+bardinux-gnome-live (1.0~dev2) lucid; urgency=low
+
+  * Disabled ubiquity artwork for Bardinux until it works.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 02 Dec 2010 17:17:30 +0000
+
+
 bardinux-gnome-live (1.0~dev1) lucid; urgency=low
 
   * Initial package

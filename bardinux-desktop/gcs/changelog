@@ -1,3 +1,13 @@
+bardinux-desktop (1.0~dev3) lucid; urgency=low
+
+  * Delete mozilla dependences. It must be in Bardinux base metapackages.
+  * Added virtuoso for nepomuk to dependences.
+  * Deleted kubuntu-notification-helper from dependences.
+  * Added some Spanish translations for KDE.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 02 Dec 2010 17:10:34 +0000
+
+
 bardinux-desktop (1.0~dev2) lucid; urgency=low
 
   * Converted the most recommends to dependences.

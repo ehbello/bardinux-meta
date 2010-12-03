@@ -1,3 +1,10 @@
+bardinux-sources (1.0~dev4) lucid; urgency=low
+
+  * Avoid to pre-configure all packages with debconf before they are installed.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 02 Dec 2010 18:18:14 +0000
+
+
 bardinux-sources (1.0~dev3) lucid; urgency=low
 
   * Removed unused dependence of patch command.

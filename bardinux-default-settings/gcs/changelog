@@ -1,3 +1,17 @@
+bardinux-default-settings (1.0~dev10) lucid; urgency=low
+
+  * Disabled automont of external drives. It does not work correctly with not mounted partitions.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 02 Dec 2010 17:07:58 +0000
+
+
+bardinux-default-settings (1.0~dev9) lucid; urgency=low
+
+  * Bugfix the plasma-desktop script removing all activities of the desktop.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 11 Oct 2010 17:57:39 +0100
+
+
 bardinux-default-settings (1.0~dev8) lucid; urgency=low
 
   * Added defaultSuffix to metadata.desktop to get the default wallpaper to work.

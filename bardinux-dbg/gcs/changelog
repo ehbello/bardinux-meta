@@ -1,3 +1,10 @@
+bardinux-dbg (1.0~dev2) lucid; urgency=low
+
+  * Added GNU Debugger (gdb) to dependences.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 08 Oct 2010 18:55:31 +0100
+
+
 bardinux-dbg (1.0~dev1) lucid; urgency=low
 
   * Initial release.

@@ -1,3 +1,10 @@
+bardinux-desktop-base (1.0~dev2) lucid; urgency=low
+
+  * Added some mozilla dependences and dnie-support dependence.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 02 Dec 2010 17:10:06 +0000
+
+
 bardinux-desktop-base (1.0~dev1) lucid; urgency=low
 
   * Initial package
