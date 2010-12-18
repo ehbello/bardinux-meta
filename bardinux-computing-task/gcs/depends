@@ -9,6 +9,7 @@ bison
 bochs
 bochs-doc
 bochsbios
+build-essential
 byacc
 clisp
 ddd
@@ -35,7 +36,6 @@ gnuplot
 graphviz
 kdirstat
 kftpgrabber
-kubuntu-restricted-extras
 libexpect-perl
 libfltk1.1
 libfltk1.1-dev

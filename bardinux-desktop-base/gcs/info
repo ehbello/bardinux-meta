@@ -22,8 +22,9 @@ shortdesc: "The Bardinux base desktop system."
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev2
+version: 1.0~dev3
 
 # Cambios en esta versión
 changes:
-    - Added some mozilla dependences and dnie-support dependence.
+    - Added some mozplugger dependence to load documents directly in the browser.
+    - Added command-not-found dependence.

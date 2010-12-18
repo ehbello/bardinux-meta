@@ -19,8 +19,9 @@ shortdesc: "Metapaquete de Software para Informática."
 longdesc: "Paquetes para desarrollo de software, específicos \n para areas de conocimiento relacionadas con la informática. \n Contiene IDE's, compiladores, herramientas matemáticas, \n frameworks y librerias."
 
 # Versión del paquete
-version: 1.0~dev2
+version: 1.0~dev4
 
 # Cambios en esta versión
 changes:
-    - Added doxygen to dependences.
+    - Added build-essential utils dependence.
+    - Deleted unuseful kubuntu-restricted-extras dependence.

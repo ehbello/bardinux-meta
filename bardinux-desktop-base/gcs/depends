@@ -2,6 +2,7 @@ aspell-es
 bardinux-desktop
 bardinux-menu
 bardinux-minimal
+command-not-found
 dnie-support
 emesene
 firefox
@@ -11,6 +12,7 @@ language-pack-es-base
 language-pack-gnome-es
 language-pack-kde-es
 language-support-es
+mozplugger
 myspell-es
 nvidia-kernel-common
 openoffice.org

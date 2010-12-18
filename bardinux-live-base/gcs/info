@@ -19,8 +19,8 @@ shortdesc: "Metapackage to create an Bardinux distribution."
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev3
+version: 1.0~dev4
 
 # Cambios en esta versión
 changes:
-    - Fixed BUILD_SYSTEM variable of casper.conf to get casper to work correctly.
+    - Removed command-not-found unuseful in a live system.
