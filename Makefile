@@ -9,12 +9,12 @@ DATE = $(shell date +"%b %d %T")
 .PHONY: all
 all: $(patsubst %/gcs,%.build,$(wildcard */gcs))
 
-%.build: %/svgz %/gcs/changelog
+%.build: %/svgz %/debian/changelog
 	$(info [$(DATE)] $(PKGNAME): starting build process...)
 	(cd $(PKGNAME); $(DEBTOOL))
 	touch $(PKGNAME).build
 
-%/gcs/changelog: %/gcs/info %/clean
+%/debian/changelog: %/gcs/info %/clean
 	$(info [$(DATE)] $(PKGNAME): building debian files...)
 	(cd $(PKGNAME); gcs_build -S)
 
