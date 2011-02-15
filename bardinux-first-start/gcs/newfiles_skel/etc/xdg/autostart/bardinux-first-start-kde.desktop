@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Exec=/usr/share/bardinux-first-start/do-first-start kde
+Name=Gives info to the user about new software
+Name[es]=Muestra al usuario la posibilidad de instalar nuevo software
+Comment=Information about new software
+Comment[es]=Aviso de instalación de software
+NotShowIn=GNOME;XFCE;
+Terminal=false
+Type=Application

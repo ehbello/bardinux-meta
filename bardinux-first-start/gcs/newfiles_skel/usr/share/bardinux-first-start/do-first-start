@@ -4,32 +4,30 @@ TITLE="Primer inicio"
 MSGTEXT="<b>Bienvenido/a a Bardinux</b>
 <p>Bardinux no es sólo lo que contiene este disco. Todavía hay más.</p>
 ¿Desea ver una introducción a las posibilidades de Bardinux?"
-URL="file:///usr/share/doc/bardinux-first-start/HTML/index.html"
+URL="file:///usr/share/bardinux-first-start/HTML/index.html"
+APP="/usr/share/bardinux-first-start/application.ini"
 SUCCESS_FILE="$HOME/.first-start_success"
 
 [ -e $SUCCESS_FILE ] && exit 0
 
-case $1 in 
-    kde)
+case $1 in
+    kde|qt)
         if ! kdialog --title "$TITLE" --yesno "$MSGTEXT"; then
             exit 0
-        fi 
-        # --geometry 'bigsize': workaround for fullscreen
-        if konqueror --geometry 1900x1600 "$URL"; then
-            echo > $SUCCESS_FILE
-        fi 
-        ;; 
-    gtk)
+        fi
+        ;;
+    gnome|gtk)
         MSGTEXT=$(echo $MSGTEXT | sed 's|</\?p>|\\n\\n|g')
         if ! zenity --question --ok-label "Sí" --cancel-label "No" --text "$MSGTEXT"; then
             exit 0
-        fi 
-        if firefox "$URL"; then
-            echo > $SUCCESS_FILE
-        fi 
-        ;; 
-    *)  
-        echo "Usage: $0 [kde|gtk]"
+        fi
+        ;;
+    *)
+        echo "Usage: $0 <kde|qt|gnome|gtk>"
         exit 1
         ;; 
 esac
+
+if firefox -app "$APP"; then
+	echo > $SUCCESS_FILE
+fi
