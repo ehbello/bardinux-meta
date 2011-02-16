@@ -19,9 +19,10 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev2
+version: 1.0~dev3
 
 # Cambios en esta versión
 changes:
-    - Added metadata.desktop to define default desktop wallpaper in both profiles.
-    - Changed default ntp server of ntpdate to ntp.ccti.ull.es
+    - Added configuration to reduze Mozilla Firefox disk cache on clients.
+    - Choosed an alternative way to apply this profile on kde.
+    - Lockdown default wallpaper in guest mode.
