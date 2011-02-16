@@ -22,8 +22,8 @@ shortdesc: "Paquete de repositorios."
 longdesc: "Instala archivos fuente para permitir al gestor de paquetes instalar software desde los repositorios de Bardinux."
 
 # Versión del paquete
-version: 1.0~dev4
+version: 1.0~dev5
 
 # Cambios en esta versión
 changes:
-    - Avoid to pre-configure all packages with debconf before they are installed.
+    - Added more components to bardinux sources list.
