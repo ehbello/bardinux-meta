@@ -1,0 +1,7 @@
+[General]
+groups=Domain Admins,Domain Users,Domain Guests
+
+[Groups]
+Domain Admins=bardinux-default,default
+Domain Users=cajacanarias-default,sigaull-default,bardinux-default,default
+Domain Guests=guest-default,sigaull-default,bardinux-default,default
