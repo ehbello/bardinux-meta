@@ -22,8 +22,8 @@ shortdesc: "Paquete de versión."
 longdesc: "Contiene las configuraciones necesarias para determinar \n que Bardinux es la distribución instalada."
 
 # Versión del paquete
-version: 1.0~dev4
+version: 1.0~dev5
 
 # Cambios en esta versión
 changes:
-    - Changed lsb-release information again for compatibility reasons. \n We derive from Ubuntu and we must assume it ¬¬
+    - Changed version of Bardinux to 3.0 Beta2.
