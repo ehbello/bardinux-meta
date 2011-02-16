@@ -12,7 +12,7 @@ case ${TYPE} in
 		COMPONENTS="main restricted universe multiverse"
 		;;
 	*)
-		TYPE="not defined."
+		TYPE="Default"
 		;;
 esac
 echo "Distribution type: ${TYPE}"
@@ -37,7 +37,7 @@ BUILDRESULT=${BASEDIR}/pbuilder/${NAME}/result/
 HOOKDIR=/usr/share/bardinux-dev-tools/config/pbuilder-hooks/
 
 if [ ! -d ${BASEPATH} ]; then
-	sudo mkdir -p ${BASEPATH}
+	sudo mkdir -p ${BASEPATH} ${APTCACHE}
 fi
 
 PBUILDERSATISFYDEPENDSCMD="/usr/lib/pbuilder/pbuilder-satisfydepends-gdebi"
@@ -47,9 +47,9 @@ PDEBUILD_PBUILDER="cowbuilder"
 export CCACHE_DIR="/var/cache/pbuilder/ccache"
 export PATH="/usr/lib/ccache:${PATH}"
 
-if [ ! -d ${CACHE_DIR} ]; then
-	sudo mkdir -p ${CACHE_DIR}
-	sudo chown 1234 ${CACHE_DIR}
+if [ ! -d ${CCACHE_DIR} ]; then
+	sudo mkdir -p ${CCACHE_DIR}
+	sudo chown 1234 ${CCACHE_DIR}
 fi
 
 EXTRAPACKAGES="ccache gdebi-core"
