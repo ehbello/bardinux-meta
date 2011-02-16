@@ -19,8 +19,9 @@ shortdesc: "Default settings and artwork for the Bardinux desktop system (KDE Ve
 longdesc: "This package contains the default settings and used by Bardinux. It also\n includes artwork and Bardinux branding."
 
 # Versión del paquete
-version: 1.0~dev10
+version: 1.0~dev11
 
 # Cambios en esta versión
 changes:
-    - Disabled automont of external drives. It does not work correctly with not mounted partitions.
+    - Added Software Management to favorite list at kickoff menu.
+    - Added yakuake preferences to profile.
