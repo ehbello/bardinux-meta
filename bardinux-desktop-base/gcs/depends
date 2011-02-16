@@ -1,10 +1,11 @@
+apturl
 aspell-es
 bardinux-desktop
 bardinux-menu
 bardinux-minimal
 command-not-found
 dnie-support
-emesene
+emesene | amsn
 firefox
 gimp
 gimp-gutenprint
@@ -13,12 +14,13 @@ language-pack-gnome-es
 language-pack-kde-es
 language-support-es
 mozplugger
+icedtea6-plugin
 myspell-es
 nvidia-kernel-common
 openoffice.org
 openoffice.org-l10n-es
 plymouth-theme-bardinux-logo
-psi-plus
-psi-plus-plugins
+psi-plus | psi
+psi-plus-plugins | psi
 thunderbird
 thunderbird-locale-es-es

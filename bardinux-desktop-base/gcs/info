@@ -22,9 +22,9 @@ shortdesc: "The Bardinux base desktop system."
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev3
+version: 1.0~dev4
 
 # Cambios en esta versión
 changes:
-    - Added some mozplugger dependence to load documents directly in the browser.
-    - Added command-not-found dependence.
+    - Fixed some issues of dependencies.
+    - Added non KDE version of apturl and icedtea6-plugin to dependencies.
