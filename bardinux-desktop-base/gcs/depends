@@ -7,14 +7,14 @@ command-not-found
 dnie-support
 emesene | amsn
 firefox
-gimp
-gimp-gutenprint
+#gimp
+#gimp-gutenprint
+icedtea6-plugin
 language-pack-es-base
 language-pack-gnome-es
 language-pack-kde-es
 language-support-es
 mozplugger
-icedtea6-plugin
 myspell-es
 nvidia-kernel-common
 openoffice.org
