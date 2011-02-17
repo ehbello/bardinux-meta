@@ -1,3 +1,25 @@
+bardinux-default-settings (1.0~dev13) lucid; urgency=low
+
+  * Fixed syntax error at GRUB configuration file.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 17 Feb 2011 12:29:37 +0000
+
+
+bardinux-default-settings (1.0~dev12) lucid; urgency=low
+
+  * Limited the number of linux kernel entries at GRUB menu to 1 + recovery.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 17 Feb 2011 11:12:40 +0000
+
+
+bardinux-default-settings (1.0~dev11) lucid; urgency=low
+
+  * Added Software Management to favorite list at kickoff menu.
+  * Added yakuake preferences to profile.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 16 Feb 2011 21:43:26 +0000
+
+
 bardinux-default-settings (1.0~dev10) lucid; urgency=low
 
   * Disabled automont of external drives. It does not work correctly with not mounted partitions.
