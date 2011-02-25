@@ -31,12 +31,12 @@ all: $(patsubst %/gcs,%.build,$(wildcard */gcs))
 		-exec gunzip '{}.gz' \; \
 		-exec rename 's/\.svgz$$/\.svg/' {} \;
 
-%/clean:
+%/clean: %/svg
 	$(info [$(DATE)] $(PKGNAME): cleanning useless files...)
 	-find $(PKGNAME) -iname "*.gcs" -delete
 	-rm -rf $(PKGNAME)/debian
 
-%/realclean: %/svg
+%/realclean:
 	$(info [$(DATE)] $(PKGNAME): removing all output files...)
 	-rm -f $(PKGNAME)*.build
 	-rm -f $(PKGNAME)*.dsc
