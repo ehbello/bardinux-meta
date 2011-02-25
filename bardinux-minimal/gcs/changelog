@@ -1,3 +1,10 @@
+bardinux-minimal (1.0~dev3) lucid; urgency=low
+
+  * Changed vim by vim-tiny.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 17 Feb 2011 15:06:55 +0000
+
+
 bardinux-minimal (1.0~dev2) lucid; urgency=low
 
   * Initial package

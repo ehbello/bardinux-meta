@@ -1,3 +1,18 @@
+bardinux-first-start (1.0~dev3) lucid; urgency=low
+
+  * Rebuild!
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 17 Feb 2011 13:29:42 +0000
+
+
+bardinux-first-start (1.0~dev2) lucid; urgency=low
+
+  * Updated web content.
+  * New way to run the 'firststart' content.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 16 Feb 2011 21:46:32 +0000
+
+
 bardinux-first-start (1.0~dev1) lucid; urgency=low
 
   * Initial package

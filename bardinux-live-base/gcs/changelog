@@ -1,3 +1,10 @@
+bardinux-live-base (1.0~dev4) lucid; urgency=low
+
+  * Removed command-not-found unuseful in a live system.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Sat, 18 Dec 2010 13:58:47 +0000
+
+
 bardinux-live-base (1.0~dev3) lucid; urgency=low
 
   * Fixed BUILD_SYSTEM variable of casper.conf to get casper to work correctly.

@@ -1,3 +1,26 @@
+bardinux-desktop-base (1.0~dev5) lucid; urgency=low
+
+  * Removed GiMP of Bardinux dependences.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 17 Feb 2011 14:59:13 +0000
+
+
+bardinux-desktop-base (1.0~dev4) lucid; urgency=low
+
+  * Fixed some issues of dependencies.
+  * Added non KDE version of apturl and icedtea6-plugin to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 16 Feb 2011 21:44:05 +0000
+
+
+bardinux-desktop-base (1.0~dev3) lucid; urgency=low
+
+  * Added some mozplugger dependence to load documents directly in the browser.
+  * Added command-not-found dependence.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Sat, 18 Dec 2010 13:58:19 +0000
+
+
 bardinux-desktop-base (1.0~dev2) lucid; urgency=low
 
   * Added some mozilla dependences and dnie-support dependence.

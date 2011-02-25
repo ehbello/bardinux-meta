@@ -1,3 +1,17 @@
+bardinux-default-settings (1.0~dev15) lucid; urgency=low
+
+  * /etc/kde4rc must be configfile and not newfile.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 17 Feb 2011 15:39:20 +0000
+
+
+bardinux-default-settings (1.0~dev14) lucid; urgency=low
+
+  * Revert hook of bardinux-default-settings profile removing /etc/kde4rc
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 17 Feb 2011 15:31:29 +0000
+
+
 bardinux-default-settings (1.0~dev13) lucid; urgency=low
 
   * Fixed syntax error at GRUB configuration file.

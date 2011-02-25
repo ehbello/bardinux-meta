@@ -1,3 +1,10 @@
+bardinux-sources (1.0~dev5) lucid; urgency=low
+
+  * Added more components to bardinux sources list.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 16 Feb 2011 21:48:07 +0000
+
+
 bardinux-sources (1.0~dev4) lucid; urgency=low
 
   * Avoid to pre-configure all packages with debconf before they are installed.

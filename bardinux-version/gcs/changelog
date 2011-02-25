@@ -1,3 +1,10 @@
+bardinux-version (1.0~dev5) lucid; urgency=low
+
+  * Changed version of Bardinux to 3.0 Beta2.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 16 Feb 2011 21:48:34 +0000
+
+
 bardinux-version (1.0~dev4) lucid; urgency=low
 
   * Changed lsb-release information again for compatibility reasons. \n We derive from Ubuntu and we must assume it ¬¬

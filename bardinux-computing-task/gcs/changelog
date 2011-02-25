@@ -1,3 +1,11 @@
+bardinux-computing-task (1.0~dev4) lucid; urgency=low
+
+  * Added build-essential utils dependence.
+  * Deleted unuseful kubuntu-restricted-extras dependence.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Sat, 18 Dec 2010 13:57:26 +0000
+
+
 bardinux-computing-task (1.0~dev2) lucid; urgency=low
 
   * Added doxygen to dependences.
