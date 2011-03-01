@@ -19,8 +19,8 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev3
+version: 1.0~dev4
 
 # Cambios en esta versión
 changes:
-    - Choosed an alternative way to apply this profile on kde.
+    - Changed again the way to load kde profile using Bardinux configuration\n  for multiple profiles.

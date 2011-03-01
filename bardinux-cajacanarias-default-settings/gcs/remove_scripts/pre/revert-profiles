@@ -1,3 +1,2 @@
-/usr/bin/link-kde-profile "Domain Admins" bardinux-default,kubuntu-default
 /usr/bin/link-kde-profile "Domain Users" bardinux-sigaull-default,bardinux-default,kubuntu-default
 /usr/bin/link-kde-profile "Domain Guests" bardinux-sigaull-guestuser,bardinux-default,kubuntu-default
