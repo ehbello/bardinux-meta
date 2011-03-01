@@ -22,8 +22,8 @@ shortdesc: "The Bardinux base desktop system."
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev5
+version: 1.0~dev6
 
 # Cambios en esta versión
 changes:
-    - Removed GiMP of Bardinux dependences.
+    - Added bardinux-multimedia-task as Bardinux dependence.
