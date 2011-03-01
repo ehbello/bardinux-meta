@@ -1,7 +1,7 @@
 faad
 ffmpeg
 #flashplugin-installer
-swfdec-mozilla
+mozilla-plugin-gnash
 moonlight-plugin-mozilla
 gstreamer0.10-ffmpeg
 gstreamer0.10-plugins-ugly
