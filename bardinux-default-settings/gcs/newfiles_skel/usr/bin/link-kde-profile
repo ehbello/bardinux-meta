@@ -1,0 +1,24 @@
+#!/bin/sh
+set -ex
+
+MAP=/etc/kde-user-profile
+
+clean() {
+	echo $@ | tr "," "\n" | sort -u | tr "\n" "," | sed 's/^,\|,$//g'
+}
+
+GROUP=$1; shift
+PROFS=$(clean $@)
+
+OLD_GROUPS=$(kreadconfig --file ${MAP} --group General --key groups)
+NEW_GROUPS=${OLD_GROUPS},${GROUP}
+
+if [ ${PROFS} ]; then
+	kwriteconfig --file ${MAP} --group Groups --key "${GROUP}" "${PROFS}"
+else
+	NEW_GROUPS=$(echo $NEW_GROUPS | tr "," "\n" | grep -v "^${GROUP}$" | tr "\n" ",")
+	sed "/^${GROUP}=/d" -i ${MAP}
+fi
+
+NEW_GROUPS=$(clean ${NEW_GROUPS})
+kwriteconfig --file ${MAP} --group General --key groups "${NEW_GROUPS}"
