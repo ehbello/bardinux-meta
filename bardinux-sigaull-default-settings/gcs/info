@@ -19,10 +19,8 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev3
+version: 1.0~dev4
 
 # Cambios en esta versión
 changes:
-    - Added configuration to reduze Mozilla Firefox disk cache on clients.
-    - Choosed an alternative way to apply this profile on kde.
-    - Lockdown default wallpaper in guest mode.
+    - Load sigaull profiles using new hooks provided by bardinux-default-settings\n  package
