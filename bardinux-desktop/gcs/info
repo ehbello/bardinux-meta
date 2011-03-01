@@ -19,8 +19,8 @@ shortdesc: "Bardinux desktop system (KDE Version)"
 longdesc: "This package depends on all of the packages in the Bardinux desktop system.\n Installing this package will include the default Bardinux KDE installation.\n It is safe to remove this package if some of the desktop system packages are\n not desired."
 
 # Versión del paquete
-version: 1.0~dev6
+version: 1.0~dev7
 
 # Cambios en esta versión
 changes:
-    - Removed main dependencies to lighten the default installation and live cd.
+    - Added kinfocenter to dependences.
