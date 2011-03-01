@@ -13,9 +13,9 @@ priority: optional
 section: metapackages
 
 # Desktop menu entry (man menufile)
-menu-needs="X11"
-menu-section="Applications"
-menu-command="/usr/bin/firefox -app /usr/share/bardinux-first-start/application.ini"
+menu-needs: X11
+menu-section: Help
+menu-command: /usr/bin/firefox -app /usr/share/bardinux-first-start/application.ini
 
 # Descripción corta
 shortdesc: "Bardinux First Start dialog and webpage"
@@ -24,9 +24,8 @@ shortdesc: "Bardinux First Start dialog and webpage"
 longdesc: "This package contains the application and webpage that is showed on the first \n  Bardinux start."
 
 # Versión del paquete
-version: 1.0~dev2
+version: 1.0~dev3
 
 # Cambios en esta versión
 changes:
-    - Updated web content.
-    - New way to run the 'firststart' content.
+    - Rebuild!
