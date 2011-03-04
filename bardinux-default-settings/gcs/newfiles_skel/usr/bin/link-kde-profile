@@ -8,7 +8,7 @@ clean() {
 }
 
 GROUP=$1; shift
-PROFS=$(clean $@)
+PROFS=$(echo $@ | sed 's/ +/,/g')
 
 OLD_GROUPS=$(kreadconfig --file ${MAP} --group General --key groups)
 NEW_GROUPS=${OLD_GROUPS},${GROUP}
