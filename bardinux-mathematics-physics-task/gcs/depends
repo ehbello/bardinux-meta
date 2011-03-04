@@ -23,7 +23,7 @@ kile
 libatlas3gf-base
 maxima
 mysql-common
-octave
+octave3.0
 oregano
 p2c
 perl

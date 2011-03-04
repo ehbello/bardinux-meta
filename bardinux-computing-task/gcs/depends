@@ -48,7 +48,7 @@ make
 mpg321
 nasm
 nedit
-octave
+octave3.0
 perl
 perl-tk
 pvm
