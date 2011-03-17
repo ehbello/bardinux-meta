@@ -27,3 +27,4 @@ version: 1.0~dev6
 # Cambios en esta versión
 changes:
     - Added bardinux-multimedia-task as Bardinux dependence.
+    - Added alternatives to firefox.

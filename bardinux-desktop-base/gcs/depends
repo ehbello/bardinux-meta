@@ -9,7 +9,7 @@ bardinux-multimedia-task
 command-not-found
 dnie-support
 emesene | amsn
-firefox
+firefox | chromium-browser | rekonq
 icedtea6-plugin
 language-pack-es-base
 language-pack-gnome-es
