@@ -34,7 +34,7 @@ BASETGZ=${BASEDIR}/pbuilder/${NAME}-base.tgz
 BUILDPLACE=${BASEDIR}/pbuilder/build
 BUILDRESULT=${BASEDIR}/pbuilder/${NAME}/result/
 #HOOKDIR=${BASEDIR}/pbuilder/hooks/
-HOOKDIR=/usr/share/bardinux-dev-tools/config/pbuilder-hooks/
+HOOKDIR=/usr/share/bardinux-dev-tools/pbuilder-hooks/
 
 if [ ! -d ${BASEPATH} ]; then
 	sudo mkdir -p ${BASEPATH} ${APTCACHE}

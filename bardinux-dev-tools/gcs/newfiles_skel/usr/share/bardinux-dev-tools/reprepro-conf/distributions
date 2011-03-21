@@ -1,0 +1,79 @@
+Origin: Ubuntu
+Label: Ubuntu
+Suite: dapper
+Codename: dapper
+Architectures: i386 amd64 source
+Components: main
+Tracking: all
+Description: Bardinux
+SignWith: C4673343
+
+Origin: Ubuntu
+Label: Ubuntu
+Suite: feisty
+Codename: feisty
+Architectures: i386 amd64 source
+Components: main
+Tracking: all
+Description: Bardinux v2.0
+SignWith: C4673343
+
+Origin: Ubuntu
+Label: Ubuntu
+Suite: gutsy
+Codename: gutsy
+Architectures: i386 amd64 source
+Components: main
+Tracking: all
+Description: Bardinux v2.5
+SignWith: C4673343
+
+Origin: Ubuntu
+Label: Ubuntu
+Suite: hardy
+Codename: hardy
+Architectures: i386 amd64 source
+Components: main
+Tracking: all
+Description: Bardinux v2.6
+SignWith: C4673343
+
+Origin: Ubuntu
+Label: Ubuntu
+Suite: hardy
+Codename: hardy-updates
+Architectures: i386 amd64 source
+Components: main
+Tracking: all
+Description: Bardinux v2.6 Updates
+SignWith: C4673343
+
+Codename: lucid
+Suite: bardinux
+Components: main restricted universe multiverse
+UDebComponents: main restricted
+Architectures: amd64 i386 source
+Origin: Ubuntu
+Version: 3.0
+Description: Repositorio de Bardinux 3.0
+SignWith: C4673343
+
+Codename: maverick
+Suite: bardinux
+Components: main restricted universe multiverse
+UDebComponents: main restricted
+Architectures: amd64 i386 source
+Origin: Ubuntu
+Version: 3.1
+Description: Repositorio de Bardinux 3.1
+SignWith: C4673343
+
+Codename: natty
+Suite: bardinux
+Components: main restricted universe multiverse
+UDebComponents: main restricted
+Architectures: amd64 i386 source
+Origin: Ubuntu
+Version: 3.2
+Description: Repositorio de Bardinux 3.2
+SignWith: C4673343
