@@ -1,6 +1,3 @@
 [Directories]
 profileDirsPrefix=/etc/kde-profiles/
 userProfileMapFile=/etc/kde-user-profile
-
-[Directories-default]
-prefixes=/etc/kde-profiles/bardinux-default/
