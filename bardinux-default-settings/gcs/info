@@ -26,3 +26,4 @@ changes:
     - Runs update-grub after install forcing to apply grub configuration.
     - Changed the hook to load KDE profiles. Now supports multiple profiles.
     - Added a workaround for NetworkManager problems (LP: #553994)
+    - Added configuration to get better flash performance.
