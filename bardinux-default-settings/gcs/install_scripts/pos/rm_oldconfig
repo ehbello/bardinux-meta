@@ -1,2 +1,0 @@
-# Delete garbage of old development versions of this package
-rm -f /etc/X11/Xsession.d/90bardinux
