@@ -22,8 +22,8 @@ shortdesc: "The unidistro base system."
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev3
+version: 1.0~dev4
 
 # Cambios en esta versión
 changes:
-    - Changed vim by vim-tiny.
+    - Changed again vim-tiny by vim.
