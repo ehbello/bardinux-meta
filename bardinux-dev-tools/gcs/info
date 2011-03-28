@@ -24,3 +24,4 @@ version: 1.0.3
 # Cambios en esta versión
 changes:
     - New version of update-repo script with some improvements.
+    - Changed pbuild-satisfydepends command to classic. Now '--use-pbuild-internal' works.

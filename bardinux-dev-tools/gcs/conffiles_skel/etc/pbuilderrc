@@ -40,7 +40,7 @@ if [ ! -d ${BASEPATH} ]; then
 	sudo mkdir -p ${BASEPATH} ${APTCACHE}
 fi
 
-PBUILDERSATISFYDEPENDSCMD="/usr/lib/pbuilder/pbuilder-satisfydepends-gdebi"
+PBUILDERSATISFYDEPENDSCMD="/usr/lib/pbuilder/pbuilder-satisfydepends-classic"
 PDEBUILD_PBUILDER="cowbuilder"
 
 # CCache setup
@@ -52,5 +52,5 @@ if [ ! -d ${CCACHE_DIR} ]; then
 	sudo chown 1234 ${CCACHE_DIR}
 fi
 
-EXTRAPACKAGES="ccache gdebi-core"
+EXTRAPACKAGES="ccache"
 BINDMOUNTS="${CCACHE_DIR}"
