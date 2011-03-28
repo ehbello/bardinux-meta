@@ -1,3 +1,10 @@
+bardinux-computing-task (1.0~dev5) lucid; urgency=low
+
+  * Replaced octave virtual dependence to avoid unresolved dependences.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 04 Mar 2011 12:55:56 +0000
+
+
 bardinux-computing-task (1.0~dev4) lucid; urgency=low
 
   * Added build-essential utils dependence.

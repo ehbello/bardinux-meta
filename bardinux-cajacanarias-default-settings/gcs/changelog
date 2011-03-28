@@ -1,3 +1,10 @@
+bardinux-cajacanarias-default-settings (1.0~dev4) lucid; urgency=low
+
+  * Changed again the way to load kde profile using Bardinux configuration\n  for multiple profiles.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 01 Mar 2011 18:47:40 +0000
+
+
 bardinux-cajacanarias-default-settings (1.0~dev3) lucid; urgency=low
 
   * Choosed an alternative way to apply this profile on kde.

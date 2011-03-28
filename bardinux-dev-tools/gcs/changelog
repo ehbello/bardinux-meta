@@ -1,3 +1,10 @@
+bardinux-dev-tools (1.0.3) lucid; urgency=low
+
+  * New version of update-repo script with some improvements.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 21 Mar 2011 18:03:35 +0000
+
+
 bardinux-dev-tools (1.0.2) lucid; urgency=low
 
   * Bugfixed pbuilder scripts when is used from scratch.

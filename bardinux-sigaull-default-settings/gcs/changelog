@@ -1,3 +1,10 @@
+bardinux-sigaull-default-settings (1.0~dev4) lucid; urgency=low
+
+  * Load sigaull profiles using new hooks provided by bardinux-default-settings\n  package
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 01 Mar 2011 18:51:50 +0000
+
+
 bardinux-sigaull-default-settings (1.0~dev3) lucid; urgency=low
 
   * Added configuration to reduze Mozilla Firefox disk cache on clients.

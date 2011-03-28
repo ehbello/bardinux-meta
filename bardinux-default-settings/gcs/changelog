@@ -1,3 +1,12 @@
+bardinux-default-settings (1.0~dev16) lucid; urgency=low
+
+  * Runs update-grub after install forcing to apply grub configuration.
+  * Changed the hook to load KDE profiles. Now supports multiple profiles.
+  * {'Added a workaround for NetworkManager problems (LP': None}
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 01 Mar 2011 18:48:31 +0000
+
+
 bardinux-default-settings (1.0~dev15) lucid; urgency=low
 
   * /etc/kde4rc must be configfile and not newfile.

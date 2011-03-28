@@ -1,3 +1,10 @@
+bardinux-sigaull-desktop (1.0~dev5) lucid; urgency=low
+
+  * Conflicts with bardinux-first-start. This package is not useful for clasrooms.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 22 Mar 2011 17:51:56 +0000
+
+
 bardinux-sigaull-desktop (1.0~dev4) lucid; urgency=low
 
   * Fixed wrong name of Virtualbox dkms module dependence.

@@ -1,3 +1,10 @@
+bardinux-scientific-task (1.0~dev2) lucid; urgency=low
+
+  * Replaced octave virtual dependence to avoid unresolved dependences.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 04 Mar 2011 12:57:09 +0000
+
+
 bardinux-scientific-task (1.0~dev1) lucid; urgency=low
 
   * Initial package
