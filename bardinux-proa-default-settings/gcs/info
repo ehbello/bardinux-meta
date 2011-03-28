@@ -24,3 +24,4 @@ version: 1.0~dev2
 # Cambios en esta versión
 changes:
     - Added metadata.desktop to define default desktop wallpaper.
+    - Changed again the way to load kde profiles using Bardinux configuration\n  for multiple profiles. userProfileMapFile does not work!

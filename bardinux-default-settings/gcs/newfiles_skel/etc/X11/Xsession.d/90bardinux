@@ -1,0 +1,5 @@
+# This file is sourced by Xsession(5), not executed.
+
+KDEDIRS="/usr/share/kubuntu-default-settings/kde-profile/default/:$KDEDIRS"
+KDEDIRS="/usr/share/bardinux-default-settings/kde-profile/default/:$KDEDIRS"
+export KDEDIRS

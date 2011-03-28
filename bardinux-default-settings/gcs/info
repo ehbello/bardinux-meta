@@ -24,6 +24,6 @@ version: 1.0~dev16
 # Cambios en esta versión
 changes:
     - Runs update-grub after install forcing to apply grub configuration.
-    - Changed the hook to load KDE profiles. Now supports multiple profiles.
     - Added a workaround for NetworkManager problems (LP: #553994)
     - Added configuration to get better flash performance.
+    - Changed again the way to load kde profiles using Bardinux configuration\n  for multiple profiles. userProfileMapFile does not work!

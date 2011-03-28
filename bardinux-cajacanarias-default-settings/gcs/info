@@ -23,4 +23,4 @@ version: 1.0~dev4
 
 # Cambios en esta versión
 changes:
-    - Changed again the way to load kde profile using Bardinux configuration\n  for multiple profiles.
+    - Changed again the way to load kde profiles using Bardinux configuration\n  for multiple profiles. userProfileMapFile does not work!
