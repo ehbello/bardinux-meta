@@ -19,8 +19,8 @@ shortdesc: "Firefox bookmarks for Bardinux related services."
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev1
+version: 1.0~dev2
 
 # Cambios en esta versión
 changes:
-    - Initial release
+    - Customized the content of the bookmarks file.
