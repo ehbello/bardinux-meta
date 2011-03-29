@@ -22,9 +22,8 @@ shortdesc: "The Bardinux base desktop system."
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev6
+version: 1.0~dev7
 
 # Cambios en esta versión
 changes:
-    - Added bardinux-multimedia-task as Bardinux dependence.
-    - Added alternatives to firefox.
+    - Changed apturl by the common version apturl-common

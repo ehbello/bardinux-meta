@@ -24,8 +24,9 @@ shortdesc: "Bardinux First Start dialog and webpage"
 longdesc: "This package contains the application and webpage that is showed on the first \n  Bardinux start."
 
 # Versión del paquete
-version: 1.0~dev3
+version: 1.0~dev4
 
 # Cambios en esta versión
 changes:
-    - Rebuild!
+    - Added equivalences to apturl dependency.
+    - Added an option to force the display of first-start pop-up.
