@@ -30,3 +30,5 @@ version: 1.0~dev4
 changes:
     - Added equivalences to apturl dependency.
     - Added an option to force the display of first-start pop-up.
+    - Changed NAME and VENDOR of bardinux-first-start application for xulrunner. 
+    - Changed do-first-start to don't use .first-start_success file.

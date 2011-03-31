@@ -6,7 +6,7 @@ MSGTEXT="<b>Bienvenido/a a Bardinux</b>
 ¿Desea ver una introducción a las posibilidades de Bardinux?"
 URL="file:///usr/share/bardinux-first-start/HTML/index.html"
 APP="/usr/share/bardinux-first-start/application.ini"
-SUCCESS_FILE="$HOME/.first-start_success"
+SUCCESS_FILE="$HOME/.oslull/bardinux-first-start"
 
 [ -e $SUCCESS_FILE ] && [ "$2" != "--force" ] && exit 0
 
@@ -29,5 +29,5 @@ case $1 in
 esac
 
 if firefox -app "$APP"; then
-	echo > $SUCCESS_FILE
+	touch $SUCCESS_FILE
 fi
