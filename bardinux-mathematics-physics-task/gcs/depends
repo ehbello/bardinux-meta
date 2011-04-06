@@ -20,6 +20,7 @@ gpc
 grace
 gv
 kile
+lazarus
 libatlas3gf-base
 maxima
 mysql-common
@@ -36,4 +37,5 @@ scrollkeeper
 texlive
 tth
 yacas
+yakuake | guake
 yale

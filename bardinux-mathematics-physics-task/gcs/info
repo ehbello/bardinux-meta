@@ -19,8 +19,8 @@ shortdesc: "Metapaquete de Software para Matemáticas, Física o Astrofísica."
 longdesc: "Recopila paquetes para desarrollo de software, específicos \n para áreas de conocimiento relacionadas con las Matemáticas, \n la Física y la Astrofísica. Contiene herramientas para calculos \n matemáticos, herramientas para la representación de gráficos, \n compiladores para lenguajes de programación de alto nivel para \n cálculo científico, así como programas de diseño y simulación \n de circuitos electrónicos."
 
 # Versión del paquete
-version: 1.0~dev2
+version: 1.0~dev3
 
 # Cambios en esta versión
 changes:
-    - Replaced octave virtual dependence to avoid unresolved dependences.
+    - Added Lazarus IDE, yakuake and guake to dependencies.
