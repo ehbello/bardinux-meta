@@ -1,0 +1,26 @@
+# YAML 1.1
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: firefox-kde-integration
+
+# Autor
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: misc
+
+# Descripción corta
+shortdesc: "Customize the Firefox browser to integrate with KDE desktop."
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "This package adds preferences and components to Firefox browser\n  that allows to use KDE features and eases the navigation using KDE desktop."
+
+# Versión del paquete
+version: 1.0~dev1
+
+# Cambios en esta versión
+changes:
+    - Initial release.

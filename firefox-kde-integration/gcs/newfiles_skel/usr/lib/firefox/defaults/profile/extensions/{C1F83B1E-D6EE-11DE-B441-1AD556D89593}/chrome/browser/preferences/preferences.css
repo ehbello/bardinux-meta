@@ -1,0 +1,243 @@
+/*
+# -*- Mode: Java; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
+# ***** BEGIN LICENSE BLOCK *****
+# Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#
+# The contents of this file are subject to the Mozilla Public License Version
+# 1.1 (the "License"); you may not use this file except in compliance with
+# the License. You may obtain a copy of the License at
+# http://www.mozilla.org/MPL/
+#
+# Software distributed under the License is distributed on an "AS IS" basis,
+# WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+# for the specific language governing rights and limitations under the
+# License.
+#
+# The Original Code is the Firefox Preferences System.
+#
+# The Initial Developer of the Original Code is
+# Ben Goodger.
+# Portions created by the Initial Developer are Copyright (C) 2005
+# the Initial Developer. All Rights Reserved.
+#
+# Contributor(s):
+#   Ben Goodger <ben@mozilla.org>
+#
+# Alternatively, the contents of this file may be used under the terms of
+# either the GNU General Public License Version 2 or later (the "GPL"), or
+# the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+# in which case the provisions of the GPL or the LGPL are applicable instead
+# of those above. If you wish to allow use of your version of this file only
+# under the terms of either the GPL or the LGPL, and not to allow others to
+# use your version of this file under the terms of the MPL, indicate your
+# decision by deleting the provisions above and replace them with the notice
+# and other provisions required by the GPL or the LGPL. If you do not delete
+# the provisions above, a recipient may use your version of this file under
+# the terms of any one of the MPL, the GPL or the LGPL.
+#
+# ***** END LICENSE BLOCK *****
+*/
+
+
+#browserHomePage {
+padding:0;
+padding-right:5px;
+border: 3px solid !important;
+-moz-border-radius: 4px;
+background-color:#ffffff;
+-moz-border-top-colors:#acacab #dcdcdc #fcfcfc !important;
+-moz-border-bottom-colors:#c9c8c6 transparent transparent !important;
+-moz-border-left-colors:#b2b1b0 #fafafa transparent !important;
+-moz-border-right-colors:#b3b2b1 #fafafa transparent !important;
+}
+
+#browserHomePage:hover {
+-moz-border-top-colors:#79b7fc #aac9ec #e8f2fd !important;
+-moz-border-bottom-colors:#7bb8fd #bddcff #eaf4ff !important;
+-moz-border-left-colors:#7bb9fd #bad9fc #eaf4ff !important;
+-moz-border-right-colors:#7cb9fe #bad9fc #eaf4ff !important;
+}
+
+#browserHomePage[focused="true"] {
+-moz-border-top-colors:#3076c6 #85a8d1 #dde7f5 !important;
+-moz-border-bottom-colors:#3278c7 #98bbe4 #dfe9f7 !important;
+-moz-border-left-colors:#3278c7 #95b8e1 #dfe9f7 !important;
+-moz-border-right-colors:#3379c8 #95b8e1 #dfe9f7 !important;
+}
+
+
+/* Global Styles */
+/*#BrowserPreferences {
+background-color:#E4E3E2 !important;
+}*/
+
+#BrowserPreferences prefwindow {
+  padding: 0px;
+}
+
+/* Global Styles */
+#BrowserPreferences radio[pane] {
+list-style-image: url("chrome://browser/skin/preferences/Options.png"); 
+padding: 5px 8px 1px 8px !important;
+margin-right:0px !important;
+border:2px solid transparent;
+font-weight:bold;
+}
+
+#BrowserPreferences radio[pane]:hover {
+/* background: Transparent url("chrome://browser/skin/preferences/hover.png") center center !important; */
+background: -moz-linear-gradient(top, #deeefe, #ccdae7);
+color: #000000;
+border:2px solid;
+-moz-border-top-colors:#cce1f6 #e7f3fe;
+-moz-border-bottom-colors:#cadef2 #e3eef8;
+-moz-border-right-colors:#cadff3 #e3effa;
+-moz-border-left-colors:#cadff3 #e3eff9;
+-moz-border-radius:2px;
+}
+
+#BrowserPreferences radio[pane][selected="true"] {
+/* background: Transparent url("chrome://browser/skin/preferences/select.png") center center !important; */
+background: -moz-linear-gradient(top, #68b4fd, #5190cf);
+color: #ffffff;
+border:2px solid;
+-moz-border-top-colors:#418bd4 #89c5fe;
+-moz-border-bottom-colors:#418bd4 #71a8df;
+-moz-border-right-colors:#418bd4 #77b0e7;
+-moz-border-left-colors:#418bd4 #77afe6;
+-moz-border-radius:2px;
+}
+
+
+.paneSelector {
+-moz-box-pack: start;
+-moz-appearance: none;
+margin:10px 10px 3px 10px !important; 
+border: 2px solid !important;
+-moz-border-radius: 5px;
+-moz-border-top-colors:#969595 #c1c0bf;
+-moz-border-bottom-colors:#d6d5d4 #e0dfde;
+-moz-border-left-colors:#bbbab9 #dcdbda;
+-moz-border-right-colors:#bcbbba #dcdbda;
+padding:0 !important;
+background-color:#ffffff;
+}
+
+.paneSelector:hover {
+-moz-border-top-colors:#78B6FB #A6C0DD;
+-moz-border-bottom-colors:#7AB7FC #ADC7E2;
+-moz-border-left-colors:#7AB8FC #ABC4E0;
+-moz-border-right-colors:#7AB7FC #ABC4E0;
+}
+.paneSelector:focus {
+-moz-border-top-colors:#2f75c5 #789bc3;
+-moz-border-bottom-colors:#3278c7 #88abd3;
+-moz-border-left-colors:#3177c6 #86a8d1;
+-moz-border-right-colors:#3278c7 #86a8d1;
+}
+
+
+radio[pane=paneMain] 		{-moz-image-region:rect(0px,32px,32px,0px)}
+radio[pane=paneTabs] 		{-moz-image-region:rect(0px,64px,32px,32px);}
+radio[pane=paneContent] 	{-moz-image-region:rect(0px,96px,32px,64px)}
+radio[pane=paneApplications] 	{-moz-image-region:rect(0px,128px,32px,96px)}
+radio[pane=panePrivacy] 	{-moz-image-region:rect(0px,160px,32px,128px)}
+radio[pane=paneSecurity] 	{-moz-image-region:rect(0px,192px,32px,160px);}
+radio[pane=paneAdvanced] 	{-moz-image-region:rect(0px,224px,32px,192px)}
+
+/* Applications Pane */
+#BrowserPreferences[animated="true"] #handlersView {
+height: 25em;
+}
+
+#BrowserPreferences[animated="false"] #handlersView {
+-moz-box-flex: 1;
+}
+
+/* Privacy Pane */
+
+/* styles for the link elements copied from .text-link in global.css */
+.inline-link {
+color: #0057ae !important;
+  text-decoration: underline;
+}
+
+.inline-link:not(:focus) {
+  outline: 1px dotted transparent;
+}
+
+.inline-link:focus {
+  outline: 1px dashed #000000;
+}
+
+/* Modeless Window Dialogs */
+.windowDialog,
+.windowDialog prefpane {
+  padding: 0px;
+}
+
+.contentPane {
+  margin: 9px 8px 5px 8px;
+}
+
+.actionButtons {
+  margin: 0px 3px 6px 3px !important;
+}
+
+/* Cookies Manager */
+#cookiesChildren::-moz-tree-image(domainCol) {
+  width: 16px;
+  height: 16px;
+  margin: 0px 2px;
+  list-style-image: url("chrome://global/skin/icons/folder-item.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+#cookiesChildren::-moz-tree-image(domainCol, container) {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+#cookiesChildren::-moz-tree-image(domainCol, container, open) {
+  -moz-image-region: rect(16px, 32px, 32px, 16px);
+}
+
+#cookieInfoBox {
+margin:5px !important;  
+border: 2px solid !important;
+-moz-border-radius: 5px;
+-moz-border-top-colors:#969595 #c1c0bf !important;
+-moz-border-bottom-colors:#d6d5d4 #e0dfde !important;
+-moz-border-left-colors:#bbbab9 #dcdbda !important;
+-moz-border-right-colors:#bcbbba #dcdbda !important;
+padding: 5px;
+}
+
+/* Advanced Pane */
+
+/* Adding padding-bottom prevents the bottom of the tabpanel from being cutoff
+   when browser.preferences.animateFadeIn = true */
+#advancedPrefs {
+  padding-bottom: 8px;
+}
+
+/* bottom-most box containing a groupbox in a prefpane. Prevents the bottom
+   of the groupbox from being cutoff */
+.bottomBox {
+  padding-bottom: 4px;
+}
+
+.paneSelector,
+.tab-middle.box-inherit {
+  border: none;
+  outline: transparent;
+}
+
+/* select buttons */
+menulist {
+  outline: none;
+}
+
+/* top options panel */
+radiogroup {
+  background: none;
+}

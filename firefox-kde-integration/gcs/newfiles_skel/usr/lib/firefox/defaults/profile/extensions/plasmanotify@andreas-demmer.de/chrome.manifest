@@ -1,0 +1,4 @@
+content	plasmanotify	chrome/content/
+locale	plasmanotify	en-US	chrome/locale/en-US/
+locale	plasmanotify	de-DE	chrome/locale/de-DE/
+overlay	chrome://browser/content/browser.xul	chrome://plasmanotify/content/ff-overlay.xul

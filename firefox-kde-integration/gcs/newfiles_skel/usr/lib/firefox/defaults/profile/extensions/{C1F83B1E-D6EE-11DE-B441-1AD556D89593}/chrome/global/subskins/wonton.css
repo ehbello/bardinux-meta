@@ -1,0 +1,754 @@
+/* WONTON SOUP COLOR SCHEME FOR OXYGEN KDE  */
+
+@namespace html url("http://www.w3.org/1999/xhtml");
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+window,page,wizard,dialog,prefwindow  {
+-moz-appearance: none !important;
+background: url("chrome://global/skin/subskins/wonton/gradient/radial.png") top center no-repeat, 
+url("chrome://global/skin/subskins/wonton/gradient/linear.png") top left repeat-x,
+url("chrome://global/skin/subskins/wonton/gradient/bottom.png") bottom left repeat !important;
+background-color:#444952 !important;
+color: #B6C1D0 !important;}
+
+#clientBox {
+background: url("chrome://browser/skin/icons/aboutkde.png") top center no-repeat,
+	    url("chrome://global/skin/subskins/wonton/gradient/radial.png") top center no-repeat, 
+            url("chrome://global/skin/subskins/wonton/gradient/linear.png") top left repeat-x !important;
+background-color:#444952 !important;}
+
+menubar > menu:hover {
+background-color:#444952 !important;
+background-image:none !important;
+-moz-border-radius: 5px !important;}
+
+statusbar {
+background-color:#454A53 !important;}
+
+statusbarpanel#statusbar-display {
+-moz-border-top-colors: #4B515B #3C4049 #5B616E !important;}
+
+toolbar,tabpanels,toolbarbutton,toolbar[type="menubar"],
+menubar,#navigator-toolbox,menu,menuitem,#menubar-items,
+#PersonalToolbar,urlbar {
+color: #B6C1D0 !important;}
+
+#editBMPanel_namePicker[droppable="false"],
+#editBookmarkPanel textbox,.fileFieldContentBox,textbox,
+#userAgent textbox {
+border:3px solid !important;
+color: #B6C1D0 !important;
+background-color:#3C4048 !important;
+-moz-border-top-colors:#2E3137 #363940 #3B3F47 !important;
+-moz-border-bottom-colors:#424650 #3C4048 #3C4048 !important;
+-moz-border-left-colors:#3D4048 #3B3F47 #3C4048 !important;
+-moz-border-right-colors:#3D4149 #3B3F47 #3C4048 !important;}
+#editBMPanel_namePicker[droppable="false"]:hover,
+.fileFieldContentBox:hover,textbox:hover,
+#userAgent textbox:hover {
+-moz-border-top-colors:#7491AF #505E6F #434A55 !important;
+-moz-border-bottom-colors:#7592AE #546273 #434B56 !important;
+-moz-border-left-colors:#7491AF #546273 #434B56 !important;
+-moz-border-right-colors:#7492AE #546273 #434B56 !important;}
+#editBMPanel_namePicker[droppable="false"][focused="true"],
+.fileFieldContentBox[focused="true"],textbox[focused="true"],
+#userAgent textbox[focused="true"]  {
+-moz-border-top-colors:#7A8996 #535B64 #444951 !important;
+-moz-border-bottom-colors:#7B8A95 #575F68 #444A52 !important;
+-moz-border-left-colors:#7A8996 #575F68 #444A52 !important;
+-moz-border-right-colors:#7A8A95 #575F68 #444A52 !important;}
+
+.tabbrowser-tab:not([selected="true"]) { 
+background-image:url("chrome://global/skin/subskins/wonton/tabs/tab_left.png"),
+		 url("chrome://global/skin/subskins/wonton/tabs/tab_right.png"),
+		 url("chrome://global/skin/subskins/wonton/tabs/tab_center.png") !important;
+color: #B6C1D0 !important;}
+
+.tabbrowser-tab:not([selected="true"]):hover { 
+-moz-appearance: none !important;
+background-image:url("chrome://global/skin/subskins/wonton/tabs/tab_left_hover.png"),
+		 url("chrome://global/skin/subskins/wonton/tabs/tab_right_hover.png"),
+		 url("chrome://global/skin/subskins/wonton/tabs/tab_center_hover.png") !important;
+color: #B6C1D0 !important;}
+
+.tabbrowser-tab[selected="true"] { 
+background-image:url("chrome://global/skin/subskins/wonton/tabs/selected_left.png"),
+		 url("chrome://global/skin/subskins/wonton/tabs/selected_right.png"),
+		 url("chrome://global/skin/subskins/wonton/tabs/selected_center.png") !important;
+color: #B6C1D0 !important;}
+
+.tabs-newtab-button {
+background-image:url("chrome://global/skin/subskins/wonton/tabs/selected_left.png"),
+		 url("chrome://global/skin/subskins/wonton/tabs/selected_right.png"),
+                 url("chrome://browser/skin/tabbrowser/tabs/tab_new.png"),
+		 url("chrome://global/skin/subskins/wonton/tabs/selected_center.png") !important;
+background-repeat:no-repeat,no-repeat,no-repeat,repeat-x !important;
+background-position:bottom left,bottom right,bottom center,bottom center !important; }
+
+.tabs-newtab-button:hover {
+background-image:url("chrome://global/skin/subskins/wonton/tabs/selected_left.png"),
+		 url("chrome://global/skin/subskins/wonton/tabs/selected_right.png"),
+                 url("chrome://browser/skin/tabbrowser/tabs/tab_new_hover.png"),
+		 url("chrome://global/skin/subskins/wonton/tabs/selected_center.png") !important;
+background-repeat:no-repeat,no-repeat,no-repeat,repeat-x !important;
+background-position:bottom left,bottom right,bottom center,bottom center !important; }
+
+
+tab {
+background-image:url("chrome://global/skin/subskins/wonton/pref/tab_left_pref.png"),
+		 url("chrome://global/skin/subskins/wonton/pref/tab_right_pref.png"),
+		 url("chrome://global/skin/subskins/wonton/pref/tab_center_pref.png") !important;
+color: #B6C1D0 !important;
+}
+
+tab:not([selected="true"]):hover {
+background-image:url("chrome://global/skin/subskins/wonton/pref/tab_left_hover_pref.png"),
+		 url("chrome://global/skin/subskins/wonton/pref/tab_right_hover_pref.png"),
+		 url("chrome://global/skin/subskins/wonton/pref/tab_center_hover_pref.png") !important;
+}
+
+tab[selected="true"] {
+background-image:url("chrome://global/skin/subskins/wonton/pref/selected_left_pref.png"),
+		 url("chrome://global/skin/subskins/wonton/pref/selected_right_pref.png"),
+		 url("chrome://global/skin/subskins/wonton/pref/selected_center_pref.png") !important;
+}
+
+.tabs-bottom {
+-moz-border-top-colors: #474C56 #5E646F #4B515B !important;
+background-color: #4A4F59 !important;}
+
+#BrowserPreferences tabpanels,
+prefwindow tabpanels {
+background-color: #4B505A !important;
+color: #B6C1D0 !important;
+-moz-border-radius-topleft:0px;
+-moz-border-radius-topright:4px;
+-moz-border-radius-bottomright:6px;
+-moz-border-radius-bottomleft:6px;
+border:4px solid !important;
+border-top:1px solid #5D6371 !important;
+-moz-border-left-colors:  transparent #3F444D #595E6A #4C515B !important;
+-moz-border-right-colors: transparent #3F444D #595E6A #4C515B !important;
+-moz-border-bottom-colors: transparent #3F444D #595E6A #4C515B !important;
+padding:0px !important;
+}
+
+tabpanels {background-color: #4B505A !important;}
+
+toolbarbutton:hover,
+.toolbarbutton-1:hover,
+toolbarbutton.bookmark-item:hover,
+#placesMenu > menu:hover {
+-moz-border-top-colors:#4F545F #67727D #515761 transparent !important;
+-moz-border-bottom-colors:#4D545E #66717C #505660 transparent !important;
+-moz-border-right-colors:#4E545E #66717C #505660 transparent !important;
+-moz-border-left-colors:#4E545F #66727D #505761 transparent !important;
+background-color:transparent !important;
+}
+toolbarbutton:hover:active,
+.toolbarbutton-1:hover:active,
+toolbarbutton.bookmark-item:hover:active,
+#placesMenu > menu:hover:active,
+#placesMenu > menu[open="true"] {
+-moz-border-top-colors:transparent #7592B0 #586778 #515A66 !important;
+-moz-border-bottom-colors:transparent #7592AF #5D6C7E #515A67 !important;
+-moz-border-right-colors:transparent #7592AE #5D6C7E #515A67 !important;
+-moz-border-left-colors:transparent #7492AF #5D6C7E #515A67 !important;
+background-color:transparent !important;
+}
+
+#bookmarks-button[checked="true"],
+#history-button[checked="true"],
+.toolbarbutton-1[checked="true"],
+toolbarbutton[checked="true"],
+toolbarbutton.bookmark-item[open="true"]  {
+-moz-border-top-colors:transparent #373A42 #444851 #4B515B !important;
+-moz-border-bottom-colors:transparent #474D57 #4C515B #4C515B !important;
+-moz-border-right-colors:transparent #424750 #4B515A #4C525C !important;
+-moz-border-left-colors:transparent #42464F #4B5059 #4C515B !important;
+}
+
+toolbarbutton[disabled="true"],
+toolbarbutton[disabled="true"]:hover,
+toolbarbutton[disabled="true"]:hover:active,
+toolbarbutton[disabled="true"][open="true"],
+toolbarbutton[disabled="true"][checked="true"] {
+-moz-border-top-colors:transparent transparent transparent transparent !important;
+-moz-border-bottom-colors:transparent transparent transparent transparent !important;
+-moz-border-right-colors:transparent transparent transparent transparent !important;
+-moz-border-left-colors:transparent transparent transparent transparent !important;
+}
+
+findbar {
+background-color: #454A53 !important;
+color: #B6C1D0 !important;
+border-top: 1px solid #424140 !important;}
+
+
+toolbarbutton.bookmark-item[container],#downloads-button,
+#organizeButton,#viewMenu,#maintenanceButton {
+background-image:url("chrome://global/skin/subskins/wonton/arrow/menudroparrow_white.png") !important;
+background-repeat:no-repeat !important;
+background-position:bottom right !important;
+}
+
+dropmarker {
+list-style-image:url("chrome://global/skin/subskins/wonton/arrow/arrow-down_white.png") !important;}
+
+.searchbar-dropmarker-image {
+background-color:#3C4048 !important;
+height:16px !important;
+list-style-image:  url("chrome://global/skin/subskins/wonton/arrow/arrow-down_white16.png") !important;}
+
+toolbarbutton.chevron { 
+list-style-image:  url("chrome://global/skin/subskins/wonton/arrow/chevron_white.png") !important; }
+
+.findbar-find-next,
+.findbar-find-previous,
+.findbar-highlight,
+.findbar-highlight[checked="true"],
+menulist:not([editable]),
+button {
+background:url("chrome://global/skin/subskins/wonton/buttons/normal/left.png") center left no-repeat,
+url("chrome://global/skin/subskins/wonton/buttons/normal/right.png") center right no-repeat,
+url("chrome://global/skin/subskins/wonton/buttons/normal/center.png") center center repeat-x !important;
+color:#D2DEF0 !important;
+-moz-border-radius:8px !important;}
+
+.mini-button,
+.mini-button:hover,
+#feed-button,
+#feed-button:hover,
+.searchbar-engine-button,
+.searchbar-engine-button:hover,
+.spinbuttons-up,
+.spinbuttons-up:hover,
+.spinbuttons-down,
+.spinbuttons-down:hover
+{background: none !important;}
+
+#autoscroller {
+background-image: url("chrome://global/skin/icons/autoscroll.png") !important;
+background-color: #3C4048 !important;
+background-position: right top !important;}
+#autoscroller[scrolldir="NS"] {
+background-image: url("chrome://global/skin/icons/autoscroll.png") !important;
+background-color: #3C4048 !important;
+background-position: right center !important;}
+#autoscroller[scrolldir="EW"] {
+background-image: url("chrome://global/skin/icons/autoscroll.png") !important;
+background-color: #3C4048 !important;
+background-position: right bottom !important;}
+
+.spinbuttons-up,
+.spinbuttons-down {
+list-style-image: url ("chrome://browser/skin/tabbrowser/tabs/obs/arrow/spinbutton.png") !important;
+}
+
+.findbar-find-next:hover,.findbar-find-previous:hover,.findbar-highlight:hover,
+menulist:not([editable]):hover,
+button:hover {
+background:url("chrome://global/skin/subskins/wonton/buttons/hover/left.png") center left no-repeat,
+	   url("chrome://global/skin/subskins/wonton/buttons/hover/right.png") center right no-repeat,
+	   url("chrome://global/skin/subskins/wonton/buttons/hover/center.png") center center repeat-x !important;
+color:#D2DEF0 !important;}
+
+menulist:not([editable]):hover:active,
+menulist:not([editable])[open="true"],
+button[default="true"] {
+background:url("chrome://global/skin/subskins/wonton/buttons/default/left.png") center left no-repeat,
+	   url("chrome://global/skin/subskins/wonton/buttons/default/right.png") center right no-repeat,
+	   url("chrome://global/skin/subskins/wonton/buttons/default/center.png") center center repeat-x !important;
+color:#D2DEF0 !important;}
+
+.findbar-find-next:hover:active,
+.findbar-find-previous:hover:active,
+.findbar-highlight:hover:active,
+button:hover:active,
+button[open="true"],
+button[checked="true"] {
+background:url("chrome://global/skin/subskins/wonton/buttons/active/left.png") center left no-repeat,
+	   url("chrome://global/skin/subskins/wonton/buttons/active/right.png") center right no-repeat,
+	   url("chrome://global/skin/subskins/wonton/buttons/active/center.png") center center repeat-x !important;
+color:#D2DEF0 !important;}
+
+/*.tab-close-button {
+opacity:0.9 !important;}*/
+
+#sanitizeEverythingWarningBox,
+.groupbox-body,
+.downloadContentBox {
+border:3px solid !important;
+-moz-border-top-colors:  #424750 #5C6370 #474B55 !important;
+-moz-border-bottom-colors: #33373D #4D525B #464C55 !important;
+-moz-border-left-colors:  #3B3F47 #595E6A #474B55 !important;
+-moz-border-right-colors: #3B3F47 #595E69 #474C55 !important;
+ background-image: none !important;
+background-color:#454A53 !important;
+-moz-border-radius: 6px !important;}
+
+html|*#errorPageContainer {
+background: url("chrome://global/skin/icons/warning-large.png") 20px 15px no-repeat !important;
+-moz-border-top-colors:  #424750 #5C6370 #474B55 !important;
+-moz-border-bottom-colors: #33373D #4D525B #464C55 !important;
+-moz-border-left-colors:  #3B3F47 #595E6A #474B55 !important;
+-moz-border-right-colors: #3B3F47 #595E69 #474C55 !important;
+background-color:#454A53 !important;
+}
+
+html|*#errorTitle,
+html|*#errorLongContent,
+html|*#errorShortDesc {
+color:#fff !important;
+text-shadow: 1px 1px 1px #000 !important;
+}
+
+.downloadContentBox,
+caption {
+color: #B6C1D0 !important;
+font-weight: normal !important;
+text-shadow: 1px 1px 1px #000 !important;}
+
+toolbar[iconsize="large"][mode="icons"] #back-forward-dropmarker {
+list-style-image:  url("chrome://global/skin/subskins/wonton/arrow/arrow-down_white16.png") !important;
+  -moz-image-region: auto !important;}
+
+/*toolbar[iconsize="large"][mode="icons"] #back-forward-dropmarker:not([disabled="true"]):hover {
+  -moz-image-region: rect(37px 438px 65px 422px);}
+toolbar[iconsize="large"][mode="icons"] #back-forward-dropmarker[disabled="true"] {
+  -moz-image-region: rect(71px 438px 99px 422px);}
+toolbar[iconsize="large"][mode="icons"] #back-forward-dropmarker:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(105px 438px 133px 422px);}*/
+
+
+tree,richlistbox,.paneSelector,#topBar,.viewSelector,
+#extensionsView,#themePreviewArea,#viewGroup,listbox,
+#palette-box,#sanitizeEverythingWarningBox,#permList,#itemList {
+-moz-border-top-colors:#343840 #40444D !important;
+-moz-border-bottom-colors:#424650 #454A53 !important;
+-moz-border-left-colors:#3D4048 #444952 !important;
+-moz-border-right-colors:#3D4149 #444952 !important;
+background-color: #3C4048 !important;
+color: #B6C1D0 !important;}
+
+tree:hover,
+#topBar:hover,
+richlistbox:hover,
+.paneSelector:hover,
+.viewSelector:hover,
+#extensionsView:hover,
+listbox:hover,
+#itemList:hover {
+-moz-border-top-colors:#7491AF #566576 !important;
+-moz-border-bottom-colors:#7592AE #596879 !important;
+-moz-border-left-colors:#7491AF #596879 !important;
+-moz-border-right-colors:#7492AE #596879 !important;
+background-color: #3C4048 !important;
+color: #B6C1D0 !important;}
+
+tree:focus,#topBar:focus,richlistbox:focus,.paneSelector:focus,
+.viewSelector:focus,#extensionsView:focus,listbox:focus,#itemList:focus {
+-moz-border-top-colors:#7A8996 #59626B !important;
+-moz-border-bottom-colors:#7B8A95 #5C656E !important;
+-moz-border-left-colors:#7A8996 #5C656E !important;
+-moz-border-right-colors:#7A8A95 #5C656E !important;}
+
+#viewGroup radio,
+richlistitem {
+background-color: #3C4048 !important;
+color: #B6C1D0 !important;}
+
+#BrowserPreferences radio[pane]:hover,
+radio[pane]:hover,
+richlistitem:hover,
+treechildren::-moz-tree-row(hover),
+treechildren::-moz-tree-row(current, focus),
+#viewGroup radio:hover,
+listitem:hover,
+#permList > vbox:hover {
+background: -moz-linear-gradient(top, #4E5562, #484E59) !important;
+-moz-border-top-colors:#505764 #7A7F89 !important;
+-moz-border-bottom-colors:#4D5460 #767A82 !important;
+-moz-border-left-colors:#4E5661 #787D86 !important;
+-moz-border-right-colors:#4D5561 #777C85 !important;
+color: #B6C1D0 !important;}
+
+#BrowserPreferences radio[pane][selected="true"],
+radio[pane][selected="true"],
+richlistitem[selected="true"],
+treechildren::-moz-tree-row(selected),
+treechildren::-moz-tree-row(selected, focus),
+treechildren::-moz-tree-row(selected, current, focus),
+#viewGroup radio[selected="true"],
+listitem[selected="true"],
+listbox:focus > listitem[selected="true"] {
+background: -moz-linear-gradient(top, #9AAFC9, #78889C) !important;
+-moz-border-top-colors:#78889C #B4C4D7 !important;
+-moz-border-bottom-colors:#78889C #9AA6B5 !important;
+-moz-border-left-colors:#78889C #A5B3C3 !important;
+-moz-border-right-colors:#78889C #9EAAB9 !important;
+color: #C6DFF3 !important;}
+
+#identity-box.verifiedDomain {
+background: url("chrome://browser/skin/identity_arrow.png"),
+	    -moz-linear-gradient(top, #9AAFC9, #78889C) !important;
+-moz-border-top-colors:#78889C #B4C4D7 !important;
+-moz-border-bottom-colors:#78889C #9AA6B5 !important;
+-moz-border-left-colors:#78889C #A5B3C3 !important;
+-moz-border-right-colors:#78889C #9EAAB9 !important;
+color: #C6DFF3 !important;
+background-position:center right,center left !important;
+background-repeat:no-repeat,repeat !important;}
+
+menulist > menupopup,
+.menulist-menupopup {
+background-image:none !important;
+background-color:#3C4048 !important;
+-moz-border-image: none !important;
+padding: 0px !important;
+margin:0px !important;
+-moz-border-radius:0px !important;
+border: 1px solid #565C69 !important;
+}
+
+.menulist-menupopup > menuitem:hover ,
+menulist > menupopup > menuitem:hover,
+.menulist-menupopup > menuitem:focus,
+menulist > menupopup > menuitem:focus,
+menulist > menupopup > menuitem[_moz-menuactive="true"],
+menulist > menupopup > menu[_moz-menuactive="true"]  {
+color: #B6C1D0 !important;
+background-color:#78889C !important;
+background-image:none !important;
+-moz-border-radius:0px !important;
+}
+
+tooltip {
+border: 1px solid #2A2C30 !important;
+background-color: #B6C1D0 !important;  
+color: #2A2C30 !important;}
+
+.tooltip-label {
+color: #2A2C30 !important;}
+
+#instructions {
+text-shadow: 2px 2px 3px #000 !important;}
+.fileFieldContentBox {
+margin:0px !important;}
+
+textbox.plain {background-color: #3C4048 !important;}
+
+panel[type="autocomplete"] {
+border: 2px solid !important;
+background-color: #3C4048 !important;
+-moz-border-top-colors   : #2A2A2A #4C4A4A !important;
+-moz-border-left-colors  : #262626 #454444 !important;
+-moz-border-right-colors : #262626 #434242 !important;
+-moz-border-bottom-colors: #1F1F1F transparent !important;
+} 
+
+menuseparator {
+background-image: none !important;
+background-color:transparent !important;
+border-top:2px solid !important;
+-moz-border-top-colors:  #3E424B #5D6370 !important;
+}
+
+treecol,
+treecolpicker {
+background: #525863 url("chrome://global/skin/subskins/wonton/gripper.png") no-repeat center right !important;
+color: #B6C1D0 !important;
+-moz-border-bottom-colors: #474C56 #676F7D !important;
+}
+
+#sidebar-box > sidebarheader{
+-moz-border-top-colors: #3C4049 #5B616E #4B515B !important; 
+-moz-border-left-colors: #545965 #3E434B #515661 !important;
+-moz-border-right-colors: #525764 #3D424B #505460 !important;
+background-color:transparent !important;}
+
+#sidebar-box > browser {
+-moz-border-left-colors: #545965 #3E434B #515661 !important;
+-moz-border-right-colors: #525764 #3D424B #505460 !important;
+-moz-border-bottom-colors: #5B616E #3C4049 #454A53 !important; 
+background-color:transparent !important;}
+
+#bookmarksPanel > hbox,
+#history-panel > hbox {
+background-color:transparent !important;}
+#sidebar-box,#bookmarks-view,#historyTree,
+#bookmarksPanel,#history-panel {
+background: -moz-linear-gradient(top, #4B515B,#454A53) !important;}
+
+#sidebar-box .tabs-closebutton {
+list-style-image: url("chrome://global/skin/subskins/wonton/close_sidebar.png") !important;
+}
+
+splitter {
+-moz-border-right-colors: #525764 #3D424B #505460 !important;
+background: transparent url("chrome://global/skin/subskins/wonton/gripper.png") no-repeat center center !important;}
+
+grippy:hover {background-color: transparent !important;}
+
+#infoPaneBox {
+-moz-border-top-colors:#7A8996 #59626B !important;
+-moz-border-bottom-colors:#7B8A95 #5C656E !important;
+-moz-border-left-colors:#7A8996 #5C656E !important;
+-moz-border-right-colors:#7A8A95 #5C656E !important;
+background-color: #3C4048 !important;
+color: #B6C1D0 !important;}
+
+#placesView {
+border: 3px solid !important;
+-moz-border-top-colors: #3C4049 #5B616E #4B515B !important; 
+-moz-border-left-colors: #545965 #3E434B #515661 !important;
+-moz-border-right-colors: #525764 #3D424B #505460 !important;
+-moz-border-bottom-colors: #5B616E #3C4049 #454A53 !important; 
+}
+
+#editBMPanel,
+#editBookmarkPanelTitle,
+#editBookmarkPanelHeader,
+#editBookmarkPanelContent {
+color: #B6C1D0 !important;}
+
+#identity-popup-container {
+color: #B6C1D0 !important;}
+
+menu:hover,
+menuitem:hover,
+menu[_moz-menuactive="true"],
+menuitem[_moz-menuactive="true"],
+menu[_moz-menuactive="true"],
+menuitem[_moz-menuactive="true"]  {
+background-image: url("chrome://global/skin/subskins/wonton/menu/menuitem_hover.png") !important;
+background-repeat:repeat-x !important; 
+background-position:center right !important;}
+
+menu[disabled="true"], menuitem[disabled="true"],
+menu[_moz-menuactive="true"][disabled="true"],
+menuitem[_moz-menuactive="true"][disabled="true"] {
+background-image:none !important; 
+}
+
+menu.bookmark-item:hover,
+menu.bookmark-item:hover:active {
+-moz-border-radius-topleft: 5px !important;
+-moz-border-radius-topright: 0px !important;
+-moz-border-radius-bottomleft: 5px !important;
+-moz-border-radius-bottomright: 0px !important; 
+background-color:transparent !important;
+background-image: url("chrome://global/skin/subskins/wonton/menuitem_hover.png") !important;
+background-repeat:repeat-x !important; 
+background-position:center right !important;
+}
+
+#copyright { color:#B6C1D0 !important;}
+
+.findbar-textbox[status="notfound"]  > .textbox-input-box {
+background-color:#584156 !important;
+color:#B6C1D0 !important;
+}
+
+separator.groove:not([orient="vertical"]) {
+border-top: 1px solid #525764 !important; 
+border-bottom: 1px solid #3D424B !important; }
+separator.groove[orient="vertical"] {
+border-left: 1px solid #525764 !important;
+border-right: 1px solid #3D424B !important;}
+
+#editor-tools {
+-moz-border-top-colors:#5E646F #4B515B !important;}
+
+notification[type="info"] {
+background-color:#444952 !important;
+color: #B6C1D0 !important;
+-moz-border-top-colors:#5E646F #4B515B !important;
+}
+
+menupopup,popup,panel {
+-moz-appearance: none !important;
+background-color: #2D2C2C !important;
+background-image:url("chrome://global/skin/subskins/wonton/popup/top_left.png"),
+url("chrome://global/skin/subskins/wonton/popup/bottom_left.png"),
+url("chrome://global/skin/subskins/wonton/popup/center_left.png"),
+url("chrome://global/skin/subskins/wonton/popup/top_right.png"),
+url("chrome://global/skin/subskins/wonton/popup/bottom_right.png"),
+url("chrome://global/skin/subskins/wonton/popup/center_right.png"),  
+url("chrome://global/skin/subskins/wonton/popup/bottom_center.png"),
+url("chrome://global/skin/subskins/wonton/popup/top_center.png"),
+url("chrome://global/skin/subskins/wonton/popup/center_center.png") !important;
+background-repeat:no-repeat,no-repeat,repeat-y,no-repeat,no-repeat,repeat-y,repeat-x,repeat-x,repeat !important;
+background-position:top left,bottom left,center left,top right,bottom right,center right,bottom center,top center,center center !important; }
+
+/* scrollbars */
+
+scrollcorner { background-color: #454A53 !important;}
+
+scrollbar[orient="vertical"] {
+background: url("chrome://global/skin/subskins/wonton/scrollbar/vertical/scroll-background_top.png"),
+	    url("chrome://global/skin/subskins/wonton/scrollbar/vertical/scroll-background_bottom.png"),
+	    url("chrome://global/skin/subskins/wonton/scrollbar/vertical/scroll-background.png") !important;
+background-color:transparent !important;
+background-repeat:no-repeat,no-repeat,repeat-y !important;
+background-position:top,bottom,center !important; }
+
+thumb[orient="vertical"] {
+-moz-appearance: none;
+background:url("chrome://global/skin/subskins/wonton/scrollbar/vertical/thumb-endcap2.png"),
+	   url("chrome://global/skin/subskins/wonton/scrollbar/vertical/thumb-endcap.png"),
+	   url("chrome://global/skin/subskins/wonton/scrollbar/vertical/thumb-topcap.png") !important;
+background-color:transparent !important;
+background-position:top,bottom,center !important; 
+background-repeat:no-repeat,no-repeat,repeat-y !important;}
+
+thumb[orient="vertical"]:hover,
+thumb[orient="vertical"]:active {
+-moz-appearance: none;
+background:url("chrome://global/skin/subskins/wonton/scrollbar/vertical/thumb-endcap2_hover.png"),
+	   url("chrome://global/skin/subskins/wonton/scrollbar/vertical/thumb-endcap_hover.png"),	   
+	   url("chrome://global/skin/subskins/wonton/scrollbar/vertical/thumb-topcap-hover.png") !important;
+background-color:transparent !important;
+background-position:top,bottom,center !important; 
+background-repeat:no-repeat,no-repeat,repeat-y !important;}
+
+scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"] {
+background-image: url("chrome://global/skin/subskins/wonton/scrollbar/vertical/arrow-up.png") !important;}
+scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"]:hover {
+background-image: url("chrome://global/skin/subskins/wonton/scrollbar/vertical/arrow-up_hover.png") !important;}
+scrollbar[orient="vertical"] > scrollbarbutton[type="increment"] {
+background-image: url("chrome://global/skin/subskins/wonton/scrollbar/vertical/arrow-down.png") !important;}
+scrollbar[orient="vertical"] > scrollbarbutton[type="increment"]:hover {
+background-image: url("chrome://global/skin/subskins/wonton/scrollbar/vertical/arrow-down_hover.png") !important;}
+
+
+scrollbar[orient="horizontal"] {
+-moz-appearance: none;
+background: url("chrome://global/skin/subskins/wonton/scrollbar/scroll-background_left.png"),
+	    url("chrome://global/skin/subskins/wonton/scrollbar/scroll-background_right.png"),
+	    url("chrome://global/skin/subskins/wonton/scrollbar/scroll-background-horizontal.png") !important;
+background-color:transparent !important;
+background-repeat:no-repeat,no-repeat,repeat-x !important;
+background-position:top left,top right,top center !important; 
+}
+
+thumb[orient="horizontal"] {
+-moz-appearance: none;
+background:url("chrome://global/skin/subskins/wonton/scrollbar/thumb-endcap4.png"),
+	   url("chrome://global/skin/subskins/wonton/scrollbar/thumb-endcap3.png"),
+	   url("chrome://global/skin/subskins/wonton/scrollbar/thumb-startcap.png") !important;
+background-color:transparent !important;
+background-position:top left,top right,top center !important; 
+background-repeat:no-repeat,no-repeat,repeat-x !important;
+}
+
+thumb[orient="horizontal"]:hover,
+thumb[orient="horizontal"]:active {
+-moz-appearance: none;
+background:url("chrome://global/skin/subskins/wonton/scrollbar/thumb-endcap4_hover.png"),
+	   url("chrome://global/skin/subskins/wonton/scrollbar/thumb-endcap3_hover.png"),	   
+	   url("chrome://global/skin/subskins/wonton/scrollbar/thumb-startcap-hover.png") !important;
+background-color:transparent !important;
+background-position:top left,top right,top center !important; 
+background-repeat:no-repeat,no-repeat,repeat-x !important;
+}
+
+scrollbar[orient="horizontal"] > scrollbarbutton[type="decrement"] {
+background-image: url("chrome://global/skin/subskins/wonton/scrollbar/arrow-left.png") !important;}
+scrollbar[orient="horizontal"] > scrollbarbutton[type="decrement"]:hover {
+background-image: url("chrome://global/skin/subskins/wonton/scrollbar/arrow-left_hover.png") !important;}
+scrollbar[orient="horizontal"] > scrollbarbutton[type="increment"] {
+background-image: url("chrome://global/skin/subskins/wonton/scrollbar/arrow-right.png") !important;}
+scrollbar[orient="horizontal"] > scrollbarbutton[type="increment"]:hover {
+background-image: url("chrome://global/skin/subskins/wonton/scrollbar/arrow-right_hover.png") !important;}
+
+menuitem[checked="true"] {
+list-style-image: url("chrome://global/skin/subskins/wonton/menu/myMenucheck.png") !important;
+-moz-image-region: rect(0px, 16px, 16px, 0px) !important;}
+menuitem[checked="false"] {
+list-style-image: url("chrome://global/skin/subskins/wonton/menu/nocheck.png") !important;
+-moz-image-region: auto !important;}
+menuitem[checked="true"][type="radio"] {
+list-style-image: url("chrome://global/skin/subskins/wonton/menu/myMenucheck.png") !important;
+-moz-image-region: rect(32px, 16px, 48px, 0px) !important;}
+menuitem[checked="false"][type="radio"] {
+list-style-image: url("chrome://global/skin/subskins/wonton/menu/nocheck_radio.png") !important;
+-moz-image-region: auto !important;}
+menuitem[checked="true"][type="radio"][disabled="true"] {
+list-style-image: url("chrome://global/skin/subskins/wonton/menu/myMenucheck.png") !important;
+-moz-image-region: rect(48px, 16px, 64px, 0px) !important;}
+menuitem[checked="true"][type="radio"][_moz-menuactive="true"] {
+list-style-image: url("chrome://global/skin/subskins/wonton/menu/myMenucheck.png") !important;
+-moz-image-region: rect(32px, 16px, 48px, 0px) !important;}
+menuitem[checked="true"][disabled="true"] {
+list-style-image: url("chrome://global/skin/subskins/wonton/menu/myMenucheck.png") !important;
+-moz-image-region: rect(16px, 16px, 32px, 0px) !important;}
+menuitem[checked="true"][_moz-menuactive="true"] {
+list-style-image: url("chrome://global/skin/subskins/wonton/menu/myMenucheck.png") !important;
+-moz-image-region: rect(0px, 16px, 16px, 0px) !important;}
+
+/* radio box*/
+.radio-check-box1 {list-style-image:url("chrome://global/skin/subskins/wonton/radio/radio.png") !important;}
+radio[focused="true"] .radio-check-box1 {list-style-image:url("chrome://global/skin/subskins/wonton/radio/radio-focus.png") !important;}
+radio[selected="true"][focused="true"] .radio-check-box1 {list-style-image: url("chrome://global/skin/subskins/wonton/radio/radio-checked-focus.png") !important;}
+radio:active .radio-check-box1 {list-style-image:url("chrome://global/skin/subskins/wonton/radio/radio-active.png") !important;}
+radio[selected="true"]:active .radio-check-box1 {list-style-image:url("chrome://global/skin/subskins/wonton/radio/radio-checked-active.png") !important;}
+radio[selected="true"] .radio-check-box1 {list-style-image:url("chrome://global/skin/subskins/wonton/radio/radio-checked.png") !important;}
+radio:not([disabled="true"]):hover .radio-check-box1 {list-style-image:url("chrome://global/skin/subskins/wonton/radio/radio-active.png") !important;}
+radio[selected="true"]:not([disabled="true"]):hover .radio-check-box1 {list-style-image:url("chrome://global/skin/subskins/wonton/radio/radio-checked-active.png") !important;}
+radio[disabled="true"] .radio-check-box1 {list-style-image:url("chrome://global/skin/subskins/wonton/radio/radio.png") !important;}
+radio[selected="true"][disabled="true"] .radio-check-box1 {list-style-image:url("chrome://global/skin/subskins/wonton/radio/radio-checked.png") !important;}
+
+/* 67 */
+/* ::::: statusbar progressmeter ::::: */
+progressmeter,
+progressmeter[mode="undetermined"],
+.progressmeter-statusbar {
+background: url("chrome://global/skin/subskins/wonton/progress/bg_left.png"),
+	    url("chrome://global/skin/subskins/wonton/progress/bg_right.png"),
+	    url("chrome://global/skin/subskins/wonton/progress/bg_center.png") !important;
+background-color:transparent !important;
+background-repeat:no-repeat,no-repeat,repeat-x !important;
+background-position:left,right,center !important; 
+}
+/* 68 */
+progressmeter[mode="undetermined"] .progress-bar,
+.progress-bar,
+.progressmeter-statusbar .progress-bar {
+background: url("chrome://global/skin/subskins/wonton/progress/prog_left.png"),
+	    url("chrome://global/skin/subskins/wonton/progress/prog_right.png"),
+	    url("chrome://global/skin/subskins/wonton/progress/prog_center.png") !important;
+background-color:transparent !important;
+background-repeat:no-repeat,no-repeat,repeat-x !important;
+background-position:left,right,center !important; 
+}
+
+#pagesaver-statusbarpanel button {
+background-image:none !important;}
+
+.dialog-button-box { 
+background-color:transparent !important;
+background: url("chrome://global/skin/subskins/wonton/menu/menu_separator.png") top center no-repeat !important;}
+
+checkbox[disabled="true"] > .checkbox-check {list-style-image: url("chrome://global/skin/subskins/wonton/checkbox/checkbox.png") !important;}
+checkbox[checked="true"][disabled="true"] > .checkbox-check {list-style-image: url("chrome://global/skin/subskins/wonton/checkbox/checkbox-checked.png") !important;}
+checkbox:not([disabled="true"]):hover >  .checkbox-check{list-style-image: url("chrome://global/skin/subskins/wonton/checkbox/checkbox-active.png") !important;}
+checkbox[checked="true"]:not([disabled="true"]):hover >  .checkbox-check{list-style-image: url("chrome://global/skin/subskins/wonton/checkbox/checkbox-checked-active.png") !important;}
+checkbox[checked="true"] > .checkbox-check {list-style-image: url("chrome://global/skin/subskins/wonton/checkbox/checkbox-checked.png") !important;}
+checkbox[checked="true"][disabled="true"] > .checkbox-check {list-style-image: url("chrome://global/skin/subskins/wonton/checkbox/checkbox-active.png") !important;}
+checkbox:focus >  .checkbox-check{list-style-image: url("chrome://global/skin/subskins/wonton/checkbox/checkbox-focus.png") !important;}
+checkbox[checked="true"]:focus >  .checkbox-check{list-style-image: url("chrome://global/skin/subskins/wonton/checkbox/checkbox-checked-focus.png") !important;}
+checkbox:focus:active > .checkbox-check {list-style-image: url("chrome://global/skin/subskins/wonton/checkbox/checkbox-active.png") !important;}
+checkbox[checked="true"]:active > .checkbox-check{list-style-image: url("chrome://global/skin/subskins/wonton/checkbox/checkbox-checked-active.png") !important;}
+.checkbox-check {list-style-image: url("chrome://global/skin/subskins/wonton/checkbox/checkbox.png") !important;}
+
+.menu-right {
+list-style-image: url("chrome://global/skin/subskins/wonton/arrow/menu-arrow.png") !important;
+-moz-image-region: auto;}
+
+.autorepeatbutton-up,.scrollbutton-up,.up {list-style-image:url("chrome://global/skin/subskins/wonton/arrow/arrow-up.png") !important;}      
+.autorepeatbutton-down,.scrollbutton-down,.down {list-style-image:url("chrome://global/skin/subskins/wonton/arrow/arrow-down.png") !important;}
+
+#speeddialTabbox-panelContainer {background: -moz-linear-gradient(top, #4B515B,#454A53) !important;}
+
+#ToolbarMode #viewGroup {background-color:transparent !important;}

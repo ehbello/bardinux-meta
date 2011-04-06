@@ -1,0 +1,135 @@
+.searchbar-textbox {
+margin-left:3px;
+/* height:22px; */
+padding:0 !important;
+border: 3px solid !important;
+-moz-border-radius: 4px;
+background-color:#fff;
+-moz-border-top-colors:#acacab #dcdcdc #fcfcfc !important;
+-moz-border-bottom-colors:#c9c8c6 transparent transparent !important;
+-moz-border-left-colors:#b2b1b0 #fafafa transparent !important;
+-moz-border-right-colors:#b3b2b1 #fafafa transparent !important;
+width: 6em;
+min-width: 6em;
+}
+
+.searchbar-textbox:hover {
+-moz-border-top-colors:#79b7fc #aac9ec #e8f2fd !important;
+-moz-border-bottom-colors:#7bb8fd #bddcff #eaf4ff !important;
+-moz-border-left-colors:#7bb9fd #bad9fc #eaf4ff !important;
+-moz-border-right-colors:#7cb9fe #bad9fc #eaf4ff !important;
+}
+
+.searchbar-textbox[focused="true"] {
+-moz-border-top-colors:#3076c6 #85a8d1 #dde7f5 !important;
+-moz-border-bottom-colors:#3278c7 #98bbe4 #dfe9f7 !important;
+-moz-border-left-colors:#3278c7 #95b8e1 #dfe9f7 !important;
+-moz-border-right-colors:#3379c8 #95b8e1 #dfe9f7 !important;
+}
+
+.textbox-input-box {
+padding:0;
+margin: 0;
+}
+
+.searchbar-engine-menuitem[selected="true"] > .menu-iconic-text {
+font-weight: bold;
+}
+
+/* Engine button */
+.searchbar-engine-image {
+height: 16px;
+width: 16px;
+list-style-image: url("chrome://global/skin/icons/folder-item.png");
+-moz-image-region: rect(0px, 16px, 16px, 0px);
+-moz-margin-start: 2px;
+padding:0 !important;
+background-color: transparent !important;
+}
+
+.searchbar-engine-button {
+-moz-appearance: none;
+padding:0 !important;
+margin:0px !important;
+min-width: 0;
+margin: 0;
+border: none;
+-moz-box-align: start;
+background: none !important;
+}
+
+.searchbar-engine-button > .button-box {
+-moz-appearance: none !important;
+background: none !important;
+padding:0 !important;
+margin:0 !important;
+}
+
+
+.searchbar-engine-button:hover:active > .button-box,
+.searchbar-engine-button[open="true"] > .button-box {
+background:none transparent;
+}
+
+.searchbar-engine-button > .button-box[focused="true"] {
+background-color: transparent;
+}
+
+
+.searchbar-engine-button[addengines="true"] {
+background-color: transparent;
+}
+
+.searchbar-dropmarker-image {
+list-style-image: url("chrome://browser/skin/icons/search_dropmarker.png");
+width: 11px;
+height: 10px;
+/* padding-right:3px; */
+/* margin-top:-2px !important; */
+/* margin-bottom:-2px !important; */
+-moz-margin-start: 1px;
+-moz-margin-end: 2px;
+}
+
+/* Search go button */
+.search-go-container {
+  -moz-box-align: center;
+}
+
+.search-go-button {
+padding: 1px;
+padding-right:5px;
+list-style-image: url("chrome://global/skin/icons/searchbar.png");
+cursor: pointer;
+-moz-appearance: none !important;
+-moz-margin-start:3px !important;
+-moz-margin-end:0 !important;
+-moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+.search-go-button:hover {
+-moz-image-region: rect(0, 32px, 16px, 16px);
+}
+
+.search-go-button:hover:active {
+-moz-image-region: rect(0, 48px, 16px, 32px);
+}
+
+.search-go-button[chromedir="rtl"] {
+list-style-image: url("chrome://global/skin/icons/searchbar.png");
+}
+
+menuitem[cmd="cmd_clearhistory"] {
+  list-style-image: url("moz-icon://stock/gtk-clear?size=menu");
+}
+
+menuitem[cmd="cmd_clearhistory"][disabled] {
+  list-style-image: url("moz-icon://stock/gtk-clear?size=menu&state=disabled");
+}
+
+button {
+-moz-appearance: none;
+ min-height:17px;
+ height:17px;
+-moz-border-image: none !important;
+}

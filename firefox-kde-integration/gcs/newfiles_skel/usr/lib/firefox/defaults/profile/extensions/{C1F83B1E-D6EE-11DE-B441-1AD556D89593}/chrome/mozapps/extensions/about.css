@@ -1,0 +1,52 @@
+#clientBox {
+background-image: none !important;
+background-color:#E1DFDE !important;
+color: #000000;
+}
+
+#extensionName {
+  font-size: large;
+  font-weight: bold;
+text-shadow: 2px 2px 1px #ffffff;
+}
+
+#extensionVersion {
+  font-weight: bold;
+  color: #909090;
+}
+
+#genericAbout {
+  padding: 0px 0px 10px 0px;
+  min-height: 200px;
+  width: 30em;
+}
+
+#groove {
+  margin-top: 0px;
+}
+
+#clientBox {
+  padding: 10px;
+} 
+
+#extensionDescription {
+  color: #404040;
+}
+
+.boxIndent {
+  -moz-margin-start: 6px;
+}
+
+#extensionCreator, .contributor {
+  margin: 0px;
+} 
+
+.sectionTitle {
+background-color:transparent !important;
+background-image: url("chrome://browser/skin/icons/menu_separator.png") !important;
+background-repeat:no-repeat !important;
+background-position:top center;
+padding: 2px 0px 3px 0px;
+margin-top: 3px;
+font-weight: bold;
+}

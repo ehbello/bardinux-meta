@@ -1,0 +1,110 @@
+/* ===== dialog.css =====================================================
+  == Styles used by the XUL dialog element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: dialog ::::: */
+
+#commonDialog > image {
+  -moz-margin-end: 14px !important;
+}
+
+/*#commonDialog > .dialog-button-box {
+-moz-box-direction: normal; 
+-moz-box-pack: start; 
+  padding-right: 0px !important;
+margin-right: 0px !important;
+border:1px solid red;
+}
+
+#commonDialog > .dialog-button-box spacer { display: none !important; }*/
+
+
+dialog { 
+-moz-appearance: dialog;
+padding: 5px;
+}
+
+/* ::::: dialog buttons ::::: */
+
+.dialog-button {
+  font: menu;
+  margin: 5px;
+}
+
+/* ::::: dialog header ::::: */
+
+dialogheader {
+  margin: 0px 5px 5px 5px;
+  padding: 5px 8px;
+}
+
+.dialogheader-title {
+  margin: 0px !important;
+  font-size: larger;
+  font-weight: bold;
+  display: none;
+}
+
+/* ::::: large dialog header ::::: */
+
+.header-large {
+  -moz-box-orient: vertical;
+  margin: -14px -14px 0;
+  padding: 12px 5px 12px 25px;
+}
+
+.header-large > .dialogheader-title {
+  font: inherit;
+  font-weight: bold;
+}
+
+.header-large > .dialogheader-description {
+  margin-left: 12px !important;
+}
+
+.dialogheader-description {
+font-weight: bold !important;
+}
+
+.dialogheader-title {
+font-weight: bold !important;
+}
+
+#loginContainer  {
+padding-top: 10px;
+}
+
+#findDialog, #findDialog > menu, #findDialog > groupbox {
+	font: menu !important;
+}
+
+#dialog.caseSensitive {
+	margin-top: 8px;
+}
+
+.dialog-button-box { 
+-moz-box-direction: reverse !important; 
+-moz-box-pack: start !important; 
+background-color:transparent !important;
+background-image: url("chrome://browser/skin/icons/menu_separator.png");
+background-repeat:no-repeat;
+background-position:top center;
+margin-top:5px;
+padding-top: 5px;
+margin-right:0 !important;
+padding-right:0 !important;
+}
+
+.dialog-button-box spacer { display: none !important; }
+
+button[icon="accept"],
+button[icon="yes"] {
+  -moz-box-ordinal-group: 1 !important;
+}
+
+button[icon="cancel"]
+button[icon="no"]  {
+  -moz-box-ordinal-group: 9 !important;
+}

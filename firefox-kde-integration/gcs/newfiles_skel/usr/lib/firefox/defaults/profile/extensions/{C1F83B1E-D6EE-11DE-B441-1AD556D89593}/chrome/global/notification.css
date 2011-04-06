@@ -1,0 +1,91 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+notification[type="info"] {
+color: #000000;
+background-color:#D2D1CF;
+border-top: 2px solid;
+border-right:none;
+border-left:none;
+border-bottom:none;
+-moz-border-top-colors:#969595 #c1c0bf;
+}
+
+notification[type="warning"] {
+color: #000000;
+background-color: #D9E9F7;
+border-top: 2px solid;
+border-right:none;
+border-left:none;
+border-bottom:none;
+-moz-border-top-colors:#969595 #c1c0bf;
+}
+
+notification[type="critical"] {
+color: #000000;
+background-color: #EFD731;
+border-top: 2px solid;
+border-right:none;
+border-left:none;
+border-bottom:none;
+-moz-border-top-colors:#969595 #c1c0bf;
+}
+
+.messageImage {
+  width: 16px;
+  height: 16px;
+  margin: 0 8px;
+}
+
+/* Default icons for notifications */
+
+notification[type="info"] .messageImage {
+  list-style-image: url("chrome://global/skin/notification/info-icon.png") !important;
+}
+
+notification[type="warning"] .messageImage {
+  list-style-image: url("chrome://global/skin/notification/warning-icon.png") !important;
+}
+
+notification[type="critical"] .messageImage {
+  list-style-image: url("chrome://global/skin/notification/error-icon.png") !important;
+}
+
+.notification-inner {
+  border: 0 !important;
+}
+ 
+.messageText {
+  margin: 0px 3px !important;
+  padding: 0;
+  font-weight: normal;
+}
+
+.messageCloseButton {
+  -moz-appearance: none;
+  padding: 0;
+  margin: 0 5px;
+  list-style-image: url("chrome://global/skin/icons/close.png");
+  -moz-image-region: rect(0px, 14px, 14px, 0px);
+  border: none;
+}
+
+.messageCloseButton:hover {
+  -moz-image-region: rect(0px, 28px, 14px, 14px);
+}
+
+.messageCloseButton:hover:active {
+  -moz-image-region: rect(0px, 42px, 14px, 28px);
+}
+
+.messageCloseButton > .toolbarbutton-text {
+  display: none;
+}
+
+.messageCloseButton > .toolbarbutton-icon {
+  padding: 0;
+}
+/* some extensions add a text-link for a "Learn more..." link */
+notification[type="info"] .text-link {
+color: #0057ae !important;
+border-bottom:1px solid #0057ae !important;
+}

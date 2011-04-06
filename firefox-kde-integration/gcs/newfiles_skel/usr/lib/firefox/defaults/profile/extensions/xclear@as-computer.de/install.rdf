@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+	<RDF:Description about="urn:mozilla:install-manifest">
+		<em:aboutURL />
+		<em:creator>Peter Leugner</em:creator>
+		<em:description>Clear url and search field easily</em:description>
+		<em:homepageURL>http://www.as-computer.de</em:homepageURL>
+		<em:iconURL />
+		<em:id>xclear@as-computer.de</em:id>
+		<em:name>xclear</em:name>
+		<em:version>1.4</em:version>
+		<em:type>2</em:type>
+		<em:targetApplication>
+			<RDF:Description>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+				<em:maxVersion>4.0.*</em:maxVersion>
+				<em:minVersion>3.0</em:minVersion>
+			</RDF:Description>
+		</em:targetApplication>
+	</RDF:Description>
+</RDF>

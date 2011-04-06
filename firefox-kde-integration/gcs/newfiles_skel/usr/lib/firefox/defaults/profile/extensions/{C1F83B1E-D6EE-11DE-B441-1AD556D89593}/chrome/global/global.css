@@ -1,0 +1,598 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1/GPL 2.0/LGPL 2.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is Mozilla Communicator client code, released
+ * March 31, 1998.
+ *
+ * The Initial Developer of the Original Code is
+ * Netscape Communications Corporation.
+ * Portions created by the Initial Developer are Copyright (C) 1998-1999
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *
+ * Alternatively, the contents of this file may be used under the terms of
+ * either the GNU General Public License Version 2 or later (the "GPL"), or
+ * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+ * in which case the provisions of the GPL or the LGPL are applicable instead
+ * of those above. If you wish to allow use of your version of this file only
+ * under the terms of either the GPL or the LGPL, and not to allow others to
+ * use your version of this file under the terms of the MPL, indicate your
+ * decision by deleting the provisions above and replace them with the notice
+ * and other provisions required by the GPL or the LGPL. If you do not delete
+ * the provisions above, a recipient may use your version of this file under
+ * the terms of any one of the MPL, the GPL or the LGPL.
+ *
+ * ***** END LICENSE BLOCK ***** */
+
+/* ===== global.css =====================================================
+  == Styles that apply everywhere.
+  ======================================================================= */
+
+/* all localizable skin settings shall live here */
+@import url("chrome://global/locale/intl.css");
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: XBL bindings ::::: */
+
+radio {
+  -moz-binding: url("chrome://global/skin/globalBindings.xml#radio");
+}
+
+menulist > menupopup,
+.menulist-menupopup {
+  -moz-binding: url("chrome://global/content/bindings/popup.xml#popup-scrollbars");
+}
+
+.menulist-compact {
+  -moz-binding: url("chrome://global/skin/globalBindings.xml#menulist-compact");
+}
+
+progressmeter[mode="undetermined"] {
+  -moz-binding: url("chrome://global/content/bindings/progressmeter.xml#progressmeter-undetermined");
+}
+
+
+.menulist-editable-box {
+  background: url("chrome://browser/skin/icons/search-back.png") repeat-x left center;
+  padding: 2px 0px; /* aligns url filed with startcap*/
+  padding-right: 5px; /* extra padding between url text and dropmarker*/
+}
+
+
+
+#bookmarksPanel,
+#history-panel{
+background-color:transparent;
+} 
+#bookmarksPanel >hbox ,
+#history-panel > hbox {
+background-color:transparent;
+}
+
+/* ::::: root elements ::::: */
+
+window,page,wizard,dialog,prefwindow  {
+-moz-appearance: none !important;
+background: url("chrome://browser/skin/icons/radial.png") top center no-repeat, 
+            url("chrome://browser/skin/icons/linear.png") top left repeat-x;
+background-color:#D2D1CF;
+font: message-box;
+color: #101010;
+}
+
+/* deprecated */
+window.dialog {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  -moz-padding-start: 8px;
+  -moz-padding-end: 10px;
+}
+
+/* ::::: alert icons :::::*/
+
+.message-icon,
+.alert-icon,
+.error-icon,
+.question-icon {
+  width: 64px;
+  height: 64px;
+}
+
+.message-icon {
+  list-style-image: url("chrome://global/skin/icons/Message.png");
+}
+
+.alert-icon {
+  list-style-image: url("chrome://global/skin/icons/Warning.png");
+}
+
+.error-icon {
+  list-style-image: url("chrome://global/skin/icons/Error.png");
+}
+
+.question-icon {
+  list-style-image: url("chrome://global/skin/icons/Question.png");
+}
+
+/* ::::: iframe ::::: */
+
+iframe {
+  border: none;
+  width: 100px;
+  height: 100px;
+  min-width: 10px;
+  min-height: 10px;
+}
+
+/* AboutDialog */
+#clientBox {
+background: url("chrome://browser/skin/icons/aboutkde.png") top center no-repeat,
+	    url("chrome://browser/skin/icons/newtool.png") top center no-repeat, 
+            url("chrome://browser/skin/icons/newtool_left.png") top left repeat-x !important;
+background-color:#D2D1CF !important;
+}
+
+#userAgent {background-color:transparent !important;}
+
+/* ::::: statusbar ::::: */
+
+statusbar {
+-moz-appearance: none;
+border-top: 1px solid #cfcecd;
+border-left: none;
+border-right: none;
+border-bottom: none;
+background-color: #D2D1CF;
+min-height: 22px;
+margin: 0px;
+padding: 1px;
+}
+
+statusbarpanel {
+-moz-appearance: none;
+-moz-box-align: center;
+-moz-box-pack: center;
+border:none;
+padding: 0 4px;
+}
+
+.statusbar-resizerpanel {
+-moz-box-align: end;
+-moz-box-pack: end;
+-moz-appearance: none;
+padding: 0px;
+border: none;
+display: none;
+}
+
+.statusbarpanel-iconic,
+.statusbarpanel-iconic-text,
+.statusbarpanel-menu-iconic {
+padding: 0 1px;
+}
+
+window:not([active="true"]) menubar > menu {
+color: #000000;
+}
+
+sidebarheader {
+-moz-appearance: none;
+border-top: 1px solid transparent;
+font-weight:bold;
+}
+
+sidebarheader > label {
+-moz-padding-start: 2px;
+}
+
+#sidebar-box {
+background-color:#E0DFDE;
+padding-right:0px;
+padding-left:0px;
+}
+
+#sidebar-box > sidebarheader{
+list-style-image: url("chrome://browser/skin/places/bookmarksToolbar.png");
+background-color:transparent;
+
+border-top:3px solid;
+border-right:3px solid;
+border-left:3px solid;
+border-bottom:none !important;
+
+-moz-border-left-colors: #ececea #b4b2b1 #e6e4e3;
+-moz-border-right-colors: #ececeb #b6b4b3 #e8e8e6;
+-moz-border-top-colors: #e4e3e3 #b0aead #f3f3f2; 
+
+margin:0 2px 0px 2px;
+
+-moz-border-radius-topleft:5px;
+-moz-border-radius-topright:5px;
+-moz-border-radius-bottomright:0px;
+-moz-border-radius-bottomleft:0px; 
+}
+
+#sidebar-box > browser {
+border-top:none !important;
+border-bottom:3px solid;
+border-right:3px solid;
+border-left:3px solid;
+-moz-border-left-colors: #ececea #b4b2b1 #e6e4e3;
+-moz-border-right-colors: #ececeb #b6b4b3 #e8e8e6;
+-moz-border-bottom-colors: #f3f3f2 #b0aead #d2d1cf; 
+background-color:transparent;
+
+margin:0 2px 6px 2px;
+padding-right:0px;
+padding-left:0px;
+
+-moz-border-radius-topleft:0px;
+-moz-border-radius-topright:0px;
+-moz-border-radius-bottomright:5px;
+-moz-border-radius-bottomleft:5px;  
+}
+
+#bookmarks-view,
+#historyTree {
+background-color:transparent;
+-moz-border-radius: 0px !important;
+border-top:none !important;
+border-right:none !important;
+border-left:none !important;
+border-bottom:none !important;
+} 
+
+#sidebar-box,#bookmarks-view,#historyTree,
+#bookmarksPanel,#history-panel {
+background: -moz-linear-gradient(top, #E4E3E2,#D2D1CF); 
+}
+
+#bookmarks-view:focus {
+border-bottom:none !important;
+}
+
+.toolbar-focustarget {
+  -moz-user-focus: ignore !important;
+}
+
+/* ::::: miscellaneous formatting ::::: */
+
+.inset {
+  border: 1px solid ThreeDShadow;
+  border-right-color: ThreeDHighlight;
+  border-bottom-color: ThreeDHighlight;
+  margin: 0 5px 5px;
+}
+  
+.outset {
+  border: 1px solid ThreeDShadow;
+  border-left-color: ThreeDHighlight;
+  border-top-color: ThreeDHighlight;
+}
+
+/* separators */
+separator:not([orient="vertical"]) {
+  height: 1.5em;
+}
+separator[orient="vertical"] {
+  width: 1.5em;
+}
+
+separator.thin:not([orient="vertical"]) {
+  height: 0.5em;
+}  
+separator.thin[orient="vertical"] {
+  width: 0.5em;
+}
+
+separator.groove:not([orient="vertical"]) {
+border-top: 1px solid #b7b5b3; 
+border-bottom: 1px solid #ffffff; 
+height: 0; 
+margin-top: 0.4em;
+margin-bottom: 0.4em;
+}
+separator.groove[orient="vertical"] {
+border-left: 1px solid #b7b5b3;
+border-right: 1px solid #ffffff;
+width: 0;
+margin-left: 0.4em;
+margin-right: 0.4em;
+}
+
+.small-margin {
+margin: 1px 2px;
+}
+    
+.plain {
+margin: 0 !important;
+border: none;
+padding: 0;
+}
+
+description,
+label {
+cursor: default;
+margin-top: 1px;
+margin-bottom: 2px;
+-moz-margin-start: 3px;
+-moz-margin-end: 3px;
+}
+
+description {
+margin-bottom: 4px;
+}
+
+#offlineAppsListLabel {
+margin-top: 10px !important;
+}
+
+label[disabled="true"] {
+color: GrayText;
+}
+
+label[disabled="true"]:-moz-system-metric(windows-classic) {
+color: ThreeDShadow;
+text-shadow: 1px 1px ThreeDHighlight;
+}
+
+.tooltip-label {
+border-color:#000000;
+color:#000000;
+margin: 0;
+}
+
+.header {
+font-weight: bold;
+}
+
+.monospace {
+font-family: monospace;
+}
+
+.indent {
+-moz-margin-start: 23px;
+}
+
+.box-padded {
+padding: 5px;
+}
+
+.spaced {
+margin: 3px 5px 4px;
+}
+
+.wizard-box {
+padding: 20px 44px 10px;
+}
+
+.text-link {
+color: -moz-nativehyperlinktext;
+text-decoration: underline;
+border: 1px solid transparent;
+cursor: pointer;
+}
+  
+.text-link:focus {
+color: red;
+border: 1px dotted -moz-DialogText;
+}
+  
+.text-link:hover:active {
+color: red;
+}
+
+.text-link[visited="true"] {
+color: purple;
+}
+
+/* :::::: autoscroll popup ::::: */
+
+#autoscroller {
+height: 28px;
+width: 28px;
+border: none;
+margin: -14px;
+padding: 0;
+background-image: url("chrome://global/skin/icons/autoscroll.png");
+background-color: #E2E1E1 !important;
+background-position: right top;
+-moz-appearance: none;
+-moz-border-image: none !important;
+}
+
+#autoscroller[scrolldir="NS"] {
+background-color: #E2E1E1 !important;
+background-image: url("chrome://global/skin/icons/autoscroll.png");
+background-position: right center;
+-moz-border-image: none !important;
+}
+
+#autoscroller[scrolldir="EW"] {
+background-image: url("chrome://global/skin/icons/autoscroll.png");
+background-position: right bottom;
+background-color: #E2E1E1 !important;
+-moz-border-image: none !important;
+}
+
+.tabs-right {
+border: none;
+background-color: transparent !important;
+border-bottom:none !important;
+-moz-border-radius-bottomright: 8px;
+}
+
+tabs {
+-moz-appearance: none;
+background-color: transparent !important;
+margin: 0px !important;
+border: none !important;
+height:29px;
+padding:0 !important;
+}
+
+.tabbrowser-tabs[multibar] .tabbrowser-arrowscrollbox > .tabs-newtab-button {
+  height: 30px !important;
+  max-height: 30px !important;
+}
+
+/* FIREFOX 3.6 TABS */
+
+tab {
+height: 30px !important;
+-moz-appearance: none !important;
+background-color: transparent !important;
+background-image:url("chrome://browser/skin/tabbrowser/tabs/pref/tab_left_pref.png"),
+		 url("chrome://browser/skin/tabbrowser/tabs/pref/tab_right_pref.png"),
+		 url("chrome://browser/skin/tabbrowser/tabs/pref/tab_center_pref.png");
+-moz-border-image: none;
+background-position:bottom left,bottom right,bottom center;
+background-repeat:no-repeat,no-repeat,repeat-x;
+border: none !important;
+margin: 0px 0px 0px 1px;
+padding: 8px 8px 0px 8px;
+background-color: transparent !important;
+}
+
+tab:not([selected="true"]):hover {
+-moz-appearance: none !important;
+background-color: transparent !important;
+background-image:url("chrome://browser/skin/tabbrowser/tabs/pref/tab_left_hover_pref.png"),
+		 url("chrome://browser/skin/tabbrowser/tabs/pref/tab_right_hover_pref.png"),
+		 url("chrome://browser/skin/tabbrowser/tabs/pref/tab_center_hover_pref.png");
+-moz-border-image: none;
+background-position:bottom left,bottom right,bottom center;
+background-repeat:no-repeat,no-repeat,repeat-x;
+border: none !important;
+margin: 0px 0px 0px 1px;
+background-color: transparent !important;
+}
+
+tab[selected="true"] {
+-moz-appearance: none !important;
+margin: 0px 0px -1px 1px;
+padding: 6px 8px 0px 8px;
+background-color: transparent !important;
+background-color: transparent !important;
+background-image:url("chrome://browser/skin/tabbrowser/tabs/pref/selected_left_pref.png"),
+		 url("chrome://browser/skin/tabbrowser/tabs/pref/selected_right_pref.png"),
+		 url("chrome://browser/skin/tabbrowser/tabs/pref/selected_center_pref.png");
+-moz-border-image: none;
+background-position:bottom left,bottom right,bottom center;
+background-repeat:no-repeat,no-repeat,repeat-x;
+font-weight:normal;
+opacity:0.95 !important;
+border: none !important;
+}
+
+
+#miscGroup .groupbox-body,
+#addonsPhishingGroup .groupbox-body {
+-moz-border-radius-topleft: 6px;
+-moz-border-radius-topright: 6px;
+-moz-border-radius-bottomleft: 6px;
+-moz-border-radius-bottomright: 6px;
+}
+
+#updatePanel {
+padding:10px !important;
+}
+
+#TM_ButtonBox {
+padding-top:10px !important;
+padding-bottom:25px !important;
+padding-right:10px !important;
+padding-left:10px !important;}
+
+#styles {
+-moz-appearance: none !important;
+margin: 2px 4px;
+border: 2px solid !important;
+-moz-border-radius: 5px;
+-moz-border-top-colors:#969595 #c1c0bf !important;
+-moz-border-bottom-colors:#d6d5d4 #e0dfde !important;
+-moz-border-left-colors:#bbbab9 #dcdbda !important;
+-moz-border-right-colors:#bcbbba #dcdbda !important;
+background-color: #ffffff !important;
+color: #000000 !important;
+}
+
+#styles:focus {
+-moz-border-top-colors:#2f75c5 #789bc3 !important;
+-moz-border-bottom-colors:#3278c7 #88abd3 !important;
+-moz-border-left-colors:#3177c6 #86a8d1 !important;
+-moz-border-right-colors:#3278c7 #86a8d1 !important;
+}
+
+button[id="warningSettings"] {
+margin-bottom:20px !important;}
+
+ *[anonid="twisty"] {padding-left:10px !important;padding-right:10px !important;} 
+
+.speeddialThumb {
+-moz-box-shadow: 3px 3px 5px rgba(100, 100, 100, 0.5) !important;
+-moz-border-radius: 5px !important;
+}
+
+.speeddial-container {
+border:3px solid !important;
+-moz-border-top-colors:#ABACAA #DCDCDB #FBFCFC !important;
+-moz-border-bottom-colors:#BFC0BB #FFFFFF #FFFFFF !important;
+-moz-border-left-colors:#AAABA5 #FAFAFA #FFFFFF !important;
+-moz-border-right-colors:#AAACA6 #FAFAFA #FFFFFF !important;
+-moz-border-radius: 4px !important;
+}
+
+window[gtbPlatform="win"] #gtbGoogleSearchBox,
+window[gtbPlatform="linux"] #gtbGoogleSearchBox {
+border-width: 3px;
+-moz-border-top-colors:#acacab #dcdcdc #fcfcfc;
+-moz-border-bottom-colors:#c9c8c6 transparent transparent;
+-moz-border-left-colors:#b2b1b0 #fafafa transparent;
+-moz-border-right-colors:#b3b2b1 #fafafa transparent;
+}
+
+window[gtbPlatform="win"] #gtbGoogleSearchBox:hover,
+window[gtbPlatform="linux"] #gtbGoogleSearchBox:hover {
+-moz-border-top-colors:#79b7fc #aac9ec #e8f2fd;
+-moz-border-bottom-colors:#7bb8fd #bddcff #eaf4ff;
+-moz-border-left-colors:#7bb9fd #bad9fc #eaf4ff;
+-moz-border-right-colors:#7cb9fe #bad9fc #eaf4ff;
+}
+
+window[gtbPlatform="win"] #gtbGoogleSearchBox[focused="true"],
+window[gtbPlatform="linux"] #gtbGoogleSearchBox[focused="true"] {
+-moz-border-top-colors:#3076c6 #85a8d1 #dde7f5;
+-moz-border-bottom-colors:#3278c7 #98bbe4 #dfe9f7;
+-moz-border-left-colors:#3278c7 #95b8e1 #dfe9f7;
+-moz-border-right-colors:#3379c8 #95b8e1 #dfe9f7;
+}
+
+.speeddialThumb { margin: 10px !important;}
+.notification-inner.outset { padding:3px 0px;}
+
+.downloadContentBox {
+background-color: #D2D1CF;
+border:3px solid;
+-moz-border-left-colors:  #B1B0AF #F5F3F2 #D5D4D2;
+-moz-border-right-colors: #B1B0AF #F4F3F1 #D6D5D3;
+-moz-border-top-colors:  #CACAC7 #FBFBFB #D5D4D2;
+-moz-border-bottom-colors: #929290 #E3E2E2 #D5D4D2;
+-moz-border-radius: 6px;
+color:#000;
+text-shadow: 1px 1px 1px #fff;
+}
+
+#urlbar[fission="fusion"] > #statusbar-icon { margin:-1px !important; }

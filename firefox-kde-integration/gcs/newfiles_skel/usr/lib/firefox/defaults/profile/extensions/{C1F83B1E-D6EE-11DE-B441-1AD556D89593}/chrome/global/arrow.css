@@ -1,0 +1,46 @@
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.up {
+  min-width: 0px;
+  list-style-image: url("chrome://global/skin/arrow/arrow-up.png");
+}               
+.up:hover {
+  list-style-image: url("chrome://global/skin/arrow/arrow-up.png");
+}
+.up[disabled="true"] {
+  list-style-image: url("chrome://global/skin/arrow/arrow-up-dis.png");
+}
+
+.down {
+  min-width: 0px;
+  list-style-image: url("chrome://global/skin/arrow/arrow-down.png");
+}
+.down:hover {
+  list-style-image: url("chrome://global/skin/arrow/arrow-down.png");
+}
+.down[disabled="true"] {
+  list-style-image: url("chrome://global/skin/arrow/arrow-down-dis.png");
+}
+
+.left {
+  min-width: 0px;
+  list-style-image: url("chrome://global/skin/arrow/arrow-lft.png");
+}
+.left:hover {
+  list-style-image: url("chrome://global/skin/arrow/arrow-lft-hov.png");
+}
+.left[disabled="true"] {
+  list-style-image: url("chrome://global/skin/arrow/arrow-lft-dis.png");
+}
+
+.right {
+  min-width: 0px;
+  list-style-image: url("chrome://global/skin/arrow/arrow-rit.png");
+}
+.right:hover {
+  list-style-image: url("chrome://global/skin/arrow/arrow-rit-hov.png");
+}
+.right[disabled="true"] {
+  list-style-image: url("chrome://global/skin/arrow/arrow-rit-dis.png");
+}

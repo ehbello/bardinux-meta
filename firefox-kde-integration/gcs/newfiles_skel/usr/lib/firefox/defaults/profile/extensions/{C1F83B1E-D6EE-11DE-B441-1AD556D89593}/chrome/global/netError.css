@@ -1,0 +1,143 @@
+/*
+ *  This defines the look-and-feel styling of the error pages.
+ *  (see: netError.xhtml)
+ *
+ *  Original styling by William Price <bugzilla@mob.rice.edu>
+ *  Updated by: Steven Garrity <steven@silverorange.com>
+ *              Henrik Skupin  <mozilla@hskupin.info>
+ */
+
+html {
+background-color:#EEEEEE;
+}
+
+body {
+font: message-box;
+}
+
+h1 {
+margin: 0 0 .6em 0;
+font-size: 160%;
+}
+
+ul, ol {
+margin: 0;
+-moz-margin-start: 1.5em;
+padding: 0;
+}
+
+ul > li, ol > li {
+margin-bottom: .5em;
+list-style-image: url("chrome://browser/skin/icons/16/checkbox.png");
+}
+
+ul {
+list-style: normal;
+}
+
+#errorPageContainer {
+position: relative;
+min-width: 13em;
+max-width: 52em;
+margin: 5em auto; 
+padding: 3em; 
+-moz-padding-start: 50px; 
+-moz-background-origin: content; 
+border:3px solid;
+-moz-border-left-colors:  #B1B0AF #F5F3F2 #D5D4D2;
+-moz-border-right-colors: #B1B0AF #F4F3F1 #D6D5D3;
+-moz-border-top-colors:  #CACAC7 #FBFBFB #D5D4D2;
+-moz-border-bottom-colors: #929290 #E3E2E2 #D5D4D2;
+ background: url("chrome://global/skin/icons/warning-large.png") 20px 15px no-repeat;
+background-color:#D2D1CF;
+-moz-border-radius: 6px;
+}
+
+#errorPageContainer.certerror {
+  background-image: url("chrome://global/skin/icons/sslWarning.png");
+}
+
+body[dir="rtl"] #errorPageContainer {
+  background-position: right 0;
+}
+
+#errorTitle {
+  -moz-margin-start: 50px;
+text-shadow: 1px 1px 1px #fff;
+}
+
+#errorLongContent {
+  -moz-margin-start: 50px;
+}
+
+#errorShortDesc > p {
+  overflow: auto;
+  font-size: 100%;
+  white-space: pre-wrap;
+}
+
+#errorLongDesc {
+  -moz-padding-end: 3em;
+  font-size: 100%;
+}
+
+#errorLongDesc > p {
+}
+
+#errorTryAgain {
+  margin-top: 2em;
+  -moz-margin-start: 50px;
+}
+
+#brand {
+  position: absolute;
+  right: 0;
+  bottom: -1.5em;
+  -moz-margin-end: 10px;
+  opacity: .4;
+}
+
+body[dir="rtl"] #brand {
+  right: auto;
+  left: 0;
+}
+
+#brand > p {
+  margin: 0;
+}
+
+#errorContainer {
+  display: none;
+}
+
+#securityOverrideDiv {
+  padding-top: 10px;
+}
+
+#securityOverrideContent {
+  background-color: InfoBackground;
+  color: InfoText;
+  padding: 10px;
+  -moz-border-radius: 10px;
+}
+
+/* Custom styling for 'blacklist' error class */
+:root.blacklist #errorTitle, :root.blacklist #errorLongContent,
+:root.blacklist #errorShortDesc, :root.blacklist #errorLongDesc,
+:root.blacklist a {
+  background-color: #722; /* Dark red */
+  color: white;
+}
+
+:root.blacklist #errorPageContainer {
+  background-image: url("chrome://global/skin/icons/blacklist_large.png");
+  background-color: #722;
+}
+
+:root.blacklist {
+  background: #333;
+}
+
+:root.blacklist #errorTryAgain {
+  display: none;
+}

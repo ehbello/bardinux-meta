@@ -1,0 +1,814 @@
+/* HONEYCOMB COLOR SCHEME FOR OXYGEN KDE  */
+
+@namespace html url("http://www.w3.org/1999/xhtml");
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/* 1 */
+window,page,wizard,dialog,prefwindow  {
+-moz-appearance: none !important;
+background: url("chrome://global/skin/subskins/honeycomb/gradient/radial.png") top center no-repeat, 
+url("chrome://global/skin/subskins/honeycomb/gradient/linear.png") top left repeat-x,
+url("chrome://global/skin/subskins/honeycomb/gradient/bottom.png") bottom left repeat !important;
+background-color:#C7C9C3 !important;
+color: #000 !important;
+border:none !important;
+}
+
+#clientBox {
+background: url("chrome://browser/skin/icons/aboutkde.png") top center no-repeat,
+	    url("chrome://global/skin/subskins/honeycomb/gradient/radial.png") top center no-repeat, 
+            url("chrome://global/skin/subskins/honeycomb/gradient/linear.png") top left repeat-x !important;
+background-color:#C7C9C3 !important;}
+
+notification[type="info"] {
+color: #000 !important;
+background-color:#C7C9C3 !important;
+}
+/* 2 */
+menubar > menu:hover {
+background-color:#C3C6BF !important;
+background-image:none !important;
+-moz-border-radius: 5px !important;}
+/* 3 */
+statusbar {
+background-color:#C7C9C3 !important;}
+/* 4 */
+toolbar,tabpanels,toolbarbutton,toolbar[type="menubar"],
+menubar,#navigator-toolbox,menu,menuitem,#menubar-items,
+#PersonalToolbar,urlbar {
+color: #000 !important;}
+/* 5 */
+#editBMPanel_namePicker[droppable="false"],
+#editBookmarkPanel textbox,.fileFieldContentBox,textbox,
+#userAgent textbox {
+border:3px solid !important;
+color: #000 !important;
+background-color:#FFFFFF !important;
+-moz-border-top-colors:#ABACAA #DCDCDB #FBFCFC !important;
+-moz-border-bottom-colors:#BFC0BB #FFFFFF #FFFFFF !important;
+-moz-border-left-colors:#AAABA5 #FAFAFA #FFFFFF !important;
+-moz-border-right-colors:#AAACA6 #FAFAFA #FFFFFF !important;}
+#editBMPanel_namePicker[droppable="false"]:hover,
+.fileFieldContentBox:hover,textbox:hover,
+#userAgent textbox:hover,
+#userAgent textbox[focused="true"] {
+-moz-border-top-colors:#F0C207 #E5D282 #FCF6DD !important;
+-moz-border-bottom-colors:#F1C308 #FAE798 #FEF8DF !important;
+-moz-border-left-colors:#F0C207 #F7E495 #FEF8DF !important;
+-moz-border-right-colors:#F1C308 #F7E495 #FEF8DF !important;}
+#editBMPanel_namePicker[droppable="false"][focused="true"],
+.fileFieldContentBox[focused="true"],textbox[focused="true"] {
+-moz-border-top-colors:#585858 #A5A5A4 #E7E7E7 !important;
+-moz-border-bottom-colors:#595959 #BABABA #E9E9E9 !important;
+-moz-border-left-colors:#595959 #B7B7B7 #E9E9E9 !important;
+-moz-border-right-colors:#595959 #B7B7B7 #E9E9E9 !important;}
+/* 6 */
+.tabbrowser-tab:not([selected="true"]) { 
+background-image:url("chrome://global/skin/subskins/honeycomb/tabs/tab_left.png"),
+		 url("chrome://global/skin/subskins/honeycomb/tabs/tab_right.png"),
+		 url("chrome://global/skin/subskins/honeycomb/tabs/tab_center.png") !important;
+color: #000 !important;}
+/* 7 */
+.tabbrowser-tab:not([selected="true"]):hover { 
+-moz-appearance: none !important;
+background-image:url("chrome://global/skin/subskins/honeycomb/tabs/tab_left_hover.png"),
+		 url("chrome://global/skin/subskins/honeycomb/tabs/tab_right_hover.png"),
+		 url("chrome://global/skin/subskins/honeycomb/tabs/tab_center_hover.png") !important;
+color: #000 !important;}
+/* 8 */
+.tabbrowser-tab[selected="true"] { 
+background-image:url("chrome://global/skin/subskins/honeycomb/tabs/selected_left.png"),
+		 url("chrome://global/skin/subskins/honeycomb/tabs/selected_right.png"),
+		 url("chrome://global/skin/subskins/honeycomb/tabs/selected_center.png") !important;
+color: #000 !important;}
+/* 9 */
+.tabs-newtab-button {
+background-image:url("chrome://global/skin/subskins/honeycomb/tabs/selected_left.png"),
+		 url("chrome://global/skin/subskins/honeycomb/tabs/selected_right.png"),
+                 url("chrome://browser/skin/tabbrowser/tabs/tab_new.png"),
+		 url("chrome://global/skin/subskins/honeycomb/tabs/selected_center.png") !important;
+background-repeat:no-repeat,no-repeat,no-repeat,repeat-x !important;
+background-position:bottom left,bottom right,bottom center,bottom center !important; }
+/* 10 */
+.tabs-newtab-button:hover {
+background-image:url("chrome://global/skin/subskins/honeycomb/tabs/selected_left.png"),
+		 url("chrome://global/skin/subskins/honeycomb/tabs/selected_right.png"),
+                 url("chrome://browser/skin/tabbrowser/tabs/tab_new_hover.png"),
+		 url("chrome://global/skin/subskins/honeycomb/tabs/selected_center.png") !important;
+background-repeat:no-repeat,no-repeat,no-repeat,repeat-x !important;
+background-position:bottom left,bottom right,bottom center,bottom center !important; }
+
+/* 11 */
+tab {
+background-image:url("chrome://global/skin/subskins/honeycomb/pref/tab_left_pref.png"),
+		 url("chrome://global/skin/subskins/honeycomb/pref/tab_right_pref.png"),
+		 url("chrome://global/skin/subskins/honeycomb/pref/tab_center_pref.png") !important;
+color: #000 !important;
+}
+/* 12 */
+tab:not([selected="true"]):hover {
+background-image:url("chrome://global/skin/subskins/honeycomb/pref/tab_left_hover_pref.png"),
+		 url("chrome://global/skin/subskins/honeycomb/pref/tab_right_hover_pref.png"),
+		 url("chrome://global/skin/subskins/honeycomb/pref/tab_center_hover_pref.png") !important;
+}
+/* 13 */
+tab[selected="true"] {
+background-image:url("chrome://global/skin/subskins/honeycomb/pref/selected_left_pref.png"),
+		 url("chrome://global/skin/subskins/honeycomb/pref/selected_right_pref.png"),
+		 url("chrome://global/skin/subskins/honeycomb/pref/selected_center_pref.png") !important;
+}
+/* 14 */
+.tabs-bottom {
+-moz-border-top-colors: #CCD0C9 #F6F7F4 #D8DAD4 !important;
+background-color: #D5D8D1 !important;}
+.tabbrowser-tab[busy] {
+color:#3c3a66 !important;
+}
+/* 15 */
+#BrowserPreferences tabpanels,
+prefwindow tabpanels {
+background:url("chrome://global/skin/subskins/honeycomb/gradient/gradient.png") top left repeat-x !important;
+background-color: #C7C9C3 !important;
+color: #000 !important;
+-moz-border-radius-topleft:0px;
+-moz-border-radius-topright:4px;
+-moz-border-radius-bottomright:6px;
+-moz-border-radius-bottomleft:6px;
+border:4px solid !important;
+border-top:1px solid #F9F9F6 !important;
+-moz-border-left-colors: transparent #B5B7B1 #EDEEEB #DADCD6 !important;
+-moz-border-right-colors: transparent #B5B7B1 #EDEEEB #DADCD6 !important;
+-moz-border-bottom-colors: #B6B1AD #928C89 #DEDCD9 #D2CCC9 !important;
+padding:0px !important;
+}
+
+#speeddialTabbox-panelContainer {background: -moz-linear-gradient(top, #D8DBD4,#C7C9C3) !important;}
+
+/* 16 */
+toolbarbutton:hover,
+.toolbarbutton-1:hover,
+toolbarbutton.bookmark-item:hover,
+#placesMenu > menu:hover {
+-moz-border-top-colors:#D2D5CE #929390 #CDD0CA transparent !important;
+-moz-border-bottom-colors:#D0D3CC #91928F #CCCFC9 transparent !important;
+-moz-border-right-colors:#D1D4CD #919390 #CCCFC9 transparent !important;
+-moz-border-left-colors:#D1D4CD #919390 #CCCFC9 transparent !important;
+background-color:transparent !important;}
+toolbarbutton:hover:active,
+.toolbarbutton-1:hover:active,
+toolbarbutton.bookmark-item:hover:active,
+#placesMenu > menu:hover:active,
+#placesMenu > menu[open="true"] {
+-moz-border-top-colors:transparent #EFC106 #D3C26E #DCD9BA !important;
+-moz-border-bottom-colors:transparent #F1C408 #E3D27F #DDD9BA !important;
+-moz-border-right-colors:transparent #F2C409 #E1D07D #DDD9BA !important;
+-moz-border-left-colors:transparent #F1C308 #E1D07D #DDD9BA !important;
+background-color:transparent !important;}
+#bookmarks-button[checked="true"],
+#history-button[checked="true"],
+.toolbarbutton-1[checked="true"],
+toolbarbutton[checked="true"],
+toolbarbutton.bookmark-item[open="true"]  {
+-moz-border-top-colors:transparent #979993 #BEC0BA #D8DBD4 !important;
+-moz-border-bottom-colors:transparent #CED1CB #D9DCD5 #D9DCD5 !important;
+-moz-border-right-colors:transparent #B8BBB4 #D5D8D1 #D9DCD5 !important;
+-moz-border-left-colors:transparent #B8BBB4 #D6D9D2 #DADDD6 !important;}
+
+toolbarbutton[disabled="true"],
+toolbarbutton[disabled="true"]:hover,
+toolbarbutton[disabled="true"]:hover:active,
+toolbarbutton[disabled="true"][open="true"],
+toolbarbutton[disabled="true"][checked="true"] {
+-moz-border-top-colors:transparent transparent transparent transparent !important;
+-moz-border-bottom-colors:transparent transparent transparent transparent !important;
+-moz-border-right-colors:transparent transparent transparent transparent !important;
+-moz-border-left-colors:transparent transparent transparent transparent !important;
+}
+
+/* 17 */
+findbar {
+background-color: #C7C9C3 !important;
+color: #000 !important;
+border-top: 1px solid #A7A9A4 !important;}
+
+/*toolbarbutton.bookmark-item[container],#downloads-button,
+#organizeButton,#viewMenu,#maintenanceButton {
+background-image:url("chrome://global/skin/subskins/obsidian/arrow/menudroparrow_white.png") !important;
+background-repeat:no-repeat !important;
+background-position:bottom right !important;
+}
+
+dropmarker {
+list-style-image:url("chrome://global/skin/subskins/obsidian/arrow/arrow-down_white.png") !important;}
+
+.searchbar-dropmarker-image {
+background-color:#201F1F !important;
+height:16px !important;
+list-style-image:  url("chrome://global/skin/subskins/obsidian/arrow/arrow-down_white16.png") !important;}
+
+toolbarbutton.chevron { 
+list-style-image:  url("chrome://global/skin/subskins/obsidian/arrow/chevron_white.png") !important; }*/
+/* 18 */
+.findbar-find-next,
+.findbar-find-previous,
+.findbar-highlight,
+.findbar-highlight[checked="true"],
+menulist:not([editable]),
+button {
+background:url("chrome://global/skin/subskins/honeycomb/buttons/normal/left.png") center left no-repeat,
+url("chrome://global/skin/subskins/honeycomb/buttons/normal/right.png") center right no-repeat,
+url("chrome://global/skin/subskins/honeycomb/buttons/normal/center.png") center center repeat-x !important;
+color:#000 !important;}
+/* 19 */
+.mini-button,
+.mini-button:hover,
+#feed-button,
+#feed-button:hover,
+.searchbar-engine-button,
+.searchbar-engine-button:hover,
+.spinbuttons-up,
+.spinbuttons-up:hover,
+.spinbuttons-down,
+.spinbuttons-down:hover
+{background: none !important;}
+
+#autoscroller {
+background-image: url("chrome://global/skin/icons/autoscroll.png") !important;
+background-color: #C7C9C3 !important;
+background-position: right top !important;}
+#autoscroller[scrolldir="NS"] {
+background-image: url("chrome://global/skin/icons/autoscroll.png") !important;
+background-color: #C7C9C3 !important;
+background-position: right center !important;}
+#autoscroller[scrolldir="EW"] {
+background-image: url("chrome://global/skin/icons/autoscroll.png") !important;
+background-color: #C7C9C3 !important;
+background-position: right bottom !important;}
+
+/* 20 */
+/*.spinbuttons-up,
+.spinbuttons-down {
+list-style-image: url ("chrome://browser/skin/tabbrowser/tabs/obs/arrow/spinbutton.png") !important;
+}*/
+/* 21 */
+.findbar-find-next:hover,.findbar-find-previous:hover,.findbar-highlight:hover,
+menulist:not([editable]):hover,
+button:hover {
+background:url("chrome://global/skin/subskins/honeycomb/buttons/hover/left.png") center left no-repeat,
+url("chrome://global/skin/subskins/honeycomb/buttons/hover/right.png") center right no-repeat,
+url("chrome://global/skin/subskins/honeycomb/buttons/hover/center.png") center center repeat-x !important;
+color:#000 !important;}
+/* 22 */
+menulist:not([editable]):hover:active,
+menulist:not([editable])[open="true"],
+button[default="true"] {
+background:url("chrome://global/skin/subskins/honeycomb/buttons/default/left.png") center left no-repeat,
+url("chrome://global/skin/subskins/honeycomb/buttons/default/right.png") center right no-repeat,
+url("chrome://global/skin/subskins/honeycomb/buttons/default/center.png") center center repeat-x !important;
+color:#000 !important;}
+/* 23 */
+.findbar-find-next:hover:active,
+.findbar-find-previous:hover:active,
+.findbar-highlight:hover:active,
+button:hover:active,
+button[open="true"],
+button[checked="true"] {
+background:url("chrome://global/skin/subskins/honeycomb/buttons/active/left.png") center left no-repeat,
+url("chrome://global/skin/subskins/honeycomb/buttons/active/right.png") center right no-repeat,
+url("chrome://global/skin/subskins/honeycomb/buttons/active/center.png") center center repeat-x !important;
+color:#000 !important;}
+
+/* 24 */
+/*html|*.textbox-input, 
+html|*.textbox-textarea {
+color: inherit !important;}*/
+/* 25 */
+.tab-close-button {
+opacity:0.9 !important;}
+
+/* 26 */
+menupopup,popup,panel {
+-moz-appearance: none !important;
+background-color: #E4E3E3 !important;
+background-image:url("chrome://global/skin/subskins/honeycomb/popup/top_left.png"),
+url("chrome://global/skin/subskins/honeycomb/popup/bottom_left.png"),
+url("chrome://global/skin/subskins/honeycomb/popup/center_left.png"),
+url("chrome://global/skin/subskins/honeycomb/popup/top_right.png"),
+url("chrome://global/skin/subskins/honeycomb/popup/bottom_right.png"),
+url("chrome://global/skin/subskins/honeycomb/popup/center_right.png"),  
+url("chrome://global/skin/subskins/honeycomb/popup/bottom_center.png"),
+url("chrome://global/skin/subskins/honeycomb/popup/top_center.png"),
+url("chrome://global/skin/subskins/honeycomb/popup/center_center.png") !important;
+
+background-repeat:no-repeat,no-repeat,repeat-y,no-repeat,no-repeat,repeat-y,repeat-x,repeat-x,repeat !important;
+background-position:top left,bottom left,center left,top right,bottom right,center right,bottom center,top center,center center !important; 
+}
+
+/* 27 */
+panel[type="autocomplete"],
+popup[type="autocomplete"] {
+background-image: none !important;
+-moz-border-radius:0px !important;
+} 
+/* 28 */
+menuseparator {
+background-image: none !important;
+background-color:transparent !important;
+border-top:2px solid !important;
+-moz-border-top-colors:  #AAACA6 #ECEFE8 !important;
+}
+
+/* scrollbars */
+/* 29 */
+scrollbar[orient="vertical"] {
+background: url("chrome://global/skin/subskins/honeycomb/scrollbar/vertical/scroll-background_top.png"),
+	    url("chrome://global/skin/subskins/honeycomb/scrollbar/vertical/scroll-background_bottom.png"),
+	    url("chrome://global/skin/subskins/honeycomb/scrollbar/vertical/scroll-background.png") !important;
+background-color:transparent !important;
+background-repeat:no-repeat,no-repeat,repeat-y !important;
+background-position:top,bottom,center !important; }
+/* 30 */
+scrollbar[orient="horizontal"] {
+-moz-appearance: none;
+background: url("chrome://global/skin/subskins/honeycomb/scrollbar/scroll-background_left.png"),
+	    url("chrome://global/skin/subskins/honeycomb/scrollbar/scroll-background_right.png"),
+	    url("chrome://global/skin/subskins/honeycomb/scrollbar/scroll-background-horizontal.png") !important;
+background-color:transparent !important;
+background-repeat:no-repeat,no-repeat,repeat-x !important;
+background-position:top left,top right,top center !important; 
+}
+/* 31 */
+thumb[orient="vertical"] {
+-moz-appearance: none;
+background:url("chrome://global/skin/subskins/honeycomb/scrollbar/vertical/thumb-endcap2.png"),
+	   url("chrome://global/skin/subskins/honeycomb/scrollbar/vertical/thumb-endcap.png"),
+	   url("chrome://global/skin/subskins/honeycomb/scrollbar/vertical/thumb-topcap.png") !important;
+background-color:transparent !important;
+background-position:top,bottom,center !important; 
+background-repeat:no-repeat,no-repeat,repeat-y !important;
+}
+/* 32 */
+thumb[orient="vertical"]:hover,
+thumb[orient="vertical"]:active {
+-moz-appearance: none;
+background:url("chrome://global/skin/subskins/honeycomb/scrollbar/vertical/thumb-endcap2_hover.png"),
+	   url("chrome://global/skin/subskins/honeycomb/scrollbar/vertical/thumb-endcap_hover.png"),	   
+	   url("chrome://global/skin/subskins/honeycomb/scrollbar/vertical/thumb-topcap-hover.png") !important;
+background-color:transparent !important;
+background-position:top,bottom,center !important; 
+background-repeat:no-repeat,no-repeat,repeat-y !important;}
+/* 33 */
+thumb[orient="horizontal"] {
+-moz-appearance: none;
+background:url("chrome://global/skin/subskins/honeycomb/scrollbar/thumb-endcap4.png"),
+	   url("chrome://global/skin/subskins/honeycomb/scrollbar/thumb-endcap3.png"),
+	   url("chrome://global/skin/subskins/honeycomb/scrollbar/thumb-startcap.png") !important;
+background-color:transparent !important;
+background-position:top left,top right,top center !important; 
+background-repeat:no-repeat,no-repeat,repeat-x !important;
+}
+/* 34 */
+thumb[orient="horizontal"]:hover,
+thumb[orient="horizontal"]:active {
+-moz-appearance: none;
+background:url("chrome://global/skin/subskins/honeycomb/scrollbar/thumb-endcap4_hover.png"),
+	   url("chrome://global/skin/subskins/honeycomb/scrollbar/thumb-endcap3_hover.png"),	   
+	   url("chrome://global/skin/subskins/honeycomb/scrollbar/thumb-startcap-hover.png") !important;
+background-color:transparent !important;
+background-position:top left,top right,top center !important; 
+background-repeat:no-repeat,no-repeat,repeat-x !important;
+}
+/* 35 */
+scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"] {
+background-image: url("chrome://global/skin/subskins/honeycomb/scrollbar/vertical/arrow-up.png") !important;}
+scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"]:hover {
+background-image: url("chrome://global/skin/subskins/honeycomb/scrollbar/vertical/arrow-up_hover.png") !important;}
+scrollbar[orient="vertical"] > scrollbarbutton[type="increment"] {
+background-image: url("chrome://global/skin/subskins/honeycomb/scrollbar/vertical/arrow-down.png") !important;}
+scrollbar[orient="vertical"] > scrollbarbutton[type="increment"]:hover {
+background-image: url("chrome://global/skin/subskins/honeycomb/scrollbar/vertical/arrow-down_hover.png") !important;}
+/* 36 */
+scrollbar[orient="horizontal"] > scrollbarbutton[type="decrement"] {
+background-image: url("chrome://global/skin/subskins/honeycomb/scrollbar/arrow-left.png") !important;}
+scrollbar[orient="horizontal"] > scrollbarbutton[type="decrement"]:hover {
+background-image: url("chrome://global/skin/subskins/honeycomb/scrollbar/arrow-left_hover.png") !important;}
+scrollbar[orient="horizontal"] > scrollbarbutton[type="increment"] {
+background-image: url("chrome://global/skin/subskins/honeycomb/scrollbar/arrow-right.png") !important;}
+scrollbar[orient="horizontal"] > scrollbarbutton[type="increment"]:hover {
+background-image: url("chrome://global/skin/subskins/honeycomb/scrollbar/arrow-right_hover.png") !important;}
+/* 37 */
+scrollcorner { background-color: #C7C9C3 !important;}
+/* 38 */
+#sanitizeEverythingWarningBox,
+.groupbox-body,
+.downloadContentBox {
+border:3px solid !important;
+-moz-border-left-colors:  #A9AAA5 #ECEDEA #CACBC6 !important;
+-moz-border-right-colors: #A9AAA5 #ECEEEA #CACCC7 !important;
+-moz-border-top-colors:  #BFC2BB #F5F5F3 #CBCCC7 !important;
+-moz-border-bottom-colors: #8B8D88 #D9DBD5 #CBCCC6 !important;
+ background-image: none !important;
+background-color:#C7C9C3 !important;
+-moz-border-radius: 6px !important;}
+
+html|*#errorPageContainer {
+background: url("chrome://global/skin/icons/warning-large.png") 20px 15px no-repeat !important;
+-moz-border-left-colors:  #A9AAA5 #ECEDEA #CACBC6 !important;
+-moz-border-right-colors: #A9AAA5 #ECEEEA #CACCC7 !important;
+-moz-border-top-colors:  #BFC2BB #F5F5F3 #CBCCC7 !important;
+-moz-border-bottom-colors: #8B8D88 #D9DBD5 #CBCCC6 !important;
+background-color:#C7C9C3 !important;
+}
+
+/* 39 */
+.downloadContentBox,
+caption {
+color: #000 !important;
+font-weight: normal !important;
+text-shadow: 1px 1px 1px #fff !important;}
+
+/* 40 */
+/*.dialog-button-box { 
+background-color:transparent !important;
+background-image: url("chrome://global/skin/subskins/oxygen/popup/line_left.png"),
+		  url("chrome://global/skin/subskins/oxygen/popup/line_right.png"),
+url("chrome://global/skin/subskins/oxygen/popup/line_center.png") !important;
+background-position:top left,top right,top center !important;
+background-repeat:no-repeat,no-repeat,repeat-x !important;
+}*/
+
+/* 41 */
+menu:hover,
+menuitem:hover,
+menu[_moz-menuactive="true"],
+menuitem[_moz-menuactive="true"],
+menu[_moz-menuactive="true"],
+menuitem[_moz-menuactive="true"]  {
+background-image: url("chrome://global/skin/subskins/honeycomb/menu/menuitem_hover.png") !important;
+background-repeat:repeat-x !important; 
+background-position:center right !important;}
+
+menu[disabled="true"], menuitem[disabled="true"],
+menu[_moz-menuactive="true"][disabled="true"],
+menuitem[_moz-menuactive="true"][disabled="true"] {
+background-image:none !important; 
+}
+/* 42 */
+tree,richlistbox,.paneSelector,#topBar,.viewSelector,
+#extensionsView,#themePreviewArea,#viewGroup,listbox,
+#palette-box,#permList,#itemList {
+-moz-border-top-colors:#939690 #B9BCB5 !important;
+-moz-border-bottom-colors:#BFC0BB #C7C9C3 !important;
+-moz-border-left-colors:#AAABA5 #C4C5C0 !important;
+-moz-border-right-colors:#AAACA6 #C4C5C0 !important;
+background-color: #FFFFFF !important;
+color: #000 !important;}
+
+tree:hover,
+#topBar:hover,
+richlistbox:hover,
+.paneSelector:hover,
+.viewSelector:hover,
+#extensionsView:hover,
+listbox:hover,
+#itemList:hover {
+-moz-border-top-colors:#EFC106 #D0BF6B !important;
+-moz-border-bottom-colors:#F1C308 #D9C774 !important;
+-moz-border-left-colors:#F0C207 #D6C572 !important;
+-moz-border-right-colors:#F1C308 #D6C572 !important;
+background-color: #FFFFFF !important;
+color: #000 !important;}
+/* 43 */
+#viewGroup radio {
+background-color: #FFF !important;}
+/* 44 */
+tree:focus,
+#topBar:focus,
+richlistbox:focus,
+.paneSelector:focus,
+.viewSelector:focus,
+#extensionsView:focus,
+listbox:focus,
+#itemList:focus {
+-moz-border-top-colors:#575757 #90928D !important;
+-moz-border-bottom-colors:#595959 #999A96 !important;
+-moz-border-left-colors:#595959 #969894 !important;
+-moz-border-right-colors:#595959 #969894 !important;}
+/* 45 */
+richlistitem{
+background-color: #fff !important;
+color: #000 !important;}
+/* 46 */
+#BrowserPreferences radio[pane]:hover,
+radio[pane]:hover,
+richlistitem:hover,
+treechildren::-moz-tree-row(hover),
+#viewGroup radio:hover,
+listitem:hover,
+#permList > vbox:hover {
+background: -moz-linear-gradient(top, #FEF3D3, #F9EECC) !important;
+-moz-border-top-colors:#F9E9BA #FEF6DE !important;
+-moz-border-bottom-colors:#F6E7B7 #FBF2D9 !important;
+-moz-border-left-colors:#F7E8B9 #FDF5DC !important;
+-moz-border-right-colors:#F7E8B9 #FDF5DC !important;
+color: #000 !important;}
+/* 47 */
+#BrowserPreferences radio[pane][selected="true"],
+radio[pane][selected="true"],
+richlistitem[selected="true"],
+treechildren::-moz-tree-row(selected),
+treechildren::-moz-tree-row(current, focus),
+treechildren::-moz-tree-row(selected, focus),
+treechildren::-moz-tree-row(selected, current, focus),
+#viewGroup radio[selected="true"],
+listitem[selected="true"],
+listbox:focus > listitem[selected="true"] {
+background: -moz-linear-gradient(top, #FEC726, #E3AA00) !important;
+-moz-border-top-colors:#E3AA00 #FED65D !important;
+-moz-border-bottom-colors:#E3AA00 #EABF40 !important;
+-moz-border-left-colors:#E3AA00 #EFC547 !important;
+-moz-border-right-colors:#E3AA00 #EFC547 !important;
+color: #fff !important;}
+
+#identity-box.verifiedDomain {
+background: url("chrome://browser/skin/identity_arrow.png"),
+	    -moz-linear-gradient(top, #FEC726, #E3AA00) !important;
+-moz-border-top-colors:#E3AA00 #FED65D !important;
+-moz-border-bottom-colors:#E3AA00 #EABF40 !important;
+-moz-border-left-colors:#E3AA00 #EFC547 !important;
+-moz-border-right-colors:#E3AA00 #EFC547 !important;
+color: #fff !important;
+background-position:center right,center left !important;
+background-repeat:no-repeat,repeat !important;}
+/* 48 */
+treecol,
+treecolpicker {
+background: #BABDB7 url("chrome://browser/skin/icons/gripper.png") no-repeat center right !important;
+color: #000 !important;
+-moz-border-bottom-colors: #9DA09B #D9DDD6 !important;
+}
+/* 49 */
+#sidebar-box > sidebarheader{
+-moz-border-left-colors: #ACAEA9 #DADED6 #D7DAD3 !important;
+-moz-border-right-colors: #DFE2DB #B0B2AC #DCDFD8 !important;
+-moz-border-top-colors: #A7A9A4 #E7EBE3 #D8DBD4 !important; 
+    background-color:transparent !important;}
+/* 50 */
+#sidebar-box > browser {
+-moz-border-left-colors: #ACAEA9 #DADED6 #D7DAD3 !important;
+-moz-border-right-colors: #DFE2DB #B0B2AC #DCDFD8 !important;
+-moz-border-bottom-colors: #E7EBE3 #A7A9A4 #C7C9C3 !important; 
+background-color:transparent !important;}
+/* 51 */
+#bookmarksPanel > hbox,
+#history-panel > hbox {
+background-color:transparent !important;}
+
+#sidebar-box,#bookmarks-view,#historyTree,
+#bookmarksPanel,#history-panel {
+background: -moz-linear-gradient(top, #D8DBD4,#C7C9C3) !important;}
+/* 52 */
+/*splitter {
+-moz-border-right-colors: #3E3D3D #292828 #3A3A3A !important;
+background: transparent url("chrome://global/skin/subskins/obsidian/gripper.png") no-repeat center center !important;}*/
+/* 53 */
+grippy:hover {background-color: transparent !important;}
+/* 54 */
+#infoPaneBox {
+-moz-border-top-colors:#8C8E89 #AFB0AA !important;
+-moz-border-bottom-colors:#BFC0BB #C7C9C3 !important;
+-moz-border-left-colors:#AAABA5 #C4C5C0 !important;
+-moz-border-right-colors:#AAACA6 #C4C5C0 !important;
+background-color: #D4D7D0 !important;
+color: #000 !important;}
+/* 55 */
+.findbar-textbox[status="notfound"]  > .textbox-input-box {
+background-color:#F7E6E6 !important;}
+/* 56 */
+/*#instructions {
+text-shadow: 2px 2px 3px #fff !important;}*/
+/* 57 */
+tooltip {
+border: 1px solid #403000 !important;
+background-color: #FFF299 !important;  
+color: #403000 !important;}
+.tooltip-label {
+color: #403000 !important;}
+/* 58 */
+.fileFieldContentBox {
+margin:0px !important;}
+/* 59 */
+/*separator.groove:not([orient="vertical"]) {
+border-top: 1px solid #3C3C3C !important; 
+border-bottom: 1px solid #282727 !important; }
+separator.groove[orient="vertical"] {
+border-left: 1px solid #3C3C3C !important;
+border-right: 1px solid #282727 !important;}*/
+/* 60 */
+checkbox[disabled="true"] > .checkbox-check {
+list-style-image: url("chrome://global/skin/subskins/honeycomb/checkbox/checkbox.png") !important;}
+checkbox[checked="true"][disabled="true"] > .checkbox-check {
+list-style-image: url("chrome://global/skin/subskins/honeycomb/checkbox/checkbox-checked.png") !important;}
+/* ..... hover state ..... */
+checkbox:not([disabled="true"]):hover >  .checkbox-check{
+list-style-image: url("chrome://global/skin/subskins/honeycomb/checkbox/checkbox-active.png") !important;}
+checkbox[checked="true"]:not([disabled="true"]):hover >  .checkbox-check{
+list-style-image: url("chrome://global/skin/subskins/honeycomb/checkbox/checkbox-checked-active.png") !important;}
+checkbox[checked="true"] > .checkbox-check {
+list-style-image: url("chrome://global/skin/subskins/honeycomb/checkbox/checkbox-checked.png") !important;}
+checkbox[checked="true"][disabled="true"] > .checkbox-check {
+list-style-image: url("chrome://global/skin/subskins/honeycomb/checkbox/checkbox-active.png") !important;}
+checkbox:focus >  .checkbox-check{
+list-style-image: url("chrome://global/skin/subskins/honeycomb/checkbox/checkbox-focus.png") !important;}
+checkbox[checked="true"]:focus >  .checkbox-check{
+list-style-image: url("chrome://global/skin/subskins/honeycomb/checkbox/checkbox-checked-focus.png") !important;}
+/* ..... active ..... */
+checkbox:focus:active > .checkbox-check {
+list-style-image: url("chrome://global/skin/subskins/honeycomb/checkbox/checkbox-active.png") !important;}
+checkbox[checked="true"]:active > .checkbox-check{
+list-style-image: url("chrome://global/skin/subskins/honeycomb/checkbox/checkbox-checked-active.png") !important;}
+/* ::::: checkBox ::::: */
+.checkbox-check {
+list-style-image: url("chrome://global/skin/subskins/honeycomb/checkbox/checkbox.png") !important;}
+
+/* 61 */
+#sidebar-box .tabs-closebutton {
+list-style-image: url("chrome://global/skin/subskins/honeycomb/close_sidebar.png") !important;}
+#sidebar-box .tabs-closebutton:hover {
+-moz-border-top-colors:#D2D5CE #929390 #CDD0CA transparent !important;
+-moz-border-bottom-colors:#D0D3CC #91928F #CCCFC9 transparent !important;
+-moz-border-right-colors:#D1D4CD #919390 #CCCFC9 transparent !important;
+-moz-border-left-colors:#D1D4CD #919390 #CCCFC9 transparent !important;}
+#sidebar-box .tabs-closebutton:hover:active {
+-moz-border-top-colors:transparent #EFC106 #D3C26E #DCD9BA !important;
+-moz-border-bottom-colors:transparent #F1C408 #E3D27F #DDD9BA !important;
+-moz-border-right-colors:transparent #F2C409 #E1D07D #DDD9BA !important;
+-moz-border-left-colors:transparent #F1C308 #E1D07D #DDD9BA !important;}
+/* 62 */
+/* radio box*/
+.radio-check-box1 {
+list-style-image:url("chrome://global/skin/subskins/honeycomb/radio/radio.png") !important;}
+radio[focused="true"] .radio-check-box1 {
+list-style-image:url("chrome://global/skin/subskins/honeycomb/radio/radio-focus.png") !important;}
+radio[selected="true"][focused="true"] .radio-check-box1 {
+list-style-image: url("chrome://global/skin/subskins/honeycomb/radio/radio-checked-focus.png") !important;}
+/* ::::: pressed image ::::: */
+radio:active .radio-check-box1 {
+list-style-image:url("chrome://global/skin/subskins/honeycomb/radio/radio-active.png") !important;}
+radio[selected="true"]:active .radio-check-box1 {
+list-style-image:url("chrome://global/skin/subskins/honeycomb/radio/radio-checked-active.png") !important;}
+/* ..... selected state ..... */
+radio[selected="true"] .radio-check-box1 {
+list-style-image:url("chrome://global/skin/subskins/honeycomb/radio/radio-checked.png") !important;}
+/* ..... hover state ..... */
+radio:not([disabled="true"]):hover .radio-check-box1 {
+list-style-image:url("chrome://global/skin/subskins/honeycomb/radio/radio-active.png") !important;}
+radio[selected="true"]:not([disabled="true"]):hover .radio-check-box1 {
+list-style-image:url("chrome://global/skin/subskins/honeycomb/radio/radio-checked-active.png") !important;}
+radio[disabled="true"] .radio-check-box1 {
+list-style-image:url("chrome://global/skin/subskins/honeycomb/radio/radio.png") !important;}
+radio[selected="true"][disabled="true"] .radio-check-box1 {
+list-style-image:url("chrome://global/skin/subskins/honeycomb/radio/radio-checked.png") !important;}
+/* 63 */
+#editBMPanel,
+#editBookmarkPanelTitle,
+#editBookmarkPanelHeader,
+#editBookmarkPanelContent {
+color: #000 !important;}
+/* 64 */
+#identity-popup-container {
+background-color:transparent !important;
+color: #000 !important;}
+/* 65 */
+/*#identity-popup {
+-moz-border-top-colors:#275C9B #283E59 !important;
+-moz-border-bottom-colors:#275C9B #2A3F5A !important;
+-moz-border-left-colors:#265B9B #2A405B !important;
+-moz-border-right-colors:#275C9B #2A405B !important;}*/
+/* 66 */
+/*.menu-right {
+  list-style-image: url("chrome://global/skin/subskins/obsidian/arrow/menu-arrow.png") !important;
+  -moz-image-region: auto;}*/
+
+/* 67 */
+/* ::::: statusbar progressmeter ::::: */
+progressmeter,
+progressmeter[mode="undetermined"],
+.progressmeter-statusbar {
+background: url("chrome://global/skin/subskins/honeycomb/progress/bg_left.png"),
+	    url("chrome://global/skin/subskins/honeycomb/progress/bg_right.png"),
+	    url("chrome://global/skin/subskins/honeycomb/progress/bg_center.png") !important;
+background-color:transparent !important;
+background-repeat:no-repeat,no-repeat,repeat-x !important;
+background-position:left,right,center !important; 
+}
+/* 68 */
+progressmeter[mode="undetermined"] .progress-bar,
+.progress-bar,
+.progressmeter-statusbar .progress-bar {
+background: url("chrome://global/skin/subskins/honeycomb/progress/prog_left.png"),
+	    url("chrome://global/skin/subskins/honeycomb/progress/prog_right.png"),
+	    url("chrome://global/skin/subskins/honeycomb/progress/prog_center.png") !important;
+background-color:transparent !important;
+background-repeat:no-repeat,no-repeat,repeat-x !important;
+background-position:left,right,center !important; 
+}
+/* 69 */
+#pagesaver-statusbarpanel button {
+background-image:none !important;}
+/* 70 */
+menu.bookmark-item:hover,
+menu.bookmark-item:hover:active {
+-moz-border-radius-topleft: 5px !important;
+-moz-border-radius-topright: 0px !important;
+-moz-border-radius-bottomleft: 5px !important;
+-moz-border-radius-bottomright: 0px !important; 
+background-color:transparent !important;
+background-image: url("chrome://global/skin/subskins/honeycomb/menu/menuitem_hover.png") !important;
+background-repeat:repeat-x !important; 
+background-position:center right !important;
+}
+/* 71 */
+/*.autorepeatbutton-up,.scrollbutton-up,.up {
+list-style-image:url("chrome://global/skin/subskins/obsidian/arrow/arrow-up.png") !important;} */
+/* 72      */
+/*.autorepeatbutton-down,.scrollbutton-down,.down {
+list-style-image:url("chrome://global/skin/subskins/obsidian/arrow/arrow-down.png") !important;}*/
+/* 73 */
+#placesView {
+border: 3px solid !important;
+-moz-border-left-colors: #ACAEA9 #DADED6 #D7DAD3 !important;
+-moz-border-right-colors: #DFE2DB #B0B2AC #DCDFD8 !important;
+-moz-border-top-colors: #A7A9A4 #E7EBE3 #D8DBD4 !important; 
+-moz-border-bottom-colors: #E7EBE3 #A7A9A4 #C7C9C3 !important; 
+}
+/* 74 */
+textbox.plain {background-color: #fff !important;}
+/* 75 */
+menuitem[checked="true"] {
+list-style-image: url("chrome://global/skin/subskins/honeycomb/menu/myMenucheck.png") !important;
+-moz-image-region: rect(0px, 16px, 16px, 0px) !important;}
+menuitem[checked="false"] {
+list-style-image: url("chrome://global/skin/subskins/honeycomb/menu/nocheck.png") !important;
+-moz-image-region: auto !important;}
+menuitem[checked="true"][type="radio"] {
+list-style-image: url("chrome://global/skin/subskins/honeycomb/menu/myMenucheck.png") !important;
+-moz-image-region: rect(32px, 16px, 48px, 0px) !important;}
+menuitem[checked="false"][type="radio"] {
+list-style-image: url("chrome://global/skin/subskins/honeycomb/menu/nocheck_radio.png") !important;
+-moz-image-region: auto !important;}
+menuitem[checked="true"][type="radio"][disabled="true"] {
+list-style-image: url("chrome://global/skin/subskins/honeycomb/menu/myMenucheck.png") !important;
+-moz-image-region: rect(48px, 16px, 64px, 0px) !important;}
+menuitem[checked="true"][type="radio"][_moz-menuactive="true"] {
+list-style-image: url("chrome://global/skin/subskins/honeycomb/menu/myMenucheck.png") !important;
+-moz-image-region: rect(32px, 16px, 48px, 0px) !important;}
+menuitem[checked="true"][disabled="true"] {
+list-style-image: url("chrome://global/skin/subskins/honeycomb/menu/myMenucheck.png") !important;
+-moz-image-region: rect(16px, 16px, 32px, 0px) !important;}
+menuitem[checked="true"][_moz-menuactive="true"] {
+list-style-image: url("chrome://global/skin/subskins/honeycomb/menu/myMenucheck.png") !important;
+-moz-image-region: rect(0px, 16px, 16px, 0px) !important;}
+
+
+menulist > menupopup,
+.menulist-menupopup {
+min-width: 0px;
+background-image:none !important;
+background-color:#ffffff !important;
+-moz-border-image: none !important;
+padding: 0px !important;
+margin:0px !important;
+-moz-border-radius:0px !important;
+border: 1px solid #b8b8b8 !important;
+}
+
+.menulist-menupopup > menuitem:hover ,
+menulist > menupopup > menuitem:hover,
+.menulist-menupopup > menuitem:focus,
+menulist > menupopup > menuitem:focus,
+menulist > menupopup > menuitem[_moz-menuactive="true"],
+menulist > menupopup > menu[_moz-menuactive="true"]  {
+color: #fff !important;
+background-color:#E3AA00 !important;
+background-image:none !important;
+-moz-border-radius:0px !important;
+}
+
+.findbar-textbox[status="notfound"] {
+-moz-border-top-colors:#A69D9B #D6C8C7 #F4E3E3 !important;
+-moz-border-bottom-colors:#BFC0BB #F7E6E6 #F7E6E6 !important;
+-moz-border-left-colors:#AAABA5 #F2E2E2 #F7E6E6 !important;
+-moz-border-right-colors:#AAACA6 #F2E2E2 #F7E6E6 !important;}
+.findbar-textbox[status="notfound"]:hover {
+-moz-border-top-colors:#F0C106 #E1C676 #F5E0C7 !important;
+-moz-border-bottom-colors:#F1C308 #F5D889 #F7E2C9 !important;
+-moz-border-left-colors:#F0C207 #F2D586 #F7E2C9 !important;
+-moz-border-right-colors:#F1C308 #F2D586 #F7E2C9 !important;}
+.findbar-textbox[status="notfound"][focused="true"] {
+-moz-border-top-colors:#585858 #A19998 #E0D1D1 !important;
+-moz-border-bottom-colors:#595959 #B5ABAB #E2D3D3 !important;
+-moz-border-left-colors:#595959 #B2A8A8 #E2D3D3 !important;
+-moz-border-right-colors:#595959 #B2A8A8 #E2D3D3 !important;}
+
+#ToolbarMode #viewGroup {background-color:transparent !important;}

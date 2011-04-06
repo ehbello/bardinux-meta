@@ -1,0 +1,342 @@
+
+/* ===== menu.css =======================================================
+  == Styles used by XUL menu-related elements.
+  ======================================================================= */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: menu/menuitem ::::: */
+
+menu,
+menuitem {
+-moz-appearance: none !important;
+-moz-box-align: center;
+color: #000000;
+font: menu;
+list-style-image: none;
+-moz-image-region: auto;
+-moz-border-radius: 3px;
+}
+
+
+menu[disabled="true"], menuitem[disabled="true"],
+menu[_moz-menuactive="true"][disabled="true"],
+menuitem[_moz-menuactive="true"][disabled="true"] {
+color: #000000;
+padding:0px 0px 0px 2px !important;
+opacity: 0.3;
+background-image:none !important; 
+}
+
+menu[disabled="true"]:hover, menuitem[disabled="true"]:hover,
+menu[_moz-menuactive="true"][disabled="true"]:hover,
+menuitem[_moz-menuactive="true"][disabled="true"]:hover {
+background-color:transparent !important;
+background-image:none !important;
+}
+
+menu {
+border: none;
+margin:3px 2px 3px 5px !important;
+padding:0px !important;
+padding-left:2px !important;
+}
+
+menubar > menu {
+border: none;
+padding: 0px !important;
+margin: 0px 3px !important;
+}
+
+/* ..... internal content .... */
+
+.menu-text,
+.menu-iconic-text {
+  margin: 0px 4px 0px 3px;
+  color: inherit;
+
+}
+
+.menu-text {
+  margin-left: 2px !important;
+/* padding-bottom:4px !important; */
+  font-weight: inherit;
+}
+
+.menuitem-text {
+  margin-left: 2px !important;
+/* margin-bottom:4px !important; */
+  font-weight: inherit;
+}
+
+.menu-description {
+  font-style: italic;
+  color: GrayText;
+  -moz-margin-start: 1ex !important;
+}
+
+.menu-accel,
+.menu-iconic-accel {
+  margin: 0px 2px 0px 12px !important;
+  padding-right: 0px;
+  color: inherit;
+}
+
+.menu-accel-container {
+  -moz-box-pack: end;
+}
+
+.menu-iconic-left {
+  margin: 0px 0px 0px -2px !important;
+  color: inherit;
+}
+
+.menu-iconic-icon {
+  width: 16px;
+  height: 16px;
+  list-style-image: inherit;
+}
+
+menuitem[type="checkbox"] > .menu-iconic-left,
+menuitem[type="radio"] > .menu-iconic-left {
+  margin:0 !important;
+ }
+
+/* ..... menu arrow box ..... */
+
+.menu-right {
+  margin: 0px 0px 0px 6px;
+  width: 8px;
+padding-right:0;
+  list-style-image: url("chrome://global/skin/icons/menu-arrow.png");
+  -moz-image-region: auto;
+}
+
+.menu-right[_moz-menuactive="true"] {
+  list-style-image: url("chrome://global/skin/icons/menu-arrow.png");
+  -moz-image-region: auto;
+}
+
+.menu-right[disabled="true"] {
+  list-style-image: url("chrome://global/skin/icons/menu-arrow_dis.png");
+  -moz-image-region: auto;
+}
+
+/* ::::: menu/menuitems in menubar ::::: */
+
+/*menubar > menu {
+  border: 2px solid transparent;
+}*/
+/*menubar > menu[_moz-menuactive="true"][open="true"] {
+  border-width: 3px 1px 1px 3px;
+}*/
+menubar > menu[_moz-menuactive="true"],
+menubar > menu[_moz-menuactive="true"][open="true"] {
+  color: #000;
+/* background-color:#000 !important; */
+}
+
+/* ..... internal content .... */
+
+.menubar-left {
+  color: inherit;
+}
+
+.menubar-text {
+  margin: 1px 6px 2px 6px !important;
+  color: inherit;
+}
+
+/* ::::: menu/menuitems in popups ::::: */
+
+menupopup > menu,
+popup > menu
+ {
+margin:3px 7px 3px 5px !important;
+padding:0px !important;
+padding-left:2px !important;
+}
+
+menubar > menu:hover,
+menubar > menu[focused="false"] {
+background-color:#CECDCB;
+background-image:none !important;
+-moz-border-radius: 5px !important;
+padding: 0px !important;
+}
+
+menu:hover,
+menuitem:hover,
+menu[_moz-menuactive="true"],
+menuitem[_moz-menuactive="true"],
+menu[_moz-menuactive="true"],
+menuitem[_moz-menuactive="true"]  {
+padding: 0px 0px 0px 2px;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-topright: 0px;
+-moz-border-radius-bottomleft: 5px;
+-moz-border-radius-bottomright: 0px; 
+background-color:transparent;
+background-image: url("chrome://browser/skin/icons/menuitem_hover.png");
+background-repeat:repeat-x; 
+background-position:center right;
+}
+
+popup > menuitem {
+margin:3px 7px 3px 5px !important;
+padding:0px !important;
+padding-left:2px !important;
+}
+
+menupopup > menuitem {
+margin:3px 7px 3px 5px !important;
+padding:0px !important;
+padding-left:2px !important;
+}
+
+/* ::::: menu/menuitems in menulist popups ::::: */
+
+.menulist-menupopup {
+background-color:#fff !important;
+-moz-border-image: none !important;
+}
+
+.menulist-menupopup > menu,
+menulist > menupopup > menu {
+/*   padding: 0px !important; */
+  font: inherit;
+  color: #000000;
+}
+
+
+.menulist-menupopup > menuitem,
+menulist > menupopup > menuitem  {
+padding-right: 10px;
+margin:0px !important;
+font: inherit;
+color: #000000;
+background-color:transparent !important;
+background-image:none !important;
+-moz-border-radius:0px !important;
+}
+
+.menulist-menupopup > menuitem:hover ,
+menulist > menupopup > menuitem:hover,
+.menulist-menupopup > menuitem:focus,
+menulist > menupopup > menuitem:focus,
+menulist > menupopup > menuitem[_moz-menuactive="true"],
+menulist > menupopup > menu[_moz-menuactive="true"]  {
+padding-right: 10px;  
+margin:0px !important;
+font: inherit;
+color: #fff !important;
+background-color:#418BD4 !important;
+background-image:none;
+-moz-border-radius:0px !important;
+}
+
+
+menuitem > .menu-iconic-left,
+menuitem > .menu-iconic-left,
+menu > .menu-iconic-left,
+menu > .menu-iconic-left {
+  margin: 0px 3px 0px 0px !important;
+}
+
+.menulist-menupopup > menuitem > .menu-iconic-left,
+menulist > menupopup > menuitem > .menu-iconic-left,
+.menulist-menupopup > menu > .menu-iconic-left,
+menulist > menupopup > menu > .menu-iconic-left {
+  margin: 0 2px 0 0 !important;
+}
+
+/* ::::: checkbox menuitem ::::: */
+
+menuitem[checked="true"] {
+list-style-image: url("chrome://global/skin/menu/myMenucheck.png");
+-moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+menuitem[checked="false"] {
+list-style-image: url("chrome://global/skin/menu/nocheck.png");
+-moz-image-region: auto;
+}
+
+menuitem[checked="true"] .menu-iconic-left {
+width: 16px !important;
+height: 16px !important; 
+ margin: 0 2px 0 0 !important;
+}
+
+menuitem[checked="false"] .menu-iconic-left {
+width: 16px !important;
+height: 16px !important; 
+ margin: 0 2px 0 0 !important;
+}
+
+
+menuitem[checked="true"][disabled="true"] {
+list-style-image: url("chrome://global/skin/menu/myMenucheck.png");
+-moz-image-region: rect(16px, 16px, 32px, 0px);
+}
+
+menuitem[checked="true"][_moz-menuactive="true"] {
+list-style-image: url("chrome://global/skin/menu/myMenucheck.png");
+-moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+/* ::::: radio menuitem ::::: */
+
+menuitem[checked="true"][type="radio"] {
+  list-style-image: url("chrome://global/skin/menu/myMenucheck.png");
+  -moz-image-region: rect(32px, 16px, 48px, 0px);
+}
+
+menuitem[checked="false"][type="radio"] {
+  list-style-image: url("chrome://global/skin/menu/nocheck_radio.png");
+  -moz-image-region: auto;
+}
+
+menuitem[checked="true"][type="radio"][disabled="true"] {
+  list-style-image: url("chrome://global/skin/menu/myMenucheck.png");
+  -moz-image-region: rect(48px, 16px, 64px, 0px);
+
+}
+
+menuitem[checked="true"][type="radio"][_moz-menuactive="true"] {
+  list-style-image: url("chrome://global/skin/menu/myMenucheck.png");
+  -moz-image-region: rect(32px, 16px, 48px, 0px);
+}
+
+/* ::::: menuseparator ::::: */
+
+menuseparator {
+margin: 0px 10px;
+padding:0 !important;
+height:2px;
+background-color:transparent;
+background-image:none;
+border-top:2px solid;
+-moz-border-top-colors:#B8B6B4 #FEFEFE;
+}
+
+/* ::::: menulist popup ::::: */
+/*menulist > menupopup {
+margin: 0px 0px 0px 0px;
+background-color:#ffffff !important;
+-moz-border-image: none !important;
+}*/
+
+/* ::::: autocomplete ::::: */
+
+.autocomplete-history-popup > menuitem {
+  max-width: none !important;
+  font: message-box;
+}
+
+/* ::::: tree column picker ::::: */
+
+.treecell-popupcell-menu {
+  margin-left: -2px;
+  list-style-image: url("chrome://global/skin/columnselect.gif");
+  -moz-image-region: auto;
+}

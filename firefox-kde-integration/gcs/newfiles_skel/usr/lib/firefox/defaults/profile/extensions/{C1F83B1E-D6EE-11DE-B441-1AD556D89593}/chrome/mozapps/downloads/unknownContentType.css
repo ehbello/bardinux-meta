@@ -1,0 +1,110 @@
+ 
+ /* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code mozilla.org code.
+ *
+ * The Initial Developer of the Original Code is Netscape
+ * Communications Corporation. Portions created by Netscape are
+ * Copyright (C) 1998-2001 Netscape Communications Corporation. All
+ * Rights Reserved.
+ *
+ * Contributor(s):
+ * Alex W. (Charamel) <lucx@shaw.ca>
+ *
+ * ***** END LICENSE BLOCK ***** */
+ 
+ 
+#unknownContentType {
+/*background-color: #DEDEDE;*/
+}
+
+#unknownContentType{/*gets rid of padding*/
+  padding:0px !important;
+}
+
+#container{
+
+}
+
+
+#container > description  {
+  font-size: 100%;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  background-color: #EBEAE9;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+  height: 3em;
+  padding: 0.8em;
+
+ margin:5px !important; 
+border: 2px solid !important;
+-moz-border-radius: 5px;
+-moz-border-top-colors:#969595 #c1c0bf !important;
+-moz-border-bottom-colors:#d6d5d4 #e0dfde !important;
+-moz-border-left-colors:#bbbab9 #dcdbda !important;
+-moz-border-right-colors:#bcbbba #dcdbda !important;
+
+}
+
+/*remove separator*/
+separator{
+  display:none;
+}
+
+/*bring back thin separators in group box but still hide the thick bottom separator  */
+#unknownContentType groupbox separator.thin{
+  display:block!important;
+}
+
+
+/*filename and icon*/
+#container > .small-indent{
+  background:transparent;
+  padding:8px 4px 0px 4px;
+  margin-bottom:6px;
+}
+
+/* message that appears when you check the "automatically do this" box */
+#settingsChange{
+  margin-top:10px;
+  margin-left:30px;
+}
+
+.plain {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+}
+
+/*icon*/
+#contentTypeImage {
+  margin-right: 5px;
+  margin-left:10px;
+  width: 16px;
+}
+
+#container > hbox {
+  margin-left: 30px;
+}
+
+#container > .small-indent {
+  margin-left: 0px;
+}
+
+#unknownContentType groupbox{
+  margin:8px 8px 6px 8px;
+}

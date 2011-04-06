@@ -1,0 +1,5 @@
+skin	browser		oxygen		chrome/browser/
+skin	global		oxygen		chrome/global/
+skin	mozapps		oxygen		chrome/mozapps/
+skin	communicator	oxygen 		chrome/communicator/
+skin	help		oxygen		chrome/help/
