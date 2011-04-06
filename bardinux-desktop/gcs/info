@@ -24,3 +24,5 @@ version: 1.0~dev8
 # Cambios en esta versión
 changes:
     - Added bardinux-bookmarks to dependencies.
+    - Removed kde-l10n-es to reduce the size of minimum installation.
+    - Added firefox-kde-integration to dependencies.
