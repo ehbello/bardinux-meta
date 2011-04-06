@@ -31,6 +31,7 @@ g++
 gcc
 gcl
 gdb
+git-core
 gnumeric
 gnuplot
 graphviz
@@ -45,14 +46,16 @@ libterm-readkey-perl
 libterm-readline-gnu-perl
 linux-source
 make
+mercurial
 mpg321
 nasm
 nedit
 octave3.0
+openssh-client
 perl
 perl-tk
 pvm
-qemu
+qemu | virtualbox-ose-qt | vboxgtk
 qt3-apps-dev
 qt3-dev-tools
 qt4-designer
@@ -71,3 +74,4 @@ vgabios
 vlc
 xemacs21
 yacas
+yakuake | guake
