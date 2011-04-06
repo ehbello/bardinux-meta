@@ -27,3 +27,4 @@ version: 1.0~dev7
 # Cambios en esta versión
 changes:
     - Changed apturl by the common version apturl-common
+    - Removed bardinux-multimedia-task and nvidia-common dependencies.
