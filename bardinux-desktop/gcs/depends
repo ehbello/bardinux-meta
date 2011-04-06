@@ -47,6 +47,7 @@ alsa-utils
 amarok
 anacron
 apport-kde
+apturl-common
 apturl-kde
 ark
 avahi-autoipd
@@ -65,6 +66,7 @@ cups-bsd
 cups-client
 dolphin
 dvd+rw-tools
+firefox-kde-integration
 foo2zjs
 foomatic-db
 foomatic-db-engine
@@ -90,7 +92,6 @@ kbluetooth
 kcalc
 kcm-gtk
 kcm-touchpad
-kde-l10n-es
 kde-window-manager
 kde-zeroconf
 kdebase-plasma
