@@ -2,5 +2,4 @@ bardinux-desktop
 bardinux-sigaull-default-settings
 siga-client
 virtualbox-ose-dkms
-virtualbox-ose
-virtualbox-ose-qt
+virtualbox-ose-qt | vboxgtk | qemu
