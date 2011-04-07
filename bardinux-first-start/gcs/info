@@ -24,11 +24,9 @@ shortdesc: "Bardinux First Start dialog and webpage"
 longdesc: "This package contains the application and webpage that is showed on the first \n  Bardinux start."
 
 # Versión del paquete
-version: 1.0~dev4
+version: 1.0~dev5
 
 # Cambios en esta versión
 changes:
-    - Added equivalences to apturl dependency.
-    - Added an option to force the display of first-start pop-up.
-    - Changed NAME and VENDOR of bardinux-first-start application for xulrunner. 
-    - Changed do-first-start to don't use .first-start_success file.
+    - Added new box to the web to split privative and free extras.
+    - Changed the size of page to adjust automatically.

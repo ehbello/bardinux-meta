@@ -12,12 +12,9 @@ body {
 	font-size:13px; 
 	color: #333333;
 	background-color: #333333;
-/*	background-image: url('background.png');
-	background-position: center 120px;
-	background-repeat: no-repeat;*/
 	padding: 0px;
-	padding-right: 120px;
-	padding-left: 120px;
+	padding-right: 5%;
+	padding-left: 5%;
 	margin: 0px;
 
 }
@@ -37,10 +34,9 @@ a {
 #centro {
 	margin: 0 auto;
 	margin-top: 20px;
-/*	margin-bottom: 120px;*/
-	-moz-border-radius: 10px 10px 0px 0px;
-	-webkit-border-radius: 10px 0px 0px;
-	width: 860px;
+	-moz-border-radius: 50px 0px 0px 0px;
+	-webkit-border-radius: 50px 0px 0px 0px;
+	width: 100%;
 	height: auto;
 	padding: 20px;
 	background-color: lightgray;
@@ -62,6 +58,9 @@ a {
 	padding-left: 50px;
 }
 
+#centro>.dibujo>a>img {
+	border: 0px;
+}
 
 .descripcion {
 	min-height: 300px;
@@ -89,9 +88,8 @@ a {
 
 .flash {
 	text-align: center;
-	margin: 30px;
-	padding-left: 70px;
-	padding-right: 70px;
+	padding-left: 10px;
+	padding-right: 10px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	width: 350px;
@@ -113,19 +111,30 @@ a {
 
 .aplicaciones {
 	height: 540px;
-	width: 860px;
+	width: 100%;
+}
+
+.contenedor-izquierdo {
+	height: 540px;
+/*	width: -moz-calc(100%/2);*/
+	width: 50%;
+	float: left;
+}
+
+.contenedor-derecho {
+	height: 540px;
+/*	width: -moz-calc(100%/2);*/
+	width: 50%;
+	float: right;
 }
 
 .instalador1 {
-	min-height: 480px;
-	float: left;
+	height: 240px;
 	padding-left: 25px;
 	padding-right: 25px;
-	padding-top: 25px;
+	padding-top: 10px;
 	padding-bottom: 10px;
-	/*width: -moz-calc(100%/2 - 40px);*/
-	width: 360px;
-	margin: 5px;
+	width: -moz-calc(100% - 15%);
 	border: 1px solid gray;
 	-moz-border-radius: 30px;
    -webkit-border-radius: 30px;
@@ -133,13 +142,13 @@ a {
 
 .instalador1>img {
 	float: right;
-	margin-top: 60px;
+	height: 80px;
 }
 
 
 .instalador1>div>p>a>img {
 	position: relative;
-	top: 8px;
+	top: 6px;
 	padding-right: 5px;
 }
 
@@ -147,45 +156,34 @@ a {
 	text-align: center;
 	font-weight: bold;
 	font-size: 17px;
-	padding-bottom: 5px;
 }
 
 
 .instalador1>div {
-	height: 250px;
-	margin-top: 80px;
-	padding-top: 20px;
 }
 
 .instalador2 {
-	min-height: 480px;
-	float: right;
+	height: 240px;
 	padding-left: 25px;
 	padding-right: 25px;
-	padding-top: 25px;
+	padding-top: 10px;
 	padding-bottom: 10px;
-	/*width: -moz-calc(100%/2 - 40px);*/
-	width: 360px;
-	margin: 5px;
+	width: -moz-calc(100% - 15%);
 	border: 1px solid gray;
+	margin-top: 5px;
 	-moz-border-radius: 30px;
    -webkit-border-radius: 30px;
 }
 
 .instalador2>img {
 	float: right;
-	margin-top: 60px;
-}
-
-
-.instalador2>p {
-
+	height: 80px;
 }
 
 
 .instalador2>div>p>a>img {
 	position: relative;
-	top: 8px;
+	top: 6px;
 	padding-right: 5px;
 }
 
@@ -193,11 +191,51 @@ a {
 	text-align: center;
 	font-weight: bold;
 	font-size: 17px;
-	padding-bottom: 5px;
 }
 
 
 .instalador2>div {
+}
+
+.instalador3 {
+	height: 507px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: -moz-calc(100% - 15%);
+	margin-left: 15px;
+	border: 1px solid gray;
+	-moz-border-radius: 30px;
+   -webkit-border-radius: 30px;
+}
+
+.instalador3>img {
+	float: right;
+	margin-top: 60px;
+	width: 160px;
+}
+
+
+.instalador3>p {
+
+}
+
+
+.instalador3>div>p>a>img {
+	position: relative;
+	top: 6px;
+	padding-right: 5px;
+}
+
+.instalador3>.asunto {
+	text-align: center;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+
+.instalador3>div {
 	width: 330px;
 	padding-top: 20px;
 }
@@ -239,9 +277,11 @@ a {
 
 
 .esquina {
-	position: absolute;
-	top: 800px;
-	right: 20px;
+	background-color: white;
+	color: black;
+	-moz-border-radius: 50px 50px 50px 50px;
+	-webkit-border-radius: 50px 50px 50px 50px;
+	text-align: center;
 }
 
 .esquina>a>img {
