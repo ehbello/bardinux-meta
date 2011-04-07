@@ -1,6 +1,0 @@
-content xclear jar:chrome/xclear.jar!/chrome/xclear/content/
-skin xclear global jar:chrome/xclear.jar!/chrome/xclear/skin/global/
-locale xclear en-US jar:chrome/xclear.jar!/chrome/xclear/locale/en-US/
-locale xclear de-DE jar:chrome/xclear.jar!/chrome/xclear/locale/de-DE/
-locale xclear sv-SE jar:chrome/xclear.jar!/chrome/xclear/locale/sv-SE/
-style	chrome://browser/content/browser.xul	chrome://xclear/skin/xclear.css

@@ -1,8 +1,0 @@
-overlay chrome://browser/content/browser.xul chrome://konquefox/content/konquefox.xul
-style chrome://global/content/customizeToolbar.xul chrome://konquefox/skin/konquefox.css
-
-content konquefox jar:konquefox.jar!/content/
-skin konquefox classic/1.0 jar:konquefox.jar!/skin/
-locale konquefox en jar:konquefox.jar!/locale/en/
-locale konquefox fr jar:konquefox.jar!/locale/fr/
-locale konquefox it jar:konquefox.jar!/locale/it/
