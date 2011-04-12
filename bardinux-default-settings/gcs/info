@@ -24,3 +24,4 @@ version: 1.0~dev17
 # Cambios en esta versión
 changes:
     - Fixed typo loading kubuntu-default-settings directory in KDEDIRS variable.
+    - Added again configuration for Mozilla Firefox
