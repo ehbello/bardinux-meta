@@ -30,3 +30,4 @@ version: 1.0~dev5
 changes:
     - Added new box to the web to split privative and free extras.
     - Changed the size of page to adjust automatically.
+    - Added preferences to get work apt url in app mode.
