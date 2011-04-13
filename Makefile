@@ -38,7 +38,7 @@ status: $(patsubst %/gcs,%/status,$(wildcard */gcs))
 	-find $(PKGNAME) -iname "*.gcs" -delete
 	-rm -rf $(PKGNAME)/debian
 
-%/realclean:
+%/realclean: %/clean
 	$(info [$(DATE)] $(PKGNAME): removing all output files...)
 	-rm -f $(PKGNAME)*.build
 	-rm -f $(PKGNAME)*.dsc
