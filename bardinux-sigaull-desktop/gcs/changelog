@@ -1,3 +1,10 @@
+bardinux-sigaull-desktop (1.0~dev6) lucid; urgency=low
+
+  * Added alternatives to virtualbox dependency.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 31 Mar 2011 19:47:26 +0100
+
+
 bardinux-sigaull-desktop (1.0~dev5) lucid; urgency=low
 
   * Conflicts with bardinux-first-start. This package is not useful for clasrooms.

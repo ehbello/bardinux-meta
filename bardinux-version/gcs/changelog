@@ -1,3 +1,10 @@
+bardinux-version (1.0~dev6) lucid; urgency=low
+
+  * Changed version of Bardinux to 3.0 Beta3.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 13 Apr 2011 17:11:56 +0100
+
+
 bardinux-version (1.0~dev5) lucid; urgency=low
 
   * Changed version of Bardinux to 3.0 Beta2.

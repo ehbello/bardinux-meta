@@ -1,3 +1,10 @@
+bardinux-default-settings (1.0~dev17) lucid; urgency=low
+
+  * Fixed typo loading kubuntu-default-settings directory in KDEDIRS variable.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 29 Mar 2011 19:54:37 +0100
+
+
 bardinux-default-settings (1.0~dev16) lucid; urgency=low
 
   * Runs update-grub after install forcing to apply grub configuration.

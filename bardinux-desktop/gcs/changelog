@@ -1,3 +1,10 @@
+bardinux-desktop (1.0~dev8) lucid; urgency=low
+
+  * Added bardinux-bookmarks to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 29 Mar 2011 19:57:36 +0100
+
+
 bardinux-desktop (1.0~dev7) lucid; urgency=low
 
   * Added kinfocenter to dependences.

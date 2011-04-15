@@ -1,3 +1,10 @@
+bardinux-multimedia-task (1.0~dev5) lucid; urgency=low
+
+  * Replaced gnash plugin by adobe flash for flash reproduction.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 31 Mar 2011 19:44:17 +0100
+
+
 bardinux-multimedia-task (1.0~dev4) lucid; urgency=low
 
   * Replaced swfdec plugin by gnash for flash reproduction.

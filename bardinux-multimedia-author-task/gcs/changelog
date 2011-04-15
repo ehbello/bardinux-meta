@@ -1,3 +1,10 @@
+bardinux-multimedia-author-task (1.0~dev2) lucid; urgency=low
+
+  * Added libk3b6-extracodecs to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 07 Apr 2011 10:59:54 +0100
+
+
 bardinux-multimedia-author-task (1.0~dev1) lucid; urgency=low
 
   * Initial package

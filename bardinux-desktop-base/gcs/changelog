@@ -1,3 +1,17 @@
+bardinux-desktop-base (1.0~dev8) lucid; urgency=low
+
+  * Added menu dependence to install Debian menu in desktop.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 13 Apr 2011 19:45:59 +0100
+
+
+bardinux-desktop-base (1.0~dev7) lucid; urgency=low
+
+  * Changed apturl by the common version apturl-common
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 29 Mar 2011 19:56:45 +0100
+
+
 bardinux-desktop-base (1.0~dev6) lucid; urgency=low
 
   * Added bardinux-multimedia-task as Bardinux dependence.

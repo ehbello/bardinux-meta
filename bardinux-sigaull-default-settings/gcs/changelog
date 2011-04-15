@@ -1,3 +1,12 @@
+bardinux-sigaull-default-settings (1.0~dev5) lucid; urgency=low
+
+  * Changed again the way to load kde profiles using Bardinux configuration\n  for multiple profiles. userProfileMapFile does not work!
+  * Added configuration to disable strigi daemon for nepomuk to avoid the\n  indexing of files.
+  * Fixed configuration for Firefox. Wrong directory.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 07 Apr 2011 11:03:34 +0100
+
+
 bardinux-sigaull-default-settings (1.0~dev4) lucid; urgency=low
 
   * Load sigaull profiles using new hooks provided by bardinux-default-settings\n  package
