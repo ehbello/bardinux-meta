@@ -9,6 +9,7 @@ bison
 bochs
 bochs-doc
 bochsbios
+bochs-x
 build-essential
 byacc
 clisp
