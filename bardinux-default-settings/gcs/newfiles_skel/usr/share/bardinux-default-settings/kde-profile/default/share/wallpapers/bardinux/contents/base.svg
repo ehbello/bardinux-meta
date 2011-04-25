@@ -32971,7 +32971,6 @@
        fy="190.19373"
        r="320" />
     <linearGradient
-       inkscape:collect="always"
        id="linearGradient4806-4-0">
       <stop
          style="stop-color:#44d8ff;stop-opacity:1"
@@ -32994,8 +32993,7 @@
        fy="16.234577"
        r="20" />
     <linearGradient
-       id="linearGradient2295-3-2-1"
-       inkscape:collect="always">
+       id="linearGradient2295-3-2-1">
       <stop
          id="stop2297-9-8-9"
          offset="0"
@@ -33019,15 +33017,6 @@
          id="feColorMatrix7861-3-3-6-3"
          type="saturate"
          values="0" />
-    </filter>
-    <filter
-       color-interpolation-filters="sRGB"
-       inkscape:collect="always"
-       id="filter3677-0-6-3">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="0.61240497"
-         id="feGaussianBlur3679-3-3-8" />
     </filter>
     <radialGradient
        inkscape:collect="always"
@@ -33166,15 +33155,15 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.94"
-     inkscape:cx="200"
-     inkscape:cy="125"
+     inkscape:zoom="1.4085567"
+     inkscape:cx="191.67339"
+     inkscape:cy="85.521613"
      inkscape:document-units="px"
-     inkscape:current-layer="g6431"
+     inkscape:current-layer="layer1"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1280"
-     inkscape:window-height="976"
+     inkscape:window-height="745"
      inkscape:window-x="-4"
      inkscape:window-y="-3"
      showgrid="false"
@@ -33187,7 +33176,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -33223,7 +33212,7 @@
            sodipodi:nodetypes="ccccc" />
       </g>
       <g
-         transform="matrix(0.51888114,0,0,0.51888114,-855.82319,128.97412)"
+         transform="matrix(0.34394043,0,0,0.34394043,-789.98512,185.18706)"
          id="g31448">
         <path
            id="path7843-9"
@@ -33293,7 +33282,7 @@
              y="291.74893">bardinux</tspan></text>
       </g>
       <g
-         transform="matrix(0.52056602,0,0,0.52056602,-855.59134,128.44277)"
+         transform="matrix(0.34505725,0,0,0.34505725,-789.83144,184.83485)"
          id="g4081">
         <g
            id="g32518"
@@ -33405,69 +33394,8 @@
       </g>
     </g>
     <g
-       transform="matrix(0.36064483,0,0,0.36064483,-528.8725,288.46153)"
+       transform="matrix(0.19718879,0,0,0.19718879,-445.28244,344.49389)"
        id="layer1-6"
-       inkscape:label="Layer 1">
-      <g
-         transform="matrix(0.9647941,0,0,0.9647941,19.214792,13.867005)"
-         id="g2190">
-        <rect
-           style="fill:#9f257b;fill-opacity:1;fill-rule:nonzero;stroke:#9f257b;stroke-width:8.4010973;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           id="rect2253"
-           width="26.978987"
-           height="16.598904"
-           x="364.03439"
-           y="332.63416" />
-        <circle
-           style="fill:#ffffff;fill-rule:evenodd;stroke:#9f257b;stroke-width:2.82220006"
-           sodipodi:ry="27.1359"
-           sodipodi:rx="27.1359"
-           sodipodi:cy="113.661"
-           sodipodi:cx="99.772697"
-           id="circle1529"
-           r="27.1359"
-           cy="113.661"
-           cx="99.772697"
-           class="fil1 str0"
-           transform="matrix(0.7240572,0,0,0.7240572,329.11248,258.63654)"
-           d="m 126.9086,113.661 c 0,14.98675 -12.14916,27.1359 -27.135903,27.1359 -14.986744,0 -27.1359,-12.14915 -27.1359,-27.1359 0,-14.986741 12.149156,-27.135897 27.1359,-27.135897 14.986743,0 27.135903,12.149156 27.135903,27.135897 z" />
-        <text
-           x="386.81558"
-           y="349.06421"
-           id="_20827880"
-           class="fil2 fnt1"
-           style="font-size:22.33600616px;font-style:italic;font-weight:bold;fill:#44515b;fill-opacity:1;fill-rule:evenodd;font-family:Humnst777 BT">SL</text>
-        <text
-           x="361.72437"
-           y="349.01956"
-           id="text10977"
-           class="fil2 fnt1"
-           style="font-size:22.33600616px;font-style:italic;font-weight:bold;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;font-family:Humnst777 BT">
-          <tspan
-             style="font-style:normal;fill:#ffffff;fill-opacity:1"
-             id="tspan10981">O</tspan>
-        </text>
-      </g>
-      <text
-         id="text2163"
-         y="340.90878"
-         x="506.60959"
-         style="font-size:8.33545303px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         xml:space="preserve"><tspan
-           y="340.90878"
-           x="506.60959"
-           id="tspan2165"
-           sodipodi:role="line">OFICINA DE SOFTWARE LIBRE</tspan></text>
-      <text
-         id="text2167"
-         y="350.74039"
-         x="506.16324"
-         style="font-size:9.3748951px;font-style:normal;font-weight:bold;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         xml:space="preserve"><tspan
-           y="350.74039"
-           x="506.16324"
-           id="tspan2169"
-           sodipodi:role="line">UNIVERSIDAD DE LA LAGUNA</tspan></text>
-    </g>
+       inkscape:label="Layer 1" />
   </g>
 </svg>

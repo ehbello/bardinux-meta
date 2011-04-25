@@ -19,10 +19,8 @@ shortdesc: "Default settings and artwork for the Bardinux desktop system (KDE Ve
 longdesc: "This package contains the default settings and used by Bardinux. It also\n includes artwork and Bardinux branding."
 
 # Versión del paquete
-version: 1.0~dev17
+version: 1.0~dev18
 
 # Cambios en esta versión
 changes:
-    - Fixed typo loading kubuntu-default-settings directory in KDEDIRS variable.
-    - Added again configuration for Mozilla Firefox.
-    - Added bardinux website as startup homepage for Mozilla Firefox.
+    - Reduced the size of the logo at bardinux wallpapers.
