@@ -19,10 +19,8 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev5
+version: 1.0~dev6
 
 # Cambios en esta versión
 changes:
-    - Changed again the way to load kde profiles using Bardinux configuration\n  for multiple profiles. userProfileMapFile does not work!
-    - Added configuration to disable strigi daemon for nepomuk to avoid the\n  indexing of files.
-    - Fixed configuration for Firefox. Wrong directory.
+    - Moved again the firefox preferences to a working directory.
