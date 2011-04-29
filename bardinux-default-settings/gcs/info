@@ -25,3 +25,4 @@ version: 1.0~dev18
 changes:
     - Reduced the size of the logo at bardinux wallpapers.
     - Modified network-manager-pidfix.conf to enable NM networking instead of delete\n status file.
+    - Fixed configuration to set the default firefox homepage.
