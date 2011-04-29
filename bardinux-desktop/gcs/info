@@ -19,10 +19,8 @@ shortdesc: "Bardinux desktop system (KDE Version)"
 longdesc: "This package depends on all of the packages in the Bardinux desktop system.\n Installing this package will include the default Bardinux KDE installation.\n It is safe to remove this package if some of the desktop system packages are\n not desired."
 
 # Versión del paquete
-version: 1.0~dev8
+version: 1.0~dev9
 
 # Cambios en esta versión
 changes:
-    - Added bardinux-bookmarks to dependencies.
-    - Removed kde-l10n-es to reduce the size of minimum installation.
-    - Added firefox-kde-integration to dependencies.
+    - Added kcmhviewer to dependencies.
