@@ -1,9 +1,11 @@
-# This is not really a .desktop file like the rest, but it is useful to treat
-# it as such
+# Apparently this is not really a .desktop file like the rest, but it's useful
+# to treat it as such
 
 [KdmGreeterTheme]
-Greeter=ethais-bardinux.xml
-Name=Ethais-for-Bardinux
-Author=Enrique Hernández Bello
-Copyright=GPL 2010 Enrique Hernández Bello | quique@osl.ull.es
+Encoding=UTF-8
+Greeter=elegant_air-bardinux.xml
+Name=Elegant-Air-for-Bardinux
+Description=Elegant Air KDM theme
+Author=Vaxx <vaxxipooh@yahoo.se>, Max <resch.max@gmail.com>, downdiagonal <eightmillion@gmail.com>, Enrique Hernández Bello <quique@osl.ull.es>
+Copyright=GPL 2011 Enrique Hernández Bello | quique@osl.ull.es
 Screenshot=screenshot.png
