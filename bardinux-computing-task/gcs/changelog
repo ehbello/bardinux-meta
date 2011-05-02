@@ -1,3 +1,10 @@
+bardinux-computing-task (1.0~dev7) lucid; urgency=low
+
+  * Added bochs-x depends to instal bochs modules for X.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 25 Apr 2011 16:41:33 +0100
+
+
 bardinux-computing-task (1.0~dev6) lucid; urgency=low
 
   * Added virtualbox dependency as qemu alternative.
