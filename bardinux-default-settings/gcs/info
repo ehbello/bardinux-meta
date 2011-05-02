@@ -26,3 +26,4 @@ changes:
     - Reduced the size of the logo at bardinux wallpapers.
     - Modified network-manager-pidfix.conf to enable NM networking instead of delete\n status file.
     - Fixed configuration to set the default firefox homepage.
+    - Removed OSL-ULL logo from ksplash to get a more clean aspect.

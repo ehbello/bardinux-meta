@@ -32873,12 +32873,12 @@
      inkscape:cx="200"
      inkscape:cy="125"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g7159"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1280"
-     inkscape:window-height="976"
-     inkscape:window-x="-4"
+     inkscape:window-height="1004"
+     inkscape:window-x="1276"
      inkscape:window-y="-3"
      showgrid="false"
      inkscape:window-maximized="1" />
@@ -32911,72 +32911,6 @@
          inkscape:export-xdpi="225"
          inkscape:export-ydpi="225"
          inkscape:export-filename="/home/quique/src/svn/bardinux-trunk/metapkgs/bardinux-kde-desktop/gcs/newfiles_skel/usr/share/wallpapers/bardinux/contents/images/1600x1200.jpg.png" />
-      <g
-         transform="matrix(0.46129791,0,0,0.46129944,-731.65834,242.86211)"
-         id="layer1-0-9"
-         inkscape:label="Layer 1"
-         style="filter:url(#filter6663-6);opacity:1">
-        <g
-           transform="matrix(0.9647941,0,0,0.9647941,19.214792,13.867005)"
-           id="g2190-9">
-          <rect
-             style="fill:#9f257b;fill-opacity:1;fill-rule:nonzero;stroke:#9f257b;stroke-width:8.40109729999999999;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-             id="rect2253-6"
-             width="26.978987"
-             height="16.598904"
-             x="364.03439"
-             y="332.63416" />
-          <circle
-             style="fill:#ffffff;fill-rule:evenodd;stroke:#9f257b;stroke-width:2.82220006000000012"
-             sodipodi:ry="27.1359"
-             sodipodi:rx="27.1359"
-             sodipodi:cy="113.661"
-             sodipodi:cx="99.772697"
-             id="circle1529-0"
-             r="27.1359"
-             cy="113.661"
-             cx="99.772697"
-             class="fil1 str0"
-             transform="matrix(0.7240572,0,0,0.7240572,329.11248,258.63654)"
-             d="m 126.9086,113.661 c 0,14.98675 -12.14916,27.1359 -27.135903,27.1359 -14.986744,0 -27.1359,-12.14915 -27.1359,-27.1359 0,-14.986741 12.149156,-27.135897 27.1359,-27.135897 14.986743,0 27.135903,12.149156 27.135903,27.135897 z" />
-          <text
-             x="386.81558"
-             y="349.06421"
-             id="_20827880-2"
-             class="fil2 fnt1"
-             style="font-size:22.33600616000000016px;font-style:italic;font-weight:bold;fill:#44515b;fill-opacity:1;fill-rule:evenodd;font-family:Humnst777 BT">SL</text>
-          <text
-             x="361.72437"
-             y="349.01956"
-             id="text10977-7"
-             class="fil2 fnt1"
-             style="font-size:22.33600616000000016px;font-style:italic;font-weight:bold;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;font-family:Humnst777 BT">
-            <tspan
-               style="font-style:normal;fill:#ffffff;fill-opacity:1"
-               id="tspan10981-6">O</tspan>
-          </text>
-        </g>
-        <text
-           id="text2163-1"
-           y="340.90878"
-           x="506.60959"
-           style="font-size:8.33545303000000004px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-           xml:space="preserve"><tspan
-             y="340.90878"
-             x="506.60959"
-             id="tspan2165-3"
-             sodipodi:role="line">OFICINA DE SOFTWARE LIBRE</tspan></text>
-        <text
-           id="text2167-2"
-           y="350.74039"
-           x="506.16324"
-           style="font-size:9.37489509999999981px;font-style:normal;font-weight:bold;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-           xml:space="preserve"><tspan
-             y="350.74039"
-             x="506.16324"
-             id="tspan2169-1"
-             sodipodi:role="line">UNIVERSIDAD DE LA LAGUNA</tspan></text>
-      </g>
     </g>
     <g
        id="g6371"
