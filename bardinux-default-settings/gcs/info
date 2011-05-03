@@ -24,3 +24,4 @@ version: 1.0~dev19
 # Cambios en esta versión
 changes:
     - Fixed KDM splash theme for higher resolutions.
+    - Renamed firefox directory where homepage settings are located.
