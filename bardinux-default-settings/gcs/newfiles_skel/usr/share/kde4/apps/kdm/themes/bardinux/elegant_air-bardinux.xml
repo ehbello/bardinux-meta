@@ -63,13 +63,13 @@ Changelog:
 				<pos width="100%" height="192"/>
 			</item>
 		</fixed>
-		<box orientation="horizontal" spacing="100" xpadding="10">
+		<box orientation="horizontal" homogeneous="true">
 			<item type="pixmap">
 				<normal file="branding-icon.png"/>
-				<pos anchor="w" x="50%" y="50%" width="181" height="50"/>
+				<pos anchor="w" x="25%" y="50%" width="181" height="50"/>
 			</item>
 			<item type="rect" id="talker">
-				<pos anchor="w" x="30%" y="50%" width="box" height="box"/>
+				<pos anchor="c" x="50%" y="50%" width="box" height="box"/>
 				<box orientation="horizontal" spacing="5">
 					<box orientation="vertical" spacing="5">
 						<item type="label">
@@ -112,7 +112,7 @@ Changelog:
   </item>
 <!-- session/language/disconnect buttons -->
   <item type="rect">
-    <pos y="100%" x="20" width="100%" height="10%" anchor="sw"/>
+    <pos y="100%" x="20" width="box" height="10%" anchor="sw"/>
     <box xpadding="10" spacing="10" orientation="horizontal">
       <item type="rect" id="session_button" button="true">
         <pos y="50%" width="box" height="100%" anchor="w"/>
@@ -191,8 +191,13 @@ Changelog:
       </item>
     </box>
   </item>
+  <item type="rect">
+    <pos y="100%" x="-20" width="box" height="10%" anchor="se"/>
+    <box xpadding="10" spacing="10" orientation="horizontal">
 	<item type="pixmap" id="corp-logo" background="true">
 		<normal file="corp-logo.png" alpha=".4" />
-		<pos anchor="se" x="-20" y="-10" />
+        <pos y="50%" anchor="w"/>
 	</item>
+  </box>
+  </item>
 </greeter>
