@@ -19,8 +19,8 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev4
+version: 1.0~dev5
 
 # Cambios en esta versión
 changes:
-    - Changed again the way to load kde profiles using Bardinux configuration\n  for multiple profiles. userProfileMapFile does not work!
+    - Wrong directory of file for KDEDIRS hook.
