@@ -194,7 +194,7 @@ Changelog:
   <item type="rect">
     <pos y="100%" x="-20" width="box" height="10%" anchor="se"/>
     <box xpadding="10" spacing="10" orientation="horizontal">
-	<item type="pixmap" id="corp-logo" background="true">
+	<item type="pixmap" id="corp-logo">
 		<normal file="corp-logo.png" alpha=".4" />
         <pos y="50%" anchor="w"/>
 	</item>
