@@ -1,3 +1,17 @@
+bardinux-default-settings (1.0~dev20) lucid; urgency=low
+
+  * Disabled corplogo at background of KDM theme.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 06 May 2011 09:55:52 +0100
+
+
+bardinux-default-settings (1.0~dev19) lucid; urgency=low
+
+  * Fixed KDM splash theme for higher resolutions.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 02 May 2011 20:36:29 +0100
+
+
 bardinux-default-settings (1.0~dev18) lucid; urgency=low
 
   * Reduced the size of the logo at bardinux wallpapers.

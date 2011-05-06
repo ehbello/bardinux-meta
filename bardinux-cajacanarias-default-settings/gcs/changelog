@@ -1,3 +1,10 @@
+bardinux-cajacanarias-default-settings (1.0~dev5) lucid; urgency=low
+
+  * Wrong directory of file for KDEDIRS hook.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 04 May 2011 20:22:24 +0100
+
+
 bardinux-cajacanarias-default-settings (1.0~dev4) lucid; urgency=low
 
   * Changed again the way to load kde profile using Bardinux configuration\n  for multiple profiles.
