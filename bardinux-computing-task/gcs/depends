@@ -4,7 +4,6 @@
 #kdevelop
 #newlib-m68hc1x
 #octaviz
-abiword
 bison
 bochs
 bochs-doc
@@ -57,8 +56,6 @@ perl
 perl-tk
 pvm
 qemu | virtualbox-ose-qt | vboxgtk
-qt3-apps-dev
-qt3-dev-tools
 qt4-designer
 qt4-dev-tools
 qt4-doc
