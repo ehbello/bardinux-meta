@@ -5,7 +5,7 @@ APT {
 	Get {
 		AutomaticRemove "true";
 		Purge "true";
-		ReInstall "true";
+		ReInstall "false";
 	};
 };
 Aptitude::Recommends-Important "false";
