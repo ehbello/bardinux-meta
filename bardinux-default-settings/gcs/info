@@ -24,3 +24,4 @@ version: 1.0~dev21
 # Cambios en esta versión
 changes:
     - Fixed network-manager-pidfix upstart script.
+    - Added grub feature to archive old kernels in a new submenu.
