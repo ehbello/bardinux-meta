@@ -1,0 +1,13 @@
+# This file is sourced by Xsession(5), not executed.
+
+if id $(whoami) | grep -q '(Domain Guests)'; then
+	KDEDIRS="/usr/share/bardinux-sigaull-default-settings/kde-profile/guestuser/:$KDEDIRS"
+fi
+
+DISKUSAGE=$(df -m ${HOME} | tail -1 | awk '{ print $4 }') # needs "dfree comand" in smb.conf at server
+
+if [ ${DISKUSAGE} == 0 ] || mount | grep -q "^tmpfs on ${HOME} type tmpfs"; then
+	KDEDIRS="/usr/share/bardinux-sigaull-default-settings/kde-profile/guestuser/:$KDEDIRS"
+	export KDE_HOME_READONLY="true"
+fi
+export KDEDIRS

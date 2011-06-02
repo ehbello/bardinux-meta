@@ -3,7 +3,4 @@
 if id $(whoami) | grep -q '(Domain Users)'; then
 	KDEDIRS="/usr/share/bardinux-sigaull-default-settings/kde-profile/default/:$KDEDIRS"
 fi
-if id $(whoami) | grep -q '(Domain Guests)'; then
-	KDEDIRS="/usr/share/bardinux-sigaull-default-settings/kde-profile/guestuser/:$KDEDIRS"
-fi
 export KDEDIRS
