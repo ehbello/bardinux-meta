@@ -19,8 +19,8 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev6
+version: 1.0~dev7
 
 # Cambios en esta versión
 changes:
-    - Moved again the firefox preferences to a working directory.
+    - Wallpapers images converted to PNG format.

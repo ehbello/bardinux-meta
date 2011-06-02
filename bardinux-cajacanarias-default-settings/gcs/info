@@ -19,8 +19,9 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev5
+version: 1.0~dev6
 
 # Cambios en esta versión
 changes:
-    - Wrong directory of file for KDEDIRS hook.
+    - Redesigned wallpapers with new logo of CajaCanarias.
+    - Wallpapers images converted to PNG format.

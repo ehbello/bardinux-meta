@@ -20,7 +20,6 @@ custom_config=false
 lock_screen=false
 run_command=false
 editable_desktop_icons=false
-run_desktop_files=false
 lineedit_text_completion=false
 opengl_screensavers=false
 manipulatescreen_screensavers=false

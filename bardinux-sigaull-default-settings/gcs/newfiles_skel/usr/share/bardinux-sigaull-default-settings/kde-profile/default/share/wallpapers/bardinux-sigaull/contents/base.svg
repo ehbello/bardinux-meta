@@ -11,17 +11,17 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="400"
-   height="250"
-   id="svg2"
-   sodipodi:version="0.32"
-   inkscape:version="0.47 r22583"
-   version="1.0"
-   sodipodi:docname="base.svg"
-   inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   inkscape:export-filename="screenshot.png"
+   inkscape:export-ydpi="90"
    inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
+   inkscape:export-filename="screenshot.png"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   sodipodi:docname="base.svg"
+   version="1.0"
+   inkscape:version="0.47 r22583"
+   sodipodi:version="0.32"
+   id="svg2"
+   height="250"
+   width="400">
   <defs
      id="defs4">
     <linearGradient
@@ -32948,9 +32948,9 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="197.57123"
-     inkscape:cy="124.95696"
+     inkscape:zoom="2.936"
+     inkscape:cx="200"
+     inkscape:cy="125"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showguides="true"
@@ -32979,149 +32979,115 @@
      id="layer1"
      transform="translate(712.68732,-180.19373)">
     <g
-       transform="matrix(3.1428776,0,0,3.1428776,-305.11642,263.87717)"
-       inkscape:label="Shadow"
-       id="g2611" />
-    <g
-       transform="matrix(3.1428776,0,0,3.1428776,-305.11642,263.87717)"
-       style="display:inline"
-       inkscape:label="Lavoro"
-       id="g2613" />
-    <g
-       id="g6371"
-       transform="matrix(0.6801762,0,0,0.6801762,-222.71201,28.172019)"
-       style="opacity:0.2;fill:none;stroke:#ffffff;stroke-width:5.88082933;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    <rect
-       style="fill:url(#radialGradient6433);fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect6369"
-       width="400"
-       height="250"
-       x="-712.68732"
-       y="180.19373"
-       inkscape:export-xdpi="225"
-       inkscape:export-ydpi="225"
-       inkscape:export-filename="/home/quique/src/svn/bardinux-trunk/metapkgs/bardinux-kde-desktop/gcs/newfiles_skel/usr/share/wallpapers/bardinux/contents/images/1600x1200.jpg.png" />
-    <path
-       sodipodi:nodetypes="ccccc"
-       id="path17626-9"
-       d="m -712.68732,180.19373 400,0 0,105.26318 c -150.00001,21.05261 -230.00001,15.78945 -400,2.8197 l 0,-108.08288 z"
-       style="opacity:0.34509804;color:#000000;fill:url(#radialGradient6430);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible" />
-    <g
-       id="g10006">
-      <text
-         transform="scale(0.98289382,1.0174039)"
-         sodipodi:linespacing="125%"
-         id="text1855"
-         y="302.4895"
-         x="-585.18903"
-         style="font-size:25.99532318px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#eaebe8;fill-opacity:1;stroke:none;font-family:Danube"
-         xml:space="preserve"><tspan
-           style="font-size:25.99532318px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#eaebe8;fill-opacity:1;font-family:Danube"
-           y="302.4895"
+       id="g14540">
+      <g
+         id="g2611"
+         inkscape:label="Shadow"
+         transform="matrix(3.1428776,0,0,3.1428776,-305.11642,263.87717)" />
+      <g
+         id="g2613"
+         inkscape:label="Lavoro"
+         style="display:inline"
+         transform="matrix(3.1428776,0,0,3.1428776,-305.11642,263.87717)" />
+      <g
+         style="opacity:0.2;fill:none;stroke:#ffffff;stroke-width:5.88082933;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         transform="matrix(0.6801762,0,0,0.6801762,-222.71201,28.172019)"
+         id="g6371" />
+      <rect
+         inkscape:export-filename="/home/quique/src/svn/bardinux-trunk/metapkgs/bardinux-kde-desktop/gcs/newfiles_skel/usr/share/wallpapers/bardinux/contents/images/1600x1200.jpg.png"
+         inkscape:export-ydpi="225"
+         inkscape:export-xdpi="225"
+         y="180.19373"
+         x="-712.68732"
+         height="250"
+         width="400"
+         id="rect6369"
+         style="fill:url(#radialGradient6433);fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <path
+         style="opacity:0.34509804;color:#000000;fill:url(#radialGradient6430);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
+         d="m -712.68732,180.19373 400,0 0,105.26318 c -150.00001,21.05261 -230.00001,15.78945 -400,2.8197 l 0,-108.08288 z"
+         id="path17626-9"
+         sodipodi:nodetypes="ccccc" />
+      <g
+         transform="matrix(0.79855044,0,0,0.79855708,-107.36213,54.846621)"
+         id="g10006">
+        <text
+           xml:space="preserve"
+           style="font-size:25.99532318px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#eaebe8;fill-opacity:1;stroke:none;font-family:Danube"
            x="-585.18903"
-           id="tspan1857"
-           sodipodi:role="line">siga</tspan></text>
-      <g
-         transform="matrix(1.470684,0,0,1.470684,28.004276,2.7053955)"
-         id="g7291">
-        <path
-           style="fill:#a12e96"
-           d="m -349.07075,207.12997 c 0.19019,-1.58406 -0.23804,-0.68097 -1.78725,-0.0562 -0.71158,0.28233 -1.44084,0.42528 -2.18696,0.42528 -1.52859,0 -2.76307,-0.42528 -3.71179,-1.27131 -0.94872,-0.84698 -1.42308,-1.95315 -1.42308,-3.32041 0,-0.52496 0.0308,-1.06743 0.0924,-1.63113 0.057,-0.56466 0.14939,-1.13303 0.268,-1.69673 l 1.35211,-6.43601 1.99798,0 c -0.57242,2.72701 -1.33435,5.30261 -1.72065,8.34493 -0.24505,1.93032 0.87737,4.16536 3.18904,4.2079 1.43587,0.0264 3.76545,-0.7597 4.56455,-4.34187 1.16584,-5.22578 0.59146,-2.61457 1.75437,-8.21279 l 2.06541,0.002 -2.72754,13.98658 -1.72661,0 0,0 z"
-           class="fil0"
-           id="_146750096" />
-        <path
-           style="fill:#a12e96"
-           d="m -340.67181,193.23738 0,14.30152 6.3102,-2.0267 -0.47022,-2.31284 c -1.17292,0.4193 -3.39841,1.53613 -3.53508,1.21344 -0.13675,-0.32267 0.0541,-7.4333 0.0541,-11.24533 l -2.35894,0.0699 0,0 z"
-           class="fil0"
-           id="_146749472" />
-        <path
-           style="fill:#a12e96"
-           d="m -331.43312,193.23702 0,14.22891 6.27813,-2.01642 -0.46781,-2.30108 c -1.16697,0.41718 -3.38118,1.52839 -3.51717,1.20731 -0.13599,-0.32107 0.0538,-7.39558 0.0538,-11.18827 l -2.34695,0.0695 0,0 z"
-           class="fil0"
-           id="_146782072" />
-      </g>
-      <text
-         sodipodi:linespacing="100%"
-         id="text5483"
-         y="316.21964"
-         x="-450.61337"
-         style="font-size:7.27278566px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         xml:space="preserve"><tspan
-           style="font-size:7.50446749px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;font-family:Aboriginal Sans;-inkscape-font-specification:Aboriginal Sans"
-           id="tspan5491"
+           y="302.4895"
+           id="text1855"
+           sodipodi:linespacing="125%"
+           transform="scale(0.98289382,1.0174039)"><tspan
+             sodipodi:role="line"
+             id="tspan1857"
+             x="-585.18903"
+             y="302.4895"
+             style="font-size:25.99532318px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#eaebe8;fill-opacity:1;font-family:Danube">siga</tspan></text>
+        <g
+           id="g7291"
+           transform="matrix(1.470684,0,0,1.470684,28.004276,2.7053955)">
+          <path
+             id="_146750096"
+             class="fil0"
+             d="m -349.07075,207.12997 c 0.19019,-1.58406 -0.23804,-0.68097 -1.78725,-0.0562 -0.71158,0.28233 -1.44084,0.42528 -2.18696,0.42528 -1.52859,0 -2.76307,-0.42528 -3.71179,-1.27131 -0.94872,-0.84698 -1.42308,-1.95315 -1.42308,-3.32041 0,-0.52496 0.0308,-1.06743 0.0924,-1.63113 0.057,-0.56466 0.14939,-1.13303 0.268,-1.69673 l 1.35211,-6.43601 1.99798,0 c -0.57242,2.72701 -1.33435,5.30261 -1.72065,8.34493 -0.24505,1.93032 0.87737,4.16536 3.18904,4.2079 1.43587,0.0264 3.76545,-0.7597 4.56455,-4.34187 1.16584,-5.22578 0.59146,-2.61457 1.75437,-8.21279 l 2.06541,0.002 -2.72754,13.98658 -1.72661,0 0,0 z"
+             style="fill:#a12e96" />
+          <path
+             id="_146749472"
+             class="fil0"
+             d="m -340.67181,193.23738 0,14.30152 6.3102,-2.0267 -0.47022,-2.31284 c -1.17292,0.4193 -3.39841,1.53613 -3.53508,1.21344 -0.13675,-0.32267 0.0541,-7.4333 0.0541,-11.24533 l -2.35894,0.0699 0,0 z"
+             style="fill:#a12e96" />
+          <path
+             id="_146782072"
+             class="fil0"
+             d="m -331.43312,193.23702 0,14.22891 6.27813,-2.01642 -0.46781,-2.30108 c -1.16697,0.41718 -3.38118,1.52839 -3.51717,1.20731 -0.13599,-0.32107 0.0538,-7.39558 0.0538,-11.18827 l -2.34695,0.0695 0,0 z"
+             style="fill:#a12e96" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:7.27278566px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+           x="-450.61337"
            y="316.21964"
-           x="-450.61337"
-           sodipodi:role="line">Sistema Integrado de</tspan><tspan
-           id="tspan7020"
-           style="font-size:7.50446749px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;font-family:Aboriginal Sans;-inkscape-font-specification:Aboriginal Sans"
-           y="323.72409"
-           x="-450.61337"
-           sodipodi:role="line">Gestión de Aulas</tspan></text>
-    </g>
-    <g
-       transform="matrix(0.36064605,0,0,0.36064483,-528.87295,288.46153)"
-       id="layer1-6-6"
-       inkscape:label="Layer 1">
-      <g
-         transform="matrix(0.9647941,0,0,0.9647941,19.214792,13.867005)"
-         id="g2190-2">
-        <rect
-           style="fill:#9f257b;fill-opacity:1;fill-rule:nonzero;stroke:#9f257b;stroke-width:8.4010973;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           id="rect2253-6"
-           width="26.978987"
-           height="16.598904"
-           x="364.03439"
-           y="332.63416" />
-        <circle
-           style="fill:#ffffff;fill-rule:evenodd;stroke:#9f257b;stroke-width:2.82220006"
-           sodipodi:ry="27.1359"
-           sodipodi:rx="27.1359"
-           sodipodi:cy="113.661"
-           sodipodi:cx="99.772697"
-           id="circle1529-7"
-           r="27.1359"
-           cy="113.661"
-           cx="99.772697"
-           class="fil1 str0"
-           transform="matrix(0.7240572,0,0,0.7240572,329.11248,258.63654)"
-           d="m 126.9086,113.661 c 0,14.98675 -12.14916,27.1359 -27.135903,27.1359 -14.986744,0 -27.1359,-12.14915 -27.1359,-27.1359 0,-14.986741 12.149156,-27.135897 27.1359,-27.135897 14.986743,0 27.135903,12.149156 27.135903,27.135897 z" />
-        <text
-           x="386.81558"
-           y="349.06421"
-           id="_20827880-5"
-           class="fil2 fnt1"
-           style="font-size:22.33600616px;font-style:italic;font-weight:bold;fill:#44515b;fill-opacity:1;fill-rule:evenodd;font-family:Humnst777 BT">SL</text>
-        <text
-           x="361.72437"
-           y="349.01956"
-           id="text10977-6"
-           class="fil2 fnt1"
-           style="font-size:22.33600616px;font-style:italic;font-weight:bold;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;font-family:Humnst777 BT">
-          <tspan
-             style="font-style:normal;fill:#ffffff;fill-opacity:1"
-             id="tspan10981-9">O</tspan>
-        </text>
+           id="text5483"
+           sodipodi:linespacing="100%"><tspan
+             sodipodi:role="line"
+             x="-450.61337"
+             y="316.21964"
+             id="tspan5491"
+             style="font-size:7.50446749px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;font-family:Aboriginal Sans;-inkscape-font-specification:Aboriginal Sans">Sistema Integrado de</tspan><tspan
+             sodipodi:role="line"
+             x="-450.61337"
+             y="323.72409"
+             style="font-size:7.50446749px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;font-family:Aboriginal Sans;-inkscape-font-specification:Aboriginal Sans"
+             id="tspan7020">Gestión de Aulas</tspan></text>
       </g>
-      <text
-         id="text2163-8"
-         y="340.90878"
-         x="506.60959"
-         style="font-size:8.33545303px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         xml:space="preserve"><tspan
-           y="340.90878"
-           x="506.60959"
-           id="tspan2165-7"
-           sodipodi:role="line">OFICINA DE SOFTWARE LIBRE</tspan></text>
-      <text
-         id="text2167-2"
-         y="350.74039"
-         x="506.16324"
-         style="font-size:9.3748951px;font-style:normal;font-weight:bold;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         xml:space="preserve"><tspan
-           y="350.74039"
-           x="506.16324"
-           id="tspan2169-8"
-           sodipodi:role="line">UNIVERSIDAD DE LA LAGUNA</tspan></text>
+      <g
+         transform="translate(-54.112221,14.599937)"
+         style="opacity:0.3"
+         id="g14494">
+        <text
+           xml:space="preserve"
+           style="font-size:14.54677105px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;opacity:0.68127489;fill:#ffffff;fill-opacity:0.43404254;stroke:none;font-family:Bitstream Vera Sans"
+           x="-458.51035"
+           y="369.94397"
+           id="text2163-8"
+           transform="scale(1.0000017,0.99999831)"><tspan
+             sodipodi:role="line"
+             id="tspan2165-7"
+             x="-458.51035"
+             y="369.94397">OFICINA DE SOFTWARE LIBRE</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:16.36077309px;font-style:normal;font-weight:bold;text-align:center;text-anchor:middle;opacity:0.68127489;fill:#ffffff;fill-opacity:0.43404254;stroke:none;font-family:Bitstream Vera Sans"
+           x="-459.28931"
+           y="387.10178"
+           id="text2167-2"
+           transform="scale(1.0000017,0.99999831)"><tspan
+             sodipodi:role="line"
+             id="tspan2169-8"
+             x="-459.28931"
+             y="387.10178">UNIVERSIDAD DE LA LAGUNA</tspan></text>
+      </g>
     </g>
   </g>
 </svg>
