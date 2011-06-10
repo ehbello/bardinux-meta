@@ -5,3 +5,5 @@ if id $(whoami) | grep -q '(Domain Users)'; then
 fi
 # Does not overlay Domain Guests profile.
 export KDEDIRS
+# Avoids persistent KDE cache to get work diverts of wallpaper.
+export KDEVARTMP=/tmp

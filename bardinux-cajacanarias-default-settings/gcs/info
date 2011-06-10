@@ -25,3 +25,4 @@ version: 1.0~dev6
 changes:
     - Redesigned wallpapers with new logo of CajaCanarias.
     - Wallpapers images converted to PNG format.
+    - Forced to load CajaCanarias wallpaper diverting bardinux-sigaull wallpaper.
