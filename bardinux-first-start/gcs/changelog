@@ -1,4 +1,4 @@
-bardinux-first-start (1.0~dev5) lucid; urgency=low
+bardinux-first-start (1.0.5) lucid; urgency=low
 
   * Added new box to the web to split privative and free extras.
   * Changed the size of page to adjust automatically.

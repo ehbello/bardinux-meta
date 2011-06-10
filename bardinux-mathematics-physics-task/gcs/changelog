@@ -1,4 +1,4 @@
-bardinux-mathematics-physics-task (1.0~dev3) lucid; urgency=low
+bardinux-mathematics-physics-task (1.0.3) lucid; urgency=low
 
   * Added Lazarus IDE, yakuake and guake to dependencies.
 

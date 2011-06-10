@@ -19,7 +19,7 @@ shortdesc: "Metapaquete recopilatorio de tipografías."
 longdesc: "Este paquete recopila todas las tipografías existentes en el \n repositorio para su instalación en bruto. Algo bastante útil \n para cuando quieres disponer de todas las fuentes posibles \n sin tener que seleccionar una por una."
 
 # Versión del paquete
-version: 1.0~dev2
+version: 1.0.2
 
 # Cambios en esta versión
 changes:

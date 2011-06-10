@@ -1,4 +1,4 @@
-bardinux-sigaull-desktop (1.0~dev6) lucid; urgency=low
+bardinux-sigaull-desktop (1.0.6) lucid; urgency=low
 
   * Added alternatives to virtualbox dependency.
 

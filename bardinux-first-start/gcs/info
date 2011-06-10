@@ -24,7 +24,7 @@ shortdesc: "Bardinux First Start dialog and webpage"
 longdesc: "This package contains the application and webpage that is showed on the first \n  Bardinux start."
 
 # Versión del paquete
-version: 1.0~dev5
+version: 1.0.5
 
 # Cambios en esta versión
 changes:

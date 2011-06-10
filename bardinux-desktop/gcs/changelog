@@ -1,4 +1,4 @@
-bardinux-desktop (1.0~dev9) lucid; urgency=low
+bardinux-desktop (1.0.9) lucid; urgency=low
 
   * Added kcmhviewer to dependencies.
 

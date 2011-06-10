@@ -1,4 +1,4 @@
-bardinux-fonts-task (1.0~dev2) lucid; urgency=low
+bardinux-fonts-task (1.0.2) lucid; urgency=low
 
   * Suggests bardinux-restricted-fonts-task package.
 

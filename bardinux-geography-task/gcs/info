@@ -19,7 +19,7 @@ shortdesc: "Metapaquete de Software para la Geografía."
 longdesc: "Recopila herramientas para áreas de conocimiento \n relacionadas con la Geografía y los Sistemas de \n Informacion Geografica (SIG)."
 
 # Versión del paquete
-version: 1.0~dev1
+version: 1.0.1
 
 # Cambios en esta versión
 changes:

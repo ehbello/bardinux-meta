@@ -1,4 +1,4 @@
-bardinux-proa-default-settings (1.0~dev2) lucid; urgency=low
+bardinux-proa-default-settings (1.0.2) lucid; urgency=low
 
   * Added metadata.desktop to define default desktop wallpaper.
 

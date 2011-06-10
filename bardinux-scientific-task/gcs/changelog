@@ -1,4 +1,4 @@
-bardinux-scientific-task (1.0~dev2) lucid; urgency=low
+bardinux-scientific-task (1.0.2) lucid; urgency=low
 
   * Replaced octave virtual dependence to avoid unresolved dependences.
 

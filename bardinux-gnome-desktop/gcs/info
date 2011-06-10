@@ -19,7 +19,7 @@ shortdesc: "The Bardinux desktop system (GNOME Version)."
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev3
+version: 1.0.3
 
 # Cambios en esta versión
 changes:

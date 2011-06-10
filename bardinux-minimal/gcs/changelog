@@ -1,4 +1,4 @@
-bardinux-minimal (1.0~dev4) lucid; urgency=low
+bardinux-minimal (1.0.4) lucid; urgency=low
 
   * Changed again vim-tiny by vim.
 

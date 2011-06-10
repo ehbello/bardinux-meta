@@ -1,4 +1,4 @@
-bardinux-gnome-desktop (1.0~dev3) lucid; urgency=low
+bardinux-gnome-desktop (1.0.3) lucid; urgency=low
 
   * Added apturl dependency for Gnome.
 

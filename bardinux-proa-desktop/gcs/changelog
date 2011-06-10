@@ -1,4 +1,4 @@
-bardinux-proa-desktop (1.0~dev2) lucid; urgency=low
+bardinux-proa-desktop (1.0.2) lucid; urgency=low
 
   * Deleted provides file because this package does not provide nothing.
 

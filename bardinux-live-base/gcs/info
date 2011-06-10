@@ -19,7 +19,7 @@ shortdesc: "Metapackage to create an Bardinux distribution."
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev4
+version: 1.0.4
 
 # Cambios en esta versión
 changes:

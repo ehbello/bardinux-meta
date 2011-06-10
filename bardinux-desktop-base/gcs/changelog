@@ -1,4 +1,4 @@
-bardinux-desktop-base (1.0~dev8) lucid; urgency=low
+bardinux-desktop-base (1.0.8) lucid; urgency=low
 
   * Added menu dependence to install Debian menu in desktop.
 

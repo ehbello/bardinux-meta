@@ -19,7 +19,7 @@ shortdesc: "Metapaquete de Software para Edición de Gráficos."
 longdesc: "Se incluye software de maquetación, edición de \n imágenes (bitmap y vectoriales), escaneado de imágenes \n y diseño 3D."
 
 # Versión del paquete
-version: 1.0~dev2
+version: 1.0.2
 
 # Cambios en esta versión
 changes:

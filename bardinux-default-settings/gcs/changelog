@@ -1,4 +1,4 @@
-bardinux-default-settings (1.0~dev20) lucid; urgency=low
+bardinux-default-settings (1.0.20) lucid; urgency=low
 
   * Disabled corplogo at background of KDM theme.
 

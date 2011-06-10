@@ -1,4 +1,4 @@
-bardinux-live-base (1.0~dev4) lucid; urgency=low
+bardinux-live-base (1.0.4) lucid; urgency=low
 
   * Removed command-not-found unuseful in a live system.
 

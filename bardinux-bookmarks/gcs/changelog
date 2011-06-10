@@ -1,4 +1,4 @@
-bardinux-bookmarks (1.0~dev2) lucid; urgency=low
+bardinux-bookmarks (1.0.2) lucid; urgency=low
 
   * Customized the content of the bookmarks file.
 

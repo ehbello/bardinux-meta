@@ -1,4 +1,4 @@
-bardinux-live (1.0~dev2) lucid; urgency=low
+bardinux-live (1.0.2) lucid; urgency=low
 
   * Disabled ubiquity artwork dependence for Bardinux until it works.
 

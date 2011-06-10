@@ -19,7 +19,7 @@ shortdesc: "Debug symbols and related packages for Bardinux debug"
 longdesc: "This package contains all the necessary for debug the Bardinux distributions. It allows users to\n generate good crash reports against distribution packages."
 
 # Versión del paquete
-version: 1.0~dev2
+version: 1.0.2
 
 # Cambios en esta versión
 changes:

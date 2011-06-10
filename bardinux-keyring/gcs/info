@@ -22,7 +22,7 @@ shortdesc: "GnuPG key of the Bardinux repository"
 longdesc: "The Bardinux repository digitally signs its Release files. This package\n contains the repository key used for that."
 
 # Versión del paquete
-version: 1.0~dev1
+version: 1.0.1
 
 # Cambios en esta versión
 changes:

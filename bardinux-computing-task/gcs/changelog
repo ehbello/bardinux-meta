@@ -1,4 +1,4 @@
-bardinux-computing-task (1.0~dev7) lucid; urgency=low
+bardinux-computing-task (1.0.7) lucid; urgency=low
 
   * Added bochs-x depends to instal bochs modules for X.
 

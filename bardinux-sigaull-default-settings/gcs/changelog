@@ -1,4 +1,4 @@
-bardinux-sigaull-default-settings (1.0~dev6) lucid; urgency=low
+bardinux-sigaull-default-settings (1.0.6) lucid; urgency=low
 
   * Moved again the firefox preferences to a working directory.
 

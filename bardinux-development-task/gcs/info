@@ -19,7 +19,7 @@ shortdesc: "Metapaquete con Software para Desarrollo de Aplicaciones."
 longdesc: ""
 
 # Versión del paquete
-version: 1.0~dev1
+version: 1.0.1
 
 # Cambios en esta versión
 changes:

@@ -1,4 +1,4 @@
-bardinux-dbg (1.0~dev2) lucid; urgency=low
+bardinux-dbg (1.0.2) lucid; urgency=low
 
   * Added GNU Debugger (gdb) to dependences.
 
