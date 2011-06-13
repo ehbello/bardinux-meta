@@ -1,3 +1,10 @@
+bardinux-multimedia-author-task (1.0.3) lucid; urgency=low
+
+  * Added lame encoder to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 10 Jun 2011 15:18:50 +0100
+
+
 bardinux-multimedia-author-task (1.0.2) lucid; urgency=low
 
   * Added libk3b6-extracodecs to dependencies.

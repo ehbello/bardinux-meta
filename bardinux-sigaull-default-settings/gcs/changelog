@@ -1,3 +1,11 @@
+bardinux-sigaull-default-settings (1.0.7) lucid; urgency=low
+
+  * Wallpapers images converted to PNG format.
+  * Forced to load sigaull-guest profile when login with a temporary account.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 10 Jun 2011 15:21:55 +0100
+
+
 bardinux-sigaull-default-settings (1.0.6) lucid; urgency=low
 
   * Moved again the firefox preferences to a working directory.

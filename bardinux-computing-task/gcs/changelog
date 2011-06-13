@@ -1,3 +1,10 @@
+bardinux-computing-task (1.0.8) lucid; urgency=low
+
+  * Deleted some useless dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 10 Jun 2011 15:04:47 +0100
+
+
 bardinux-computing-task (1.0.7) lucid; urgency=low
 
   * Added bochs-x depends to instal bochs modules for X.

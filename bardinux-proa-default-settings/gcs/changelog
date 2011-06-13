@@ -1,3 +1,10 @@
+bardinux-proa-default-settings (1.0.3) lucid; urgency=low
+
+  * Wallpapers images converted to PNG format.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 10 Jun 2011 15:20:08 +0100
+
+
 bardinux-proa-default-settings (1.0.2) lucid; urgency=low
 
   * Added metadata.desktop to define default desktop wallpaper.

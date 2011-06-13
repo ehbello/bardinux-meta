@@ -1,3 +1,11 @@
+bardinux-default-settings (1.0.21) lucid; urgency=low
+
+  * Fixed network-manager-pidfix upstart script.
+  * Wallpapers images converted to PNG format.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 10 Jun 2011 15:07:01 +0100
+
+
 bardinux-default-settings (1.0.20) lucid; urgency=low
 
   * Disabled corplogo at background of KDM theme.
