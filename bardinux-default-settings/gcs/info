@@ -19,9 +19,8 @@ shortdesc: "Default settings and artwork for the Bardinux desktop system (KDE Ve
 longdesc: "This package contains the default settings and used by Bardinux. It also\n includes artwork and Bardinux branding."
 
 # Versión del paquete
-version: 1.0.21
+version: 1.0.22
 
 # Cambios en esta versión
 changes:
-    - Fixed network-manager-pidfix upstart script.
-    - Wallpapers images converted to PNG format.
+    - Added fix to avoid ucf control for grub-pc of /etc/default/grub.

@@ -1,0 +1,7 @@
+if [ -x /usr/sbin/update-grub ]; then
+  update-grub || true
+fi
+
+if [ -x /usr/bin/ucfr ]; then
+	ucfr --force grub-pc /etc/default/grub
+fi
