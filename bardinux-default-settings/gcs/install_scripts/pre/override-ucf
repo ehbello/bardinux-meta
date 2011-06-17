@@ -1,3 +1,5 @@
+PACKAGE=$(ucfq --with-colons | cut -d ":" -f 2)
+
 if [ -x /usr/bin/ucfr ]; then
-	ucfr --force bardinux-default-settings /etc/default/grub
+	ucfr --purge $(PACKAGE) /etc/default/grub
 fi
