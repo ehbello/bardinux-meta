@@ -1,3 +1,0 @@
-# m h  dom mon dow   command
-* * * * *	root	/usr/bin/amixer sset "Master" 0
-* * * * *	root	/usr/bin/amixer sset "Master Mono" 0
