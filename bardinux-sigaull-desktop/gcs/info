@@ -19,8 +19,8 @@ shortdesc: "Bardinux desktop system (KDE Version)"
 longdesc: "This package depends on all of the packages in the Bardinux desktop system.\n Installing this package will include the default Bardinux KDE installation.\n It is safe to remove this package if some of the desktop system packages are\n not desired."
 
 # Versión del paquete
-version: 1.0.6
+version: 1.0.7
 
 # Cambios en esta versión
 changes:
-    - Added alternatives to virtualbox dependency.
+    - Added bardinux-multimedia-task to dependency list.
