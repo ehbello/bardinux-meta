@@ -76,7 +76,7 @@ timeout		30
 ## should update-grub create alternative automagic boot options
 ## e.g. alternative=true
 ##      alternative=false
-# alternative=true
+# alternative=false
 
 ## should update-grub lock alternative automagic boot options
 ## e.g. lockalternative=true
@@ -103,7 +103,7 @@ timeout		30
 ## multiple altoptions lines are allowed
 ## e.g. altoptions=(extra menu suffix) extra boot options
 ##      altoptions=(recovery) single
-## altoptions=(clean mode) quiet boot=bull-restore
+## altoptions=(clean mode) quiet boot=restore
 
 ## controls how many kernels should be put into the menu.lst
 ## only counts the first occurence of a kernel, not the

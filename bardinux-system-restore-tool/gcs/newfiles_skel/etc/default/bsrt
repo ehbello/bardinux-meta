@@ -1,0 +1,5 @@
+## Specify the mount partition where store backups
+## If it is not defined, no partition was mounted.
+# Example: /dev/sda7
+#
+#BACKUPDEV=

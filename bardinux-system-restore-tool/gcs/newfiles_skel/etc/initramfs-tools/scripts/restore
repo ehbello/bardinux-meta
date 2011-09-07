@@ -4,44 +4,86 @@
 # Parameter: Where to mount the filesystem
 #
 
-SRC="/dev/sda2"
-DST="/dev/sda1"
+. /etc/default/bsrt
+
+mount_dev () {
+	mkdir -p $3
+	mount -t ext4 -o $1 $2 $3
+}
 
 syncronize () {
-	echo "Restaurando desde $1 hasta $2"
-	mkdir -p /source
-	mkdir -p /target
-	mount -t ext3 -o ro $1 /source
-	mount -t ext3 -o rw $2 /target
-	rsync -ax --progress --delete --exclude=/home /source/* /target/
+	echo "Restaurando $1 desde $BACKUPDEV hasta $ROOTDEV"
+	mount_dev ro $BACKUPDEV /source
+	mount_dev rw $ROOTDEV /target
+	rsync -ax --progress --delete --exclude=/home /source/$1 /target/
+	{ for I in $(seq 1 100) ; do echo $I; sleep 0.01; done; echo 100; } | dialog --shadow --gauge "Progress" 6 70 0
 	umount /source
 	umount /target
 }
 
+getSnapshots() {
+	mount_dev ro $BACKUPDEV /source
+
+	for ID in $(ls -1 /source/${SNAPSHOTDIR}); do
+		DATE=$(date -R -r ${SNAPSHOTDIR}/${ID} | sed 's/, \| /|/g')
+		echo "${ID#*.} ${DATE}"
+	done
+
+	umount /source
+}
+
 mountroot () {
-	dialog --title "Restauración del sistema" \
-		--infobox \
-		"\n\n\n   Comprobando dispositivos..."\
-		10 80
+	dialog --title	"Restauración del sistema" \
+		--infobox	"\
+		\n \
+		\n \
+		\n   Comprobando dispositivos... \
+		\n " 12 80
 
 	slumber=600
-	while [ ! -e "$SRC" ]; do
+	while [ ! -e "$BACKUPDEV" ]; do
 		/bin/sleep 0.1
 		slumber=$(( ${slumber} - 1 ))
 		[ ${slumber} -gt 0 ] || panic "No hay dispositivos"
 	done
+
+	menuitems=$(getSnapshots)
+
+	dialog --title "Selección del punto de restauración" \
+		--menu	"\
+		\n \
+		\n \
+		\n Elija punto de restauración a usar para llevar el equipo a un estado anterior: \
+		\n \
+		" 30 80 17 \
+		${menuitems} 2> /tmp/answer
+
+	srcpoint_dir="${SNAPSHOTDIR}/daily.$(< /tmp/answer)"
+
+	mount_dev ro ${BACKUPDEV} ${ROOTDEV}
 	dialog --title "Restauración del sistema" \
-		--yesno \
-		"\n\n\n   Se va a iniciar el proceso para restaurar la copia del sistema. ¿Desea continuar? "\
-		10 80
+		--yesno "\
+		\n \
+		\n   Se va a iniciar el proceso para restaurar la copia del sistema: \
+		\n   $(date -R -r /source/${srcpoint_dir}) \
+		\n \
+		\n   ¿Desea continuar? \
+		\n" 12 80
+	umount /source
+
 	if [[ $? == 0 ]]; then
 		clear
-		syncronize $SRC $DST
+#		syncronize $srcpoint_dir
 	fi
 
 	dialog --title "Restauración del sistema" \
-		--msgbox "\n\n\n    Proceso terminado, pulse enter para reiniciar." \
-		10 60
+		--msgbox "\
+		\n \
+		\n \
+		\n   Proceso terminado, pulse enter para reiniciar.\
+		\n" 12 60
 
-	reboot
+#	reboot
 }
+
+mountroot

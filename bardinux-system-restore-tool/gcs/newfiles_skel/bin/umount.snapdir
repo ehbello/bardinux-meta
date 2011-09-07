@@ -1,0 +1,8 @@
+#!/bin/sh
+
+. /etc/default/srt
+
+[ -n ${BACKUPDEV} ] || exit 0
+
+SNAPSHOT_ROOT=$(sed -n 's/^snapshot_root[[:blank:]]*\(.*\)/\1/p' /etc/rsnapshot.conf)
+umount -rl ${SNAPSHOT_ROOT}

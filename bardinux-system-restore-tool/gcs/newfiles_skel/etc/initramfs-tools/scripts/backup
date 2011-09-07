@@ -1,8 +1,9 @@
 #!/bin/sh
-mv backup.3 backup.tmp
-mv backup.2 backup.3
-mv backup.1 backup.2
-mv backup.0 backup.1
-mv backup.tmp backup.0
-cp -al backup.1/. backup.0
-rsync -a --delete source_directory/ backup.0/
+
+. /etc/default/bsrt
+
+mount -t ext4 ${ROOTDEV} /mnt
+mount -t ext4 ${BACKUPDEV} /mnt/${SNAPSHOTDIR}
+chroot /mnt rsnapshot daily
+umount /mnt/${SNAPSHOTDIR}
+umount /mnt

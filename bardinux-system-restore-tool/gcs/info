@@ -19,8 +19,8 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev1
+version: 1.0~dev2
 
 # Cambios en esta versión
 changes:
-    - Initial package
+    - Bunch of changes to get work this system.

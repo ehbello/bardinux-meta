@@ -1,8 +1,10 @@
 #!/bin/bash
 
+. /etc/default/bsrt
+
 mountroot () {
 	slumber=600
-	while [ ! -e "/dev/sda5" ]; do
+	while [ ! -e "${ROOTDEV}" ]; do
 		/bin/sleep 0.1
 		slumber=$(( ${slumber} - 1 ))
 		[ ${slumber} -gt 0 ] || panic "No hay dispositivos"
@@ -10,8 +12,7 @@ mountroot () {
 
 	HOMES=/source/home/
 	mkdir /source
-	mount -t ext3 -o rw /dev/sda5 /source
-	mount -t ext3 -o rw /dev/sda6 /source/home
+	mount -t ext3 -o rw ${ROOTDEV} /source
 	
 	numHomes=$(( $(ls -l $HOMES | wc -l) - 1 ))
 	DIALOGO2=" Todos $(du -hs $HOMES|cut -f 1)  0"
@@ -40,7 +41,6 @@ mountroot () {
 		--msgbox "\n\n\n    Proceso terminado, pulse enter para reiniciar." \
 		10 60
 
-	umount /source/home
 	umount /source
 	reboot
 }

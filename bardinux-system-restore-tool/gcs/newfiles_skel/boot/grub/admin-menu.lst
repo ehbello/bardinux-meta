@@ -2,17 +2,17 @@ password --md5 {{superpasswd}}
 
 title           - Borrar usuarios
 root            {{grubdev}}
-kernel          /vmlinuz root={{rootdev}} ro quiet boot=bull-borra-usuarios
+kernel          /vmlinuz root={{rootdev}} ro quiet boot=userdel
 initrd          /initrd.img
 quiet
 
 title           - Restaurar sistema
 root            {{grubdev}}
-kernel          /vmlinuz root={{rootdev}} ro quiet boot=bull-restore
+kernel          /vmlinuz root={{rootdev}} ro quiet boot=restore
 initrd          /initrd.img
 quiet
 
-#title           - Clonar maquina
+#title           - Clonar sistema
 #root            {{grubdev}}
 #kernel          /vmlinuz root={{rootdev}} ro quiet boot=udpcast
 #initrd          /initrd.img
