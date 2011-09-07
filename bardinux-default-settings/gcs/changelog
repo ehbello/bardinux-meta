@@ -1,15 +1,18 @@
-bardinux-default-settings (1.0.24) lucid; urgency=low
+bardinux-default-settings (1.1.1) lucid; urgency=low
 
+  * Set A4 as default paper size for all printers insetad of US Letter.
   * Fixed problems with ucf installing grub after this package.
 
  -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 16 Jun 2011 18:58:14 +0100
 
 
-bardinux-default-settings (1.0.23) lucid; urgency=low
+bardinux-default-settings (1.1.0) lucid; urgency=low
 
-  * Set A4 as default paper size for all printers insetad of US Letter.
+  * Updated kdm.conf to work in Natty.
+  * Changed branding logo of Bardinux for kickoff.
+  * Updated libreoffice favorite shortcut in kickoff.
 
- -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 16 Jun 2011 16:35:48 +0100
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 15 Jun 2011 21:06:47 +0100
 
 
 bardinux-default-settings (1.0.22) lucid; urgency=low
