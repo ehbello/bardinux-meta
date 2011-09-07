@@ -1,0 +1,2 @@
+#ln -sf /usr/share/bardinux-default-settings/kde-profile/default/share/wallpapers/bardinux/contents/images/1920x1200.png /usr/share/wallpapers/kde-default.png
+rm -f /usr/share/wallpapers/kde-default.png
