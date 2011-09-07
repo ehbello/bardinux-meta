@@ -1,5 +1,0 @@
-PACKAGE=$(ucfq --with-colons /etc/default/grub | cut -d ":" -f 2)
-
-if [ -x /usr/bin/ucfr ]; then
-	ucfr --purge $(PACKAGE) /etc/default/grub
-fi
