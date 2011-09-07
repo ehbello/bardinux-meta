@@ -1,3 +1,10 @@
+bardinux-sources (1.1.7) lucid; urgency=low
+
+  * Updated bardinux and medibuntu sources lists.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 15 Jun 2011 21:20:59 +0100
+
+
 bardinux-sources (1.0.6) lucid; urgency=low
 
   * Disabled automatic reinstallation of a package when install.
