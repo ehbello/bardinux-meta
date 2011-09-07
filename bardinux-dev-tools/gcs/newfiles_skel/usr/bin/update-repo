@@ -78,7 +78,7 @@ for pkg in ${ARGS:-$DERIVATIVE_PACKAGES}; do
 done
 
 if sed -n '/^Codename: '$CODENAME'/,/^ *$/p' $LOCAL_REPOSITORY/conf/distributions | egrep -q ^SignWith; then
-	$REPREPRO $OPTIONS export $CODENAME
+	$REPREPRO $OPTIONS --ask-passphrase export $CODENAME
 fi
 
 chmod 755 -R $LOCAL_REPOSITORY

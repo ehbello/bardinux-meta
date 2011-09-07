@@ -19,9 +19,8 @@ shortdesc: "useful tools for Bardinux developers"
 longdesc: " This is a collection of useful tools that Bardinux developers use to make their\n packaging work a lot easier."
 
 # Versión del paquete
-version: 1.2.4
+version: 1.2.5
 
 # Cambios en esta versión
 changes:
-    - Added oneiric repository to reprepro configuration.
-    - Changed update-repo to sign the archive at end of includes.
+    - Fixed problem signin at reprepro export.
