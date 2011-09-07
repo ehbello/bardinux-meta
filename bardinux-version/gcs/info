@@ -22,8 +22,8 @@ shortdesc: "Paquete de versión."
 longdesc: "Contiene las configuraciones necesarias para determinar \n que Bardinux es la distribución instalada."
 
 # Versión del paquete
-version: 1.0.9
+version: 1.0.10
 
 # Cambios en esta versión
 changes:
-    - Forcing to update-grub after upgrade.
+    - Forcing to update-grub after upgrade _always_.
