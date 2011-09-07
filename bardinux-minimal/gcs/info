@@ -16,14 +16,14 @@ section: metapackages
 task: bardinux-minimal
 
 # Descripción corta
-shortdesc: "The unidistro base system."
+shortdesc: "The bardinux base system."
 
 # Descipción larga, las lineas han de estar separadas por "\n "
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0.4
+version: 1.2.1
 
 # Cambios en esta versión
 changes:
-    - Changed again vim-tiny by vim.
+    - Reviewed dependencies of this package for Oneiric Ocelot.

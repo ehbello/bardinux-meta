@@ -5,8 +5,8 @@ gimp-resynthesizer
 gimp-plugin-registry
 inkscape
 blender
-yafray
+#yafray
 scribus
 sane
 skanlite
-synfig
+#synfig

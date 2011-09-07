@@ -6,19 +6,22 @@ bardinux-desktop
 bardinux-menu
 bardinux-minimal
 command-not-found
-dnie-support
+opensc
+libacr38u
+libccid
+libnss3-tools
 emesene | amsn
 firefox | chromium-browser | rekonq
 icedtea6-plugin
 language-pack-es-base
 language-pack-gnome-es
 language-pack-kde-es
-language-support-es
+#language-support-es
 menu
 mozplugger
 myspell-es
-openoffice.org
-openoffice.org-l10n-es
+libreoffice
+libreoffice-l10n-es
 plymouth-theme-bardinux-logo
 psi-plus | psi
 psi-plus-plugins | psi

@@ -19,8 +19,8 @@ shortdesc: "Metapaquete recopilatorio de tipografías restringidas."
 longdesc: "Este paquete añade tipografías que por algún motivo no son de libre distribución."
 
 # Versión del paquete
-version: 1.0.1
+version: 1.2.1
 
 # Cambios en esta versión
 changes:
-    - Initial package
+    - Reviewed dependencies of this package for Oneiric Ocelot.

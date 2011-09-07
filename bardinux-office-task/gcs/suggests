@@ -1,8 +1,8 @@
-kdissert
-semantik
+#kdissert
+#tetex-base
+#tetex-extra
 kile
 kile-doc
 latex-beamer
 lyx
-#tetex-base
-#tetex-extra
+semantik

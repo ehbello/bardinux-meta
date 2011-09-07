@@ -1,10 +1,10 @@
+#gstreamer0.10-plugins-ugly-multiverse
+#moonlight-plugin-mozilla
 faad
 ffmpeg
 flashplugin-installer | mozilla-plugin-gnash | swfdec-mozilla
-moonlight-plugin-mozilla
 gstreamer0.10-ffmpeg
 gstreamer0.10-plugins-ugly
-gstreamer0.10-plugins-ugly-multiverse
 lame
 libdvdread4
 libxine1-all-plugins

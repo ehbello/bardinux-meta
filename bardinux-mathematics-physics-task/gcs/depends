@@ -16,7 +16,7 @@ gdb
 geda
 gnumeric
 gnuplot
-gpc
+#gpc
 grace
 gv
 kile
@@ -24,9 +24,9 @@ lazarus
 libatlas3gf-base
 maxima
 mysql-common
-octave3.0
+octave3.2
 oregano
-p2c
+#p2c
 perl
 pgplot5
 pspp

@@ -19,8 +19,8 @@ shortdesc: "Metapaquete de Software Técnico Científico."
 longdesc: "Instala herramientas para preparación de documentos \n electrónicos y científicos de alta calidad así como \n herramientas de cálculos numérico y estadísticos, \n comúnmente usadas en los primeros años de titulación \n de carreras como Matemáticas, Física y/o Astrofísica."
 
 # Versión del paquete
-version: 1.0.2
+version: 1.2.1
 
 # Cambios en esta versión
 changes:
-    - Replaced octave virtual dependence to avoid unresolved dependences.
+    - Reviewed dependencies of this package for Oneiric Ocelot.

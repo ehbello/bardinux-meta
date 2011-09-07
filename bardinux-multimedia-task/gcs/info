@@ -22,8 +22,8 @@ shortdesc: "Metapaquete de Codecs Multimedia."
 longdesc: "Este paquete instala todo lo necesario para poder hacer \n un uso confortable de la multimedia de tu ordenador. \n Contiene codecs de reprodución de vídeo, audio y flash."
 
 # Versión del paquete
-version: 1.0.5
+version: 1.2.1
 
 # Cambios en esta versión
 changes:
-    - Replaced gnash plugin by adobe flash for flash reproduction.
+    - Reviewed dependencies of this package for Oneiric Ocelot.

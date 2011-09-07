@@ -22,8 +22,9 @@ shortdesc: "Aplicaciones de ofimatica (edicion de textos, hoja de calculo, etc).
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0.1
+version: 1.2.1
 
 # Cambios en esta versión
 changes:
-    - Initial package
+    - Reviewed dependencies of this package for Oneiric Ocelot.
+    - Reviewed dependencies of this package for Oneiric Ocelot.

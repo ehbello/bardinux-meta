@@ -35,7 +35,7 @@ git-core
 gnumeric
 gnuplot
 graphviz
-kdirstat
+#kdirstat
 kftpgrabber
 libexpect-perl
 libfltk1.1
@@ -50,7 +50,7 @@ mercurial
 mpg321
 nasm
 nedit
-octave3.0
+octave3.2
 openssh-client
 perl
 perl-tk
@@ -67,7 +67,7 @@ sun-java6-jdk
 swi-prolog
 tcm
 tora
-tsclient
+#tsclient
 vgabios
 vlc
 xemacs21

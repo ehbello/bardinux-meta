@@ -1,3 +1,10 @@
+bardinux-scientific-task (1.1.0) lucid; urgency=low
+
+  * Updated version of octave.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 15 Jun 2011 21:19:16 +0100
+
+
 bardinux-scientific-task (1.0.2) lucid; urgency=low
 
   * Replaced octave virtual dependence to avoid unresolved dependences.

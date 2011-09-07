@@ -1,11 +1,12 @@
+#ttf-arhangai
 #ttf-lee
 #ttf-tahoma-replacement
 fondu
 fontforge
 fontforge-extras
+fonts-hurai-umefont
 fontypython
 otf-thai-tlwg
-sun-java6-fonts
 t1-thai-tlwg
 ttf-adf-accanthis
 ttf-adf-baskervald
@@ -26,7 +27,6 @@ ttf-alee
 ttf-ancient-fonts
 ttf-aoyagi-kouzan-t
 ttf-arabeyes
-ttf-arhangai
 ttf-arphic-bkai00mp
 ttf-arphic-bsmi00lp
 ttf-arphic-gbsn00lp
@@ -82,8 +82,8 @@ ttf-indic-fonts-core
 ttf-ipafont
 ttf-ipafont-jisx0208
 ttf-isabella
-#ttf-japanese-gothic
-#ttf-japanese-mincho
+ttf-japanese-gothic
+ttf-japanese-mincho
 ttf-jsmath
 ttf-junicode
 ttf-jura
@@ -109,7 +109,6 @@ ttf-lyx
 ttf-malayalam-fonts
 ttf-manchufont
 ttf-marvosym
-ttf-mathematica4.1
 ttf-mgopen
 ttf-misaki
 ttf-mona
@@ -165,7 +164,6 @@ ttf-tmuni
 ttf-tomsontalks
 ttf-tuffy
 ttf-ubuntu-title
-ttf-umefont
 ttf-umeplus
 ttf-unfonts
 ttf-unfonts-core

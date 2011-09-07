@@ -22,8 +22,8 @@ shortdesc: "The Bardinux base desktop system."
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0.8
+version: 1.2.1
 
 # Cambios en esta versión
 changes:
-    - Added menu dependence to install Debian menu in desktop.
+    - Reviewed dependencies of this package for Oneiric Ocelot.

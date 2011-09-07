@@ -19,8 +19,8 @@ shortdesc: "Metapaquete de Software para Multimedia."
 longdesc: "Recopila aplicaciones multimedia para la creacion y edicion de audio y video."
 
 # Versión del paquete
-version: 1.0.3
+version: 1.2.1
 
 # Cambios en esta versión
 changes:
-    - Added lame encoder to dependencies.
+    - Reviewed dependencies of this package for Oneiric Ocelot.
