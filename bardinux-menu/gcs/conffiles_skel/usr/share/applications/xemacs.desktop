@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Emacs gráfico (Xemacs)
 Comment=XEmacs, gráfico 
-TryExec=/usr/bin/xemacs21
-Exec=/usr/bin/xemacs21
+TryExec=xemacs21
+Exec=xemacs21
 Terminal=false
 Icon=/usr/share/pixmaps/bardinux/development.png
 Type=Application

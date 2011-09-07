@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Programación Scheme (DrScheme)
 Comment=Entorno de programación de Scheme
-TryExec=/usr/bin/drscheme
-Exec=/usr/bin/drscheme
+TryExec=drscheme
+Exec=drscheme
 Terminal=false
 Type=Application
 Categories=Education;Development;

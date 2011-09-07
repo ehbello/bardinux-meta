@@ -19,8 +19,8 @@ shortdesc: "Entradas de menú para Bardinux."
 longdesc: "Este paquete provee los datos de menú del escritorio que presenta las \n aplicaciones proporcionadas por Bardinux a los usuarios."
 
 # Versión del paquete
-version: 1.0.1
+version: 1.0.2
 
 # Cambios en esta versión
 changes:
-    - Initial package
+    - Removed full the executable path of each desktop file.

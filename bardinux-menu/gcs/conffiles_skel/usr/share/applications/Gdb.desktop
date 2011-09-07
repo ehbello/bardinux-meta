@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Depurador (Gdb)
 Comment=
-TryExec=/usr/bin/ddd
-Exec=/usr/bin/gdbtui
+TryExec=ddd
+Exec=gdbtui
 Terminal=true
 Type=Application
 Categories=Education;Development;

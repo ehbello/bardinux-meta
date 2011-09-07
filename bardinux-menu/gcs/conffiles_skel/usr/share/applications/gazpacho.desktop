@@ -2,8 +2,8 @@
 Name=Diseñador de Interfaces (Gazpacho)
 Comment=Design Graphical User Interfaces
 Icon=/usr/share/gazpacho/pixmaps/gazpacho-icon.png
-TryExec=/usr/bin/gazpacho
-Exec=/usr/bin/gazpacho %F
+TryExec=gazpacho
+Exec=gazpacho %F
 Terminal=false
 Type=Application
 Version=0.9.4

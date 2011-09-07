@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Plataforma de desarrollo (Eclipse)
 Comment=Desarrolla aplicaciones y mucho más
-TryExec=/usr/bin/eclipse
-Exec=/usr/bin/eclipse
+TryExec=eclipse
+Exec=eclipse
 Icon=eclipse48.png
 Terminal=false
 MultipleArgs=false

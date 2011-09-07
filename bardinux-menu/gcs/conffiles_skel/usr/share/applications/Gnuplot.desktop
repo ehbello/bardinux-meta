@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Gráficas (GnuPlot) 
 Comment=GnuPlot(Ploteo interactivo de gráficas)
-TryExec=/usr/bin/gnuplot
-Exec=/usr/bin/gnuplot
+TryExec=gnuplot
+Exec=gnuplot
 Terminal=true
 Icon=/usr/share/pixmaps/bardinux/math.png
 Type=Application

@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Compilador de ADA (Gnat)
 Comment=
-TryExec=/usr/bin/gnat-gps
-Exec=/usr/bin/gnat-gps
+TryExec=gnat-gps
+Exec=gnat-gps
 Terminal=true
 Type=Application
 Categories=Education;Development;

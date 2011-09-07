@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Vim gráfico (gvim)
 Comment=GVIM, gráfico 
-Exec=/usr/bin/gvim
-TryExec=/usr/bin/gvim
+Exec=gvim
+TryExec=gvim
 Terminal=false
 Icon=vim-32
 Type=Application

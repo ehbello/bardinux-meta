@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Intérprete pyhton (Python)
 Comment=Python Interpreter (v2.4)
-TryExec=/usr/bin/ipython
-Exec=/usr/bin/ipython
+TryExec=ipython
+Exec=ipython
 Icon=/usr/share/pixmaps/python2.4.xpm
 Terminal=true
 MultipleArgs=false

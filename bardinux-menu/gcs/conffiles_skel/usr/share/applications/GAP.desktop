@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Álgebra discreta (GAP)
 Comment=Grupos, Algoritmos y programación
-TryExec=/usr/bin/gap
-Exec=/usr/bin/gap
+TryExec=gap
+Exec=gap
 Terminal=true
 Type=Application
 Categories=Education;Math;
