@@ -19,9 +19,9 @@ shortdesc: "useful tools for Bardinux developers"
 longdesc: " This is a collection of useful tools that Bardinux developers use to make their\n packaging work a lot easier."
 
 # Versión del paquete
-version: 1.0.3
+version: 1.2.4
 
 # Cambios en esta versión
 changes:
-    - New version of update-repo script with some improvements.
-    - Changed pbuild-satisfydepends command to classic. Now '--use-pbuild-internal' works.
+    - Added oneiric repository to reprepro configuration.
+    - Changed update-repo to sign the archive at end of includes.
