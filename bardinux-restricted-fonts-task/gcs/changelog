@@ -1,3 +1,10 @@
+bardinux-restricted-fonts-task (1.2.1) oneiric; urgency=low
+
+  * Reviewed dependencies of this package for Oneiric Ocelot.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 07 Sep 2011 21:50:01 +0100
+
+
 bardinux-restricted-fonts-task (1.0.1) lucid; urgency=low
 
   * Initial package

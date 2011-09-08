@@ -1,3 +1,10 @@
+bardinux-scientific-task (1.2.1) oneiric; urgency=low
+
+  * Reviewed dependencies of this package for Oneiric Ocelot.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 07 Sep 2011 21:50:31 +0100
+
+
 bardinux-scientific-task (1.1.0) lucid; urgency=low
 
   * Updated version of octave.

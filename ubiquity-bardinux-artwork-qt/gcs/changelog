@@ -1,3 +1,12 @@
+ubiquity-bardinux-artwork-qt (1.2~dev3) oneiric; urgency=low
+
+  * Deleted ubiquity qt images.
+  * Disabled squares of gui installer.
+  * Added scripts to set the kde default wallpaper.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 07 Sep 2011 21:56:11 +0100
+
+
 ubiquity-bardinux-artwork-qt (1.0~dev2) lucid; urgency=low
 
   * Rebuilt to fix the conflict problem with ubiquity.

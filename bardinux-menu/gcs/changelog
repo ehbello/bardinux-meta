@@ -1,3 +1,10 @@
+bardinux-menu (1.0.2) oneiric; urgency=low
+
+  * Removed full the executable path of each desktop file.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 07 Sep 2011 21:46:26 +0100
+
+
 bardinux-menu (1.0.1) lucid; urgency=low
 
   * Initial package

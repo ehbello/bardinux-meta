@@ -1,3 +1,10 @@
+bardinux-mathematics-physics-task (1.2.1) oneiric; urgency=low
+
+  * Reviewed dependencies of this package for Oneiric Ocelot.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 07 Sep 2011 21:45:56 +0100
+
+
 bardinux-mathematics-physics-task (1.2.0) lucid; urgency=low
 
   * Updated dependencies for Oneiric Ocelot.

@@ -1,3 +1,18 @@
+bardinux-dev-tools (1.2.5) oneiric; urgency=low
+
+  * Fixed problem signin at reprepro export.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 07 Sep 2011 22:29:06 +0100
+
+
+bardinux-dev-tools (1.2.4) oneiric; urgency=low
+
+  * Added oneiric repository to reprepro configuration.
+  * Changed update-repo to sign the archive at end of includes.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 07 Sep 2011 21:40:50 +0100
+
+
 bardinux-dev-tools (1.0.3) lucid; urgency=low
 
   * New version of update-repo script with some improvements.

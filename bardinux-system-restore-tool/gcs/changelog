@@ -1,3 +1,10 @@
+bardinux-system-restore-tool (1.0~dev2) oneiric; urgency=low
+
+  * Bunch of changes to get work this system.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 07 Sep 2011 21:52:36 +0100
+
+
 bardinux-system-restore-tool (1.0~dev1) lucid; urgency=low
 
   * Initial package
