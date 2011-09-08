@@ -19,14 +19,8 @@ shortdesc: "Default settings and artwork for the Bardinux desktop system (KDE Ve
 longdesc: "This package contains the default settings and used by Bardinux. It also\n includes artwork and Bardinux branding."
 
 # Versión del paquete
-version: 1.2.2
+version: 1.2.3
 
 # Cambios en esta versión
 changes:
-    - Fixing legacy bugs.
-    - Changed the way of customize the firefox homepage without dependency of firefox version.
-    - Updated libreoffice in favorite links of kickoff.
-    - Updated grub configuration.
-    - Fixed kdm configuration for theme customization.
-    - Added script to reload kdm configuration.
-    - Some changes in branding.svg for kickoff.
+    - Fix load of firefox configuration.

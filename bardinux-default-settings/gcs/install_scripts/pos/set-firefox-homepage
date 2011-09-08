@@ -1,1 +1,0 @@
-sed 's|(browser.startup.homepage).*|&=http://bardinux.ull.es|g' -i /usr/lib/firefox-*/browserconfig.properties
