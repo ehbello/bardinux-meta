@@ -1,7 +1,7 @@
 # YAML 1.1
 
 # Nombre del paquete (minúsculas-separado-con-guiones)
-name: syslinux-theme-bardinux
+name: syslinux-themes-bardinux
 
 # Autor
 author: Enrique Hernández Bello <quique@osl.ull.es>
