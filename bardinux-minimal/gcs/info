@@ -22,8 +22,8 @@ shortdesc: "The bardinux base system."
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2.1
+version: 1.2.2
 
 # Cambios en esta versión
 changes:
-    - Reviewed dependencies of this package for Oneiric Ocelot.
+    - Reorganized dependencies between desktop metapackages.
