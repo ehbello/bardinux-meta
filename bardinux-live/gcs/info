@@ -19,8 +19,8 @@ shortdesc: "Metapackage to create a Bardinux Live distribution (KDE Version)"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0.2
+version: 1.2.0
 
 # Cambios en esta versión
 changes:
-    - Disabled ubiquity artwork dependence for Bardinux until it works.
+    - Enabled again ubiquity artwork dependence for Bardinux.
