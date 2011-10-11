@@ -149,7 +149,7 @@ ttf-sinhala-lklug
 ttf-sjfonts
 ttf-staypuft
 ttf-summersby
-ttf-symbol-replacement
+#ttf-symbol-replacement
 ttf-tagbanwa
 ttf-takao
 ttf-takao-gothic
