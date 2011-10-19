@@ -22,10 +22,8 @@ shortdesc: "Bardinux artwork for Ubiqutiy live installer."
 longdesc: "This package provides Bardinux-themed user interface artwork, help files, and\n user interface text for the Ubiquity live CD installer."
 
 # Versión del paquete
-version: 1.2~dev3
+version: 1.2~dev4
 
 # Cambios en esta versión
 changes:
-    - Deleted ubiquity qt images.
-    - Disabled squares of gui installer.
-    - Added scripts to set the kde default wallpaper.
+    - Set the kde default wallpaper for ubiquity installer.
