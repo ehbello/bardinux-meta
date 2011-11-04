@@ -1,3 +1,46 @@
+bardinux-default-settings (1.0.31) oneiric; urgency=low
+
+  * Changed the way of customize the firefox homepage without dependency of firefox version.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 07 Sep 2011 18:45:26 +0100
+
+
+bardinux-default-settings (1.0.30) lucid; urgency=low
+
+  * Rebuild.
+  * Fixing legacy bugs.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 15 Jul 2011 20:11:35 +0100
+
+
+bardinux-default-settings (1.0.29) lucid; urgency=low
+
+  * Fixing legacy bugs.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 15 Jul 2011 20:09:42 +0100
+
+
+bardinux-default-settings (1.0.28) lucid; urgency=low
+
+  * Fixing legacy bugs.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 15 Jul 2011 20:00:42 +0100
+
+
+bardinux-default-settings (1.0.27) lucid; urgency=low
+
+  * Removed overriding of ucf configuration for grub.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 15 Jul 2011 19:49:34 +0100
+
+
+bardinux-default-settings (1.0.26) lucid; urgency=low
+
+  * Fixed a missed name of grub file overriding ucf configuration.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 15 Jul 2011 19:17:08 +0100
+
+
 bardinux-default-settings (1.0.24) lucid; urgency=low
 
   * Fixed problems with ucf installing grub after this package.
