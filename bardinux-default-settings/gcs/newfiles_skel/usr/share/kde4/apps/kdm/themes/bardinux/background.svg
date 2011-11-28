@@ -15,11 +15,11 @@
    height="800"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.47 r22583"
+   inkscape:version="0.48.2 r9819"
    version="1.0"
    sodipodi:docname="background.svgz"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   inkscape:export-filename="1280x800.jpg.png"
+   inkscape:export-filename="background.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -32828,7 +32828,7 @@
      inkscape:guide-bbox="true"
      inkscape:window-width="1280"
      inkscape:window-height="976"
-     inkscape:window-x="-4"
+     inkscape:window-x="-3"
      inkscape:window-y="-3"
      showgrid="false"
      inkscape:window-maximized="1" />
