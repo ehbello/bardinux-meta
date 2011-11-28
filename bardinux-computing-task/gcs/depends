@@ -35,6 +35,7 @@ git-core
 gnumeric
 gnuplot
 graphviz
+iverilog
 #kdirstat
 kftpgrabber
 libexpect-perl
