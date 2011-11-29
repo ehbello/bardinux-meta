@@ -1,4 +1,3 @@
-#kdevelop
 autoconf
 automake
 build-essential
@@ -9,8 +8,8 @@ eric
 gdb
 kdesvn
 kdesvn-kio-plugins
+kdevelop
 lokalize
 monodevelop
 monodevelop-versioncontrol
-sun-java6-jdk
 valgrind

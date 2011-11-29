@@ -22,8 +22,8 @@ shortdesc: "Utilidades para consola."
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2.1
+version: 1.2.2
 
 # Cambios en esta versión
 changes:
-    - Added axel, colordiff, convmv, htop, kpartx and nmap to dependencies.
+    - Removed nano of dependencies.

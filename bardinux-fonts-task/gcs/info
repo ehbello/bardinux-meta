@@ -19,8 +19,9 @@ shortdesc: "Metapaquete recopilatorio de tipografías."
 longdesc: "Este paquete recopila todas las tipografías existentes en el \n repositorio para su instalación en bruto. Algo bastante útil \n para cuando quieres disponer de todas las fuentes posibles \n sin tener que seleccionar una por una."
 
 # Versión del paquete
-version: 1.2.3
+version: 1.2.4
 
 # Cambios en esta versión
 changes:
-    - Disabled ttf-symbol-replacement due a wine 1.3 conflict.
+    - Deleted ttf-mona of dependencies.
+    - Deleted sun-java6-fonts of suggests.

@@ -1,7 +1,7 @@
-#binutils-m68hc1x
-#gcc-m68hc1x
+binutils-m68hc1x
+gcc-m68hc1x
 #gdb-m68hc1x
-#kdevelop
+kdevelop
 #newlib-m68hc1x
 #octaviz
 bison
@@ -64,7 +64,7 @@ r-base
 ruby
 scilab
 subversion
-sun-java6-jdk
+#sun-java6-jdk
 swi-prolog
 tcm
 tora

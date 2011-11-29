@@ -19,8 +19,10 @@ shortdesc: "Metapaquete con Software para Desarrollo de Aplicaciones."
 longdesc: ""
 
 # Versión del paquete
-version: 1.0.1
+version: 1.2.1
 
 # Cambios en esta versión
 changes:
-    - Initial package
+    - Added kdevelop to dependencies.
+    - Removed sun-java6-jdk of dependencies.
+    - Changed monodevelop by monodevelop-boo in suggests.
