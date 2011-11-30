@@ -1,3 +1,10 @@
+bardinux-sigaull-default-settings (1.0.10) oneiric; urgency=low
+
+  * Configured cron to shutdown clients every two hours if there aren't any users logged.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 04 Nov 2011 16:14:17 +0000
+
+
 bardinux-sigaull-default-settings (1.0.9) oneiric; urgency=low
 
   * Rebuild.

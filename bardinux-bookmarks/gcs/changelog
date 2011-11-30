@@ -1,3 +1,10 @@
+bardinux-bookmarks (1.0.2.1) oneiric; urgency=low
+
+  * Rebuild.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 13 Sep 2011 21:00:13 +0100
+
+
 bardinux-bookmarks (1.0.2) lucid; urgency=low
 
   * Customized the content of the bookmarks file.

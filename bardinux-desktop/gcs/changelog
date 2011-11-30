@@ -1,3 +1,24 @@
+bardinux-desktop (1.2.4) oneiric; urgency=low
+
+  * Added kfind and virtuoso-minimal to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 28 Nov 2011 17:50:30 +0000
+
+
+bardinux-desktop (1.2.3) oneiric; urgency=low
+
+  * Reorganized dependencies between desktop metapackages.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 22 Sep 2011 15:59:33 +0100
+
+
+bardinux-desktop (1.2.2) oneiric; urgency=low
+
+  * Replaced kpackagekit by Muon.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 13 Sep 2011 20:26:07 +0100
+
+
 bardinux-desktop (1.2.1) oneiric; urgency=low
 
   * Changed kdebase-workspace-bin by kde-workspace-bin.

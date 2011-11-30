@@ -1,3 +1,10 @@
+ubiquity-bardinux-artwork-qt (1.2~dev4) oneiric; urgency=low
+
+  * Set the kde default wallpaper for ubiquity installer.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 19 Oct 2011 15:52:27 +0100
+
+
 ubiquity-bardinux-artwork-qt (1.2~dev3) oneiric; urgency=low
 
   * Deleted ubiquity qt images.

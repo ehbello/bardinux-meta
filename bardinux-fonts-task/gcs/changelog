@@ -1,3 +1,25 @@
+bardinux-fonts-task (1.2.4) oneiric; urgency=low
+
+  * Deleted ttf-mona of dependencies.
+  * Deleted sun-java6-fonts of suggests.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 29 Nov 2011 14:07:19 +0000
+
+
+bardinux-fonts-task (1.2.3) oneiric; urgency=low
+
+  * Disabled ttf-symbol-replacement due a wine 1.3 conflict.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 11 Oct 2011 14:11:18 +0100
+
+
+bardinux-fonts-task (1.2.2) oneiric; urgency=low
+
+  * Fixed a mispelling error on a package name.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 13 Sep 2011 21:05:13 +0100
+
+
 bardinux-fonts-task (1.2.1) oneiric; urgency=low
 
   * Reviewed dependencies of this package for Oneiric Ocelot.

@@ -1,3 +1,18 @@
+bardinux-computing-task (1.2.3) oneiric; urgency=low
+
+  * Added binutils-m68hc1x, gcc-m68hc1x and kdevelop to dependencies.
+  * Removed sun-java6-jdk of dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 29 Nov 2011 14:05:39 +0000
+
+
+bardinux-computing-task (1.2.2) oneiric; urgency=low
+
+  * Added iverilog to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 28 Nov 2011 17:48:38 +0000
+
+
 bardinux-computing-task (1.2.1) oneiric; urgency=low
 
   * Reviewed dependencies of this package for Oneiric Ocelot.

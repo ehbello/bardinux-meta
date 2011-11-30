@@ -1,3 +1,12 @@
+bardinux-development-task (1.2.1) oneiric; urgency=low
+
+  * Added kdevelop to dependencies.
+  * Removed sun-java6-jdk of dependencies.
+  * Changed monodevelop by monodevelop-boo in suggests.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 29 Nov 2011 14:06:48 +0000
+
+
 bardinux-development-task (1.0.1) lucid; urgency=low
 
   * Initial package

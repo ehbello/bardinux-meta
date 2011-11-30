@@ -1,0 +1,7 @@
+syslinux-themes-bardinux (1~dev1) oneiric; urgency=low
+
+  * Initial release, based in part on syslinux-themes-ubuntu 1.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 16 Sep 2011 13:15:13 +0100
+
+

@@ -1,3 +1,12 @@
+bardinux-default-settings (1.2.6) oneiric; urgency=low
+
+  * Disabled kwallet daemon by default.
+  * Converted kdm background format to PNG.
+  * Updated kdm.conf init script.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 28 Nov 2011 17:49:46 +0000
+
+
 bardinux-default-settings (1.2.5) oneiric; urgency=low
 
   * Changed KPackageKit by Muon Installer at Kickoff Favorites.

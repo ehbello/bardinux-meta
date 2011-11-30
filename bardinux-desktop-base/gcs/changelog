@@ -1,3 +1,17 @@
+bardinux-desktop-base (1.2.3) oneiric; urgency=low
+
+  * Deleted foomatic-db-gutenprint because it depends of foomatic-db and we install foomatic-db-compressed.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 22 Sep 2011 18:11:24 +0100
+
+
+bardinux-desktop-base (1.2.2) oneiric; urgency=low
+
+  * Reorganized dependencies between desktop metapackages.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 22 Sep 2011 15:59:03 +0100
+
+
 bardinux-desktop-base (1.2.1) oneiric; urgency=low
 
   * Reviewed dependencies of this package for Oneiric Ocelot.

@@ -1,3 +1,17 @@
+bardinux-menu (1.2.1) oneiric; urgency=low
+
+  * Deleted bardinux-desktop dependency.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 22 Sep 2011 21:00:20 +0100
+
+
+bardinux-menu (1.0.2.1) oneiric; urgency=low
+
+  * Rebuild.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 13 Sep 2011 20:45:55 +0100
+
+
 bardinux-menu (1.0.2) oneiric; urgency=low
 
   * Removed full the executable path of each desktop file.

@@ -1,3 +1,10 @@
+bardinux-version (1.2.2) oneiric; urgency=low
+
+  * Changed version of Bardinux to 3.3 Alpha3.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 28 Nov 2011 17:51:23 +0000
+
+
 bardinux-version (1.2.1) oneiric; urgency=low
 
   * Changed version of Bardinux to 3.3 Alpha2.

@@ -1,3 +1,10 @@
+bardinux-dev-tools (1.2.6) oneiric; urgency=low
+
+  * Added live-build and gcs as recommendations.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 13 Sep 2011 20:26:50 +0100
+
+
 bardinux-dev-tools (1.2.5) oneiric; urgency=low
 
   * Fixed problem signin at reprepro export.
