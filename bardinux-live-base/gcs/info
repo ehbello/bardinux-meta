@@ -19,8 +19,8 @@ shortdesc: "Metapackage to create an Bardinux distribution."
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0.4
+version: 1.2.1
 
 # Cambios en esta versión
 changes:
-    - Removed command-not-found unuseful in a live system.
+    - Added link from kde-profile to kde4-profile for kubuntu-default-settings profile to fix (LP: #898721)
