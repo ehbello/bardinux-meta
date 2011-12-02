@@ -19,8 +19,11 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev2
+version: 1.0~dev3
+
+config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - Bunch of changes to get work this system.
+    - Workaround for avoid to conflict grub.gcs
+    - Deleted double dots on questions.
