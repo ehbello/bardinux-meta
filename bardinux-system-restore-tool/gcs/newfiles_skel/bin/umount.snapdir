@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. /etc/default/srt
+. /etc/default/bsrt
 
 [ -n ${BACKUPDEV} ] || exit 0
 
