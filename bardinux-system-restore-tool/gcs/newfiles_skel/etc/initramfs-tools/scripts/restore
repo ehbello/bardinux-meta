@@ -4,86 +4,56 @@
 # Parameter: Where to mount the filesystem
 #
 
-. /etc/default/bsrt
-
-mount_dev () {
-	mkdir -p $3
-	mount -t ext4 -o $1 $2 $3
-}
+. $(dirname $0)/libbsrt
 
 syncronize () {
-	echo "Restaurando $1 desde $BACKUPDEV hasta $ROOTDEV"
-	mount_dev ro $BACKUPDEV /source
-	mount_dev rw $ROOTDEV /target
-	rsync -ax --progress --delete --exclude=/home /source/$1 /target/
-	{ for I in $(seq 1 100) ; do echo $I; sleep 0.01; done; echo 100; } | dialog --shadow --gauge "Progress" 6 70 0
-	umount /source
-	umount /target
+	TITLE="Restaurando $1 desde ${BACKUPDEV} a ${ROOTDEV}"
+	TEXT="Completado..."
+	mount_dev rw ${ROOTDEV} /mnt
+	mount_dev ro ${BACKUPDEV} /mnt/${SNAPSHOTDIR}
+	rsync -ax --progress --delete --exclude=/mnt/home --exclude=/mnt/${SNAPSHOTDIR} /mnt/$1/ /mnt/ | draw dialog
+	umount ${BACKUPDEV}
+	umount ${ROOTDEV}
 }
 
 getSnapshots() {
-	mount_dev ro $BACKUPDEV /source
+	mount_dev ro $BACKUPDEV /mnt
 
-	for ID in $(ls -1 /source/${SNAPSHOTDIR}); do
+	for ID in $(ls -1 /mnt/${SNAPSHOTDIR}); do
 		DATE=$(date -R -r ${SNAPSHOTDIR}/${ID} | sed 's/, \| /|/g')
 		echo "${ID#*.} ${DATE}"
 	done
 
-	umount /source
+	umount /mnt
 }
 
 mountroot () {
-	dialog --title	"Restauración del sistema" \
-		--infobox	"\
-		\n \
-		\n \
-		\n   Comprobando dispositivos... \
-		\n " 12 80
-
-	slumber=600
-	while [ ! -e "$BACKUPDEV" ]; do
-		/bin/sleep 0.1
-		slumber=$(( ${slumber} - 1 ))
-		[ ${slumber} -gt 0 ] || panic "No hay dispositivos"
-	done
-
 	menuitems=$(getSnapshots)
 
-	dialog --title "Selección del punto de restauración" \
-		--menu	"\
-		\n \
-		\n \
-		\n Elija punto de restauración a usar para llevar el equipo a un estado anterior: \
-		\n \
-		" 30 80 17 \
-		${menuitems} 2> /tmp/answer
+	TITLE="Selección del punto de restauración"
+	TEXT="Elija punto de restauración a usar para llevar el equipo a un estado anterior:"
+	dialog --title ${TITLE} --menu ${TEXT} 30 80 17 ${menuitems} 2> /tmp/answer || cancelmsg
 
 	srcpoint_dir="${SNAPSHOTDIR}/daily.$(< /tmp/answer)"
 
-	mount_dev ro ${BACKUPDEV} ${ROOTDEV}
-	dialog --title "Restauración del sistema" \
-		--yesno "\
+	mount_dev ro ${BACKUPDEV} /mnt
+	TITLE="Restauración del sistema"
+	TEXT="\
 		\n \
 		\n   Se va a iniciar el proceso para restaurar la copia del sistema: \
-		\n   $(date -R -r /source/${srcpoint_dir}) \
+		\n   $(date -R -r /mnt/${srcpoint_dir}) \
 		\n \
 		\n   ¿Desea continuar? \
-		\n" 12 80
-	umount /source
+		\n"
+	draw yesno
+	umount /mnt
 
 	if [[ $? == 0 ]]; then
 		clear
-#		syncronize $srcpoint_dir
+		syncronize $srcpoint_dir
 	fi
 
-	dialog --title "Restauración del sistema" \
-		--msgbox "\
-		\n \
-		\n \
-		\n   Proceso terminado, pulse enter para reiniciar.\
-		\n" 12 60
-
-#	reboot
+	success_msg
 }
 
 mountroot

@@ -1,0 +1,67 @@
+#!/bin/bash
+
+#. /etc/default/bsrt
+ROOTDEV=/dev/sda1
+BACKUPDEV=/dev/sda1
+SNAPSHOTDIR=/.snapshotdir/
+
+if echo ${ROOTDEV} | grep -q "^UUID="; then
+	ROOTDEV=$(blkid -U ${ROOTDEV#UUID=})
+fi
+if echo ${BACKUPDEV} | grep -q "^UUID="; then
+	BACKUPDEV=$(blkid -U ${BACKUPDEV#UUID=})
+fi
+
+mount_dev () {
+	local opts = $1
+	local srcdev = $2
+	local mntpt = $3
+	check_dev ${dev}
+
+    mkdir -p ${mntpt}
+    mount ${opts:+-o ${opts}} ${srcdev} ${mntpt}
+}
+
+check_dev () {
+    TITLE="Comprobando dispositivos"
+    TEXT="Espere..."
+    { while [ ! -e "$1" ]; do
+        /bin/sleep 0.1 
+        echo $(( ${slumber} / 10 ))
+        slumber=$(( ${slumber} + 1 ))
+        [ ${slumber} -lt 100 ] || panic "No existe el dispositivo $1"
+    done; echo; } | dialog --title ${TITLE} --gauge ${TEXT} 0 0
+}
+
+cancelmsg () {
+	TITLE="Proceso cancelado"
+	TEXT="El proceso ha sido cancelado por el usuario, pulse ENTER para reiniciar."
+	dialog msgbox
+	umount -a
+	reboot
+}
+
+errormsg () {
+	TITLE="Error"
+	TEXT="Se ha producido un error. Contacte con su administrador. Pulse ENTER para reiniciar."
+	dialog msgbox
+	umount -a
+	reboot
+}
+
+successmsg () {
+	TITLE="Fin"
+    TEXT=${1:-"Proceso terminado, pulse ENTER para reiniciar."}
+    draw msgbox
+	umount -a
+	reboot
+}
+
+draw () {
+	local TYPE=${1:-msgbox}; shift
+	dialog ${TITLE:+--title "${TITLE}"} --${TYPE} "${TEXT}" ${HEIGHT:-0} ${WIDTH:-0} $@
+	
+	unset TEXT
+	unset HEIGHT
+	unset WIDTH
+}

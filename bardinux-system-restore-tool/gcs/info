@@ -19,11 +19,17 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev3
+version: 1.0~dev5
 
-config_extension: .bsrt.gcs
+#config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - Workaround for avoid to conflict grub.gcs
-    - Deleted double dots on questions.
+    - Fixed encrypted password generation for GRUB and GRUB2.
+    - Fixed GRUB2 command line.
+    - Depends on rsnapshot and dialog to work correctly.
+    - Disabled useless grub entries at installation.
+    - Fixed user permissions for administration menu for GRUB2.
+    - Added terminfo libs to get ncurses to work.
+    - Refactorization of scripts.
+    - Added a common library called libbrst.

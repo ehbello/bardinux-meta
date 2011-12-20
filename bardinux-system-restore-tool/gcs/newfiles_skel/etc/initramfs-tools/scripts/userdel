@@ -1,46 +1,47 @@
 #!/bin/bash
 
-. /etc/default/bsrt
+. $(dirname $0)/libbsrt
 
 mountroot () {
-	slumber=600
-	while [ ! -e "${ROOTDEV}" ]; do
-		/bin/sleep 0.1
-		slumber=$(( ${slumber} - 1 ))
-		[ ${slumber} -gt 0 ] || panic "No hay dispositivos"
+	mount_dev rw ${ROOTDEV} /mnt
+	
+	HOME_PATH=/mnt/home/
+	HOME_PATH=/home
+	ALL_USERS=$(ls -1 ${HOME_PATH} | grep -v 'lost+found')
+	ALL_USERS="uno dos tres cuatro cinco seis"
+
+	numHomes=$(echo ${ALL_USERS} | wc -l)
+	if [ numHomes > 0 ]; then
+		ITEMS="Todos $(du -sh $HOME_PATH | cut -f 1)  0"
+	else
+		TEXT="No existen usuarios en el sistema."
+		success_msg ${TEXT}
+	fi
+
+	for USER in ${ALL_USERS}; do
+		ITEMS="${ITEMS} ${USER} $(du -sh ${HOME_PATH}/${USER} | cut -f 1) 0"
+	done
+	
+	TITLE="Selección de usuario"
+	TEXT="Seleccione los usuarios que desea eliminar"
+	draw checklist 0 ${ITEMS} 2> /tmp/listaUsuarios
+
+	SELECTED=$(sed 's/"//g' /tmp/listaUsuarios)
+
+	if [ "${SELECTED}" == "Todos" ]; then
+		echo "Borrando todos los usuarios"
+		SELECTED=${ALL_USERS}
+	fi
+
+	for USER in ${SELECTED}; do
+		TITLE="Borrado de usuario"
+		TEXT="Borrando ${USER}..."
+		{ echo 0;
+		chroot /mnt /usr/sbin/userdel -rf ${USER}
+		echo 100; } |  dialog --title ${TITLE} --gauge ${TEXT} 0 0
 	done
 
-	HOMES=/source/home/
-	mkdir /source
-	mount -t ext3 -o rw ${ROOTDEV} /source
-	
-	numHomes=$(( $(ls -l $HOMES | wc -l) - 1 ))
-	DIALOGO2=" Todos $(du -hs $HOMES|cut -f 1)  0"
-	for dir in ${HOMES}*; do
-		if [ ${dir} == ${HOMES}lost+found ]; then continue; fi
-		DIALOGO2="$DIALOGO2 $(echo $dir|cut -d / -f 4) $(du -hs $dir|cut -f 1) 0"
-	done
-	
-	dialog --title "Ordenadores de la BULL" --checklist "Seleccione los usuarios que desea eliminar" 10 50 $numHomes $DIALOGO2 2> /tmp/listaUsuarios
-	for user in `cat /tmp/listaUsuarios`; do
-		user=$(echo $user|cut -d "\"" -f 2)
-		if [ $user == "Todos" ]; then
-			echo "Borrando todos los usuarios"
-			for dir in ${HOMES}*; do
-				if [ ${dir} == ${HOMES}lost+found ]; then continue; fi
-				chroot /source /usr/sbin/userdel -rf $(echo $dir|cut -d / -f 4)
-			done
-			break
-		fi
-		echo "Borrando $user"
-		chroot /source /usr/sbin/userdel -rf ${user}
-#		echo "rm -rf ${HOMES}/${user}"
-#		echo "userdel ${user}"
-	done
-	dialog --title "Ordenadores de la BULL" \
-		--msgbox "\n\n\n    Proceso terminado, pulse enter para reiniciar." \
-		10 60
-
-	umount /source
-	reboot
+	success_msg
 }
+
+mountroot

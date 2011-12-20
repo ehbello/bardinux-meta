@@ -1,9 +1,9 @@
 #!/bin/sh
 
-. /etc/default/bsrt
+. $(dirname $0)/libbsrt
 
-mount -t ext4 ${ROOTDEV} /mnt
-mount -t ext4 ${BACKUPDEV} /mnt/${SNAPSHOTDIR}
+mount_dev ${ROOTDEV} /mnt
+mount_dev ${BACKUPDEV} /mnt/${SNAPSHOTDIR}
 chroot /mnt rsnapshot daily
 umount /mnt/${SNAPSHOTDIR}
 umount /mnt

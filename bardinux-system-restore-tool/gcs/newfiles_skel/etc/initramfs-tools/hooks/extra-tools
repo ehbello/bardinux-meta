@@ -67,7 +67,7 @@ else
 fi
 cp -r /etc/terminfo  "${DESTDIR}/etc"
 
-for dir in /usr/share/terminfo/*; do
+for dir in /usr/share/terminfo/* /lib/terminfo/*; do
 	mkdir -p ${DESTDIR}$dir
 	for file in $dir/*; do
 		copy_exec $file $dir/

@@ -1,16 +1,16 @@
 #!/bin/sh
 cat << EOF
-menuentry --users master "Crear usuario" {
+menuentry "Crear usuario" {
 	linux /vmlinuz root=${GRUB_DEVICE} ro quiet boot=useradd
 	initrd /initrd.img
 }
 
 submenu "[Menu administrativo]" {
-menuentry --users master "Borrar usuarios" {
+menuentry --users admin "Borrar usuarios" {
         linux /vmlinuz root=${GRUB_DEVICE} ro quiet boot=userdel
         initrd /initrd.img
 }
-menuentry --users master "Restaurar sistema" {
+menuentry --users admin "Restaurar sistema" {
         linux /vmlinuz root=${GRUB_DEVICE} ro quiet boot=restore
         initrd /initrd.img
 }

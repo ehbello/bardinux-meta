@@ -128,12 +128,12 @@ timeout		30
 ## ## End Default Options ##
 
 ### END DEBIAN AUTOMAGIC KERNELS LIST
-password --md5 {{superpasswd}}
+password {{superpasswd}}
 
 ### BEGIN SPECIAL OPTION LIST
 
 title		[Menu administrativo]
-password --md5 {{adminpasswd}}
+password {{adminpasswd}}
 configfile	{{grubdev}}/boot/grub/admin-menu.lst
 quiet
 

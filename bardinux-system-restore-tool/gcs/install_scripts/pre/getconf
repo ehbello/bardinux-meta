@@ -1,6 +1,8 @@
+db_fset bardinux-system-restore-tool/grubdev seen true
 if [ -e /boot/grub/menu.lst ]; then
 	GRUBDEV=$(awk -F '=' '$1 ~ /^# *groot/ { print $2 }' /boot/grub/menu.lst)
-	db_set bardinux-system-restore-tool/grootdev ${GROOTDEV}
+	db_set bardinux-system-restore-tool/grubdev ${GRUBDEV}
+	db_fset bardinux-system-restore-tool/grubdev seen false
 fi
 
 ROOTDEV=$(awk '$2 == "/" { print $1 }' /etc/fstab | grep -v "^ *#")
