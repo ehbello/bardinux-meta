@@ -4,3 +4,4 @@ e2fsprogs
 grub|grub-pc
 initramfs-tools
 rsync
+libcrypt-passwdmd5-perl

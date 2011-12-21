@@ -19,52 +19,16 @@ esac
 
 echo -n "Copying extra-tools... "
 
-if [ -x /bin/sed ]; then
-	copy_exec /bin/sed /bin
-else
-	echo "No hay manera de usar sed arrancando con esta mierda de initramfs"
-fi
+TOOLS="/bin/sed /bin/df /usr/bin/tr /usr/bin/wc /usr/bin/du /usr/bin/rsync /usr/bin/dialog /usr/bin/dirname"
 
-if [ -x /bin/df ]; then
-	copy_exec /bin/df /bin
-else
-	echo "No hay manera de calcular espacio libre arrancando con esta mierda de initramfs"
-fi
+for TOOL in ${TOOLS}; do
+	if [ -x ${TOOL} ]; then
+		copy_exec ${TOOL} $(dirname ${TOOL})
+	else
+		echo "No hay manera de usar $(basename ${TOOL}) arrancando con esta mierda de initramfs"
+	fi
+done
 
-if [ -x /usr/bin/tr ]; then
-	copy_exec /usr/bin/tr /bin
-else
-	echo "No hay manera de traducir palabras arrancando con esta mierda de initramfs"
-fi
-
-if [ -x /usr/bin/wc ]; then
-	copy_exec /usr/bin/wc /bin
-else
-	echo "No hay manera de contar palabras arrancando con esta mierda de initramfs"
-fi
-
-if [ -x /usr/bin/du ]; then
-	copy_exec /usr/bin/du /bin
-else
-	echo "No hay manera de comprobar el tamanyo de algo arrancando con esta mierda de initramfs"
-fi
-
-if [ -x /usr/bin/rsync ]; then
-	copy_exec /usr/bin/rsync /bin
-else
-	echo "No hay manera de rsynquear nada arrancando con esta mierda de initramfs"
-fi
-
-if [ -x /usr/bin/dialog ]; then
-	copy_exec /usr/bin/dialog /bin
-else
-	echo "No hay manera de usar dialog con esta mierda de initramfs"
-fi
-if [ -x /sbin/mkfs.ext3 ]; then
-	copy_exec /sbin/mkfs.ext3 /sbin
-else
-	echo "No hay manera de formatear nada arrancando con esta mierda de initramfs"
-fi
 cp -r /etc/terminfo  "${DESTDIR}/etc"
 
 for dir in /usr/share/terminfo/* /lib/terminfo/*; do

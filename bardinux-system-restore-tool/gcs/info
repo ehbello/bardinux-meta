@@ -19,11 +19,12 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0~dev6
+version: 1.2~dev7
 
 #config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - Removed duplicated of dialog dependency.
-    - Fixed brst configuration filename for {u}mount.snapdir.
+    - Added libcrypt-passwdmd5-perl pre-dependency.
+    - Refactorized extra-tool script.
+    - Bump to Oneiric Ocelot.
