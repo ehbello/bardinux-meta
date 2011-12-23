@@ -1,30 +1,30 @@
 #!/bin/bash
 
-. $(dirname $0)/libbsrt
+. /scripts/libbsrt
 
 mountroot () {
 	mount_dev rw ${ROOTDEV} /mnt
 	
-	HOME_PATH=/mnt/home/
-	HOME_PATH=/home
-	ALL_USERS=$(ls -1 ${HOME_PATH} | grep -v 'lost+found')
-	ALL_USERS="uno dos tres cuatro cinco seis"
+	HOME_PATH=/home/
+	ALL_USERS=$(chroot_cmd /mnt /bin/ls -1 ${HOME_PATH} | grep -v 'lost+found')
 
 	numHomes=$(echo ${ALL_USERS} | wc -l)
-	if [ numHomes > 0 ]; then
-		ITEMS="Todos $(du -sh $HOME_PATH | cut -f 1)  0"
+	if [ $numHomes -gt 0 ]; then
+		ITEMS="Todos $(chroot_cmd /mnt /usr/bin/du -sh $HOME_PATH | cut -f 1)  0"
 	else
 		TEXT="No existen usuarios en el sistema."
 		success_msg ${TEXT}
 	fi
 
 	for USER in ${ALL_USERS}; do
-		ITEMS="${ITEMS} ${USER} $(du -sh ${HOME_PATH}/${USER} | cut -f 1) 0"
+		ITEMS="${ITEMS} ${USER} $(chroot_cmd /mnt /usr/bin/du -sh ${HOME_PATH}/${USER} | cut -f 1) 0"
 	done
 	
 	TITLE="Selección de usuario"
 	TEXT="Seleccione los usuarios que desea eliminar"
-	draw checklist 0 ${ITEMS} 2> /tmp/listaUsuarios
+	WIDTH=10
+	HEIGHT=50
+	draw checklist $numHomes ${ITEMS} 2> /tmp/listaUsuarios
 
 	SELECTED=$(sed 's/"//g' /tmp/listaUsuarios)
 
@@ -37,8 +37,8 @@ mountroot () {
 		TITLE="Borrado de usuario"
 		TEXT="Borrando ${USER}..."
 		{ echo 0;
-		chroot /mnt /usr/sbin/userdel -rf ${USER}
-		echo 100; } |  dialog --title ${TITLE} --gauge ${TEXT} 0 0
+		chroot_cmd /mnt /usr/sbin/userdel -rf ${USER} 2> /dev/null
+		echo 100; } |  dialog --title "${TITLE}" --gauge "${TEXT}" 0 0
 	done
 
 	success_msg

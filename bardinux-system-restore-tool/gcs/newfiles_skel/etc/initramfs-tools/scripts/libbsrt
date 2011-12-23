@@ -1,9 +1,6 @@
 #!/bin/bash
 
-#. /etc/default/bsrt
-ROOTDEV=/dev/sda1
-BACKUPDEV=/dev/sda1
-SNAPSHOTDIR=/.snapshotdir/
+. /etc/default/bsrt
 
 if echo ${ROOTDEV} | grep -q "^UUID="; then
 	ROOTDEV=$(blkid -U ${ROOTDEV#UUID=})
@@ -11,57 +8,76 @@ fi
 if echo ${BACKUPDEV} | grep -q "^UUID="; then
 	BACKUPDEV=$(blkid -U ${BACKUPDEV#UUID=})
 fi
+# Arreglar un fisco
+if [ ${BACKUPDEV} != ${ROOTDEV} ]; then
+	mount ${ROOTDEV} /mnt
+	snapshot_dir=$(awk '$1 == "snapshot_root" { print $2 }' /mnt/etc/rsnapshot.conf)
+	umount /mnt
+else
+	snapshot_dir="."
+fi
 
 mount_dev () {
-	local opts = $1
-	local srcdev = $2
-	local mntpt = $3
-	check_dev ${dev}
+	local opts=$1
+	local srcdev=$2
+	local mntpt=$3
+	check_dev ${srcdev}
 
     mkdir -p ${mntpt}
     mount ${opts:+-o ${opts}} ${srcdev} ${mntpt}
 }
 
 check_dev () {
-    TITLE="Comprobando dispositivos"
-    TEXT="Espere..."
-    { while [ ! -e "$1" ]; do
-        /bin/sleep 0.1 
-        echo $(( ${slumber} / 10 ))
-        slumber=$(( ${slumber} + 1 ))
-        [ ${slumber} -lt 100 ] || panic "No existe el dispositivo $1"
-    done; echo; } | dialog --title ${TITLE} --gauge ${TEXT} 0 0
+	TITLE="Comprobando dispositivos"
+	TEXT="Espere..."
+	{ while [ ! -e "$1" ]; do
+		/bin/sleep 0.1 
+		echo $(( ${slumber} / 10 ))
+		slumber=$(( ${slumber} + 1 ))
+		[ ${slumber} -lt 100 ] || panic "No existe el dispositivo $1"
+	done; echo; } | dialog --title "${TITLE}" --gauge "${TEXT}" 0 0
 }
 
-cancelmsg () {
+chroot_cmd () {
+	mount -o bind /dev $1/dev/
+	chroot $1 mount -a
+	chroot $@
+	chroot $1 umount -a > /dev/null
+	umount $1/dev/
+}
+
+cancel_msg () {
 	TITLE="Proceso cancelado"
 	TEXT="El proceso ha sido cancelado por el usuario, pulse ENTER para reiniciar."
 	dialog msgbox
-	umount -a
+	umount -ar > /dev/null
 	reboot
 }
 
-errormsg () {
+error_msg () {
 	TITLE="Error"
 	TEXT="Se ha producido un error. Contacte con su administrador. Pulse ENTER para reiniciar."
 	dialog msgbox
-	umount -a
+	umount -ar > /dev/null
 	reboot
 }
 
-successmsg () {
+success_msg () {
 	TITLE="Fin"
-    TEXT=${1:-"Proceso terminado, pulse ENTER para reiniciar."}
-    draw msgbox
-	umount -a
+	TEXT=${@:-"Proceso terminado, pulse ENTER para reiniciar."}
+	draw msgbox
+	umount -ar > /dev/null
 	reboot
 }
 
 draw () {
 	local TYPE=${1:-msgbox}; shift
 	dialog ${TITLE:+--title "${TITLE}"} --${TYPE} "${TEXT}" ${HEIGHT:-0} ${WIDTH:-0} $@
+	ERROR=$?
 	
 	unset TEXT
 	unset HEIGHT
 	unset WIDTH
+
+	return $ERROR
 }

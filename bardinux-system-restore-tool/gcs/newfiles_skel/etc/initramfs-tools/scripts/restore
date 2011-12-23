@@ -4,23 +4,25 @@
 # Parameter: Where to mount the filesystem
 #
 
-. $(dirname $0)/libbsrt
+. /scripts/libbsrt
 
 syncronize () {
 	TITLE="Restaurando $1 desde ${BACKUPDEV} a ${ROOTDEV}"
 	TEXT="Completado..."
-	mount_dev rw ${ROOTDEV} /mnt
-	mount_dev ro ${BACKUPDEV} /mnt/${SNAPSHOTDIR}
-	rsync -ax --progress --delete --exclude=/mnt/home --exclude=/mnt/${SNAPSHOTDIR} /mnt/$1/ /mnt/ | draw dialog
-	umount ${BACKUPDEV}
+	mount_dev ro ${BACKUPDEV} /source
+	mount_dev rw ${ROOTDEV} /target
+	rsync -ax --progress --delete /source/${SNAPSHOTDIR}/$1 /target/
+	ERROR=$?
 	umount ${ROOTDEV}
+	umount ${BACKUPDEV}
+	return ${ERROR}
 }
 
 getSnapshots() {
-	mount_dev ro $BACKUPDEV /mnt
+	mount_dev ro ${BACKUPDEV} /mnt
 
-	for ID in $(ls -1 /mnt/${SNAPSHOTDIR}); do
-		DATE=$(date -R -r ${SNAPSHOTDIR}/${ID} | sed 's/, \| /|/g')
+	for ID in /mnt/${SNAPSHOTDIR}/${1:-*}; do
+		DATE=$(date -R -r ${ID} | sed 's/, \| /|/g')
 		echo "${ID#*.} ${DATE}"
 	done
 
@@ -32,26 +34,23 @@ mountroot () {
 
 	TITLE="Selección del punto de restauración"
 	TEXT="Elija punto de restauración a usar para llevar el equipo a un estado anterior:"
-	dialog --title ${TITLE} --menu ${TEXT} 30 80 17 ${menuitems} 2> /tmp/answer || cancelmsg
+	HEIGHT=30
+	WIDTH=80
+	draw menu 17 ${menuitems} 2> /tmp/answer || cancel_msg
 
-	srcpoint_dir="${SNAPSHOTDIR}/daily.$(< /tmp/answer)"
+	srcpoint_dir="daily.$(< /tmp/answer)"
 
-	mount_dev ro ${BACKUPDEV} /mnt
 	TITLE="Restauración del sistema"
 	TEXT="\
 		\n \
 		\n   Se va a iniciar el proceso para restaurar la copia del sistema: \
-		\n   $(date -R -r /mnt/${srcpoint_dir}) \
+		\n   $(getSnapshots ${srcpoint_dir}) \
 		\n \
 		\n   ¿Desea continuar? \
 		\n"
-	draw yesno
-	umount /mnt
+	draw yesno || cancel_msg
 
-	if [[ $? == 0 ]]; then
-		clear
-		syncronize $srcpoint_dir
-	fi
+	syncronize $srcpoint_dir || error_msg
 
 	success_msg
 }

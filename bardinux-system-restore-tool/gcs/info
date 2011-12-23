@@ -19,12 +19,17 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2~dev7
+version: 1.2~dev8
 
 #config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - Added libcrypt-passwdmd5-perl pre-dependency.
-    - Refactorized extra-tool script.
-    - Bump to Oneiric Ocelot.
+    - Fixed destination directory of backups in rsnapshot.conf
+    - Added setup of root password.
+    - Deleted some of useless extra-tools.
+    - SNAPSHOTDIR variable is obtained in initramfs.
+    - Fixed the path of libbsrt at imports.
+    - Removed some of garbage code.
+    - Delete of password lock files before useradd.
+    - Some other fixes and refactoring.

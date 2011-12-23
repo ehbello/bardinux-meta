@@ -4,7 +4,7 @@
 # Parameter: Where to mount the filesystem
 #
 
-. $(dirname $0)/libbsrt
+. /scripts/libbsrt
 
 mountroot () {
 	TITLE="Ordenadores de la BULL"
@@ -17,22 +17,22 @@ mountroot () {
 	PASS2="OTRO"
 	while [ ! $USEROK ]; do
 		TITLE="Nuevo usuario"
-		TEXT="Escriba su nombre de usuario:\nDebe contener al menos 6 caracteres\ny menos de 13.\n   Ej: alberto, rmartin, etc..."
-		draw inputbox 2> /tmp/username || cancelmsg
+		TEXT="Escriba su nombre de usuario.\nDebe contener entre 6 y 12 caracteres.\n   Ej: alberto, rmartin, etc..."
+		draw inputbox 2> /tmp/username || cancel_msg
 
-		USERNAME=$(< /tmp/username)
-		if test ${#USERNAME} -lt 6 -o ${#USERNAME} -ge 12; then
+		USERNAME=$(cat /tmp/username)
+		if [ ${#USERNAME} -lt 6 -o ${#USERNAME} -gt 12 ]; then
 			TITLE="Error"
-			TEXT="Su nombre de usuario es demasiado largo o demasiado corto ha de tener entre 6 y 12 caracteres" \
-			draw msgbox || cancelmsg
+			TEXT="Su nombre de usuario es demasiado largo o demasiado corto ha de tener entre 6 y 12 caracteres"
+			draw msgbox || cancel_msg
 		elif echo -n ${USERNAME} | egrep -q -v '^[0-9a-z]*$'; then
 			TITLE="Error"
 			TEXT="Su nombre solo puede contener digitos y caracteres alfanumericos"
-			draw msgbox || cancelmsg
+			draw msgbox || cancel_msg
 		elif grep -q "^${USERNAME}:" /source/etc/passwd; then
 			TITLE="Usuario existente"
 			TEXT="Este nombre de usuario ya existe, elija otro"
-			draw msgbox || cancelmsg
+			draw msgbox || cancel_msg
 		else
 			USEROK=1
 		fi
@@ -40,40 +40,42 @@ mountroot () {
 
 	while [ "$PASS1" != "$PASS2" ]; do
 		TITLE="Configuración de clave"
-		TEXT="Escriba su clave de acceso:\nSu clave debe contener al menos 6 caracteres." \
-		dialog --title ${TITLE} --insecure --passwordbox ${TEXT} 10 60 2> /tmp/password1 || cancelmsg
+		TEXT="Escriba su clave de acceso:\nSu clave debe contener al menos 6 caracteres."
+		dialog --title "${TITLE}" --insecure --passwordbox "${TEXT}" 10 60 2> /tmp/password1 || cancel_msg
 
-		PASS1=$(< /tmp/password1)
-		if test ${#PASS1} -lt 6; then
+		PASS1=$(cat /tmp/password1)
+		if [ ${#PASS1} -gt 6 ]; then
 			TITLE="Nuevo usuario para el portatil de la BULL"
-			TEXT="Su clave de acceso debe contener al menos 6 caracteres" \
-			draw msgbox || cancelmsg
+			TEXT="Su clave de acceso debe contener al menos 6 caracteres"
+			draw msgbox || cancel_msg
 			continue
 		fi
 
 		TITLE="Confirmación de clave"
-		TEXT="Confirme su clave de acceso:"
-		dialog --title ${TITLE}	--insecure --passwordbox ${TEXT} 10 60 2> /tmp/password2 || cancelmsg
+		TEXT="Confirme su clave de acceso:\n"
+		dialog --title "${TITLE}" --insecure --passwordbox "${TEXT}" 10 60 2> /tmp/password2 || cancel_msg
 
-		PASS2=$(< /tmp/password2)
-		if test "$PASS1" != "$PASS2"; then
+		PASS2=$(cat /tmp/password2)
+		if [ "$PASS1" != "$PASS2" ]; then
 			TITLE="Error"
 			TEXT="Las claves de acceso no coinciden"
-			draw msgbox || cancelmsg
+			draw msgbox || cancel_msg
 			continue
 		fi
-
 	done
-	chroot /source /usr/sbin/useradd -mp "$PASS1" "$USERNAME"
+
+	# TODO: Definir grupos de usuario
+	chroot_cmd /source rm -f /etc/*.lock
+	chroot_cmd /source /usr/sbin/useradd -m -p "$PASS1" "$USERNAME"
 	ERROR=$?
 		
 	#for i in `mount|tr -s "(" " "|tr -s ")" " "|tr -s " " "#"|sed s/on//`;do echo "$i 0 0"|tr -s "#" " ";done > /etc/mtab
-	ln -s /proc/mounts /etc/mtab
+	#ln -s /proc/mounts /etc/mtab
 	if [[ $ERROR == 0 ]]; then
-		LIBRE=$(df -h ${ROOTDEV} | tr -s " " "#" | grep home | cut -d "#" -f 4)
-		TEXT="Usuario correctamente creado.\n Dispone de $LIBRE de espacio libre.\n\n\n    Pulse Enter para reiniciar"
+		LIBRE=$(chroot_cmd /source /bin/df -h /home | awk '{ print $4 }')
+		TEXT="Usuario correctamente creado.\n Dispone de $LIBRE de espacio libre.\n\n\n    Pulse ENTER para reiniciar"
 	else
-		TEXT="No se pudo crear el usuario. Contacte con el administrador del sistema.\n\n\n    Pulse Enter para reiniciar"
+		TEXT="No se pudo crear el usuario. Contacte con el administrador del sistema.\n\n\n    Pulse ENTER para reiniciar"
 	fi
 	
 	success_msg ${TEXT}

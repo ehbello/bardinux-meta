@@ -1,9 +1,9 @@
 #!/bin/sh
 
-. $(dirname $0)/libbsrt
+. /scripts/libbsrt
 
-mount_dev ${ROOTDEV} /mnt
-mount_dev ${BACKUPDEV} /mnt/${SNAPSHOTDIR}
-chroot /mnt rsnapshot daily
+mount_dev rw ${ROOTDEV} /mnt
+mount_dev rw ${BACKUPDEV} /mnt/${SNAPSHOTDIR}
+chroot_cmd /mnt rsnapshot daily
 umount /mnt/${SNAPSHOTDIR}
 umount /mnt

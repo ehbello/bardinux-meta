@@ -19,11 +19,11 @@ esac
 
 echo -n "Copying extra-tools... "
 
-TOOLS="/bin/sed /bin/df /usr/bin/tr /usr/bin/wc /usr/bin/du /usr/bin/rsync /usr/bin/dialog /usr/bin/dirname"
+TOOLS="/bin/sed /usr/bin/wc /usr/bin/rsync /usr/bin/dialog /usr/bin/awk"
 
 for TOOL in ${TOOLS}; do
 	if [ -x ${TOOL} ]; then
-		copy_exec ${TOOL} $(dirname ${TOOL})
+		copy_exec ${TOOL}
 	else
 		echo "No hay manera de usar $(basename ${TOOL}) arrancando con esta mierda de initramfs"
 	fi
@@ -34,7 +34,7 @@ cp -r /etc/terminfo  "${DESTDIR}/etc"
 for dir in /usr/share/terminfo/* /lib/terminfo/*; do
 	mkdir -p ${DESTDIR}$dir
 	for file in $dir/*; do
-		copy_exec $file $dir/
+		copy_exec $file
 	done
 done
 
