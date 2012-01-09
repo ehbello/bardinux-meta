@@ -1,0 +1,1 @@
+Dpkg::Post-Invoke {"echo Committing system changes... This may take some time.; rsnapshot last"; };

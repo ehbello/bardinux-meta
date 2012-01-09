@@ -20,10 +20,12 @@ esac
 
 echo -n "Parsing configuration... "
 
+interval=$(awk '$0 !~ /^ *#/ && $1 == "interval" { print $2 }' /etc/rsnapshot.conf)
 root_dev=$(awk '$0 !~ /^ *#/ && $2 == "/" { print $1 }' /etc/fstab)
 backup_dev=${BACKUPDEV:-$root_dev}
 
 cat > ${DESTDIR}/etc/default/bsrt << EOF
+INTERVAL=${interval}
 ROOTDEV=${root_dev}
 BACKUPDEV=${backup_dev}
 EOF

@@ -38,7 +38,7 @@ mountroot () {
 	WIDTH=80
 	draw menu 17 ${menuitems} 2> /tmp/answer || cancel_msg
 
-	srcpoint_dir="daily.$(< /tmp/answer)"
+	srcpoint_dir="${INTERVAL}.$(< /tmp/answer)"
 
 	TITLE="Restauración del sistema"
 	TEXT="\

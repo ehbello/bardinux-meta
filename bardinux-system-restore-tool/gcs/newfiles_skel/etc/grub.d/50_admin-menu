@@ -5,16 +5,20 @@ menuentry "Crear usuario" {
 	initrd /initrd.img
 }
 
-submenu "[Menu administrativo]" {
-menuentry --users admin "Borrar usuarios" {
+submenu --users="admin master" " [Menu administrativo]" {
+menuentry "Borrar usuarios" {
         linux /vmlinuz root=${GRUB_DEVICE} ro quiet boot=userdel
         initrd /initrd.img
 }
-menuentry --users admin "Restaurar sistema" {
+menuentry "Restaurar sistema" {
         linux /vmlinuz root=${GRUB_DEVICE} ro quiet boot=restore
         initrd /initrd.img
 }
-#menuentry "Clonar sistema" {
+menuentry --users="master" "Crear punto de restauración" {
+        linux /vmlinuz root=${GRUB_DEVICE} ro quiet boot=backup
+        initrd /initrd.img
+}
+#menuentry --users="master" "Clonar sistema" {
 #        linux /vmlinuz root=${GRUB_DEVICE} ro quiet boot=udpcast
 #        initrd /initrd.img
 #}

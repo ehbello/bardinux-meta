@@ -23,8 +23,8 @@ mount_dev () {
 	local mntpt=$3
 	check_dev ${srcdev}
 
-    mkdir -p ${mntpt}
-    mount ${opts:+-o ${opts}} ${srcdev} ${mntpt}
+	mkdir -p ${mntpt}
+	mount ${opts:+-o ${opts}} ${srcdev} ${mntpt}
 }
 
 check_dev () {

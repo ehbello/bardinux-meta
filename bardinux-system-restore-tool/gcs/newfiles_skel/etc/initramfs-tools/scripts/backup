@@ -3,7 +3,5 @@
 . /scripts/libbsrt
 
 mount_dev rw ${ROOTDEV} /mnt
-mount_dev rw ${BACKUPDEV} /mnt/${SNAPSHOTDIR}
-chroot_cmd /mnt rsnapshot daily
-umount /mnt/${SNAPSHOTDIR}
+chroot_cmd /mnt rsnapshot -v ${INTERVAL}
 umount /mnt
