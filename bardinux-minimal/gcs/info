@@ -22,8 +22,8 @@ shortdesc: "The unidistro base system."
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0.4
+version: 1.0.5
 
 # Cambios en esta versión
 changes:
-    - Changed again vim-tiny by vim.
+    - Added ntfs-3g to dependencies for ntfs fuse mounts.
