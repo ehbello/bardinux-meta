@@ -10,7 +10,7 @@ dnie-support
 emesene | amsn
 firefox | chromium-browser | rekonq
 icedtea6-plugin
-language-pack-es-base
+firefox-locale-es | chromium-browser-l10n
 language-pack-gnome-es
 language-pack-kde-es
 language-support-es
