@@ -19,7 +19,7 @@ sed "s|{{adminpasswd}}|--md5 ${ADMINPASSWD}|g" -i /boot/grub/menu.lst || true
 sed "s|{{grubdev}}|${GRUBDEV}|g" -i /boot/grub/menu.lst /boot/grub/admin-menu.lst || true
 sed "s|{{superpasswd}}|--md5 ${SUPERPASSWD}|g" -i /boot/grub/admin-menu.lst || true
 
-echo "${SUPERPASSWD}\n${SUPERPASSWD}\n" | passwd root > /dev/null
+echo "${SUPERPASSWD}\n${SUPERPASSWD}\n" | passwd root |& grep -o "passwd.*"
 
 cat << EOF > /etc/grub.d/01_passwords
 #!/bin/sh

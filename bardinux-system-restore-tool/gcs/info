@@ -19,18 +19,10 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2~dev9
+version: 1.2.10
 
 #config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - Enabled cmd_cp in rsnapshot.conf
-    - Changed interval name to 'last' in rsnapshot.conf
-    - Disabled sync_first feature in rsnapshot.conf
-    - Fixed backup order in rsnapshot.conf
-    - Hidden output of passwd root.
-    - Fixed mount/umount scripts.
-    - Added Post-Invoke hook to run rsnapshot after Dpkg changes.
-    - Changed allowed users to "Menú administrativo".
-    - Added "Crear punto de restauración" menu entry to GRUB2 conf.
+    - First almost full working release.

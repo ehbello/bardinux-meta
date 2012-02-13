@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Local filesystem mounting			-*- shell-script -*-
 
 # Parameter: Where to mount the filesystem
@@ -7,52 +7,52 @@
 . /scripts/libbsrt
 
 syncronize () {
-	TITLE="Restaurando $1 desde ${BACKUPDEV} a ${ROOTDEV}"
-	TEXT="Completado..."
-	mount_dev ro ${BACKUPDEV} /source
-	mount_dev rw ${ROOTDEV} /target
-	rsync -ax --progress --delete /source/${SNAPSHOTDIR}/$1 /target/
+	SOURCE=$(mount_dev ro ${BACKUPDEV})
+	TARGET=$(mount_dev rw ${ROOTDEV})
+
+	TITLE="Restauración"
+	TEXT="Restaurando $1 desde ${BACKUPDEV} a ${ROOTDEV}"
+	rsync -ax --progress --delete ${SOURCE}/${SNAPSHOTDIR}/$1 ${TARGET}/ | draw programbox
 	ERROR=$?
-	umount ${ROOTDEV}
-	umount ${BACKUPDEV}
+	
 	return ${ERROR}
 }
 
 getSnapshots() {
-	mount_dev ro ${BACKUPDEV} /mnt
-
-	for ID in /mnt/${SNAPSHOTDIR}/${1:-*}; do
-		DATE=$(date -R -r ${ID} | sed 's/, \| /|/g')
-		echo "${ID#*.} ${DATE}"
+	local mntpt=$(mount_dev ro ${BACKUPDEV})
+	local numitems=0
+	for ID in ${mntpt}/${SNAPSHOTDIR}/${1:-*}; do
+		if ! echo ${ID} | grep -q -o "${INTERVAL}"; then
+			continue
+		fi
+		DATE=$(date -R -r ${ID} | /bin/sed 's/, \| /_/g')
+		menuitems="${ID##*.} ${DATE} ${SNAPSHOTS}"
+		numitems=$(($numitems + 1))
 	done
-
-	umount /mnt
+	umount ${mntpt}
+	return $numitems
 }
 
-mountroot () {
-	menuitems=$(getSnapshots)
+numitems=$(getSnapshots)
 
-	TITLE="Selección del punto de restauración"
-	TEXT="Elija punto de restauración a usar para llevar el equipo a un estado anterior:"
-	HEIGHT=30
-	WIDTH=80
-	draw menu 17 ${menuitems} 2> /tmp/answer || cancel_msg
+TITLE="Selección del punto de restauración"
+TEXT="Elija punto de restauración a usar para llevar el equipo a un estado anterior:"
+HEIGHT=30
+WIDTH=50
+draw menu ${numitems} ${menuitems} 2> /tmp/answer || cancel_msg
 
-	srcpoint_dir="${INTERVAL}.$(< /tmp/answer)"
+srcpoint_dir="${INTERVAL}.$(cat /tmp/answer)"
 
-	TITLE="Restauración del sistema"
-	TEXT="\
-		\n \
-		\n   Se va a iniciar el proceso para restaurar la copia del sistema: \
-		\n   $(getSnapshots ${srcpoint_dir}) \
-		\n \
-		\n   ¿Desea continuar? \
-		\n"
-	draw yesno || cancel_msg
+TITLE="Restauración del sistema"
+TEXT="\
+	\n \
+	\n   Se va a iniciar el proceso para restaurar la copia del sistema: \
+	\n   $(getSnapshots ${srcpoint_dir}) \
+	\n \
+	\n   ¿Desea continuar? \
+	\n"
+draw yesno || cancel_msg
 
-	syncronize $srcpoint_dir || error_msg
+syncronize $srcpoint_dir || error_msg
 
-	success_msg
-}
-
-mountroot
+success_msg

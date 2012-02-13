@@ -1,78 +1,114 @@
-#!/bin/bash
+#!/bin/sh
+
+set -e
 
 . /etc/default/bsrt
 
-if echo ${ROOTDEV} | grep -q "^UUID="; then
-	ROOTDEV=$(blkid -U ${ROOTDEV#UUID=})
-fi
-if echo ${BACKUPDEV} | grep -q "^UUID="; then
-	BACKUPDEV=$(blkid -U ${BACKUPDEV#UUID=})
-fi
-# Arreglar un fisco
-if [ ${BACKUPDEV} != ${ROOTDEV} ]; then
-	mount ${ROOTDEV} /mnt
-	snapshot_dir=$(awk '$1 == "snapshot_root" { print $2 }' /mnt/etc/rsnapshot.conf)
-	umount /mnt
-else
-	snapshot_dir="."
-fi
-
-mount_dev () {
-	local opts=$1
-	local srcdev=$2
-	local mntpt=$3
-	check_dev ${srcdev}
-
-	mkdir -p ${mntpt}
-	mount ${opts:+-o ${opts}} ${srcdev} ${mntpt}
+mountroot () {
+	sh
+	reboot
 }
 
-check_dev () {
+dev_exists () {
 	TITLE="Comprobando dispositivos"
 	TEXT="Espere..."
 	{ while [ ! -e "$1" ]; do
 		/bin/sleep 0.1 
 		echo $(( ${slumber} / 10 ))
 		slumber=$(( ${slumber} + 1 ))
-		[ ${slumber} -lt 100 ] || panic "No existe el dispositivo $1"
-	done; echo; } | dialog --title "${TITLE}" --gauge "${TEXT}" 0 0
+		[ ${slumber} -lt 100 ] || return 1
+	done; echo; } # | draw gauge
+	return 0
 }
 
-chroot_cmd () {
-	mount -o bind /dev $1/dev/
-	chroot $1 mount -a
-	chroot $@
-	chroot $1 umount -a > /dev/null
-	umount $1/dev/
+is_mounted () {
+	grep -q -o "^$1 " /etc/mtab
+	return $?
+}
+
+mount_dev () {
+	local opts=$1
+	local srcdev=$2
+	local mntpt=/mnt/${srcdev##*/}
+
+	if ! dev_exists ${srcdev}; then
+		panic "No existe el dispositivo ${srcdev}"
+	fi
+	
+	if ! is_mounted ${srcdev}; then
+		mkdir -p ${mntpt}
+		mount ${opts:+-o ${opts}} ${srcdev} ${mntpt}
+	fi
+
+	echo $mntpt
+}
+
+umount_dev () {
+	umount $@
+}
+
+umount_all () {
+	umount -alf || true
+}
+
+chroot_dev () {
+	local devpt=$1; shift
+	local mntpt=$(mount_dev rw $devpt)
+
+	mount -o bind /dev $mntpt/dev/
+	chroot $mntpt mount -a
+	chroot $mntpt $@
+	ERROR=$?
+	chroot $mntpt umount -alf
+	#umount $mntpt/dev/
+	
+	return $ERROR
 }
 
 cancel_msg () {
 	TITLE="Proceso cancelado"
 	TEXT="El proceso ha sido cancelado por el usuario, pulse ENTER para reiniciar."
-	dialog msgbox
-	umount -ar > /dev/null
+	HEIGHT=10
+	WIDTH=50
+	draw msgbox
+	umount_all
 	reboot
 }
 
 error_msg () {
 	TITLE="Error"
 	TEXT="Se ha producido un error. Contacte con su administrador. Pulse ENTER para reiniciar."
-	dialog msgbox
-	umount -ar > /dev/null
+	HEIGHT=10
+	WIDTH=50
+	draw msgbox
+	umount_all
 	reboot
 }
 
 success_msg () {
 	TITLE="Fin"
 	TEXT=${@:-"Proceso terminado, pulse ENTER para reiniciar."}
+	HEIGHT=10
+	WIDTH=50
 	draw msgbox
-	umount -ar > /dev/null
+	umount_all
 	reboot
 }
 
 draw () {
+	BACKTITLE="Oficina de Software Libre de la Universidad de La Laguna"
 	local TYPE=${1:-msgbox}; shift
-	dialog ${TITLE:+--title "${TITLE}"} --${TYPE} "${TEXT}" ${HEIGHT:-0} ${WIDTH:-0} $@
+	case $TYPE in
+		gauge|prgbox|programbox)
+			read data
+			;;
+		*)
+			echo "Pulse ENTER para dibujar la siguiente pantalla..."
+			read
+			;;
+	esac
+
+	echo ${data} | dialog ${COMMON_OPTS} ${BACKTITLE:+--backtitle "${BACKTITLE}"} --no-collapse --cr-wrap ${TITLE:+--title "${TITLE}"} --${TYPE} "${TEXT}" ${HEIGHT:-0} ${WIDTH:-0} $@
 	ERROR=$?
 	
 	unset TEXT
@@ -81,3 +117,17 @@ draw () {
 
 	return $ERROR
 }
+
+if echo ${ROOTDEV} | grep -q "^UUID="; then
+	ROOTDEV=$(blkid -U ${ROOTDEV#UUID=})
+fi
+if echo ${BACKUPDEV} | grep -q "^UUID="; then
+	BACKUPDEV=$(blkid -U ${BACKUPDEV#UUID=})
+fi
+# Arreglar un fisco
+if [ ${BACKUPDEV} == ${ROOTDEV} ]; then
+	SNAPSHOTDIR=$(chroot_dev ${ROOTDEV} /bin/sed -n '/^snapshot_root/s/snapshot_root[[:blank:]]*//p' /etc/rsnapshot.conf)
+else
+	SNAPSHOTDIR="."
+fi
+

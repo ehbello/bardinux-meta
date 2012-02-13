@@ -2,6 +2,9 @@
 
 . /scripts/libbsrt
 
-mount_dev rw ${ROOTDEV} /mnt
-chroot_cmd /mnt rsnapshot -v ${INTERVAL}
-umount /mnt
+TITLE="Punto de restauración"
+TEXT="Creando punto de restauración..."
+WIDTH=50
+HEIGHT=30
+chroot_dev ${ROOTDEV} rsnapshot -v ${INTERVAL} | dialog ${COMMON_OPTS} ${BACKTITLE:+--backtitle "${BACKTITLE}"} --no-collapse --cr-wrap ${TITLE:+--title "${TITLE}"} --programbox "${TEXT}" ${HEIGHT:-0} ${WIDTH:-0} || cancel_msg
+success_msg

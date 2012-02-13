@@ -5,7 +5,7 @@ menuentry "Crear usuario" {
 	initrd /initrd.img
 }
 
-submenu --users="admin master" " [Menu administrativo]" {
+submenu --users="admin master" "[Menu administrativo]" {
 menuentry "Borrar usuarios" {
         linux /vmlinuz root=${GRUB_DEVICE} ro quiet boot=userdel
         initrd /initrd.img
