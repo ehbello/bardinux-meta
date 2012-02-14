@@ -2,6 +2,10 @@
 
 set -e
 
+if [ $DEBUG ]; then
+	set -x
+fi
+
 . /etc/default/bsrt
 
 mountroot () {
@@ -17,7 +21,7 @@ dev_exists () {
 		echo $(( ${slumber} / 10 ))
 		slumber=$(( ${slumber} + 1 ))
 		[ ${slumber} -lt 100 ] || return 1
-	done; echo; } # | draw gauge
+	done; echo; } | draw gauge
 	return 0
 }
 
@@ -102,8 +106,10 @@ draw () {
 			read data
 			;;
 		*)
-			echo "Pulse ENTER para dibujar la siguiente pantalla..."
-			read
+			if [ ${DEBUG} ]; then
+				echo "Pulse ENTER para dibujar la siguiente pantalla..."
+				read
+			fi
 			;;
 	esac
 
