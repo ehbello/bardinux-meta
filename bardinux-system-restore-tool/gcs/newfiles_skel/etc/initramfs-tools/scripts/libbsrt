@@ -72,7 +72,7 @@ chroot_dev () {
 cancel_msg () {
 	TITLE="Proceso cancelado"
 	TEXT="El proceso ha sido cancelado por el usuario, pulse ENTER para reiniciar."
-	HEIGHT=10
+	HEIGHT=5
 	WIDTH=50
 	draw msgbox
 	umount_all
@@ -82,7 +82,7 @@ cancel_msg () {
 error_msg () {
 	TITLE="Error"
 	TEXT="Se ha producido un error. Contacte con su administrador. Pulse ENTER para reiniciar."
-	HEIGHT=10
+	HEIGHT=5
 	WIDTH=50
 	draw msgbox
 	umount_all
@@ -92,7 +92,7 @@ error_msg () {
 success_msg () {
 	TITLE="Fin"
 	TEXT=${@:-"Proceso terminado, pulse ENTER para reiniciar."}
-	HEIGHT=10
+	HEIGHT=5
 	WIDTH=50
 	draw msgbox
 	umount_all
