@@ -10,9 +10,10 @@ syncronize () {
 	SOURCE=$(mount_dev ro ${BACKUPDEV})
 	TARGET=$(mount_dev rw ${ROOTDEV})
 
-	TITLE="Restauración"
-	TEXT="Restaurando $1 desde ${BACKUPDEV} a ${ROOTDEV}"
-	rsync -ax --progress --delete ${SOURCE}/${SNAPSHOTDIR}/$1 ${TARGET}/ | draw programbox
+	TITLE="Restaurando '$1' desde ${BACKUPDEV} a ${ROOTDEV}"
+	TEXT="No desconecte el equipo y, por favor, espere a que el proceso termine."
+	WIDTH=50
+	rsync -ax --progress --delete ${SOURCE}/${SNAPSHOTDIR}/$1 ${TARGET}/ | dialog ${BACKTITLE:+--backtitle "${BACKTITLE}"} --no-collapse --cr-wrap ${TITLE:+--title "${TITLE}"} --programbox "${TEXT}" ${HEIGHT:-0} ${WIDTH:-0} || cancel_msg
 	ERROR=$?
 	
 	return ${ERROR}
@@ -20,39 +21,39 @@ syncronize () {
 
 getSnapshots() {
 	local mntpt=$(mount_dev ro ${BACKUPDEV})
-	local numitems=0
-	for ID in ${mntpt}/${SNAPSHOTDIR}/${1:-*}; do
-		if ! echo ${ID} | grep -q -o "${INTERVAL}"; then
-			continue
-		fi
-		DATE=$(date -R -r ${ID} | /bin/sed 's/, \| /_/g')
-		menuitems="${ID##*.} ${DATE} ${SNAPSHOTS}"
+	unset menuitems
+	numitems=0
+	items=$(ls -1d ${mntpt}/${SNAPSHOTDIR}/${1:-${INTERVAL}.*} | sed 's|./||g' | cut -d "." -f 2 | sort -n)
+	for ID in ${items}; do
+		DATE=$(date -R -r ${mntpt}/${SNAPSHOTDIR}/${INTERVAL}.${ID}/etc/mtab | /bin/sed 's/, \| /_/g')
+		menuitems="${menuitems} ${ID##*.} ${DATE}"
 		numitems=$(($numitems + 1))
 	done
 	umount ${mntpt}
-	return $numitems
 }
 
-numitems=$(getSnapshots)
+getSnapshots
 
 TITLE="Selección del punto de restauración"
 TEXT="Elija punto de restauración a usar para llevar el equipo a un estado anterior:"
-HEIGHT=30
 WIDTH=50
 draw menu ${numitems} ${menuitems} 2> /tmp/answer || cancel_msg
 
-srcpoint_dir="${INTERVAL}.$(cat /tmp/answer)"
+SNAPSHOT_ID="${INTERVAL}.$(cat /tmp/answer)"
+getSnapshots ${SNAPSHOT_ID}
+
+[ $numitems ] || error_msg "No hay ningún punto de restauración disponible."
 
 TITLE="Restauración del sistema"
 TEXT="\
 	\n \
 	\n   Se va a iniciar el proceso para restaurar la copia del sistema: \
-	\n   $(getSnapshots ${srcpoint_dir}) \
+	\n   ${menuitems} \
 	\n \
 	\n   ¿Desea continuar? \
-	\n"
+	\n\n"
 draw yesno || cancel_msg
 
-syncronize $srcpoint_dir || error_msg
+syncronize ${SNAPSHOT_ID} || error_msg
 
 success_msg

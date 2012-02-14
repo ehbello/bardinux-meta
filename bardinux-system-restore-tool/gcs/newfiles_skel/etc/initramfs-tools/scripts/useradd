@@ -6,8 +6,8 @@
 
 . /scripts/libbsrt
 
-TITLE="Ordenadores de la BULL"
-TEXT="\n        Bienvenido a la herramienta para crear nuevas cuentas\n    personales en los ordenadores de usuarios de la biblioteca\n    de la Universidad de La Laguna.\n\n       Seguidamente le solicitaremos un nombre de usuario y una\n    clave de acceso para el sistema.\n\n\n\n\n        Oficina de Software Libre de la Universidad de La Laguna."
+TITLE="Información"
+TEXT="\n        Bienvenido a la herramienta para crear nuevas cuentas\n    personales de uso temporal.\n\n       Seguidamente le solicitaremos un nombre de usuario y una\n    clave de acceso para el sistema.\n\n"
 draw msgbox
 
 USERNAME=""
@@ -72,9 +72,9 @@ done
 if chroot_dev ${ROOTDEV} /usr/sbin/useradd -m -p "$PASS1" "$USERNAME"; then
 	chroot_dev ${ROOTDEV} touch /var/mail/${USERNAME} || true
 	LIBRE=$(chroot_dev ${ROOTDEV} /bin/df -h /home | awk '$6 == "/home" { print $4 }')
-	TEXT="Usuario correctamente creado.\n Dispone de $LIBRE de espacio libre.\n\n\n    Pulse ENTER para reiniciar"
+	TEXT="Usuario correctamente creado.\n\nDispone de $LIBRE de espacio libre.\n\n\nPulse ENTER para reiniciar"
 else
-	TEXT="No se pudo crear el usuario. Contacte con el administrador del sistema.\n\n\n    Pulse ENTER para reiniciar"
+	TEXT="No se pudo crear el usuario. Contacte con el administrador del sistema.\n\n\nPulse ENTER para reiniciar"
 fi
 
 success_msg ${TEXT}

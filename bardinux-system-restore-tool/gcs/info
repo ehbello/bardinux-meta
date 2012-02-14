@@ -19,10 +19,14 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2.10
+version: 1.2.11
 
 #config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - First almost full working release.
+    - Fixed bashism syntax at postinst.
+    - Added BACKTITLE variable to set a background title in all screens.
+    - Added some other information screens.
+    - Fixed restoration script.
+    - Deleted institutional information to generalize the scripts.

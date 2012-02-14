@@ -35,8 +35,8 @@ for USER in ${SELECTED}; do
 	TITLE="Borrado de usuario"
 	TEXT="Borrando ${USER}..."
 	{ echo 0;
-	chroot_dev ${ROOTDEV} /usr/sbin/userdel -rf ${USER} # || error_msg
-	echo 100; } # | draw gauge
+	chroot_dev ${ROOTDEV} /usr/sbin/userdel -rf ${USER} || error_msg
+	echo 100; } | draw gauge
 done
 
 success_msg

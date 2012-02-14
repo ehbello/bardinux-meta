@@ -59,7 +59,7 @@ chroot_dev () {
 	chroot $mntpt mount -a
 	chroot $mntpt $@
 	ERROR=$?
-	chroot $mntpt umount -alf
+	chroot $mntpt umount -alf > /dev/null
 	#umount $mntpt/dev/
 	
 	return $ERROR
@@ -96,7 +96,6 @@ success_msg () {
 }
 
 draw () {
-	BACKTITLE="Oficina de Software Libre de la Universidad de La Laguna"
 	local TYPE=${1:-msgbox}; shift
 	case $TYPE in
 		gauge|prgbox|programbox)
