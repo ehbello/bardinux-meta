@@ -1,4 +1,0 @@
-Template: bardinux-system-restore-tool/grubdev
-Type: string
-Description: Specify GRUB device:
- Ej. (hd0,0)

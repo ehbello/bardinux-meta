@@ -3,16 +3,22 @@
 . /scripts/libbsrt
 
 TITLE="Punto de restauración"
-TEXT="Se va a proceder a realizar un punto de restauración del estado actual del equipo.\n\
-Este quedará disponible para futuras restauraciones del sistema.\n\n\
+TEXT="Se va a proceder a realizar una congelación del estado actual del equipo. Esto permitirá volver a él en un futuro.\n\
+El proceso puede tardar varios minutos. Asegúrese de tener el equipo conectado a la corriente antes de continuar.\n\n\
 ¿Desea continuar?"
 WIDTH=50
 HEIGHT=10
 draw yesno || cancel_msg
 
 TITLE="Creando punto de restauración..."
-TEXT="No desconecte el equipo y, por favor, espere espere a que el proceso termine..."
+TEXT="No apague ni desconecte el equipo y, por favor, espere a que el proceso termine..."
 WIDTH=60
-HEIGHT=30
-chroot_dev ${ROOTDEV} rsnapshot -v ${INTERVAL} | dialog ${BACKTITLE:+--backtitle "${BACKTITLE}"} --no-collapse --cr-wrap ${TITLE:+--title "${TITLE}"} --programbox "${TEXT}" ${HEIGHT:-0} ${WIDTH:-0} || cancel_msg
+HEIGHT=10
+chroot_dev ${ROOTDEV} rsnapshot -v ${INTERVAL} | \
+	dialog ${BACKTITLE:+--backtitle "${BACKTITLE}"} \
+	--no-collapse \
+	--cr-wrap \
+	${TITLE:+--title "${TITLE}"} \
+	--programbox "${TEXT}" \
+	${HEIGHT:-0} ${WIDTH:-0} || cancel_msg
 success_msg

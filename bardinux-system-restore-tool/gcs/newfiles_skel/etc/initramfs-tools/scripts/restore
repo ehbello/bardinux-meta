@@ -6,19 +6,6 @@
 
 . /scripts/libbsrt
 
-syncronize () {
-	SOURCE=$(mount_dev ro ${BACKUPDEV})
-	TARGET=$(mount_dev rw ${ROOTDEV})
-
-	TITLE="Restaurando '$1' desde ${BACKUPDEV} a ${ROOTDEV}"
-	TEXT="No desconecte el equipo y, por favor, espere a que el proceso termine..."
-	WIDTH=60
-	rsync -ax --progress --delete ${SOURCE}/${SNAPSHOTDIR}/$1 ${TARGET}/ | dialog ${BACKTITLE:+--backtitle "${BACKTITLE}"} --no-collapse --cr-wrap ${TITLE:+--title "${TITLE}"} --programbox "${TEXT}" ${HEIGHT:-0} ${WIDTH:-0} || cancel_msg
-	ERROR=$?
-	
-	return ${ERROR}
-}
-
 getSnapshots() {
 	local mntpt=$(mount_dev ro ${BACKUPDEV})
 	unset menuitems
@@ -45,14 +32,26 @@ getSnapshots ${SNAPSHOT_ID}
 [ $numitems ] || error_msg "No hay ningún punto de restauración disponible."
 
 TITLE="Restauración del sistema"
-TEXT="\
-\n   Se va a iniciar el proceso para restaurar la copia del sistema: \
-\n   ${menuitems} \
-\n \
-\n   ¿Desea continuar? \
-\n\n"
+TEXT="Se va a iniciar el proceso para restaurar la copia del sistema: \n\n\
+${menuitems} \n\n\
+Este proceso puede tardar varios minutos. Asegúrese de tener el equipo conectado a la corriente antes de continuar.\n\n\
+¿Desea continuar? \n"
 draw yesno || cancel_msg
+	
+SOURCE=$(mount_dev ro ${BACKUPDEV})
+TARGET=$(mount_dev rw ${ROOTDEV})
 
-syncronize ${SNAPSHOT_ID} || error_msg
+TITLE="Restaurando '${SNAPSHOT_ID}' desde ${BACKUPDEV} a ${ROOTDEV}"
+TEXT="No desconecte el equipo y, por favor, espere a que el proceso termine..."
+WIDTH=60
+HEIGHT=10
+rsync -ax --progress --delete ${SOURCE}/${SNAPSHOTDIR}/${SNAPSHOT_DIR} ${TARGET}/ | \
+	dialog ${BACKTITLE:+--backtitle "${BACKTITLE}"} \
+	--no-collapse \
+	--cr-wrap \
+	${TITLE:+--title "${TITLE}"} \
+	--programbox "${TEXT}" \
+	${HEIGHT:-0} ${WIDTH:-0} || cancel_msg
+ERROR=$?
 
 success_msg

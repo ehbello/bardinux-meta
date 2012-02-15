@@ -14,14 +14,12 @@ mountroot () {
 }
 
 dev_exists () {
-	TITLE="Comprobando dispositivos"
-	TEXT="Espere..."
-	{ while [ ! -e "$1" ]; do
+	while [ ! -e "$1" ]; do
 		/bin/sleep 0.1 
-		echo $(( ${slumber} / 10 ))
+		#echo $(( ${slumber} - (${slumber} % 10) ))
 		slumber=$(( ${slumber} + 1 ))
-		[ ${slumber} -lt 100 ] || return 1
-	done; echo; } | draw gauge
+		[ ${slumber} -le 100 ] || return 1
+	done
 	return 0
 }
 
@@ -105,13 +103,11 @@ draw () {
 		gauge|prgbox|programbox)
 			read data
 			;;
-		*)
-			if [ ${DEBUG} ]; then
-				echo "Pulse ENTER para dibujar la siguiente pantalla..."
-				read
-			fi
-			;;
 	esac
+	if [ ${DEBUG} ]; then
+		echo "Pulse ENTER para dibujar la siguiente pantalla..."
+		read
+	fi
 
 	echo ${data} | dialog ${COMMON_OPTS} ${BACKTITLE:+--backtitle "${BACKTITLE}"} --no-collapse --cr-wrap ${TITLE:+--title "${TITLE}"} --${TYPE} "${TEXT}" ${HEIGHT:-0} ${WIDTH:-0} $@
 	ERROR=$?

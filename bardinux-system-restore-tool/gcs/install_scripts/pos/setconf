@@ -1,23 +1,10 @@
-db_get bardinux-system-restore-tool/rootdev
-ROOTDEV=$RET
-
 db_get bardinux-system-restore-tool/adminpasswd
 ADMINPASSWD=$RET
-ADMINPASSWD_MD5=$(md5pass ${ADMINPASSWD})
 ADMINPASSWD_PBKDF2=$(echo "${ADMINPASSWD}\n${ADMINPASSWD}\n" | grub-mkpasswd-pbkdf2 | tail -1 | cut -d " " -f 4-)
-
-db_get bardinux-system-restore-tool/grubdev
-GRUBDEV=$RET
 
 db_get bardinux-system-restore-tool/superpasswd
 SUPERPASSWD=$RET
-SUPERPASSWD_MD5=$(md5pass ${SUPERPASSWD})
 SUPERPASSWD_PBKDF2=$(echo "${SUPERPASSWD}\n${SUPERPASSWD}\n" | grub-mkpasswd-pbkdf2 | tail -1 | cut -d " " -f 4-)
-
-sed "s|{{rootdev}}|${ROOTDEV}|g" -i /boot/grub/menu.lst || true
-sed "s|{{adminpasswd}}|--md5 ${ADMINPASSWD}|g" -i /boot/grub/menu.lst || true
-sed "s|{{grubdev}}|${GRUBDEV}|g" -i /boot/grub/menu.lst /boot/grub/admin-menu.lst || true
-sed "s|{{superpasswd}}|--md5 ${SUPERPASSWD}|g" -i /boot/grub/admin-menu.lst || true
 
 echo "${SUPERPASSWD}\n${SUPERPASSWD}\n" | passwd root 2>&1 | grep -o "passwd.*"
 
