@@ -2,7 +2,7 @@
 
 . /etc/default/bsrt
 
-[ ${BACKUPDEV} ] || true
+[ ${BACKUP_DEVICE} ] || exit 0
 
 SNAPSHOT_ROOT=$(sed -n 's/^snapshot_root[[:blank:]]*\(.*\)/\1/p' /etc/rsnapshot.conf)
-mount ${BACKUPDEV} ${SNAPSHOT_ROOT}
+mount ${BACKUP_DEVICE} ${SNAPSHOT_ROOT}

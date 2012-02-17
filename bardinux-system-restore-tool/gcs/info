@@ -19,12 +19,11 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2.15
+version: 1.2.16
 
 #config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - Added script to clean inactive users.
-    - Added respective variables to default configuration.
-    - Added finger to dependencies.
+    - I forgot to add variables to parse-conf hook script.
+    - Fixed {u}mount.snapdir scripts again ¬¬
