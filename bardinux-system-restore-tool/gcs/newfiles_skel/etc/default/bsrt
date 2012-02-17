@@ -1,6 +1,14 @@
 ## Specify the mount partition where store backups
 ## If it is not defined, no partition was mounted.
-# Example: /dev/sda7
-#
-#BACKUPDEV=
-#BACKTITLE=""
+## Example: /dev/sda7
+#BACKUP_DEVICE=
+
+## Backtitle message at all menu screens
+#SCREEN_BACKTITLE=""
+
+## Maxium days of inactivity before remove
+## (Default: No remove)
+#ACCOUNT_LIMIT=
+
+## No remove these inactive users
+#NOREMOVE_INACTIVE=""
