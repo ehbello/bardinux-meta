@@ -1,0 +1,26 @@
+# YAML 1.1
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: bardinux-all-tasks
+
+# Autor
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: metapackages
+
+# Descripción corta
+shortdesc: "Metapaquete de metapaquetes"
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "Instala absolutamente todo el software definido por todos\n los metapaquetes de Bardinux."
+
+# Versión del paquete
+version: 1.2.0
+
+# Cambios en esta versión
+changes:
+    - Initial package
