@@ -22,8 +22,8 @@ shortdesc: "The Bardinux base desktop system."
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2.3
+version: 1.2.4
 
 # Cambios en esta versión
 changes:
-    - Deleted foomatic-db-gutenprint because it depends of foomatic-db and we install foomatic-db-compressed.
+    - Added web browsers localizations for Spanish.
