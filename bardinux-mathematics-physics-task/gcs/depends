@@ -31,6 +31,8 @@ perl
 pgplot5
 pspp
 python
+python-matplotlib
+python-tk
 r-recommended
 scilab
 scrollkeeper
