@@ -6,7 +6,7 @@ db_get bardinux-system-restore-tool/superpasswd
 SUPERPASSWD=$RET
 SUPERPASSWD_PBKDF2=$(echo "${SUPERPASSWD}\n${SUPERPASSWD}\n" | grub-mkpasswd-pbkdf2 | tail -1 | cut -d " " -f 4-)
 
-echo "${SUPERPASSWD}\n${SUPERPASSWD}\n" | passwd root 2>&1 | grep -o "passwd.*"
+echo "root:${SUPERPASSWD}" | chpasswd
 
 cat << EOF > /etc/grub.d/01_passwords
 #!/bin/sh

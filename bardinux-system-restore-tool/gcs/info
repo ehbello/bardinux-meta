@@ -19,11 +19,10 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2.16
+version: 1.2.17
 
 #config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - I forgot to add variables to parse-conf hook script.
-    - Fixed {u}mount.snapdir scripts again ¬¬
+    - Changed the command to modify root password.
