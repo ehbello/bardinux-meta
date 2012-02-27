@@ -27,3 +27,4 @@ version: 1.2.17
 changes:
     - Changed the command to modify root password.
     - Reduced default number of snapshots to 10.
+    - Fixed update-rc.d bug at upgrade or remove package.
