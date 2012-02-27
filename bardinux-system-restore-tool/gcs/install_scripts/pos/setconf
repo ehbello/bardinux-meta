@@ -16,6 +16,7 @@ password_pbkdf2 master ${SUPERPASSWD_PBKDF2}
 password_pbkdf2 admin ${ADMINPASSWD_PBKDF2}
 _EOF_
 EOF
+chmod +x /etc/grub.d/01_passwords
 
 if [ -x /usr/sbin/update-initramfs ]; then
 	update-initramfs -u
