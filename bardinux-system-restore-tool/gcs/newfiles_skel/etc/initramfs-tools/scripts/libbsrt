@@ -50,7 +50,7 @@ umount_dev () {
 }
 
 umount_all () {
-	umount -alf || true
+	umount -alf > /dev/null || true
 }
 
 chroot_dev () {
@@ -69,8 +69,7 @@ chroot_dev () {
 
 cancel_msg () {
 	TITLE="Proceso cancelado"
-	TEXT="El proceso ha sido cancelado por el usuario, pulse ENTER para reiniciar."
-	HEIGHT=5
+	TEXT="El proceso ha sido cancelado por el usuario, pulse ENTER para reiniciar.\n"
 	WIDTH=50
 	draw msgbox
 	umount_all
@@ -79,8 +78,7 @@ cancel_msg () {
 
 error_msg () {
 	TITLE="Error"
-	TEXT="Se ha producido un error. Contacte con su administrador. Pulse ENTER para reiniciar."
-	HEIGHT=5
+	TEXT="Se ha producido un error. Contacte con su administrador. Pulse ENTER para reiniciar.\n"
 	WIDTH=50
 	draw msgbox
 	umount_all
@@ -89,8 +87,7 @@ error_msg () {
 
 success_msg () {
 	TITLE="Fin"
-	TEXT=${@:-"Proceso terminado, pulse ENTER para reiniciar."}
-	HEIGHT=5
+	TEXT=${@:-"Proceso terminado, pulse ENTER para reiniciar.\n"}
 	WIDTH=50
 	draw msgbox
 	umount_all
@@ -100,7 +97,7 @@ success_msg () {
 draw () {
 	local TYPE=${1:-msgbox}; shift
 	case $TYPE in
-		gauge|prgbox|programbox)
+		gauge|prgbox|programbox|progressbox)
 			read data
 			;;
 	esac
@@ -131,4 +128,3 @@ if [ ${BACKUPDEV} == ${ROOTDEV} ]; then
 else
 	SNAPSHOTDIR="."
 fi
-

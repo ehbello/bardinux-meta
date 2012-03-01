@@ -12,7 +12,7 @@ getSnapshots() {
 	numitems=0
 	items=$(ls -1d ${mntpt}/${SNAPSHOTDIR}/${1:-${INTERVAL}.*} | sed 's|./||g' | cut -d "." -f 2 | sort -n)
 	for ID in ${items}; do
-		DATE=$(date -R -r ${mntpt}/${SNAPSHOTDIR}/${INTERVAL}.${ID}/etc/mtab | /bin/sed 's/, \| /_/g')
+		DATE=$(date -R -r ${mntpt}/${SNAPSHOTDIR}/${INTERVAL}.${ID}/ | /bin/sed 's/, \| /_/g')
 		menuitems="${menuitems} ${ID##*.} ${DATE}"
 		numitems=$(($numitems + 1))
 	done
@@ -22,7 +22,7 @@ getSnapshots() {
 getSnapshots
 
 TITLE="Selección del punto de restauración"
-TEXT="Elija punto de restauración a usar para llevar el equipo a un estado anterior:"
+TEXT="Elija punto de restauración a usar para llevar el equipo a un estado anterior:\n"
 WIDTH=50
 draw menu ${numitems} ${menuitems} 2> /tmp/answer || cancel_msg
 
@@ -42,15 +42,15 @@ SOURCE=$(mount_dev ro ${BACKUPDEV})
 TARGET=$(mount_dev rw ${ROOTDEV})
 
 TITLE="Restaurando '${SNAPSHOT_ID}' desde ${BACKUPDEV} a ${ROOTDEV}"
-TEXT="No desconecte el equipo y, por favor, espere a que el proceso termine..."
+TEXT="No desconecte el equipo y, por favor, espere a que el proceso termine."
 WIDTH=60
 HEIGHT=10
-rsync -ax --progress --delete ${SOURCE}/${SNAPSHOTDIR}/${SNAPSHOT_DIR} ${TARGET}/ | \
+rsync -ax --progress --delete ${SOURCE}/${SNAPSHOTDIR}/${SNAPSHOT_ID}/ ${TARGET}/ | \
 	dialog ${BACKTITLE:+--backtitle "${BACKTITLE}"} \
 	--no-collapse \
 	--cr-wrap \
 	${TITLE:+--title "${TITLE}"} \
-	--programbox "${TEXT}" \
+	--progressbox "${TEXT}" \
 	${HEIGHT:-0} ${WIDTH:-0} || cancel_msg
 ERROR=$?
 

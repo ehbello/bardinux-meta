@@ -3,37 +3,42 @@
 . /scripts/libbsrt
 
 HOME_PATH=/home/
-ALL_USERS=$(chroot_dev ${ROOTDEV} /bin/ls -1 ${HOME_PATH} | grep -v 'lost+found')
-
-numHomes=$(echo ${ALL_USERS} | tr ' ' '\n' | wc -l)
-if [ $numHomes -gt 0 ]; then
-	ITEMS="Todos $(chroot_dev ${ROOTDEV} /usr/bin/du -sh $HOME_PATH | cut -f 1)  0"
-else
-	TEXT="No existen usuarios en el sistema."
+ALL_USERS=$(chroot_dev ${ROOTDEV} /bin/ls -1 ${HOME_PATH} | grep -v 'lost+found' || true)
+if [ -z $ALL_USERS ]; then
+	TEXT="No existen usuarios en el sistema.\n"
 	success_msg ${TEXT}
 fi
 
+numHomes=$(echo ${ALL_USERS} | tr ' ' '\n' | wc -l)
+
+ITEMS="Todos $(chroot_dev ${ROOTDEV} /usr/bin/du -sh $HOME_PATH | cut -f 1)  0"
 for USER in ${ALL_USERS}; do
 	ITEMS="${ITEMS} ${USER} $(chroot_dev ${ROOTDEV} /usr/bin/du -sh ${HOME_PATH}/${USER} | cut -f 1) 0"
 done
 
 while [ ! ${SELECTED} ]; do
 	TITLE="Selección de usuario"
-	TEXT="Seleccione los usuarios que desea eliminar"
+	TEXT="Seleccione los usuarios que desea eliminar.\n"
 	WIDTH=50
 	HEIGHT=10
 	draw checklist $numHomes ${ITEMS} 2> /tmp/listaUsuarios || cancel_msg
 	SELECTED=$(sed 's/"//g' /tmp/listaUsuarios)
 done
 
+TITLE="Confirmación de borrado"
+TEXT="Se va a proceder a borrar los siguientes usuarios: ${SELECTED}\n\n\
+Este proceso borrará todos los datos de usuario y no se podrá deshacer.\n\
+¿Está seguro de continuar?\n"
+draw yesno || cancel_msg
+
 if [ "${SELECTED}" == "Todos" ]; then
-	echo "Borrando todos los usuarios"
 	SELECTED=${ALL_USERS}
 fi
 
 for USER in ${SELECTED}; do
 	TITLE="Borrado de usuario"
-	TEXT="Borrando ${USER}..."
+	TEXT="Borrando ${USER}...\n"
+	WIDTH=30
 	{ echo 0;
 	chroot_dev ${ROOTDEV} /usr/sbin/userdel -rf ${USER} || error_msg
 	echo 100; } | draw gauge

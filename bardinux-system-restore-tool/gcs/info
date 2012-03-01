@@ -19,10 +19,15 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2.18
+version: 1.2.19
 
 #config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - Fixed setup of GRUB passwords.
+    - Added more intervals again to rsnapshot.conf.
+    - Exclude contents instead of directories when rsnapshot.
+    - Fixed some texts of windows.
+    - Fixed bug at restore script.
+    - Fixed bug at users deletion.
+    - Added new screen to confirm the deletion.

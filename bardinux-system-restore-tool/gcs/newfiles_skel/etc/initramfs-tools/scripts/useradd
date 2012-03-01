@@ -7,7 +7,8 @@
 . /scripts/libbsrt
 
 TITLE="Información"
-TEXT="\n        Bienvenido a la herramienta para crear nuevas cuentas\n    personales de uso temporal.\n\n       Seguidamente le solicitaremos un nombre de usuario y una\n    clave de acceso para el sistema.\n\n"
+TEXT="	 Bienvenido a la herramienta para crear nuevas cuentas personales de uso temporal.\n\n\
+	Seguidamente le solicitaremos un nombre de usuario y una clave de acceso para el sistema.\n\n"
 draw msgbox
 
 USERNAME=""
@@ -15,17 +16,20 @@ PASS1=""
 PASS2="OTRO"
 while [ ! $USEROK ]; do
 	TITLE="Nuevo usuario"
-	TEXT="Escriba su nombre de usuario.\nDebe contener entre 6 y 12 caracteres.\n   Ej: alberto, rmartin, etc..."
+	TEXT="Escriba su nombre de usuario.\nDebe contener entre 6 y 12 caracteres.\n   Ej: alberto, rmartin, etc...\n"
+	HEIGHT=10
 	draw inputbox 2> /tmp/username || cancel_msg
 
 	USERNAME=$(cat /tmp/username)
+	HEIGHT=10
+	WIDTH=60
 	if [ ${#USERNAME} -lt 6 -o ${#USERNAME} -gt 12 ]; then
 		TITLE="Error"
-		TEXT="Su nombre de usuario es demasiado largo o demasiado corto ha de tener entre 6 y 12 caracteres"
+		TEXT="Su nombre de usuario es demasiado largo o demasiado corto ha de tener entre 6 y 12 caracteres\n"
 		draw msgbox || cancel_msg
 	elif echo -n ${USERNAME} | egrep -q -v '^[0-9a-z]*$'; then
 		TITLE="Error"
-		TEXT="Su nombre solo puede contener digitos y caracteres alfanumericos"
+		TEXT="Su nombre solo puede contener digitos y caracteres alfanumericos.\n"
 		draw msgbox || cancel_msg
 	elif chroot_dev ${ROOTDEV} grep -q "^${USERNAME}:" /etc/passwd; then
 		TITLE="Usuario existente"
@@ -38,7 +42,7 @@ done
 
 while [ "$PASS1" != "$PASS2" ]; do
 	TITLE="Configuración de clave"
-	TEXT="Escriba su clave de acceso:\nSu clave debe contener al menos 6 caracteres."
+	TEXT="Escriba su clave de acceso:\nSu clave debe contener al menos 6 caracteres.\n"
 	HEIGHT=10
 	WIDTH=60
 	dialog --title "${TITLE}" --insecure --passwordbox "${TEXT}" 10 60 2> /tmp/password1 || cancel_msg
@@ -47,7 +51,9 @@ while [ "$PASS1" != "$PASS2" ]; do
 	PASS1=$(cat /tmp/password1)
 	if [ ${#PASS1} -lt 6 ]; then
 		TITLE="Nuevo usuario para el portatil de la BULL"
-		TEXT="Su clave de acceso debe contener al menos 6 caracteres"
+		TEXT="Su clave de acceso debe contener al menos 6 caracteres.\n"
+		HEIGHT=10
+		WIDTH=60
 		draw msgbox || cancel_msg
 		continue
 	fi
@@ -62,7 +68,9 @@ while [ "$PASS1" != "$PASS2" ]; do
 	PASS2=$(cat /tmp/password2)
 	if [ "$PASS1" != "$PASS2" ]; then
 		TITLE="Error"
-		TEXT="Las claves de acceso no coinciden"
+		TEXT="Las claves de acceso no coinciden.\n"
+		HEIGHT=10
+		WIDTH=60
 		draw msgbox || cancel_msg
 		continue
 	fi
@@ -72,9 +80,9 @@ done
 if chroot_dev ${ROOTDEV} /usr/sbin/useradd -m -p "$PASS1" "$USERNAME"; then
 	chroot_dev ${ROOTDEV} touch /var/mail/${USERNAME} || true
 	LIBRE=$(chroot_dev ${ROOTDEV} /bin/df -h /home | awk '$6 == "/home" { print $4 }')
-	TEXT="Usuario correctamente creado.\n\nDispone de $LIBRE de espacio libre.\n\n\nPulse ENTER para reiniciar"
+	TEXT="Usuario correctamente creado.\n\nDispone de $LIBRE de espacio libre.\n\nPulse ENTER para reiniciar\n"
 else
-	TEXT="No se pudo crear el usuario. Contacte con el administrador del sistema.\n\n\nPulse ENTER para reiniciar"
+	TEXT="No se pudo crear el usuario. Contacte con el administrador del sistema.\n\nPulse ENTER para reiniciar\n"
 fi
 
 success_msg ${TEXT}

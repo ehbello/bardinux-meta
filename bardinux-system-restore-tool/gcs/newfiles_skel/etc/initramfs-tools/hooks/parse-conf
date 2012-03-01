@@ -28,7 +28,7 @@ cat > ${DESTDIR}/etc/default/bsrt << EOF
 INTERVAL=${interval}
 ROOTDEV=${root_dev}
 BACKUPDEV=${backup_dev}
-BACKTITLE=${SCREEN_BACKTITLE}
+BACKTITLE="${SCREEN_BACKTITLE}"
 EOF
 
 echo "done!"

@@ -3,6 +3,7 @@
 ### BEGIN INIT INFO
 # Provides:             cleanusers
 # Required-Start:    	$syslog
+# Required-Stop:		
 # Default-Start:        2 3 4 5
 # Default-Stop:         0 1 6
 # Short-Description:    Remove inactive users
