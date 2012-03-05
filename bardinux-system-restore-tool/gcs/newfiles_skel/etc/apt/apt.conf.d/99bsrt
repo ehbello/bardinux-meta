@@ -1,1 +1,1 @@
-Dpkg::Post-Invoke {"echo Committing system changes... This may take some time.; rsnapshot last"; };
+Dpkg::Post-Invoke {"echo Committing system changes... This may take some time.; test -e /etc/rsnapshot.conf && test -x /usr/bin/rsnapshot && rsnapshot last"; };

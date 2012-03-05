@@ -19,13 +19,11 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2.20
+version: 1.2.21
 
 #config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - Added backup and restoration of users and groups of the system.
-    - Hidden some warning messages when umount.
-    - Fixed some windows again.
-    - Fixed userdel script when no users are in the system.
+    - Check existence of rsnapshot.conf before run 'rsnapshot last'.
+    - Run insserv if exists instead of update-rc.d to add cleanusers.sh
