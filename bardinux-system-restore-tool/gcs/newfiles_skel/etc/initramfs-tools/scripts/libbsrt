@@ -13,14 +13,20 @@ mountroot () {
 	reboot
 }
 
-dev_exists () {
-	while [ ! -e "$1" ]; do
+check_dev () {
+	TITLE="Comprobando dispositivos"
+	TEXT="Esperando dispositivo $1..."
+	while [ ! -b "$1" ]; do
 		/bin/sleep 0.1 
-		#echo $(( ${slumber} - (${slumber} % 10) ))
+		echo $(( ${slumber} - (${slumber} % 10) ))
 		slumber=$(( ${slumber} + 1 ))
-		[ ${slumber} -le 100 ] || return 1
-	done
-	return 0
+		[ ${slumber} -le 100 ] || panic "No existe el dispositivo $1"
+	done || dialog ${BACKTITLE:+--backtitle "${BACKTITLE}"} \
+		--no-collapse \
+		--cr-wrap \
+		${TITLE:+--title "${TITLE}"} \
+		--progressbox "${TEXT}" \
+		${HEIGHT:-0} ${WIDTH:-0}
 }
 
 is_mounted () {
@@ -33,10 +39,6 @@ mount_dev () {
 	local srcdev=$2
 	local mntpt=/mnt/${srcdev##*/}
 
-	if ! dev_exists ${srcdev}; then
-		panic "No existe el dispositivo ${srcdev}"
-	fi
-	
 	if ! is_mounted ${srcdev}; then
 		mkdir -p ${mntpt}
 		mount ${opts:+-o ${opts}} ${srcdev} ${mntpt}
@@ -50,7 +52,7 @@ umount_dev () {
 }
 
 umount_all () {
-	umount -alf > /dev/null || true
+	umount -alf 2> /dev/null || true
 }
 
 chroot_dev () {
@@ -61,16 +63,25 @@ chroot_dev () {
 	chroot $mntpt mount -a
 	chroot $mntpt $@
 	ERROR=$?
-	chroot $mntpt umount -alf > /dev/null
+	chroot $mntpt umount -alf 2> /dev/null
 	#umount $mntpt/dev/
 	
 	return $ERROR
+}
+
+backup_users () {
+	chroot_dev $1 /bin/cp -a /etc/passwd /etc/shadow /etc/group /home
+}
+
+restore_users () {
+	chroot_dev $1 /bin/cp -a /home/passwd /home/shadow /home/group /etc
 }
 
 cancel_msg () {
 	TITLE="Proceso cancelado"
 	TEXT="El proceso ha sido cancelado por el usuario, pulse ENTER para reiniciar.\n"
 	WIDTH=50
+	HEIGHT=5
 	draw msgbox
 	umount_all
 	reboot
@@ -80,6 +91,7 @@ error_msg () {
 	TITLE="Error"
 	TEXT="Se ha producido un error. Contacte con su administrador. Pulse ENTER para reiniciar.\n"
 	WIDTH=50
+	HEIGHT=5
 	draw msgbox
 	umount_all
 	reboot
@@ -87,7 +99,7 @@ error_msg () {
 
 success_msg () {
 	TITLE="Fin"
-	TEXT=${@:-"Proceso terminado, pulse ENTER para reiniciar.\n"}
+	TEXT=${@:-"Proceso terminado, pulse ENTER para reiniciar.\n\n"}
 	WIDTH=50
 	draw msgbox
 	umount_all
@@ -122,9 +134,19 @@ fi
 if echo ${BACKUPDEV} | grep -q "^UUID="; then
 	BACKUPDEV=$(blkid -U ${BACKUPDEV#UUID=})
 fi
+
+if [ $DEBUG ]; then
+	echo "ROOTDEV -> $ROOTDEV"
+	echo "BACKUPDEV -> $BACKUPDEV"
+	read
+fi
+
+check_dev ${ROOTDEV}
+
 # Arreglar un fisco
 if [ ${BACKUPDEV} == ${ROOTDEV} ]; then
 	SNAPSHOTDIR=$(chroot_dev ${ROOTDEV} /bin/sed -n '/^snapshot_root/s/snapshot_root[[:blank:]]*//p' /etc/rsnapshot.conf)
 else
 	SNAPSHOTDIR="."
+	check_dev ${BACKUPDEV}
 fi

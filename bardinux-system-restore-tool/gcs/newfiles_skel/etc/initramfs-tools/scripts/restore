@@ -54,4 +54,6 @@ rsync -ax --progress --delete ${SOURCE}/${SNAPSHOTDIR}/${SNAPSHOT_ID}/ ${TARGET}
 	${HEIGHT:-0} ${WIDTH:-0} || cancel_msg
 ERROR=$?
 
+restore_users ${ROOTDEV} || error_msg
+
 success_msg

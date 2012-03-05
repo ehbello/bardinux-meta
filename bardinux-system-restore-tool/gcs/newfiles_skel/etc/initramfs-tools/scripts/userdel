@@ -4,7 +4,7 @@
 
 HOME_PATH=/home/
 ALL_USERS=$(chroot_dev ${ROOTDEV} /bin/ls -1 ${HOME_PATH} | grep -v 'lost+found' || true)
-if [ -z $ALL_USERS ]; then
+if [ -z "$ALL_USERS" ]; then
 	TEXT="No existen usuarios en el sistema.\n"
 	success_msg ${TEXT}
 fi
@@ -16,7 +16,7 @@ for USER in ${ALL_USERS}; do
 	ITEMS="${ITEMS} ${USER} $(chroot_dev ${ROOTDEV} /usr/bin/du -sh ${HOME_PATH}/${USER} | cut -f 1) 0"
 done
 
-while [ ! ${SELECTED} ]; do
+while [ ! "${SELECTED}" ]; do
 	TITLE="Selección de usuario"
 	TEXT="Seleccione los usuarios que desea eliminar.\n"
 	WIDTH=50
@@ -25,10 +25,11 @@ while [ ! ${SELECTED} ]; do
 	SELECTED=$(sed 's/"//g' /tmp/listaUsuarios)
 done
 
+USERS=$(echo ${SELECTED} | sed 's/ /, /g')
 TITLE="Confirmación de borrado"
-TEXT="Se va a proceder a borrar los siguientes usuarios: ${SELECTED}\n\n\
-Este proceso borrará todos los datos de usuario y no se podrá deshacer.\n\
-¿Está seguro de continuar?\n"
+TEXT="Se va a proceder a borrar los siguientes usuarios: ${USERS}\n\n\
+Este proceso borrará todos los datos de usuario y no se podrá deshacer.\n\n\
+¿Desea continuar?\n"
 draw yesno || cancel_msg
 
 if [ "${SELECTED}" == "Todos" ]; then
@@ -43,5 +44,7 @@ for USER in ${SELECTED}; do
 	chroot_dev ${ROOTDEV} /usr/sbin/userdel -rf ${USER} || error_msg
 	echo 100; } | draw gauge
 done
+
+backup_users ${ROOTDEV} || error_msg
 
 success_msg

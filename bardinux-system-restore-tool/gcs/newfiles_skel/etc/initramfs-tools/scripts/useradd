@@ -7,8 +7,8 @@
 . /scripts/libbsrt
 
 TITLE="Información"
-TEXT="	 Bienvenido a la herramienta para crear nuevas cuentas personales de uso temporal.\n\n\
-	Seguidamente le solicitaremos un nombre de usuario y una clave de acceso para el sistema.\n\n"
+TEXT="Bienvenido a la herramienta para crear nuevas cuentas personales de uso temporal.\n\n\
+Seguidamente le solicitaremos un nombre de usuario y una clave de acceso para el sistema.\n\n"
 draw msgbox
 
 USERNAME=""
@@ -80,7 +80,8 @@ done
 if chroot_dev ${ROOTDEV} /usr/sbin/useradd -m -p "$PASS1" "$USERNAME"; then
 	chroot_dev ${ROOTDEV} touch /var/mail/${USERNAME} || true
 	LIBRE=$(chroot_dev ${ROOTDEV} /bin/df -h /home | awk '$6 == "/home" { print $4 }')
-	TEXT="Usuario correctamente creado.\n\nDispone de $LIBRE de espacio libre.\n\nPulse ENTER para reiniciar\n"
+	TEXT="Usuario correctamente creado. Dispone de $LIBRE de espacio libre.\n\nPulse ENTER para reiniciar\n"
+	backup_users ${ROOTDEV} || error_msg
 else
 	TEXT="No se pudo crear el usuario. Contacte con el administrador del sistema.\n\nPulse ENTER para reiniciar\n"
 fi
