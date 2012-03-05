@@ -19,11 +19,10 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2.21
+version: 1.2.22
 
 #config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - Check existence of rsnapshot.conf before run 'rsnapshot last'.
-    - Run insserv if exists instead of update-rc.d to add cleanusers.sh
+    - Fixed big fail scripting postinst and preinst scripts.
