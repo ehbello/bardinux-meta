@@ -16,7 +16,8 @@ esac
 # Begin real processing below this line
 
 . /usr/share/initramfs-tools/hook-functions
-. /etc/default/bsrt
+
+[ -e /etc/default/bsrt ] && . /etc/default/bsrt
 
 echo -n "Parsing configuration... "
 

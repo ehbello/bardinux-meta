@@ -81,8 +81,8 @@ while [ "$PASS1" != "$PASS2" ]; do
 done
 
 # TODO: Definir grupos de usuario
-if chroot_dev ${ROOTDEV} /usr/sbin/useradd -m -p "$PASS1" "$USERNAME"; then
-	chroot_dev ${ROOTDEV} touch /var/mail/${USERNAME} || true
+if chroot_dev ${ROOTDEV} /usr/sbin/useradd -m -p "$PASS1" "$USERNAME" ${USER_GROUPS:+-G ${USER_GROUPS}}; then
+	chroot_dev ${ROOTDEV} /usr/bin/touch /var/mail/${USERNAME} || true
 	LIBRE=$(chroot_dev ${ROOTDEV} /bin/df -h /home | awk '$6 == "/home" { print $4 }')
 	backup_users ${ROOTDEV} || error_msg
 	TEXT="Usuario correctamente creado. Dispone de $LIBRE de espacio libre. Pulse ENTER para reiniciar\n"

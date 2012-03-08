@@ -19,11 +19,10 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2.25
+version: 1.2.26
 
 #config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - Changed instead by update-rc.d again at installation scripts.
-    - Test /etc/default/bsrt before source it.
+    - Added configuration variable to define default groups for new users.

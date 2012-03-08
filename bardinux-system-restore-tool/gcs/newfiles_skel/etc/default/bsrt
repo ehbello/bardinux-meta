@@ -12,3 +12,7 @@
 
 ## No remove these inactive users
 #NOREMOVE_INACTIVE=""
+
+## Default groups for new users
+# Example: group1,group2,group3
+#USER_GROUPS=""
