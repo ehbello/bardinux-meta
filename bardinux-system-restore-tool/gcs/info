@@ -19,10 +19,14 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2.22
+version: 1.2.24
 
 #config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - Fixed big fail scripting postinst and preinst scripts.
+    - Added support for incron to backup users when it were modified.
+    - Removed all accents.
+    - Fixed some windows that didn't change their messages.
+    - Fixed fail of scripts the first time of their execution after a reboot.
+    - Fixed restore of last users after system restoration.

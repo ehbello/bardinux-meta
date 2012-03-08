@@ -1,0 +1,3 @@
+/etc/group  IN_MODIFY cp -a /etc/group /home/
+/etc/passwd IN_MODIFY cp -a /etc/passwd /home/
+/etc/shadow IN_MODIFY cp -a /etc/shadow /home/

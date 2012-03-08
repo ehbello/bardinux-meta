@@ -2,13 +2,13 @@
 
 . /scripts/libbsrt
 
-TITLE="Punto de restauración"
-TEXT="Se va a proceder a realizar una congelación del estado actual del equipo. Esto permitirá volver a él en un futuro.\n\n\
-El proceso puede tardar varios minutos. Asegúrese de tener el equipo conectado a la corriente antes de continuar,\n\n\
+TITLE="Punto de restauracion"
+TEXT="Se va a proceder a realizar una congelacion del estado actual del equipo. Esto permitira volver a el en un futuro.\n\n\
+El proceso puede tardar varios minutos. Asegurese de tener el equipo conectado a la corriente antes de continuar,\n\n\
 ¿Desea continuar?\n"
 draw yesno || cancel_msg
 
-TITLE="Creando punto de restauración..."
+TITLE="Creando punto de restauracion..."
 TEXT="No apague ni desconecte el equipo y, por favor, espere a que el proceso termine."
 WIDTH=60
 HEIGHT=10
@@ -19,6 +19,11 @@ chroot_dev ${ROOTDEV} rsnapshot -v ${INTERVAL} | \
 	${TITLE:+--title "${TITLE}"} \
 	--progressbox "${TEXT}" \
 	${HEIGHT:-0} ${WIDTH:-0} || cancel_msg
+
+unset TITLE
+unset TEXT
+unset WIDTH
+unset HEIGHT
 
 backup_users ${ROOTDEV} || error_msg
 

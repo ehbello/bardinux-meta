@@ -27,6 +27,8 @@ check_dev () {
 		${TITLE:+--title "${TITLE}"} \
 		--progressbox "${TEXT}" \
 		${HEIGHT:-0} ${WIDTH:-0}
+	unset TITLE
+	unset TEXT
 }
 
 is_mounted () {
@@ -48,7 +50,8 @@ mount_dev () {
 }
 
 umount_dev () {
-	umount $@
+	local srcdev=$1
+	local mntpt=/mnt/${srcdev##*/}
 }
 
 umount_all () {
@@ -78,29 +81,30 @@ restore_users () {
 }
 
 cancel_msg () {
-	TITLE="Proceso cancelado"
-	TEXT="El proceso ha sido cancelado por el usuario, pulse ENTER para reiniciar.\n"
-	WIDTH=50
-	HEIGHT=5
+	TITLE=${TITLE:-"Proceso cancelado"}
+	TEXT=${TEXT:-"El proceso ha sido cancelado por el usuario, pulse ENTER para reiniciar.\n"}
+	WIDTH=${WIDTH:-50}
+	HEIGHT=${HEIGHT:-6}
 	draw msgbox
 	umount_all
 	reboot
 }
 
 error_msg () {
-	TITLE="Error"
-	TEXT="Se ha producido un error. Contacte con su administrador. Pulse ENTER para reiniciar.\n"
-	WIDTH=50
-	HEIGHT=5
+	TITLE=${TITLE:-"Error"}
+	TEXT=${TEXT:-"Se ha producido un error. Contacte con su administrador. Pulse ENTER para reiniciar.\n"}
+	WIDTH=${WIDTH:-50}
+	HEIGHT=${HEIGHT:-6}
 	draw msgbox
 	umount_all
 	reboot
 }
 
 success_msg () {
-	TITLE="Fin"
-	TEXT=${@:-"Proceso terminado, pulse ENTER para reiniciar.\n\n"}
-	WIDTH=50
+	TITLE=${TITLE:-"Fin"}
+	TEXT=${TEXT:-"Proceso terminado, pulse ENTER para reiniciar.\n"}
+	WIDTH=${WIDTH:-50}
+	HEIGHT=${HEIGHT:-6}
 	draw msgbox
 	umount_all
 	reboot
@@ -135,12 +139,6 @@ if echo ${BACKUPDEV} | grep -q "^UUID="; then
 	BACKUPDEV=$(blkid -U ${BACKUPDEV#UUID=})
 fi
 
-if [ $DEBUG ]; then
-	echo "ROOTDEV -> $ROOTDEV"
-	echo "BACKUPDEV -> $BACKUPDEV"
-	read
-fi
-
 check_dev ${ROOTDEV}
 
 # Arreglar un fisco
@@ -150,3 +148,7 @@ else
 	SNAPSHOTDIR="."
 	check_dev ${BACKUPDEV}
 fi
+
+# Guarrada monumental para que no pete la primera vez
+ROOTDIR=$(mount_dev rw ${ROOTDEV})
+echo > ${ROOTDIR}/etc/mtab || true

@@ -6,7 +6,7 @@
 
 . /scripts/libbsrt
 
-TITLE="Información"
+TITLE="Informacion"
 TEXT="Bienvenido a la herramienta para crear nuevas cuentas personales de uso temporal.\n\n\
 Seguidamente le solicitaremos un nombre de usuario y una clave de acceso para el sistema.\n\n"
 draw msgbox
@@ -21,7 +21,7 @@ while [ ! $USEROK ]; do
 	draw inputbox 2> /tmp/username || cancel_msg
 
 	USERNAME=$(cat /tmp/username)
-	HEIGHT=10
+	HEIGHT=7
 	WIDTH=60
 	if [ ${#USERNAME} -lt 6 -o ${#USERNAME} -gt 12 ]; then
 		TITLE="Error"
@@ -41,36 +41,40 @@ while [ ! $USEROK ]; do
 done
 
 while [ "$PASS1" != "$PASS2" ]; do
-	TITLE="Configuración de clave"
+	TITLE="Configuracion de clave"
 	TEXT="Escriba su clave de acceso:\nSu clave debe contener al menos 6 caracteres.\n"
 	HEIGHT=10
 	WIDTH=60
-	dialog --title "${TITLE}" --insecure --passwordbox "${TEXT}" 10 60 2> /tmp/password1 || cancel_msg
+	dialog ${BACKTITLE:+--backtitle "${BACKTITLE}"} --no-collapse --cr-wrap ${TITLE:+--title "${TITLE}"} --insecure --passwordbox "${TEXT}" ${HEIGHT:-0} ${WIDTH:-0} 2> /tmp/password1 || cancel_msg
 	#draw passwordbox --insecure 2> /tmp/password1 || cancel_msg
+	unset TITLE
+	unset TEXT
 
 	PASS1=$(cat /tmp/password1)
 	if [ ${#PASS1} -lt 6 ]; then
 		TITLE="Nuevo usuario para el portatil de la BULL"
 		TEXT="Su clave de acceso debe contener al menos 6 caracteres.\n"
-		HEIGHT=10
+		HEIGHT=9
 		WIDTH=60
 		draw msgbox || cancel_msg
 		continue
 	fi
 
-	TITLE="Confirmación de clave"
+	TITLE="Confirmacion de clave"
 	TEXT="Confirme su clave de acceso:\n"
-	HEIGHT=10
+	HEIGHT=9
 	WIDTH=60
-	dialog --title "${TITLE}" --insecure --passwordbox "${TEXT}" 10 60 2> /tmp/password2 || cancel_msg
+	dialog ${BACKTITLE:+--backtitle "${BACKTITLE}"} --no-collapse --cr-wrap ${TITLE:+--title "${TITLE}"} --insecure --passwordbox "${TEXT}" ${HEIGHT:-0} ${WIDTH:-0} 2> /tmp/password2 || cancel_msg
 	#draw passwordbox --insecure 2> /tmp/password2 || cancel_msg
+	unset TITLE
+	unset TEXT
 
 	PASS2=$(cat /tmp/password2)
 	if [ "$PASS1" != "$PASS2" ]; then
 		TITLE="Error"
 		TEXT="Las claves de acceso no coinciden.\n"
-		HEIGHT=10
-		WIDTH=60
+		HEIGHT=6
+		WIDTH=40
 		draw msgbox || cancel_msg
 		continue
 	fi
@@ -80,10 +84,12 @@ done
 if chroot_dev ${ROOTDEV} /usr/sbin/useradd -m -p "$PASS1" "$USERNAME"; then
 	chroot_dev ${ROOTDEV} touch /var/mail/${USERNAME} || true
 	LIBRE=$(chroot_dev ${ROOTDEV} /bin/df -h /home | awk '$6 == "/home" { print $4 }')
-	TEXT="Usuario correctamente creado. Dispone de $LIBRE de espacio libre.\n\nPulse ENTER para reiniciar\n"
 	backup_users ${ROOTDEV} || error_msg
+	TEXT="Usuario correctamente creado. Dispone de $LIBRE de espacio libre. Pulse ENTER para reiniciar\n"
 else
-	TEXT="No se pudo crear el usuario. Contacte con el administrador del sistema.\n\nPulse ENTER para reiniciar\n"
+	TEXT="No se pudo crear el usuario. Contacte con el administrador del sistema. Pulse ENTER para reiniciar\n"
 fi
+WIDTH=50
+HEIGHT=6
 
-success_msg ${TEXT}
+success_msg

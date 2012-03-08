@@ -21,20 +21,20 @@ getSnapshots() {
 
 getSnapshots
 
-TITLE="Selección del punto de restauración"
-TEXT="Elija punto de restauración a usar para llevar el equipo a un estado anterior:\n"
+TITLE="Seleccion del punto de restauracion"
+TEXT="Elija punto de restauracion a usar para llevar el equipo a un estado anterior:\n"
 WIDTH=50
 draw menu ${numitems} ${menuitems} 2> /tmp/answer || cancel_msg
 
 SNAPSHOT_ID="${INTERVAL}.$(cat /tmp/answer)"
 getSnapshots ${SNAPSHOT_ID}
 
-[ $numitems ] || error_msg "No hay ningún punto de restauración disponible."
+[ $numitems ] || error_msg "No hay ningun punto de restauracion disponible."
 
-TITLE="Restauración del sistema"
+TITLE="Restauracion del sistema"
 TEXT="Se va a iniciar el proceso para restaurar la copia del sistema: \n\n\
 ${menuitems} \n\n\
-Este proceso puede tardar varios minutos. Asegúrese de tener el equipo conectado a la corriente antes de continuar.\n\n\
+Este proceso puede tardar varios minutos. Asegurese de tener el equipo conectado a la corriente antes de continuar.\n\n\
 ¿Desea continuar? \n"
 draw yesno || cancel_msg
 	
@@ -45,14 +45,18 @@ TITLE="Restaurando '${SNAPSHOT_ID}' desde ${BACKUPDEV} a ${ROOTDEV}"
 TEXT="No desconecte el equipo y, por favor, espere a que el proceso termine."
 WIDTH=60
 HEIGHT=10
-rsync -ax --progress --delete ${SOURCE}/${SNAPSHOTDIR}/${SNAPSHOT_ID}/ ${TARGET}/ | \
+rsync -ax --progress --exclude /etc/mtab --delete ${SOURCE}/${SNAPSHOTDIR}/${SNAPSHOT_ID}/ ${TARGET}/ | \
 	dialog ${BACKTITLE:+--backtitle "${BACKTITLE}"} \
 	--no-collapse \
 	--cr-wrap \
 	${TITLE:+--title "${TITLE}"} \
 	--progressbox "${TEXT}" \
 	${HEIGHT:-0} ${WIDTH:-0} || cancel_msg
-ERROR=$?
+
+unset TITLE
+unset TEXT
+unset WIDTH
+unset HEIGHT
 
 restore_users ${ROOTDEV} || error_msg
 
