@@ -19,14 +19,11 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2.24
+version: 1.2.25
 
 #config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - Added support for incron to backup users when it were modified.
-    - Removed all accents.
-    - Fixed some windows that didn't change their messages.
-    - Fixed fail of scripts the first time of their execution after a reboot.
-    - Fixed restore of last users after system restoration.
+    - Changed instead by update-rc.d again at installation scripts.
+    - Test /etc/default/bsrt before source it.
