@@ -1,0 +1,27 @@
+## Specify the mount partition where store backups
+## If it is not defined, no partition was mounted.
+## Example: /dev/sda7
+BACKUP_DEVICE=/dev/sda6
+
+## Backtitle message at all menu screens
+SCREEN_BACKTITLE="Préstamo de Ordenadores Portátiles para Alumnos (PROA)"
+
+## Maxium days of inactivity before remove
+## (Default: No remove)
+ACCOUNT_LIMIT=10
+
+## No remove these inactive users
+#NOREMOVE_INACTIVE=""
+
+## Default groups for new users
+# Example: group1,group2,group3
+USER_GROUPS="dialout,cdrom,plugdev,sambashare"
+
+## Default login shell for new users
+USER_SHELL="/bin/bash"
+
+## Default home directory permissions for new users
+USER_HOMEDIR_MODE=700
+
+#--NOTE-------------------------------------------
+# Run `update-initramfs -u` after modify this file.
