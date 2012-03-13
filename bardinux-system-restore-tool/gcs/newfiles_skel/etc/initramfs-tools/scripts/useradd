@@ -11,7 +11,7 @@ TEXT="Bienvenido a la herramienta para crear nuevas cuentas personales de uso te
 Seguidamente le solicitaremos un nombre de usuario y una clave de acceso para el sistema.\n\n"
 
 if [ ${ACCOUNT_LIMIT} ]; then
-	TEXT="${TEXT}ATENCIÓN: Todo usuario inactivo sera eliminado despues de ${ACCOUNT_LIMIT} dias.\n\n"
+	TEXT="${TEXT}ATENCION: Todo usuario en desuso sera eliminado despues de ${ACCOUNT_LIMIT} dias de inactividad.\n\n"
 fi
 draw msgbox
 
