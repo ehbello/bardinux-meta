@@ -9,6 +9,10 @@
 TITLE="Informacion"
 TEXT="Bienvenido a la herramienta para crear nuevas cuentas personales de uso temporal.\n\n\
 Seguidamente le solicitaremos un nombre de usuario y una clave de acceso para el sistema.\n\n"
+
+if [ ${ACCOUNT_LIMIT} ]; then
+	TEXT="${TEXT}ATENCIÓN: Todo usuario inactivo sera eliminado despues de ${ACCOUNT_LIMIT} dias.\n\n"
+fi
 draw msgbox
 
 USERNAME=""
@@ -47,8 +51,6 @@ while [ "$PASS1" != "$PASS2" ]; do
 	WIDTH=60
 	dialog ${BACKTITLE:+--backtitle "${BACKTITLE}"} --no-collapse --cr-wrap ${TITLE:+--title "${TITLE}"} --insecure --passwordbox "${TEXT}" ${HEIGHT:-0} ${WIDTH:-0} 2> /tmp/password1 || cancel_msg
 	#draw passwordbox --insecure 2> /tmp/password1 || cancel_msg
-	unset TITLE
-	unset TEXT
 
 	PASS1=$(cat /tmp/password1)
 	if [ ${#PASS1} -lt 6 ]; then
@@ -66,8 +68,6 @@ while [ "$PASS1" != "$PASS2" ]; do
 	WIDTH=60
 	dialog ${BACKTITLE:+--backtitle "${BACKTITLE}"} --no-collapse --cr-wrap ${TITLE:+--title "${TITLE}"} --insecure --passwordbox "${TEXT}" ${HEIGHT:-0} ${WIDTH:-0} 2> /tmp/password2 || cancel_msg
 	#draw passwordbox --insecure 2> /tmp/password2 || cancel_msg
-	unset TITLE
-	unset TEXT
 
 	PASS2=$(cat /tmp/password2)
 	if [ "$PASS1" != "$PASS2" ]; then
@@ -81,8 +81,11 @@ while [ "$PASS1" != "$PASS2" ]; do
 done
 
 # TODO: Definir grupos de usuario
-if chroot_dev ${ROOTDEV} /usr/sbin/useradd -m -p "$PASS1" "$USERNAME" ${USER_GROUPS:+-G ${USER_GROUPS}}; then
+if chroot_dev ${ROOTDEV} /usr/sbin/useradd -m -p "$PASS1" "$USERNAME" ${USER_GROUPS:+-G ${USER_GROUPS}} ${USER_SHELL:+-s ${USER_SHELL}}; then
 	chroot_dev ${ROOTDEV} /usr/bin/touch /var/mail/${USERNAME} || true
+	if [ ${USER_HOMEDIR_MODE} ]; then
+		chroot_dev ${ROOTDEV} /bin/chmod ${USER_HOMEDIR_MODE} /home/${USERNAME} || true
+	fi
 	LIBRE=$(chroot_dev ${ROOTDEV} /bin/df -h /home | awk '$6 == "/home" { print $4 }')
 	backup_users ${ROOTDEV} || error_msg
 	TEXT="Usuario correctamente creado. Dispone de $LIBRE de espacio libre. Pulse ENTER para reiniciar\n"
@@ -92,4 +95,4 @@ fi
 WIDTH=50
 HEIGHT=6
 
-success_msg
+success_msg ${TEXT} ${WIDTH} ${HEIGHT}

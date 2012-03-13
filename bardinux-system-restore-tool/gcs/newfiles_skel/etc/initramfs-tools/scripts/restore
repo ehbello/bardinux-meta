@@ -53,11 +53,6 @@ rsync -ax --progress --exclude /etc/mtab --delete ${SOURCE}/${SNAPSHOTDIR}/${SNA
 	--progressbox "${TEXT}" \
 	${HEIGHT:-0} ${WIDTH:-0} || cancel_msg
 
-unset TITLE
-unset TEXT
-unset WIDTH
-unset HEIGHT
-
 restore_users ${ROOTDEV} || error_msg
 
 success_msg

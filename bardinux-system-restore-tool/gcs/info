@@ -19,10 +19,12 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2.26
+version: 1.2.27
 
 #config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - Added configuration variable to define default groups for new users.
+    - Added configuration variable to define default user shell and home directory permissions for new users.
+    - Modified script that parses the configuration to include all variables.
+    - Added warning to notice the deletion of inactivity users.

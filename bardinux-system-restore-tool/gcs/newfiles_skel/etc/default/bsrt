@@ -8,7 +8,7 @@
 
 ## Maxium days of inactivity before remove
 ## (Default: No remove)
-#ACCOUNT_LIMIT=
+#ACCOUNT_LIMIT=0
 
 ## No remove these inactive users
 #NOREMOVE_INACTIVE=""
@@ -16,3 +16,12 @@
 ## Default groups for new users
 # Example: group1,group2,group3
 #USER_GROUPS=""
+
+## Default login shell for new users
+USER_SHELL="/bin/bash"
+
+## Default home directory permissions for new users
+USER_HOMEDIR_MODE=700
+
+#--NOTE-------------------------------------------
+# Run `update-initramfs -u` after modify this file.

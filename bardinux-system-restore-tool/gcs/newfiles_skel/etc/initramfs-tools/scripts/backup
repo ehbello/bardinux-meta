@@ -20,11 +20,6 @@ chroot_dev ${ROOTDEV} rsnapshot -v ${INTERVAL} | \
 	--progressbox "${TEXT}" \
 	${HEIGHT:-0} ${WIDTH:-0} || cancel_msg
 
-unset TITLE
-unset TEXT
-unset WIDTH
-unset HEIGHT
-
 backup_users ${ROOTDEV} || error_msg
 
 success_msg

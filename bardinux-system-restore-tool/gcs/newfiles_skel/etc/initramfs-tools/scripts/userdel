@@ -8,7 +8,7 @@ if [ -z "$ALL_USERS" ]; then
 	TEXT="No existen usuarios en el sistema.\n"
 	WIDTH=50
 	HEIGHT=6
-	success_msg
+	success_msg ${TEXT} ${WIDTH} ${HEIGHT}
 fi
 
 numHomes=$(echo ${ALL_USERS} | tr ' ' '\n' | wc -l)
@@ -45,10 +45,6 @@ for USER in ${SELECTED}; do
 	chroot_dev ${ROOTDEV} /usr/sbin/userdel -rf ${USER} 2> /dev/null || chroot_dev ${ROOTDEV} rm -rf /home/${USER} || true
 	echo 100; } | draw gauge
 done
-
-unset TITLE
-unset TEXT
-unset WIDTH
 
 backup_users ${ROOTDEV} || error_msg
 

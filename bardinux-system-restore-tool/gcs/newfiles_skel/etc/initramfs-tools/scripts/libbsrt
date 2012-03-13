@@ -27,8 +27,6 @@ check_dev () {
 		${TITLE:+--title "${TITLE}"} \
 		--progressbox "${TEXT}" \
 		${HEIGHT:-0} ${WIDTH:-0}
-	unset TITLE
-	unset TEXT
 }
 
 is_mounted () {
@@ -81,30 +79,30 @@ restore_users () {
 }
 
 cancel_msg () {
-	TITLE=${TITLE:-"Proceso cancelado"}
-	TEXT=${TEXT:-"El proceso ha sido cancelado por el usuario, pulse ENTER para reiniciar.\n"}
-	WIDTH=${WIDTH:-50}
-	HEIGHT=${HEIGHT:-6}
+	TITLE="Proceso cancelado"
+	TEXT=${1:-"El proceso ha sido cancelado por el usuario, pulse ENTER para reiniciar.\n"}
+	WIDTH=${2:-50}
+	HEIGHT=${3:-6}
 	draw msgbox
 	umount_all
 	reboot
 }
 
 error_msg () {
-	TITLE=${TITLE:-"Error"}
-	TEXT=${TEXT:-"Se ha producido un error. Contacte con su administrador. Pulse ENTER para reiniciar.\n"}
-	WIDTH=${WIDTH:-50}
-	HEIGHT=${HEIGHT:-6}
+	TITLE="Error"
+	TEXT=${1:-"Se ha producido un error. Contacte con su administrador. Pulse ENTER para reiniciar.\n"}
+	WIDTH=${2:-50}
+	HEIGHT=${3:-6}
 	draw msgbox
 	umount_all
 	reboot
 }
 
 success_msg () {
-	TITLE=${TITLE:-"Fin"}
-	TEXT=${TEXT:-"Proceso terminado, pulse ENTER para reiniciar.\n"}
-	WIDTH=${WIDTH:-50}
-	HEIGHT=${HEIGHT:-6}
+	TITLE="Exito"
+	TEXT=${1:-"Proceso terminado, pulse ENTER para reiniciar.\n"}
+	WIDTH=${2:-50}
+	HEIGHT=${3:-6}
 	draw msgbox
 	umount_all
 	reboot
