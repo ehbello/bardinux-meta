@@ -1,3 +1,10 @@
+bardinux-proa-desktop (1.2.1) oneiric; urgency=low
+
+  * Added bardinux-unattended-upgrades to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 14 Mar 2012 11:35:37 +0000
+
+
 bardinux-proa-desktop (1.0.2) lucid; urgency=low
 
   * Deleted provides file because this package does not provide nothing.

@@ -1,3 +1,10 @@
+bardinux-default-settings (1.2.7) oneiric; urgency=low
+
+  * Reverted older but functional kickoff bardinux logo.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 14 Mar 2012 11:31:13 +0000
+
+
 bardinux-default-settings (1.2.6) oneiric; urgency=low
 
   * Disabled kwallet daemon by default.

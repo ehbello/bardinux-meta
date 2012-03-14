@@ -1,3 +1,239 @@
+bardinux-system-restore-tool (1.2.32) oneiric; urgency=low
+
+  * Renamed BACKTITLE variable by SCREEN_BACKTITLE.
+  * Fixed problem setting password of new users.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 14 Mar 2012 11:25:59 +0000
+
+
+bardinux-system-restore-tool (1.2.31) oneiric; urgency=low
+
+  * Fixed some success screens.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 14 Mar 2012 10:31:58 +0000
+
+
+bardinux-system-restore-tool (1.2.28) oneiric; urgency=low
+
+  * Fixed bug at hook parse-conf.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 13 Mar 2012 12:48:22 +0000
+
+
+bardinux-system-restore-tool (1.2.27) oneiric; urgency=low
+
+  * Added configuration variable to define default user shell and home directory permissions for new users.
+  * Modified script that parses the configuration to include all variables.
+  * Added warning to notice the deletion of inactivity users.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 13 Mar 2012 12:01:46 +0000
+
+
+bardinux-system-restore-tool (1.2.26) oneiric; urgency=low
+
+  * Added configuration variable to define default groups for new users.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 08 Mar 2012 16:04:27 +0000
+
+
+bardinux-system-restore-tool (1.2.25) oneiric; urgency=low
+
+  * Changed instead by update-rc.d again at installation scripts.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 08 Mar 2012 13:34:53 +0000
+
+
+bardinux-system-restore-tool (1.2.24) oneiric; urgency=low
+
+  * Added support for incron to backup users when it were modified.
+  * Removed all accents.
+  * Fixed some windows that didn't change their messages.
+  * Fixed fail of scripts the first time of their execution after a reboot.
+  * Fixed restore of last users after system restoration.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 08 Mar 2012 13:24:23 +0000
+
+
+bardinux-system-restore-tool (1.2.22) oneiric; urgency=low
+
+  * Fixed big fail scripting postinst and preinst scripts.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 05 Mar 2012 15:12:15 +0000
+
+
+bardinux-system-restore-tool (1.2.21) oneiric; urgency=low
+
+  * Check existence of rsnapshot.conf before run 'rsnapshot last'.
+  * Run insserv if exists instead of update-rc.d to add cleanusers.sh
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 05 Mar 2012 15:00:41 +0000
+
+
+bardinux-system-restore-tool (1.2.20) oneiric; urgency=low
+
+  * Added backup and restoration of users and groups of the system.
+  * Hidden some warning messages when umount.
+  * Fixed some windows again.
+  * Fixed userdel script when no users are in the system.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 05 Mar 2012 14:27:58 +0000
+
+
+bardinux-system-restore-tool (1.2.19) oneiric; urgency=low
+
+  * Added more intervals again to rsnapshot.conf.
+  * Exclude contents instead of directories when rsnapshot.
+  * Fixed some texts of windows.
+  * Fixed bug at restore script.
+  * Fixed bug at users deletion.
+  * Added new screen to confirm the deletion.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 01 Mar 2012 21:28:17 +0000
+
+
+bardinux-system-restore-tool (1.2.17) oneiric; urgency=low
+
+  * Changed the command to modify root password.
+  * Reduced default number of snapshots to 10.
+  * Fixed update-rc.d bug at upgrade or remove package.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 27 Feb 2012 16:09:59 +0000
+
+
+bardinux-system-restore-tool (1.2.16) oneiric; urgency=low
+
+  * I forgot to add variables to parse-conf hook script.
+  * Fixed {u}mount.snapdir scripts again ¬¬
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 17 Feb 2012 12:30:39 +0000
+
+
+bardinux-system-restore-tool (1.2.15) oneiric; urgency=low
+
+  * Added script to clean inactive users.
+  * Added respective variables to default configuration.
+  * Added finger to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 17 Feb 2012 12:10:07 +0000
+
+
+bardinux-system-restore-tool (1.2.14) oneiric; urgency=low
+
+  * Minor bugfixes.
+  * Added a workaround to apply authorizations in administration submenu.
+  * Deleted configuration for GRUB version 1
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 15 Feb 2012 14:21:19 +0000
+
+
+bardinux-system-restore-tool (1.2.13) oneiric; urgency=low
+
+  * Fixed some spelling mistakes.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 14 Feb 2012 13:03:21 +0000
+
+
+bardinux-system-restore-tool (1.2.12) oneiric; urgency=low
+
+  * Fixed bug at umount.snapdir when mountpoint is not mounted.
+  * Added a Debug mode when DEBUG variable is true.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 14 Feb 2012 12:29:21 +0000
+
+
+bardinux-system-restore-tool (1.2.11) oneiric; urgency=low
+
+  * Fixed bashism syntax at postinst.
+  * Added BACKTITLE variable to set a background title in all screens.
+  * Added some other information screens.
+  * Fixed restoration script.
+  * Deleted institutional information to generalize the scripts.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 14 Feb 2012 11:09:50 +0000
+
+
+bardinux-system-restore-tool (1.2.10) oneiric; urgency=low
+
+  * First almost full working release.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 13 Feb 2012 09:31:29 +0000
+
+
+bardinux-system-restore-tool (1.2~dev9) oneiric; urgency=low
+
+  * Enabled cmd_cp in rsnapshot.conf
+  * Changed interval name to 'last' in rsnapshot.conf
+  * Disabled sync_first feature in rsnapshot.conf
+  * Fixed backup order in rsnapshot.conf
+  * Hidden output of passwd root.
+  * Fixed mount/umount scripts.
+  * Added Post-Invoke hook to run rsnapshot after Dpkg changes.
+  * Changed allowed users to "Menú administrativo".
+  * Added "Crear punto de restauración" menu entry to GRUB2 conf.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 09 Jan 2012 13:48:57 +0000
+
+
+bardinux-system-restore-tool (1.2~dev8) oneiric; urgency=low
+
+  * Fixed destination directory of backups in rsnapshot.conf
+  * Added setup of root password.
+  * Deleted some of useless extra-tools.
+  * SNAPSHOTDIR variable is obtained in initramfs.
+  * Fixed the path of libbsrt at imports.
+  * Removed some of garbage code.
+  * Delete of password lock files before useradd.
+  * Some other fixes and refactoring.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 23 Dec 2011 13:07:29 +0000
+
+
+bardinux-system-restore-tool (1.2~dev7) oneiric; urgency=low
+
+  * Added libcrypt-passwdmd5-perl pre-dependency.
+  * Refactorized extra-tool script.
+  * Bump to Oneiric Ocelot.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 21 Dec 2011 15:49:39 +0000
+
+
+bardinux-system-restore-tool (1.0~dev6) oneiric; urgency=low
+
+  * Removed duplicated of dialog dependency.
+  * Fixed brst configuration filename for {u}mount.snapdir.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 20 Dec 2011 19:58:58 +0000
+
+
+bardinux-system-restore-tool (1.0~dev5) oneiric; urgency=low
+
+  * Fixed encrypted password generation for GRUB and GRUB2.
+  * Fixed GRUB2 command line.
+  * Depends on rsnapshot and dialog to work correctly.
+  * Disabled useless grub entries at installation.
+  * Fixed user permissions for administration menu for GRUB2.
+  * Added terminfo libs to get ncurses to work.
+  * Refactorization of scripts.
+  * Added a common library called libbrst.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 20 Dec 2011 19:51:03 +0000
+
+
+bardinux-system-restore-tool (1.0~dev4) oneiric; urgency=low
+
+  * Disabled workaround for avoid to conflict grub.gcs
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 12 Dec 2011 20:14:22 +0000
+
+
+bardinux-system-restore-tool (1.0~dev3) oneiric; urgency=low
+
+  * Workaround for avoid to conflict grub.gcs
+  * Deleted double dots on questions.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 02 Dec 2011 14:44:28 +0000
+
+
 bardinux-system-restore-tool (1.0~dev2) oneiric; urgency=low
 
   * Bunch of changes to get work this system.

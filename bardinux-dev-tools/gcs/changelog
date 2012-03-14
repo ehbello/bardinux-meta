@@ -1,3 +1,10 @@
+bardinux-dev-tools (1.2.8) oneiric; urgency=low
+
+  * Added debconf-doc to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 14 Mar 2012 11:33:01 +0000
+
+
 bardinux-dev-tools (1.2.6) oneiric; urgency=low
 
   * Added live-build and gcs as recommendations.

@@ -1,3 +1,10 @@
+bardinux-unattended-upgrades (1.2.3) oneiric; urgency=low
+
+  * Configured minimal-steps for unattended-upgrades.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 14 Mar 2012 11:36:29 +0000
+
+
 bardinux-unattended-upgrades (1.2.2) oneiric; urgency=low
 
   * Changed origins of unattended configuration for oneiric.

@@ -1,3 +1,10 @@
+bardinux-minimal (1.2.4) oneiric; urgency=low
+
+  * Added ntfs-3g to dependencies for ntfs fuse mounts.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 14 Mar 2012 11:34:45 +0000
+
+
 bardinux-minimal (1.2.3) oneiric; urgency=low
 
   * Added usb-modeswitch to dependencies.

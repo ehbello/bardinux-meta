@@ -1,3 +1,10 @@
+bardinux-mathematics-physics-task (1.2.3) oneiric; urgency=low
+
+  * Added python-tk and python-matplotlib to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 14 Mar 2012 11:33:54 +0000
+
+
 bardinux-mathematics-physics-task (1.2.2) oneiric; urgency=low
 
   * Added Wx frontend for Maxima.

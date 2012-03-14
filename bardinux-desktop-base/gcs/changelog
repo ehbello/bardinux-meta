@@ -1,3 +1,10 @@
+bardinux-desktop-base (1.2.4) oneiric; urgency=low
+
+  * Added web browsers localizations for Spanish.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 14 Mar 2012 11:32:08 +0000
+
+
 bardinux-desktop-base (1.2.3) oneiric; urgency=low
 
   * Deleted foomatic-db-gutenprint because it depends of foomatic-db and we install foomatic-db-compressed.

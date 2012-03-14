@@ -1,3 +1,10 @@
+bardinux-live-base (1.2.1) oneiric; urgency=low
+
+  * {'Added link from kde-profile to kde4-profile for kubuntu-default-settings profile to fix (LP': None}
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 01 Dec 2011 17:26:47 +0000
+
+
 bardinux-live-base (1.0.4) lucid; urgency=low
 
   * Removed command-not-found unuseful in a live system.
