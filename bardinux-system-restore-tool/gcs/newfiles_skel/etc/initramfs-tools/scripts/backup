@@ -13,7 +13,7 @@ TEXT="No apague ni desconecte el equipo y, por favor, espere a que el proceso te
 WIDTH=60
 HEIGHT=10
 chroot_dev ${ROOTDEV} rsnapshot -v ${INTERVAL} | \
-	dialog ${BACKTITLE:+--backtitle "${BACKTITLE}"} \
+	dialog ${SCREEN_BACKTITLE:+--backtitle "${SCREEN_BACKTITLE}"} \
 	--no-collapse \
 	--cr-wrap \
 	${TITLE:+--title "${TITLE}"} \

@@ -46,7 +46,7 @@ TEXT="No desconecte el equipo y, por favor, espere a que el proceso termine."
 WIDTH=60
 HEIGHT=10
 rsync -ax --progress --exclude /etc/mtab --delete ${SOURCE}/${SNAPSHOTDIR}/${SNAPSHOT_ID}/ ${TARGET}/ | \
-	dialog ${BACKTITLE:+--backtitle "${BACKTITLE}"} \
+	dialog ${SCREEN_BACKTITLE:+--backtitle "${SCREEN_BACKTITLE}"} \
 	--no-collapse \
 	--cr-wrap \
 	${TITLE:+--title "${TITLE}"} \

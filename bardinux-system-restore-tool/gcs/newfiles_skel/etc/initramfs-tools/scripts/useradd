@@ -49,7 +49,7 @@ while [ "$PASS1" != "$PASS2" ]; do
 	TEXT="Escriba su clave de acceso:\nSu clave debe contener al menos 6 caracteres.\n"
 	HEIGHT=10
 	WIDTH=60
-	dialog ${BACKTITLE:+--backtitle "${BACKTITLE}"} --no-collapse --cr-wrap ${TITLE:+--title "${TITLE}"} --insecure --passwordbox "${TEXT}" ${HEIGHT:-0} ${WIDTH:-0} 2> /tmp/password1 || cancel_msg
+	dialog ${SCREEN_BACKTITLE:+--backtitle "${SCREEN_BACKTITLE}"} --no-collapse --cr-wrap ${TITLE:+--title "${TITLE}"} --insecure --passwordbox "${TEXT}" ${HEIGHT:-0} ${WIDTH:-0} 2> /tmp/password1 || cancel_msg
 	#draw passwordbox --insecure 2> /tmp/password1 || cancel_msg
 
 	PASS1=$(cat /tmp/password1)
@@ -66,7 +66,7 @@ while [ "$PASS1" != "$PASS2" ]; do
 	TEXT="Confirme su clave de acceso:\n"
 	HEIGHT=9
 	WIDTH=60
-	dialog ${BACKTITLE:+--backtitle "${BACKTITLE}"} --no-collapse --cr-wrap ${TITLE:+--title "${TITLE}"} --insecure --passwordbox "${TEXT}" ${HEIGHT:-0} ${WIDTH:-0} 2> /tmp/password2 || cancel_msg
+	dialog ${SCREEN_BACKTITLE:+--backtitle "${SCREEN_BACKTITLE}"} --no-collapse --cr-wrap ${TITLE:+--title "${TITLE}"} --insecure --passwordbox "${TEXT}" ${HEIGHT:-0} ${WIDTH:-0} 2> /tmp/password2 || cancel_msg
 	#draw passwordbox --insecure 2> /tmp/password2 || cancel_msg
 
 	PASS2=$(cat /tmp/password2)
@@ -81,7 +81,8 @@ while [ "$PASS1" != "$PASS2" ]; do
 done
 
 # TODO: Definir grupos de usuario
-if chroot_dev ${ROOTDEV} /usr/sbin/useradd -m -p "$PASS1" "$USERNAME" ${USER_GROUPS:+-G ${USER_GROUPS}} ${USER_SHELL:+-s ${USER_SHELL}}; then
+if chroot_dev ${ROOTDEV} /usr/sbin/useradd -m "$USERNAME" ${USER_GROUPS:+-G ${USER_GROUPS}} ${USER_SHELL:+-s ${USER_SHELL}}; then
+	echo "${USERNAME}:${PASS1}" | chroot_dev ${ROOTDEV} /usr/sbin/chpasswd || error_msg "Error estableciendo la contraseña del usuario."
 	chroot_dev ${ROOTDEV} /usr/bin/touch /var/mail/${USERNAME} || true
 	if [ ${USER_HOMEDIR_MODE} ]; then
 		chroot_dev ${ROOTDEV} /bin/chmod ${USER_HOMEDIR_MODE} /home/${USERNAME} || true

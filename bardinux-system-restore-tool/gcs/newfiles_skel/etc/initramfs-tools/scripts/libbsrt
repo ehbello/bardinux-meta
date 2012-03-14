@@ -21,7 +21,7 @@ check_dev () {
 		echo $(( ${slumber} - (${slumber} % 10) ))
 		slumber=$(( ${slumber} + 1 ))
 		[ ${slumber} -le 100 ] || panic "No existe el dispositivo $1"
-	done || dialog ${BACKTITLE:+--backtitle "${BACKTITLE}"} \
+	done || dialog ${SCREEN_BACKTITLE:+--backtitle "${SCREEN_BACKTITLE}"} \
 		--no-collapse \
 		--cr-wrap \
 		${TITLE:+--title "${TITLE}"} \
@@ -120,7 +120,7 @@ draw () {
 		read
 	fi
 
-	echo ${data} | dialog ${COMMON_OPTS} ${BACKTITLE:+--backtitle "${BACKTITLE}"} --no-collapse --cr-wrap ${TITLE:+--title "${TITLE}"} --${TYPE} "${TEXT}" ${HEIGHT:-0} ${WIDTH:-0} $@
+	echo ${data} | dialog ${COMMON_OPTS} ${SCREEN_BACKTITLE:+--backtitle "${SCREEN_BACKTITLE}"} --no-collapse --cr-wrap ${TITLE:+--title "${TITLE}"} --${TYPE} "${TEXT}" ${HEIGHT:-0} ${WIDTH:-0} $@
 	ERROR=$?
 	
 	unset TEXT
