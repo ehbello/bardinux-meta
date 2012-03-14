@@ -8,7 +8,7 @@ if [ -z "$ALL_USERS" ]; then
 	TEXT="No existen usuarios en el sistema.\n"
 	WIDTH=50
 	HEIGHT=6
-	success_msg ${TEXT} ${WIDTH} ${HEIGHT}
+	success_msg "${TEXT}" ${WIDTH} ${HEIGHT}
 fi
 
 numHomes=$(echo ${ALL_USERS} | tr ' ' '\n' | wc -l)

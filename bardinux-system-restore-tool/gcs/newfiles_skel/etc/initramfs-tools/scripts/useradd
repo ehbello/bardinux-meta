@@ -95,4 +95,4 @@ fi
 WIDTH=50
 HEIGHT=6
 
-success_msg ${TEXT} ${WIDTH} ${HEIGHT}
+success_msg "${TEXT}" ${WIDTH} ${HEIGHT}
