@@ -21,21 +21,15 @@ esac
 
 [ -e /etc/default/bsrt ] || ( echo "ERROR: File /etc/default/bsrt not found!"; exit 1 )
 
-. /etc/default/bsrt
-
 echo -n "Parsing configuration... "
 
-sed '/BACKUP_DEVICE/d' /etc/default/bsrt > ${DESTDIR}/etc/default/bsrt 
+cp /etc/default/bsrt ${DESTDIR}/etc/default/bsrt 
 
 interval=$(awk '$0 !~ /^ *#/ && $1 == "interval" { print $2 }' /etc/rsnapshot.conf)
-root_dev=$(awk '$0 !~ /^ *#/ && $2 == "/" { print $1 }' /etc/fstab)
-backup_dev=${BACKUP_DEVICE:-$root_dev}
 
 cat >> ${DESTDIR}/etc/default/bsrt << EOF
 # Internal variables
 INTERVAL=${interval}
-ROOTDEV=${root_dev}
-BACKUPDEV=${backup_dev}
 EOF
 
 echo "done!"

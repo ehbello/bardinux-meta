@@ -21,7 +21,7 @@ esac
 
 echo -n "Copying extra-tools... "
 
-TOOLS="/bin/sed /usr/bin/wc /usr/bin/rsync /usr/bin/dialog /usr/bin/awk"
+TOOLS="/bin/sed /usr/bin/wc /usr/bin/rsync /usr/bin/dialog /usr/bin/awk /bin/readlink /usr/bin/find"
 
 for TOOL in ${TOOLS}; do
 	if [ -x ${TOOL} ]; then

@@ -9,24 +9,24 @@ fi
 . /etc/default/bsrt
 
 mountroot () {
-	sh
+	if [ $DEBUG ]; then
+		sh
+	fi
+	panic "Error inesperado. Por favor, contacte con su administrador."
 	reboot
 }
 
 check_dev () {
 	TITLE="Comprobando dispositivos"
-	TEXT="Esperando dispositivo $1..."
-	while [ ! -b "$1" ]; do
-		/bin/sleep 0.1 
-		echo $(( ${slumber} - (${slumber} % 10) ))
-		slumber=$(( ${slumber} + 1 ))
+	TEXT="Esperando por el dispositivo $1..."
+	WIDTH=40
+	slumber=0
+	while ! /bin/readlink -e $1 > /dev/null; do
+		/bin/sleep 1
+		slumber=$(( ${slumber} + 10 ))
+		echo ${slumber}
 		[ ${slumber} -le 100 ] || panic "No existe el dispositivo $1"
-	done || dialog ${SCREEN_BACKTITLE:+--backtitle "${SCREEN_BACKTITLE}"} \
-		--no-collapse \
-		--cr-wrap \
-		${TITLE:+--title "${TITLE}"} \
-		--progressbox "${TEXT}" \
-		${HEIGHT:-0} ${WIDTH:-0}
+	done | draw gauge
 }
 
 is_mounted () {
@@ -130,21 +130,17 @@ draw () {
 	return $ERROR
 }
 
-if echo ${ROOTDEV} | grep -q "^UUID="; then
-	ROOTDEV=$(blkid -U ${ROOTDEV#UUID=})
-fi
-if echo ${BACKUPDEV} | grep -q "^UUID="; then
-	BACKUPDEV=$(blkid -U ${BACKUPDEV#UUID=})
-fi
+ROOTDEV=$(echo ${ROOT} | sed 's#^UUID=#/dev/disk/by-uuid/#')
+BACKUPDEV=$(echo ${BACKUPDEV} | sed 's#^UUID=#/dev/disk/by-uuid/#')
 
 check_dev ${ROOTDEV}
 
-# Arreglar un fisco
-if [ ${BACKUPDEV} == ${ROOTDEV} ]; then
-	SNAPSHOTDIR=$(chroot_dev ${ROOTDEV} /bin/sed -n '/^snapshot_root/s/snapshot_root[[:blank:]]*//p' /etc/rsnapshot.conf)
-else
+if [ ${BACKUPDEV} ]; then
 	SNAPSHOTDIR="."
 	check_dev ${BACKUPDEV}
+else
+	SNAPSHOTDIR=$(chroot_dev ${ROOTDEV} /bin/sed -n '/^snapshot_root/s/snapshot_root[[:blank:]]*//p' /etc/rsnapshot.conf)
+	BACKUPDEV=${ROOTDEV}
 fi
 
 # Guarrada monumental para que no pete la primera vez
