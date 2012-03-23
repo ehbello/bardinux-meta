@@ -63,7 +63,7 @@ r-base
 ruby
 scilab
 subversion
-sun-java6-jdk
+#sun-java6-jdk
 swi-prolog
 tcm
 tora
