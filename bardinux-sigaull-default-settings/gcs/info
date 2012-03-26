@@ -19,9 +19,8 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0.11
+version: 1.0.12
 
 # Cambios en esta versión
 changes:
-    - Disabled recovery menu of GRUB bootloader.
-    - Added password for editting GRUB menus.
+    - Forces to update-grub after install or remove the package.
