@@ -19,7 +19,7 @@ mountroot () {
 check_dev () {
 	TITLE="Comprobando dispositivos"
 	TEXT="Esperando por el dispositivo $1..."
-	WIDTH=40
+	WIDTH=50
 	slumber=0
 	while ! /bin/readlink -e $1 > /dev/null; do
 		/bin/sleep 1

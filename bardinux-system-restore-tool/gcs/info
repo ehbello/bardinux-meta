@@ -19,12 +19,10 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2.33
+version: 1.2.34
 
 #config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - Fixed arithmetic syntax error under VirtualBox.
-    - Fixed bug when there are no restore points.
-    - Only runs a shell when there are an unexpected error if DEBUG variable is true.
+    - Fixed size of the first windows of useradd.
