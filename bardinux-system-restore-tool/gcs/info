@@ -19,12 +19,10 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2.35
+version: 1.2.37
 
 #config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - Fixed backups again.
-    - Fixed some windows sizes.
-    - First really stable version.
+    - Some menuentrys weren't disabled when upgrade.
