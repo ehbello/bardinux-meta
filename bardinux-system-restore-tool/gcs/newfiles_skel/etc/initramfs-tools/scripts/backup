@@ -4,8 +4,10 @@
 
 TITLE="Punto de restauracion"
 TEXT="Se va a proceder a realizar una congelacion del estado actual del equipo. Esto permitira volver a el en un futuro.\n\n\
-El proceso puede tardar varios minutos. Asegurese de tener el equipo conectado a la corriente antes de continuar,\n\n\
+El proceso puede tardar varios minutos. Asegurese de tener el equipo conectado a la corriente antes de continuar.\n\n\
 ¿Desea continuar?\n"
+WIDTH=60
+HEIGHT=13
 draw yesno || cancel_msg
 
 TITLE="Creando punto de restauracion..."

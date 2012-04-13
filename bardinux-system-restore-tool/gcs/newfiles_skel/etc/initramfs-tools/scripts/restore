@@ -7,10 +7,10 @@
 . /scripts/libbsrt
 
 getSnapshots() {
-	local mntpt=$(mount_dev ro ${BACKUPDEV})
+	local mntpt=$(mount_dev ro ${BACKUP_DEVICE})
 	unset menuitems
 	numitems=0
-	items=$(/usr/bin/find ${mntpt}/${SNAPSHOTDIR}/ -iname "${INTERVAL}.${1:-*}" -printf '%f\n' | cut -d "." -f 2 | sort -n)
+	items=$(/usr/bin/find ${mntpt}/${SNAPSHOTDIR}/ -maxdepth 1 -iname "${INTERVAL}.${1:-*}" -printf '%f\n' | cut -d "." -f 2 | sort -n)
 	for ID in ${items}; do
 		DATE=$(date -R -r ${mntpt}/${SNAPSHOTDIR}/${INTERVAL}.${ID}/ | /bin/sed 's/, \| /_/g')
 		menuitems="${menuitems} ${ID##*.} ${DATE}"
@@ -36,12 +36,14 @@ TEXT="Se va a iniciar el proceso para restaurar la copia del sistema: \n\n\
 ${menuitems} \n\n\
 Este proceso puede tardar varios minutos. Asegurese de tener el equipo conectado a la corriente antes de continuar.\n\n\
 ¿Desea continuar? \n"
+WIDTH=60
+HEIGHT=15
 draw yesno || cancel_msg
 	
-SOURCE=$(mount_dev ro ${BACKUPDEV})
+SOURCE=$(mount_dev ro ${BACKUP_DEVICE})
 TARGET=$(mount_dev rw ${ROOTDEV})
 
-TITLE="Restaurando '${SNAPSHOT_ID}' desde ${BACKUPDEV} a ${ROOTDEV}"
+TITLE="Restaurando '${SNAPSHOT_ID}' desde ${BACKUP_DEVICE} a ${ROOTDEV}"
 TEXT="No desconecte el equipo y, por favor, espere a que el proceso termine."
 WIDTH=60
 HEIGHT=10

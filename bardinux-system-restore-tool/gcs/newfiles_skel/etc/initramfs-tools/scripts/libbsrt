@@ -131,16 +131,16 @@ draw () {
 }
 
 ROOTDEV=$(echo ${ROOT} | sed 's#^UUID=#/dev/disk/by-uuid/#')
-BACKUPDEV=$(echo ${BACKUPDEV} | sed 's#^UUID=#/dev/disk/by-uuid/#')
+BACKUP_DEVICE=$(echo ${BACKUP_DEVICE} | sed 's#^UUID=#/dev/disk/by-uuid/#')
 
 check_dev ${ROOTDEV}
 
-if [ ${BACKUPDEV} ]; then
+if [ ${BACKUP_DEVICE} ]; then
 	SNAPSHOTDIR="."
-	check_dev ${BACKUPDEV}
+	check_dev ${BACKUP_DEVICE}
 else
 	SNAPSHOTDIR=$(chroot_dev ${ROOTDEV} /bin/sed -n '/^snapshot_root/s/snapshot_root[[:blank:]]*//p' /etc/rsnapshot.conf)
-	BACKUPDEV=${ROOTDEV}
+	BACKUP_DEVICE=${ROOTDEV}
 fi
 
 # Guarrada monumental para que no pete la primera vez

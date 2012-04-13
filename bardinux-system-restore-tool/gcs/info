@@ -19,10 +19,12 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2.34
+version: 1.2.35
 
 #config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - Fixed size of the first windows of useradd.
+    - Fixed backups again.
+    - Fixed some windows sizes.
+    - First really stable version.
