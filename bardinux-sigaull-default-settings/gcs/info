@@ -19,8 +19,10 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0.10
+version: 1.2.1
 
 # Cambios en esta versión
 changes:
-    - Configured cron to shutdown clients every two hours if there aren't any users logged.
+    - Added password for editting GRUB menus.
+    - Disabled recovery menu of GRUB bootloader.
+    - Forces to update-grub after install or remove the package.
