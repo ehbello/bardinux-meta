@@ -3,9 +3,9 @@
 .SILENT:
 
 DEBTOOL ?= dpkg-buildpackage -rfakeroot
-STATUS_CMD ?= bzr st
 PKGNAME = $*
 DATE = $(shell date +"%b %d %T")
+TMPFILE := $(shell mktemp)
 
 .PHONY: all status
 all: $(patsubst %/gcs,%.build,$(wildcard */gcs))
@@ -48,7 +48,13 @@ status: $(patsubst %/gcs,%/status,$(wildcard */gcs))
 
 %/status:
 	$(info ~~~~~ $(PKGNAME) ~~~~~)
-	$(STATUS_CMD) $(PKGNAME)
+	bzr st $(PKGNAME)
+
+commit:
+	bzr diff */gcs/info | grep "^+" | sed -e 's#+++ \(.*\)/gcs/info.*#\n\1:#g' -e 's#^+version: \(.*\)#(New version: \1)#' -e 's#^+##' | sed '1d' | tee $(TMPFILE)
+	#read -p "Do you want to commit? [y/N] " answer
+	bzr ci -F $(TMPFILE)
+	-rm -f $(TMPFILE)
 
 .PHONY: clean
 clean: $(patsubst %/gcs,%/clean,$(wildcard */gcs))
