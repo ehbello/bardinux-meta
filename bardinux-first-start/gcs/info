@@ -24,11 +24,8 @@ shortdesc: "Bardinux First Start dialog and webpage"
 longdesc: "This package contains the application and webpage that is showed on the first \n  Bardinux start."
 
 # Versión del paquete
-version: 1.0.5
+version: 1.2.1
 
 # Cambios en esta versión
 changes:
-    - Added new box to the web to split privative and free extras.
-    - Changed the size of page to adjust automatically.
-    - Added preferences to get work apt url in app mode.
-    - Changed the bardinux image and some colors.
+    - Changed the kdebase dependency name for oneiric.
