@@ -1,13 +1,17 @@
+#otf-thai-tlwg
+#t1-thai-tlwg
 #ttf-arhangai
+#ttf-ipafont
 #ttf-lee
+#ttf-sinhala-lklug
+#ttf-symbol-replacement
 #ttf-tahoma-replacement
+#ttf-unfonts
 fondu
 fontforge
 fontforge-extras
 fonts-horai-umefont
 fontypython
-otf-thai-tlwg
-t1-thai-tlwg
 ttf-adf-accanthis
 ttf-adf-baskervald
 ttf-adf-berenis
@@ -79,7 +83,6 @@ ttf-hanazono
 ttf-inconsolata
 ttf-indic-fonts
 ttf-indic-fonts-core
-ttf-ipafont
 ttf-ipafont-jisx0208
 ttf-isabella
 ttf-japanese-gothic
@@ -144,11 +147,9 @@ ttf-sil-scheherazade
 ttf-sil-sophia-nubian
 ttf-sil-yi
 ttf-sil-zaghawa-beria
-ttf-sinhala-lklug
 ttf-sjfonts
 ttf-staypuft
 ttf-summersby
-#ttf-symbol-replacement
 ttf-tagbanwa
 ttf-takao
 ttf-takao-gothic
@@ -164,7 +165,6 @@ ttf-tomsontalks
 ttf-tuffy
 ttf-ubuntu-title
 ttf-umeplus
-ttf-unfonts
 ttf-unfonts-core
 ttf-unfonts-extra
 ttf-unifont

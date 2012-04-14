@@ -6,12 +6,12 @@ APT::Periodic::Unattended-Upgrade "1";
 
 // Automatically upgrade packages from these (origin, archive) pairs
 Unattended-Upgrade::Allowed-Origins {
-	"Ubuntu oneiric-security";
-//	"Ubuntu oneiric-updates";
-//	"Ubuntu oneiric";
-	"Bardinux oneiric-security";
-	"Bardinux oneiric-updates";
-	"Bardinux oneiric";
+	"Ubuntu precise-security";
+//	"Ubuntu precise-updates";
+//	"Ubuntu precise";
+	"Bardinux precise-security";
+	"Bardinux precise-updates";
+	"Bardinux precise";
 };
 
 // List of packages to not update

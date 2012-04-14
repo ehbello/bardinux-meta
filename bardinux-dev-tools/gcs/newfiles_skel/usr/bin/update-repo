@@ -26,6 +26,9 @@ until [ -z $1 ]; do
 		--replace)
 			REPLACE=true
 			;;
+		--include)
+			INCLUDE=true
+			;;
 		-u|--upload)
 			UPLOAD=true
 			;;
@@ -59,23 +62,25 @@ rsync -av --delete $REPREPRO_CONF $LOCAL_REPOSITORY/conf/
 
 # Ready...
 # Including packages
-for pkg in ${ARGS:-$DERIVATIVE_PACKAGES}; do
-	if [ $REPLACE ]; then
-		$REPREPRO $OPTIONS remove $CODENAME $(basename ${pkg/_*//})
-	fi
-	if [[ $pkg =~ \.dsc$ ]]; then
-		echo '# dsc #'
-		$REPREPRO $OPTIONS -S bardinux -P low includedsc $CODENAME $pkg | tee -a $LOG_FILE
-	else	
-		if [[ $pkg =~ \.udeb$ ]]; then
-			echo '# udeb #'
-			$REPREPRO $OPTIONS includeudeb $CODENAME $pkg | tee -a $LOG_FILE
-		else
-			echo '# deb #'
-			$REPREPRO $OPTIONS includedeb $CODENAME $pkg | tee -a $LOG_FILE
+if [ $INCLUDE ]; then
+	for pkg in ${ARGS:-$DERIVATIVE_PACKAGES}; do
+		if [ $REPLACE ]; then
+			$REPREPRO $OPTIONS remove $CODENAME $(basename ${pkg/_*//})
 		fi
-	fi
-done
+		if [[ $pkg =~ \.dsc$ ]]; then
+			echo '# dsc #'
+			$REPREPRO $OPTIONS -S bardinux -P low includedsc $CODENAME $pkg | tee -a $LOG_FILE
+		else	
+			if [[ $pkg =~ \.udeb$ ]]; then
+				echo '# udeb #'
+				$REPREPRO $OPTIONS includeudeb $CODENAME $pkg | tee -a $LOG_FILE
+			else
+				echo '# deb #'
+				$REPREPRO $OPTIONS includedeb $CODENAME $pkg | tee -a $LOG_FILE
+			fi
+		fi
+	done
+fi
 
 if sed -n '/^Codename: '$CODENAME'/,/^ *$/p' $LOCAL_REPOSITORY/conf/distributions | egrep -q ^SignWith; then
 	$REPREPRO $OPTIONS --ask-passphrase export $CODENAME

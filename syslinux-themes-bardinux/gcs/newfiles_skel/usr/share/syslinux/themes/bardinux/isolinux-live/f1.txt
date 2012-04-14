@@ -1,6 +1,6 @@
                   0fWelcome to Bardinux!07                                          09F107
 
-This is an installation system for Bardinux 3.3 Alpha1.
+This is an installation system for Bardinux 3.4.
 
 0fHELP INDEX07
 

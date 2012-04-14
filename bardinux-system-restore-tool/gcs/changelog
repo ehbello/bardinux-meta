@@ -1,3 +1,49 @@
+bardinux-system-restore-tool (1.2.38) oneiric; urgency=low
+
+  * Some menuentrys weren't disabled when upgrade (new try)
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 13 Apr 2012 13:59:18 +0100
+
+
+bardinux-system-restore-tool (1.2.37) oneiric; urgency=low
+
+  * Some menuentrys weren't disabled when upgrade.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 13 Apr 2012 13:48:21 +0100
+
+
+bardinux-system-restore-tool (1.2.36) oneiric; urgency=low
+
+  * Fixed restoration again.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 13 Apr 2012 13:05:02 +0100
+
+
+bardinux-system-restore-tool (1.2.35) oneiric; urgency=low
+
+  * Fixed backups again.
+  * Fixed some windows sizes.
+  * First really stable version.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 13 Apr 2012 11:21:08 +0100
+
+
+bardinux-system-restore-tool (1.2.34) oneiric; urgency=low
+
+  * Fixed size of the first windows of useradd.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 28 Mar 2012 14:30:29 +0100
+
+
+bardinux-system-restore-tool (1.2.33) oneiric; urgency=low
+
+  * Fixed arithmetic syntax error under VirtualBox.
+  * Fixed bug when there are no restore points.
+  * Only runs a shell when there are an unexpected error if DEBUG variable is true.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 19 Mar 2012 15:52:54 +0000
+
+
 bardinux-system-restore-tool (1.2.32) oneiric; urgency=low
 
   * Renamed BACKTITLE variable by SCREEN_BACKTITLE.

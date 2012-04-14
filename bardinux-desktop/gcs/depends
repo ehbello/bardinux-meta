@@ -11,7 +11,7 @@ bardinux-desktop-base
 bluedevil
 dolphin
 #dragonplayer
-firefox-kde-support
+#firefox-kde-support
 freespacenotifier
 gnupg-agent
 gpgsm
@@ -37,7 +37,7 @@ kdepasswd
 kdepim-kresources
 kdepim-runtime
 kdepim-strigi-plugins
-kdepim-wizards
+#kdepim-wizards
 kdesudo
 kde-window-manager
 kde-window-manager-gles

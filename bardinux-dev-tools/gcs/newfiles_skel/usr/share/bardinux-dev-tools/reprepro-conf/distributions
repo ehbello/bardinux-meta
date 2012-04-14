@@ -87,3 +87,13 @@ Origin: Ubuntu
 Version: 3.3
 Description: Repositorio de Bardinux 3.3
 SignWith: C4673343
+
+Codename: precise
+Suite: bardinux
+Components: main restricted universe multiverse
+UDebComponents: main restricted
+Architectures: amd64 i386 source
+Origin: Ubuntu
+Version: 3.4
+Description: Repositorio de Bardinux 3.4
+SignWith: C4673343
