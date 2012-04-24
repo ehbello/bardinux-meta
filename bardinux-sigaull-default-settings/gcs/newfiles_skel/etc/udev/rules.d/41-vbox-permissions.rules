@@ -1,0 +1,2 @@
+# Allow all to use the Virtualbox kernel module
+KERNEL=="vboxdrv", NAME="vboxdrv", MODE="666", OPTIONS="last_rule"
