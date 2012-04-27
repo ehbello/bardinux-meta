@@ -14,7 +14,7 @@
    height="291"
    id="svg2"
    version="1.1"
-   inkscape:version="0.47 r22583"
+   inkscape:version="0.48.3.1 r9886"
    sodipodi:docname="screenshot.svg"
    inkscape:export-filename="screenshot.png"
    inkscape:export-xdpi="90"
@@ -85,7 +85,7 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.6185567"
+     inkscape:zoom="1.8659794"
      inkscape:cx="196.5"
      inkscape:cy="145.5"
      inkscape:document-units="px"
@@ -94,8 +94,8 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1280"
-     inkscape:window-height="1004"
-     inkscape:window-x="1276"
+     inkscape:window-height="753"
+     inkscape:window-x="-2"
      inkscape:window-y="-3"
      inkscape:window-maximized="1" />
   <metadata
@@ -106,7 +106,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -118,41 +118,48 @@
     <g
        id="g4203">
       <image
-         xlink:href="file:///home/quique/src/bzr/bardinux-meta/lucid/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/background.jpg"
+         sodipodi:absref="/home/ehbello/src/bzr/bardinux-meta/trunk/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/background.png"
+         xlink:href="background.png"
          width="393"
          height="291"
          id="image2865"
          x="0"
          y="761.36218" />
       <image
-         xlink:href="file:///home/quique/src/bzr/bardinux-meta/lucid/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/welcome-time-shadowed.png"
-         width="393.10001"
-         height="22.899029"
-         id="image2936"
+         sodipodi:absref="/home/ehbello/src/bzr/bardinux-meta/trunk/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/welcome-time-shadowed.png"
+         xlink:href="welcome-time-shadowed.png"
+         style="opacity:0.25"
+         y="761.36218"
          x="-0.050003052"
-         y="761.36218" />
+         id="image2936"
+         height="22.899029"
+         width="393.10001" />
       <image
-         style="opacity:0.8"
-         xlink:href="file:///home/quique/src/bzr/bardinux-meta/lucid/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/corp-logo.png"
-         width="106.60715"
-         height="19.651089"
-         id="image3007"
+         sodipodi:absref="/home/ehbello/src/bzr/bardinux-meta/trunk/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/corp-logo.png"
+         xlink:href="corp-logo.png"
+         y="1027.9913"
          x="276.60715"
-         y="1027.9913" />
+         id="image3007"
+         height="19.651089"
+         width="106.60715"
+         style="opacity:0.8" />
       <image
-         xlink:href="file:///home/quique/src/bzr/bardinux-meta/lucid/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/main-runner.png"
-         width="393"
-         height="92.963905"
-         id="image3132"
+         sodipodi:absref="/home/ehbello/src/bzr/bardinux-meta/trunk/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/main-runner.png"
+         xlink:href="main-runner.png"
+         style="opacity:0.2"
+         y="860.65747"
          x="0"
-         y="860.65747" />
+         id="image3132"
+         height="92.963905"
+         width="393" />
       <image
-         xlink:href="file:///home/quique/src/bzr/bardinux-meta/lucid/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/branding-icon.png"
-         width="88.716064"
-         height="24.507202"
-         id="image3278"
+         sodipodi:absref="/home/ehbello/src/bzr/bardinux-meta/trunk/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/branding-icon.png"
+         xlink:href="branding-icon.png"
+         y="894.81934"
          x="49.753571"
-         y="894.81934" />
+         id="image3278"
+         height="24.507202"
+         width="88.716064" />
       <text
          transform="scale(1.0336464,0.96744883)"
          id="text3286"
@@ -215,12 +222,13 @@
            id="tspan3337"
            sodipodi:role="line">Menú</tspan></text>
       <image
-         xlink:href="file:///home/quique/src/bzr/bardinux-meta/lucid/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/dots.png"
-         width="7.3124995"
-         height="29.249998"
-         id="image3406"
+         sodipodi:absref="/home/ehbello/src/bzr/bardinux-meta/trunk/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/kdm/themes/bardinux/dots.png"
+         xlink:href="dots.png"
+         y="1023.229"
          x="74.699455"
-         y="1023.229" />
+         id="image3406"
+         height="29.249998"
+         width="7.3124995" />
       <rect
          style="opacity:1;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
          id="rect3321"

@@ -15,15 +15,27 @@
    height="250"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.47 r22583"
+   inkscape:version="0.48.2 r9819"
    version="1.0"
    sodipodi:docname="base.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   inkscape:export-filename="Preview.png"
+   inkscape:export-filename="background.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
      id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11537">
+      <stop
+         style="stop-color:#50162d;stop-opacity:1;"
+         offset="0"
+         id="stop11539" />
+      <stop
+         style="stop-color:#50162d;stop-opacity:1;"
+         offset="1"
+         id="stop11541" />
+    </linearGradient>
     <linearGradient
        inkscape:collect="always"
        id="linearGradient7208">
@@ -4748,12 +4760,11 @@
          style="stop-color:#ffffff;stop-opacity:0;" />
     </linearGradient>
     <linearGradient
-       id="linearGradient4806"
-       inkscape:collect="always">
+       id="linearGradient4806">
       <stop
          id="stop4808"
          offset="0"
-         style="stop-color:#44d8ff;stop-opacity:1" />
+         style="stop-color:#44eeff;stop-opacity:1;" />
       <stop
          id="stop4810"
          offset="1"
@@ -32557,7 +32568,7 @@
        xlink:href="#linearGradient4806"
        id="radialGradient7597"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.78123406,-0.00334832,0.00234391,0.54688392,-206.3524,174.865)"
+       gradientTransform="matrix(0.78123406,-0.00279027,0.00234391,0.4557366,-206.3524,217.41979)"
        cx="-392.68732"
        cy="190.19373"
        fx="-392.68732"
@@ -32585,230 +32596,446 @@
        fx="23.857143"
        fy="40"
        r="17.142857" />
-    <filter
-       id="filter6423"
-       inkscape:label="Evanescent"
-       x="0"
-       y="0"
-       width="1"
-       height="1"
-       inkscape:menu="Blurs"
-       inkscape:menu-tooltip="Blur the contents of objects, preserving the outline and adding progressive transparency at edges"
-       color-interpolation-filters="sRGB">
-      <feColorMatrix
-         id="feColorMatrix6425"
-         type="saturate"
-         values="0"
-         result="fbSourceGraphic" />
-      <feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix6427" />
-      <feColorMatrix
-         id="feColorMatrix6429"
-         type="saturate"
-         values="0"
-         result="result1"
-         in="fbSourceGraphic" />
-      <feFlood
-         id="feFlood6431"
-         flood-color="rgb(9,111,152)"
-         result="result2" />
-      <feBlend
-         id="feBlend6433"
-         in2="result1"
-         mode="screen"
-         result="result2" />
-      <feComposite
-         id="feComposite6435"
-         in2="fbSourceGraphic"
-         operator="in"
-         in="result2"
-         result="fbSourceGraphic" />
-      <feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix6557" />
-      <feGaussianBlur
-         id="feGaussianBlur6559"
-         result="result6"
-         stdDeviation="3"
-         in="fbSourceGraphic" />
-      <feColorMatrix
-         id="feColorMatrix6561"
-         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
-         result="result7"
-         in="fbSourceGraphic" />
-      <feComposite
-         id="feComposite6563"
-         in2="result7"
-         operator="in"
-         in="result6" />
-    </filter>
     <inkscape:perspective
-       id="perspective6529"
-       inkscape:persp3d-origin="108.30425 : 13.294645 : 1"
-       inkscape:vp_z="216.60851 : 19.941967 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_x="0 : 19.941967 : 1"
-       sodipodi:type="inkscape:persp3d" />
-    <filter
-       id="filter6663"
-       inkscape:label="Duotone"
-       inkscape:menu="Color"
-       inkscape:menu-tooltip="Change colors to a duotone palette"
-       height="1"
-       width="1"
-       y="0"
-       x="0"
-       color-interpolation-filters="sRGB">
-      <feColorMatrix
-         id="feColorMatrix6665"
-         type="saturate"
-         values="0"
-         result="result1" />
-      <feFlood
-         id="feFlood6667"
-         flood-color="rgb(9,111,152)"
-         result="result2" />
-      <feBlend
-         id="feBlend6669"
-         in2="result1"
-         mode="screen"
-         result="result2" />
-      <feComposite
-         id="feComposite6671"
-         in2="SourceGraphic"
-         operator="in"
-         in="result2" />
-    </filter>
-    <inkscape:perspective
-       id="perspective6329"
+       id="perspective6917"
        inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
        inkscape:vp_z="1 : 0.5 : 1"
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 0.5 : 1"
        sodipodi:type="inkscape:persp3d" />
-    <inkscape:perspective
-       id="perspective6343"
-       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-       inkscape:vp_z="1 : 0.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_x="0 : 0.5 : 1"
-       sodipodi:type="inkscape:persp3d" />
-    <inkscape:perspective
-       id="perspective6357"
-       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-       inkscape:vp_z="1 : 0.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_x="0 : 0.5 : 1"
-       sodipodi:type="inkscape:persp3d" />
-    <inkscape:perspective
-       id="perspective6371"
-       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-       inkscape:vp_z="1 : 0.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_x="0 : 0.5 : 1"
-       sodipodi:type="inkscape:persp3d" />
-    <inkscape:perspective
-       id="perspective6385"
-       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-       inkscape:vp_z="1 : 0.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_x="0 : 0.5 : 1"
-       sodipodi:type="inkscape:persp3d" />
-    <inkscape:perspective
-       id="perspective6399"
-       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-       inkscape:vp_z="1 : 0.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_x="0 : 0.5 : 1"
-       sodipodi:type="inkscape:persp3d" />
-    <inkscape:perspective
-       id="perspective6413"
-       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-       inkscape:vp_z="1 : 0.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_x="0 : 0.5 : 1"
-       sodipodi:type="inkscape:persp3d" />
-    <inkscape:perspective
-       id="perspective6341"
-       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-       inkscape:vp_z="1 : 0.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_x="0 : 0.5 : 1"
-       sodipodi:type="inkscape:persp3d" />
-    <filter
-       id="filter6663-6"
-       inkscape:label="Duotone"
-       inkscape:menu="Color"
-       inkscape:menu-tooltip="Change colors to a duotone palette"
-       height="1"
-       width="1"
-       y="0"
-       x="0"
-       color-interpolation-filters="sRGB">
-      <feColorMatrix
-         id="feColorMatrix6665-7"
-         type="saturate"
-         values="0"
-         result="result1" />
-      <feFlood
-         id="feFlood6667-5"
-         flood-color="rgb(9,111,152)"
-         result="result2" />
-      <feBlend
-         id="feBlend6669-6"
-         in2="result1"
-         mode="screen"
-         result="result2" />
-      <feComposite
-         id="feComposite6671-9"
-         in2="SourceGraphic"
-         operator="in"
-         in="result2" />
-    </filter>
+    <radialGradient
+       r="20"
+       fy="16.234577"
+       fx="197.48041"
+       cy="16.234577"
+       cx="197.48041"
+       gradientTransform="matrix(25.612537,5.0318948,-1.2875263,7.2615473,-5733.3989,-955.3841)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient6715"
+       xlink:href="#linearGradient2295-3"
+       inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2295-3">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop2297-9" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop2299-1" />
+    </linearGradient>
+    <radialGradient
+       r="20"
+       fy="16.234577"
+       fx="197.48041"
+       cy="16.234577"
+       cx="197.48041"
+       gradientTransform="matrix(25.612537,5.0318948,-1.2875263,7.2615473,-5733.3989,-955.38407)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient6926"
+       xlink:href="#linearGradient2295-3"
+       inkscape:collect="always" />
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient4806-8"
-       id="radialGradient6346"
+       xlink:href="#linearGradient4126"
+       id="radialGradient6354"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2.499949,-0.00892886,0.00750051,1.4583571,907.58442,-250.68287)"
-       cx="-392.68732"
-       cy="190.19373"
-       fx="-392.68732"
-       fy="190.19373"
-       r="320" />
+       gradientTransform="matrix(1,0,0,0.5,0,20)"
+       cx="23.857143"
+       cy="40"
+       fx="23.857143"
+       fy="40"
+       r="17.142857" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4126"
+       id="radialGradient6363"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.5,0,20)"
+       cx="23.857143"
+       cy="40"
+       fx="23.857143"
+       fy="40"
+       r="17.142857" />
+    <inkscape:perspective
+       id="perspective14626"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2295-3-6"
+       id="radialGradient14589"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(25.612537,5.0318948,-1.2875263,7.2615473,-5733.3989,-955.3841)"
+       cx="197.48041"
+       cy="16.234577"
+       fx="197.48041"
+       fy="16.234577"
+       r="20" />
     <linearGradient
-       id="linearGradient4806-8">
+       inkscape:collect="always"
+       id="linearGradient2295-3-6">
       <stop
-         id="stop4808-7"
+         style="stop-color:#ffffff;stop-opacity:1;"
          offset="0"
-         style="stop-color:#b0eeff;stop-opacity:1;" />
+         id="stop2297-9-5" />
       <stop
-         id="stop4810-2"
+         style="stop-color:#ffffff;stop-opacity:0;"
          offset="1"
-         style="stop-color:#009bf9;stop-opacity:0.98360658" />
+         id="stop2299-1-2" />
     </linearGradient>
+    <radialGradient
+       r="20"
+       fy="16.234577"
+       fx="197.48041"
+       cy="16.234577"
+       cx="197.48041"
+       gradientTransform="matrix(25.612537,5.0318948,-1.2875263,7.2615473,-5733.3989,-955.38409)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient14635"
+       xlink:href="#linearGradient2295-3-6"
+       inkscape:collect="always" />
+    <inkscape:perspective
+       id="perspective7202"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <filter
+       id="filter7859-7"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7861-3"
+         type="saturate"
+         values="0" />
+    </filter>
+    <filter
+       id="filter7208"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7210"
+         type="saturate"
+         values="0" />
+    </filter>
+    <filter
+       id="filter7212"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7214"
+         type="saturate"
+         values="0" />
+    </filter>
+    <filter
+       id="filter7216"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7218"
+         type="saturate"
+         values="0" />
+    </filter>
+    <filter
+       id="filter7220"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7222"
+         type="saturate"
+         values="0" />
+    </filter>
+    <filter
+       id="filter7224"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7226"
+         type="saturate"
+         values="0" />
+    </filter>
+    <filter
+       id="filter7228"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7230"
+         type="saturate"
+         values="0" />
+    </filter>
+    <inkscape:perspective
+       id="perspective2866"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <filter
+       id="filter7859-7-0"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7861-3-3"
+         type="saturate"
+         values="0" />
+    </filter>
+    <inkscape:perspective
+       id="perspective3885"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <filter
+       id="filter7859-7-0-9"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7861-3-3-7"
+         type="saturate"
+         values="0" />
+    </filter>
+    <inkscape:perspective
+       id="perspective3990"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <filter
+       id="filter7859-7-0-8"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7861-3-3-0"
+         type="saturate"
+         values="0" />
+    </filter>
+    <inkscape:perspective
+       id="perspective4050"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <filter
+       id="filter7859-7-0-7"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7861-3-3-6"
+         type="saturate"
+         values="0" />
+    </filter>
+    <inkscape:perspective
+       id="perspective18126"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
     <radialGradient
        r="320"
        fy="190.19373"
        fx="-392.68732"
        cy="190.19373"
        cx="-392.68732"
-       gradientTransform="matrix(0.78123406,-0.00279027,0.00234391,0.45573659,-218.262,440.70763)"
+       gradientTransform="matrix(0.78123406,-0.00279027,0.00234391,0.4557366,-206.3524,217.41979)"
        gradientUnits="userSpaceOnUse"
-       id="radialGradient6366-8"
-       xlink:href="#linearGradient4806-8"
+       id="radialGradient14756"
+       xlink:href="#linearGradient4806-4"
        inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4806-4">
+      <stop
+         style="stop-color:#44d8ff;stop-opacity:1"
+         offset="0"
+         id="stop4808-0" />
+      <stop
+         style="stop-color:#009bf9;stop-opacity:0.98360658"
+         offset="1"
+         id="stop4810-3" />
+    </linearGradient>
+    <radialGradient
+       r="20"
+       fy="16.234577"
+       fx="197.48041"
+       cy="16.234577"
+       cx="197.48041"
+       gradientTransform="matrix(25.612537,5.0318948,-1.2875263,7.2615473,-5733.3989,-955.3841)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient14758"
+       xlink:href="#linearGradient2295-3-2"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient2295-3-2"
+       inkscape:collect="always">
+      <stop
+         id="stop2297-9-8"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:1;" />
+      <stop
+         id="stop2299-1-0"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0;" />
+    </linearGradient>
+    <radialGradient
+       r="20"
+       fy="16.234577"
+       fx="197.48041"
+       cy="16.234577"
+       cx="197.48041"
+       gradientTransform="matrix(25.612537,5.0318948,-1.2875263,7.2615473,-5733.3989,-955.3841)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient18141"
+       xlink:href="#linearGradient2295-3-2"
+       inkscape:collect="always" />
+    <inkscape:perspective
+       id="perspective6508"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient4806-8"
-       id="radialGradient6399"
+       xlink:href="#linearGradient4806-4-0"
+       id="radialGradient6449"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.78123406,-0.00279027,0.00234391,0.45573659,-218.262,440.70763)"
+       gradientTransform="matrix(0.78123406,-0.00279027,0.00234391,0.4557366,-206.3524,217.41979)"
+       cx="-392.68732"
+       cy="190.19373"
+       fx="-392.68732"
+       fy="190.19373"
+       r="320" />
+    <linearGradient
+       id="linearGradient4806-4-0">
+      <stop
+         style="stop-color:#44d8ff;stop-opacity:1"
+         offset="0"
+         id="stop4808-0-3" />
+      <stop
+         style="stop-color:#009bf9;stop-opacity:0.98360658"
+         offset="1"
+         id="stop4810-3-9" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2295-3-2-1"
+       id="radialGradient6451"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(25.612537,5.0318948,-1.2875263,7.2615473,-5733.3989,-955.3841)"
+       cx="197.48041"
+       cy="16.234577"
+       fx="197.48041"
+       fy="16.234577"
+       r="20" />
+    <linearGradient
+       id="linearGradient2295-3-2-1">
+      <stop
+         id="stop2297-9-8-9"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:1;" />
+      <stop
+         id="stop2299-1-0-6"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0;" />
+    </linearGradient>
+    <filter
+       id="filter7859-7-0-7-9"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7861-3-3-6-3"
+         type="saturate"
+         values="0" />
+    </filter>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4806-4-0"
+       id="radialGradient6482"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.78123406,-0.00279027,0.00234391,0.4557366,-206.3524,217.41979)"
        cx="-392.68732"
        cy="190.19373"
        fx="-392.68732"
@@ -32816,10 +33043,132 @@
        r="320" />
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient4806-8"
-       id="radialGradient6413"
+       xlink:href="#linearGradient2295-3-2-1"
+       id="radialGradient6484"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.78123406,-0.00279027,0.00234391,0.45573659,-206.3524,192.41979)"
+       gradientTransform="matrix(25.612537,5.0318948,-1.2875263,7.2615473,-5733.3989,-955.3841)"
+       cx="197.48041"
+       cy="16.234577"
+       fx="197.48041"
+       fy="16.234577"
+       r="20" />
+    <inkscape:perspective
+       id="perspective31404"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective31470"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <filter
+       id="filter7859-7-0-75"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7861-3-3-8"
+         type="saturate"
+         values="0" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3677-0">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.61240497"
+         id="feGaussianBlur3679-3" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3862"
+       x="-0.018240552"
+       width="1.0364811"
+       y="-0.15410459"
+       height="1.3082092">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.1084786"
+         id="feGaussianBlur3864" />
+    </filter>
+    <inkscape:perspective
+       id="perspective32618"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <filter
+       id="filter7859-7-0-75-6"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7861-3-3-8-0"
+         type="saturate"
+         values="0" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter32565">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.19068882"
+         id="feGaussianBlur32567" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3677-0-2">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.61240497"
+         id="feGaussianBlur3679-3-9" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3862-4"
+       x="-0.018240552"
+       width="1.0364811"
+       y="-0.15410459"
+       height="1.3082092">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.1084786"
+         id="feGaussianBlur3864-3" />
+    </filter>
+    <inkscape:perspective
+       id="perspective10940"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4806-4-0"
+       id="radialGradient11523"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.78123406,-0.00279027,0.00234391,0.4557366,-206.3524,217.41979)"
        cx="-392.68732"
        cy="190.19373"
        fx="-392.68732"
@@ -32827,37 +33176,125 @@
        r="320" />
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient4806-8"
-       id="radialGradient6445"
+       xlink:href="#linearGradient2295-3-2-1"
+       id="radialGradient11525"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.78123406,-0.00334832,0.00234391,0.54688391,-206.3524,174.865)"
-       cx="-392.68732"
-       cy="190.19373"
-       fx="-392.68732"
-       fy="190.19373"
-       r="320" />
+       gradientTransform="matrix(25.612537,5.0318948,-1.2875263,7.2615473,-5733.3989,-955.3841)"
+       cx="197.48041"
+       cy="16.234577"
+       fx="197.48041"
+       fy="16.234577"
+       r="20" />
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient4806-8"
-       id="radialGradient6361"
+       xlink:href="#linearGradient2295-3-2-1"
+       id="radialGradient11528"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.78123406,-0.00334832,0.00234391,0.54688391,-206.3524,174.865)"
-       cx="-392.68732"
-       cy="190.19373"
-       fx="-392.68732"
-       fy="190.19373"
-       r="320" />
+       gradientTransform="matrix(25.612537,5.0318948,-1.2875263,7.2615473,-5733.3989,-955.3841)"
+       cx="197.48041"
+       cy="16.234577"
+       fx="197.48041"
+       fy="16.234577"
+       r="20" />
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient4806-8"
-       id="radialGradient6375"
+       xlink:href="#linearGradient11537"
+       id="radialGradient11543"
+       cx="-512.68732"
+       cy="305.19373"
+       fx="-512.68732"
+       fy="305.19373"
+       r="200"
+       gradientTransform="matrix(1,0,0,0.625,0,114.44765)"
+       gradientUnits="userSpaceOnUse" />
+    <inkscape:perspective
+       id="perspective11584"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11537-7"
+       id="radialGradient11543-3"
+       cx="-512.68732"
+       cy="305.19373"
+       fx="-512.68732"
+       fy="305.19373"
+       r="200"
+       gradientTransform="matrix(1,0,0,0.625,0,114.44765)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient11537-7">
+      <stop
+         style="stop-color:#e40086;stop-opacity:1;"
+         offset="0"
+         id="stop11539-4" />
+      <stop
+         id="stop7381"
+         offset="0.5"
+         style="stop-color:#9c005c;stop-opacity:1;" />
+      <stop
+         style="stop-color:#7e004a;stop-opacity:1;"
+         offset="0.75"
+         id="stop7385" />
+      <stop
+         style="stop-color:#6d003f;stop-opacity:1;"
+         offset="1"
+         id="stop11541-1" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2295-3-2-1-3"
+       id="radialGradient11528-1"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.78123403,-0.00279027,0.00234391,0.45573659,-206.3524,217.41979)"
-       cx="-392.68732"
-       cy="190.19373"
-       fx="-392.68732"
-       fy="190.19373"
-       r="320" />
+       gradientTransform="matrix(25.612537,5.0318948,-1.2875263,7.2615473,-5733.3989,-955.3841)"
+       cx="197.48041"
+       cy="16.234577"
+       fx="197.48041"
+       fy="16.234577"
+       r="20" />
+    <linearGradient
+       id="linearGradient2295-3-2-1-3">
+      <stop
+         id="stop2297-9-8-9-0"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:1;" />
+      <stop
+         id="stop2299-1-0-6-3"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0;" />
+    </linearGradient>
+    <inkscape:perspective
+       id="perspective11871"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2295-3-2-1-3"
+       id="radialGradient7376"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(25.612537,5.0318948,-1.2875263,7.2615473,-5733.3989,-955.3841)"
+       cx="197.48041"
+       cy="16.234577"
+       fx="197.48041"
+       fy="16.234577"
+       r="20" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11537-7"
+       id="radialGradient7379"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.625,0,114.44765)"
+       cx="-512.68732"
+       cy="305.19373"
+       fx="-512.68732"
+       fy="305.19373"
+       r="200" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -32869,16 +33306,16 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.936"
+     inkscape:zoom="2.82"
      inkscape:cx="200"
      inkscape:cy="125"
      inkscape:document-units="px"
-     inkscape:current-layer="g7159"
+     inkscape:current-layer="layer1"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1280"
-     inkscape:window-height="1004"
-     inkscape:window-x="1276"
+     inkscape:window-height="969"
+     inkscape:window-x="-3"
      inkscape:window-y="-3"
      showgrid="false"
      inkscape:window-maximized="1" />
@@ -32890,7 +33327,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -32900,21 +33337,22 @@
      id="layer1"
      transform="translate(712.68732,-180.19373)">
     <g
-       id="g7159">
-      <rect
-         style="fill:url(#radialGradient6375);fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="rect6369-2"
-         width="400"
-         height="250"
-         x="-712.68732"
-         y="180.19373"
-         inkscape:export-xdpi="225"
-         inkscape:export-ydpi="225"
-         inkscape:export-filename="/home/quique/src/svn/bardinux-trunk/metapkgs/bardinux-kde-desktop/gcs/newfiles_skel/usr/share/wallpapers/bardinux/contents/images/1600x1200.jpg.png" />
-    </g>
-    <g
        id="g6371"
        transform="matrix(0.6801762,0,0,0.6801762,-222.71201,28.172019)"
        style="opacity:0.2;fill:none;stroke:#ffffff;stroke-width:5.88082933;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       inkscape:export-filename="/home/quique/src/svn/bardinux-trunk/metapkgs/bardinux-kde-desktop/gcs/newfiles_skel/usr/share/wallpapers/bardinux/contents/images/1600x1200.jpg.png"
+       inkscape:export-ydpi="225"
+       inkscape:export-xdpi="225"
+       y="180.19373"
+       x="-712.68732"
+       height="250"
+       width="400"
+       id="rect6369-3-0"
+       style="fill:url(#radialGradient7379);fill-opacity:1.0;fill-rule:nonzero;stroke:none" />
+    <g
+       transform="matrix(0.19718879,0,0,0.19718879,-445.28244,344.49389)"
+       id="layer1-6"
+       inkscape:label="Layer 1" />
   </g>
 </svg>
