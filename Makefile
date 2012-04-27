@@ -36,6 +36,7 @@ status: $(patsubst %/gcs,%/status,$(wildcard */gcs))
 %/clean: %/svg
 	$(info [$(DATE)] $(PKGNAME): cleanning useless files...)
 	-find $(PKGNAME) -iname "*.gcs" -delete
+	-find $(PKGNAME) -iname "*.~?~" -delete
 	-rm -rf $(PKGNAME)/debian
 
 %/realclean: %/clean
@@ -50,10 +51,18 @@ status: $(patsubst %/gcs,%/status,$(wildcard */gcs))
 	$(info ~~~~~ $(PKGNAME) ~~~~~)
 	bzr st $(PKGNAME)
 
-commit:
-	bzr diff */gcs/info | grep "^+" | sed -e 's#+++ \(.*\)/gcs/info.*#\n\1:#g' -e 's#^+version: \(.*\)#(New version: \1)#' -e 's#^+##' | sed '1d' | tee $(TMPFILE)
+%/commit:
+	bzr diff $(PKGNAME)/gcs/changelog  | grep '^+.*urgency=' | sed -e 's/\(.* (.*)\).*/\1/g' -e '1s/.*/Released packages:\n&/' | tee $(TMPFILE)
+	bzr diff $(PKGNAME)/gcs/info | grep "^+" | sed -e 's#+++ \(.*\)/gcs/info.*#\n\1:#g' -e 's#^+version: \(.*\)#(New version: \1)#' -e 's#^+##' | sed '1d' | tee -a $(TMPFILE)
 	#read -p "Do you want to commit? [y/N] " answer
-	bzr ci -F $(TMPFILE)
+	bzr ci $(PKGNAME) -F $(TMPFILE)
+	-rm -f $(TMPFILE)
+
+commit:
+	bzr diff */gcs/changelog  | grep '^+.*urgency=' | sed -e 's/\(.* (.*)\).*/\1/g' -e 's/^+/    - /g' -e '1s/.*/Released packages:\n&/' | tee $(TMPFILE)
+	bzr diff */gcs/info | grep "^+" | sed -e 's#+++ \(.*\)/gcs/info.*#\n\1:#g' -e 's#^+version: \(.*\)#(New version: \1)#' -e 's#^+##' | sed '1d' | tee -a $(TMPFILE)
+	#read -p "Do you want to commit? [y/N] " answer
+	bzr ci -x Makefile -F $(TMPFILE)
 	-rm -f $(TMPFILE)
 
 .PHONY: clean
