@@ -1,25 +1,44 @@
 #!/bin/sh
 
+set -e
+
 TITLE="Primer inicio"
 MSGTEXT="<b>Bienvenido/a a Bardinux</b>
 <p>Bardinux no es sólo lo que contiene este disco. Todavía hay más.</p>
 ¿Desea ver una introducción a las posibilidades de Bardinux?"
+MSGTEXT_PLAIN=$(echo $MSGTEXT | sed 's|</\?p>|\\n\\n|g')
+
+KDE_CMD="kdialog --title $TITLE --yesno '$MSGTEXT'"
+GTK_CMD="zenity --question --ok-label 'Sí' --cancel-label 'No' --text '$MSGTEXT_PLAIN'"
+
 URL="file:///usr/share/bardinux-first-start/HTML/index.html"
 APP="/usr/share/bardinux-first-start/application.ini"
 SUCCESS_FILE="$HOME/.oslull/bardinux-first-start"
+
 
 [ -e $SUCCESS_FILE ] && [ "$2" != "--force" ] && exit 0
 
 case $1 in
     kde|qt)
-        if ! kdialog --title "$TITLE" --yesno "$MSGTEXT"; then
-            exit 0
+        if which kdialog > /dev/null; then
+			if ! kdialog --title "$TITLE" --yesno "$MSGTEXT"; then
+			   exit 0;
+			fi
+		elif which zenity > /dev/null; then
+			if ! zenity --question --ok-label "Sí" --cancel-label "No" --text "$MSGTEXT_PLAIN"; then
+                exit 0
+            fi
         fi
         ;;
     gnome|gtk)
-        MSGTEXT=$(echo $MSGTEXT | sed 's|</\?p>|\\n\\n|g')
-        if ! zenity --question --ok-label "Sí" --cancel-label "No" --text "$MSGTEXT"; then
-            exit 0
+		if which zenity > /dev/null; then
+			if ! zenity --question --ok-label "Sí" --cancel-label "No" --text "$MSGTEXT_PLAIN"; then
+                exit 0
+            fi
+        elif which kdialog > /dev/null; then
+			if ! kdialog --title "$TITLE" --yesno "$MSGTEXT"; then
+			   exit 0;
+			fi
         fi
         ;;
     *)
