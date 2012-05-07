@@ -1,3 +1,11 @@
+bardinux-first-start (1.3.1) oneiric; urgency=low
+
+  * Fixed Xul application for new Firefox versions.
+  * Fixed do-first-start script to use alternate UI if the first does not exist.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 27 Apr 2012 14:11:28 +0100
+
+
 bardinux-first-start (1.0.5) lucid; urgency=low
 
   * Added new box to the web to split privative and free extras.

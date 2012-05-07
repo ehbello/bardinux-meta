@@ -7,6 +7,7 @@
 #ttf-symbol-replacement
 #ttf-tahoma-replacement
 #ttf-unfonts
+#ttfm
 fondu
 fontforge
 fontforge-extras
@@ -173,4 +174,3 @@ ttf-uralic
 ttf-vlgothic
 ttf-wqy-microhei
 ttf-wqy-zenhei
-ttfm
