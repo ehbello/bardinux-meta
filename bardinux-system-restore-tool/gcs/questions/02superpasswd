@@ -1,3 +1,3 @@
 Template: bardinux-system-restore-tool/superpasswd
 Type: password
-Description: Specify SuperAdministrator password
+Description: Specify a password for SuperAdministrator (master) user

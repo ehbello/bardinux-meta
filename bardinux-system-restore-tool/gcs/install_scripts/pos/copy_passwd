@@ -1,0 +1,1 @@
+cp -a /etc/passwd /etc/shadow /etc/group /home/

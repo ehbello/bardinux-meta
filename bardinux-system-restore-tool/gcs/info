@@ -19,10 +19,11 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2.38
+version: 1.2.39
 
 #config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - Some menuentrys weren't disabled when upgrade (new try)
+    - Backup user's info for first time when the package is installed.
+    - Changed the description of install questions.
