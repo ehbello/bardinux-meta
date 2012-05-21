@@ -4,11 +4,11 @@ APT::Periodic::Download-Upgradeable-Packages "1";
 APT::Periodic::AutocleanInterval "1";
 APT::Periodic::Unattended-Upgrade "1";
 
-// Automatically upgrade packages from these (origin, archive) pairs
+// Automatically upgrade packages from these (origin:archive) pairs
 Unattended-Upgrade::Allowed-Origins {
-	"Ubuntu precise-security";
-//	"Ubuntu precise-updates";
-//	"Ubuntu precise";
+	"Ubuntu:precise-security";
+	"Ubuntu:precise-updates";
+	"Ubuntu:precise";
 	"Bardinux precise-security";
 	"Bardinux precise-updates";
 	"Bardinux precise";
@@ -32,17 +32,22 @@ Unattended-Upgrade::AutoFixInterruptedDpkg "true";
 // they can be interrupted with SIGUSR1. This makes the upgrade
 // a bit slower but it has the benefit that shutdown while a upgrade
 // is running is possible (with a small delay)
-Unattended-Upgrades::MinimalSteps "true";
+Unattended-Upgrade::MinimalSteps "true";
+
+// Install all unattended-upgrades when the machine is shuting down
+// instead of doing it in the background while the machine is running
+// This will (obviously) make shutdown slower
+//Unattended-Upgrade::InstallOnShutdown "true";
 
 // Send email to this address for problems or packages upgrades
 // If empty or unset then no email is sent, make sure that you
-// have a working mail setup on your system. The package 'mailx'
-// must be installed or anything that provides /usr/bin/mail.
-//Unattended-Upgrade::Mail "root@localhost";
+// have a working mail setup on your system. A package that provides
+// 'mailx' must be installed.
+Unattended-Upgrade::Mail "proa@osl.ull.es";
 
 // Set this value to "true" to get emails only on errors. Default
 // is to always send a mail if Unattended-Upgrade::Mail is set
-//Unattended-Upgrade::MailOnlyOnError "true";
+Unattended-Upgrade::MailOnlyOnError "true";
 
 // Do automatic removal of new unused dependencies after the upgrade
 // (equivalent to apt-get autoremove)
