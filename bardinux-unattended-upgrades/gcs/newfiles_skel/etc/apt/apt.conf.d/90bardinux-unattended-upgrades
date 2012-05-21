@@ -9,9 +9,9 @@ Unattended-Upgrade::Allowed-Origins {
 	"Ubuntu:precise-security";
 	"Ubuntu:precise-updates";
 	"Ubuntu:precise";
-	"Bardinux precise-security";
-	"Bardinux precise-updates";
-	"Bardinux precise";
+	"Bardinux:precise-security";
+	"Bardinux:precise-updates";
+	"Bardinux:precise";
 };
 
 // List of packages to not update
