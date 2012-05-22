@@ -1,3 +1,12 @@
+bardinux-unattended-upgrades (1.3.4) oneiric; urgency=low
+
+  * Generalized unattended-upgrades config file for multiple releases.
+  * Added verbosity to unattended-upgrades.
+  * Forced to run unattended-upgrades once an hour.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 22 May 2012 12:03:30 +0100
+
+
 bardinux-unattended-upgrades (1.3.3) oneiric; urgency=low
 
   * Fixed a missed double colon in unattended-upgraded config file.

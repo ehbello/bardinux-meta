@@ -1,3 +1,10 @@
+bardinux-system-restore-tool (1.2.40) oneiric; urgency=low
+
+  * Fixed an excluded path of rsnapshot.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 22 May 2012 12:05:30 +0100
+
+
 bardinux-system-restore-tool (1.2.39) oneiric; urgency=low
 
   * Backup user's info for first time when the package is installed.
