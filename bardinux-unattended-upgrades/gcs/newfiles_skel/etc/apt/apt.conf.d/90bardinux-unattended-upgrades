@@ -3,15 +3,16 @@ APT::Periodic::Update-Package-Lists "1";
 APT::Periodic::Download-Upgradeable-Packages "1";
 APT::Periodic::AutocleanInterval "1";
 APT::Periodic::Unattended-Upgrade "1";
+APT::Periodic::Verbose "1";
 
 // Automatically upgrade packages from these (origin:archive) pairs
 Unattended-Upgrade::Allowed-Origins {
-	"Ubuntu:precise-security";
-	"Ubuntu:precise-updates";
-	"Ubuntu:precise";
-	"Bardinux:precise-security";
-	"Bardinux:precise-updates";
-	"Bardinux:precise";
+	"${distro_id}:${distro_codename}-security";
+	"${distro_id}:${distro_codename}-updates";
+	"${distro_id}:${distro_codename}";
+	"Bardinux:${distro_codename}-security";
+	"Bardinux:${distro_codename}-updates";
+	"Bardinux:${distro_codename}";
 };
 
 // List of packages to not update
