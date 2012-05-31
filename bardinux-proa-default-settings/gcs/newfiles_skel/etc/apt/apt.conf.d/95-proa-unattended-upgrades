@@ -1,0 +1,17 @@
+APT::Periodic::Enable "1";
+APT::Periodic::Update-Package-Lists "-1"; // -1 means always
+APT::Periodic::Download-Upgradeable-Packages "-1";
+APT::Periodic::AutocleanInterval "1";
+APT::Periodic::Unattended-Upgrade "-1";
+APT::Periodic::Verbose "1";
+APT::Periodic::RandomSleep "0";
+
+// Send email to this address for problems or packages upgrades
+// If empty or unset then no email is sent, make sure that you
+// have a working mail setup on your system. A package that provides
+// 'mailx' must be installed.
+Unattended-Upgrade::Mail "proa@osl.ull.es";
+
+// Set this value to "true" to get emails only on errors. Default
+// is to always send a mail if Unattended-Upgrade::Mail is set
+Unattended-Upgrade::MailOnlyOnError "true";

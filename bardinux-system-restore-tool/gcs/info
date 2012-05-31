@@ -19,10 +19,10 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.2.40
+version: 1.2.41
 
 #config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - Fixed an excluded path of rsnapshot.
+    - Disabled use_lazy_deletes for rsnapshot.

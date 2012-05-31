@@ -3,7 +3,6 @@ APT::Periodic::Update-Package-Lists "1";
 APT::Periodic::Download-Upgradeable-Packages "1";
 APT::Periodic::AutocleanInterval "1";
 APT::Periodic::Unattended-Upgrade "1";
-APT::Periodic::Verbose "1";
 
 // Automatically upgrade packages from these (origin:archive) pairs
 Unattended-Upgrade::Allowed-Origins {
@@ -44,11 +43,11 @@ Unattended-Upgrade::MinimalSteps "true";
 // If empty or unset then no email is sent, make sure that you
 // have a working mail setup on your system. A package that provides
 // 'mailx' must be installed.
-Unattended-Upgrade::Mail "proa@osl.ull.es";
+//Unattended-Upgrade::Mail "root@localhost";
 
 // Set this value to "true" to get emails only on errors. Default
 // is to always send a mail if Unattended-Upgrade::Mail is set
-Unattended-Upgrade::MailOnlyOnError "true";
+//Unattended-Upgrade::MailOnlyOnError "true";
 
 // Do automatic removal of new unused dependencies after the upgrade
 // (equivalent to apt-get autoremove)
