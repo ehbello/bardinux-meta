@@ -12,6 +12,8 @@ Unattended-Upgrade::Allowed-Origins {
 	"Bardinux:${distro_codename}-security";
 	"Bardinux:${distro_codename}-updates";
 	"Bardinux:${distro_codename}";
+	"Canonical:${distro_codename}";
+	"Medibuntu:${distro_codename}";
 };
 
 // List of packages to not update

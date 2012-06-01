@@ -19,9 +19,8 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.3.2
+version: 1.3.3
 
 # Cambios en esta versión
 changes:
-    - Changed background color of GRUB2 splash to black.
-    - Added PROAV logo to GRUB2 splash.
+    - Moved PROAV logo to right side of background for GRUB2.

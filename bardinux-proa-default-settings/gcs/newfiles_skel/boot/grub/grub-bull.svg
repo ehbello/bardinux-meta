@@ -93,8 +93,8 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1280"
-     inkscape:window-height="1004"
-     inkscape:window-x="1277"
+     inkscape:window-height="969"
+     inkscape:window-x="-3"
      inkscape:window-y="-3"
      inkscape:window-maximized="1">
     <sodipodi:guide
@@ -103,7 +103,7 @@
        id="guide4719" />
     <sodipodi:guide
        orientation="1,0"
-       position="612.82588,130.76351"
+       position="615.07246,414.49275"
        id="guide3336" />
     <sodipodi:guide
        orientation="1,0"
@@ -122,7 +122,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -140,7 +140,7 @@
        y="573.38354" />
     <g
        id="g3112"
-       transform="matrix(0.11301315,0,0,0.11301315,12.817012,578.83571)">
+       transform="matrix(0.11301315,0,0,0.11301315,509.49762,580.72345)">
       <path
          sodipodi:nodetypes="cccccccc"
          id="path2885-7"
