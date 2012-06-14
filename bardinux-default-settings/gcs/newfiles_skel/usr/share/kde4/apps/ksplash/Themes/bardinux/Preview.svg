@@ -32958,17 +32958,6 @@
          offset="1"
          id="stop11541-1" />
     </linearGradient>
-    <radialGradient
-       r="200"
-       fy="305.19373"
-       fx="-512.68732"
-       cy="305.19373"
-       cx="-512.68732"
-       gradientTransform="matrix(1,0,0,0.75,4.85625e-5,51.298441)"
-       gradientUnits="userSpaceOnUse"
-       id="radialGradient6623-6"
-       xlink:href="#linearGradient11537-7"
-       inkscape:collect="always" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -32988,8 +32977,8 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1280"
-     inkscape:window-height="1004"
-     inkscape:window-x="1277"
+     inkscape:window-height="969"
+     inkscape:window-x="-3"
      inkscape:window-y="-3"
      showgrid="false"
      inkscape:window-maximized="1" />
@@ -33012,16 +33001,14 @@
      transform="translate(712.68732,-130.19373)">
     <g
        id="g6448">
-      <rect
-         inkscape:export-filename="/home/quique/src/svn/bardinux-trunk/metapkgs/bardinux-kde-desktop/gcs/newfiles_skel/usr/share/wallpapers/bardinux/contents/images/1600x1200.jpg.png"
-         inkscape:export-ydpi="225"
-         inkscape:export-xdpi="225"
+      <image
+         sodipodi:absref="/home/quique/src/bzr/bardinux-meta/trunk/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/ksplash/Themes/bardinux/1920x1200/background.png"
+         xlink:href="1920x1200/background.png"
          y="130.19373"
          x="-712.68732"
+         id="image6602"
          height="300"
-         width="400"
-         id="rect6369-3-0"
-         style="fill:url(#radialGradient6623-6);fill-opacity:1;fill-rule:nonzero;stroke:none" />
+         width="400" />
     </g>
     <g
        id="g6371"
@@ -33030,42 +33017,42 @@
     <image
        sodipodi:absref="/home/quique/src/bzr/bardinux-meta/trunk/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/ksplash/Themes/bardinux/1600x1200/icon2.png"
        xlink:href="1600x1200/icon2.png"
-       width="62"
-       height="98.564102"
-       id="image6359"
+       y="242.22418"
        x="-614.37482"
-       y="242.22418" />
+       id="image6359"
+       height="98.564102"
+       width="62" />
     <image
        sodipodi:absref="/home/quique/src/bzr/bardinux-meta/trunk/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/ksplash/Themes/bardinux/1600x1200/icon1.png"
        xlink:href="1600x1200/icon1.png"
-       width="61.959682"
-       height="98.500008"
-       id="image6373"
+       y="242.19373"
        x="-667.22766"
-       y="242.19373" />
+       id="image6373"
+       height="98.500008"
+       width="61.959682" />
     <image
        sodipodi:absref="/home/quique/src/bzr/bardinux-meta/trunk/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/ksplash/Themes/bardinux/1600x1200/icon3.png"
        xlink:href="1600x1200/icon3.png"
-       width="61.959682"
-       height="98.500008"
-       id="image6387"
+       y="242.19373"
        x="-561.93732"
-       y="242.19373" />
+       id="image6387"
+       height="98.500008"
+       width="61.959682" />
     <image
        sodipodi:absref="/home/quique/src/bzr/bardinux-meta/trunk/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/ksplash/Themes/bardinux/1600x1200/icon4.png"
        xlink:href="1600x1200/icon4.png"
-       width="61.959679"
-       height="98.500008"
-       id="image6401"
+       y="242.19373"
        x="-506.69537"
-       y="242.19373" />
+       id="image6401"
+       height="98.500008"
+       width="61.959679" />
     <image
        sodipodi:absref="/home/quique/src/bzr/bardinux-meta/trunk/bardinux-default-settings/gcs/newfiles_skel/usr/share/kde4/apps/ksplash/Themes/bardinux/1600x1200/icon5.png"
        xlink:href="1600x1200/icon5.png"
-       width="68.402779"
-       height="98.500008"
-       id="image6415"
+       y="242.19373"
        x="-441.68732"
-       y="242.19373" />
+       id="image6415"
+       height="98.500008"
+       width="68.402779" />
   </g>
 </svg>

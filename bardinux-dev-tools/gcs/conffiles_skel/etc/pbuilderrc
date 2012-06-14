@@ -1,4 +1,4 @@
-DISTRIBUTION="${DIST:-$(lsb_release -cs)}"
+DISTRIBUTION="${DISTRIB:-$(lsb_release -cs)}"
 ARCH="${ARCH:-$(dpkg --print-architecture)}"
 
 NAME="${DISTRIBUTION}"

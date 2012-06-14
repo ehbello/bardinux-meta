@@ -4,6 +4,7 @@ cdbs
 cowdancer
 debhelper
 devscripts
+dput
 fakeroot
 pbuilder
 reprepro
