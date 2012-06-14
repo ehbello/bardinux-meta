@@ -1,3 +1,10 @@
+bardinux-sigaull-default-settings (1.3.3) precise; urgency=low
+
+  * Changed theme color to purple.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 14 Jun 2012 15:23:04 +0100
+
+
 bardinux-sigaull-default-settings (1.3.2) oneiric; urgency=low
 
   * New unattended-upgrades configuration to install on shutdown.

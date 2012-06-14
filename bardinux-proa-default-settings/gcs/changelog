@@ -1,3 +1,12 @@
+bardinux-proa-default-settings (1.3.4) precise; urgency=low
+
+  * Forget last user at KDM login.
+  * Forced to disable MinimalSteps on UnattendedUpgrades.
+  * Changed theme color to purple.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 14 Jun 2012 15:20:18 +0100
+
+
 bardinux-proa-default-settings (1.3.3) oneiric; urgency=low
 
   * Moved PROAV logo to right side of background for GRUB2.
