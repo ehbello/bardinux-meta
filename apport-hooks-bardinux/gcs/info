@@ -19,8 +19,8 @@ shortdesc: "Apport hooks for Bardinux"
 longdesc: "This package contains apport hooks for Bardinux, which allow users to\n generate crash reports against Bardinux packages and submit them to the\n Bardinux bugtracker."
 
 # Versión del paquete
-version: 1bardinux1
+version: 1bardinux2
 
 # Cambios en esta versión
 changes:
-    - Initial release based on appport-hooks-medibuntu from\n Medibuntu. Thanks to Lionel Le Folgoc <mrpouit@ubuntu.com>
+    - Rebuild for 'precise'.

@@ -1,3 +1,10 @@
+syslinux-themes-bardinux (1) precise; urgency=low
+
+  * Rebuild for 'precise'.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 14 Jun 2012 17:07:11 +0100
+
+
 syslinux-themes-bardinux (1~dev1) oneiric; urgency=low
 
   * Initial release, based in part on syslinux-themes-ubuntu 1.

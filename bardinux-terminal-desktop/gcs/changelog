@@ -1,3 +1,10 @@
+bardinux-terminal-desktop (1.0~dev3) precise; urgency=low
+
+  * Rebuild for 'precise'.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 15 Jun 2012 12:40:23 +0100
+
+
 bardinux-terminal-desktop (1.0~dev2) lucid; urgency=low
 
   * Deleted provides file because this package does not provide nothing.

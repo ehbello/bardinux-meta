@@ -24,9 +24,8 @@ shortdesc: "Bardinux First Start dialog and webpage"
 longdesc: "This package contains the application and webpage that is showed on the first \n  Bardinux start."
 
 # Versión del paquete
-version: 1.3.1
+version: 1.3.2
 
 # Cambios en esta versión
 changes:
-    - Fixed Xul application for new Firefox versions.
-    - Fixed do-first-start script to use alternate UI if the first does not exist.
+    - Rebuild for 'precise'.

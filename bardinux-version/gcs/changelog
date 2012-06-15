@@ -1,3 +1,10 @@
+bardinux-version (1.3.2) precise; urgency=low
+
+  * Changed version of Bardinux to 3.4 Beta1.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 14 Jun 2012 16:16:08 +0100
+
+
 bardinux-version (1.3.1) oneiric; urgency=low
 
   * Changed version of Bardinux to 3.4 Alpha1.

@@ -1,3 +1,10 @@
+plymouth-theme-bardinux-logo (1.3.1) precise; urgency=low
+
+  * Rebuild for 'precise'.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 15 Jun 2012 12:41:16 +0100
+
+
 plymouth-theme-bardinux-logo (1.0.3) lucid; urgency=low
 
   * Changed color of background to black.

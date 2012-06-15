@@ -1,3 +1,10 @@
+bardinux-computing-task (1.3.1) precise; urgency=low
+
+  * Rebuild for 'precise'.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 14 Jun 2012 16:33:14 +0100
+
+
 bardinux-computing-task (1.2.3) oneiric; urgency=low
 
   * Added binutils-m68hc1x, gcc-m68hc1x and kdevelop to dependencies.

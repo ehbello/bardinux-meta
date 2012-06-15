@@ -19,9 +19,8 @@ shortdesc: "useful tools for Bardinux developers"
 longdesc: " This is a collection of useful tools that Bardinux developers use to make their\n packaging work a lot easier."
 
 # Versión del paquete
-version: 1.3.1
+version: 1.3.2
 
 # Cambios en esta versión
 changes:
-    - Added precise to reprepro configuration.
-    - Modified upload-repo to include packages optionally.
+    - Rebuild for 'precise'.

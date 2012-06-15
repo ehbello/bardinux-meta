@@ -31,7 +31,7 @@ Changelog:
 	- Used Fonts: Segoe Semibold, Segoe Black, Segoe UI
 -->
 <greeter id="theme">
-	<style font="Sans 11" window-text-color="#444444" text-color="#000000" disabled-text-color="#808080"/>
+	<style font="Sans 11" window-text-color="#000000" text-color="#000000" disabled-text-color="#808080"/>
 	<item type="svg" id="background" background="true">
 		<normal file="background.svgz"/>
 		<pos anchor="c" x="50%" y="50%" width="100%" height="100%"/>
@@ -45,12 +45,12 @@ Changelog:
 			</item>
 			<item type="label">
 				<pos anchor="w" x="28" y="33%"/>
-				<normal color="#444444" font="Sans 10"/>
+				<normal color="#000000" font="Sans 10"/>
 				<stock type="welcome-label"/>
 			</item>
 			<item type="label" id="clock">
 				<pos anchor="e" x="-22" y="33%"/>
-				<normal color="#444444" font="Sans 10"/>
+				<normal color="#000000" font="Sans 10"/>
 				<text>%c</text>
 			</item>
 		</fixed>

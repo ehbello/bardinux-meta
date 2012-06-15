@@ -1,3 +1,10 @@
+ubiquity-bardinux-artwork-gtk (1.0~dev3) precise; urgency=low
+
+  * Rebuild for 'precise'.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 15 Jun 2012 12:42:11 +0100
+
+
 ubiquity-bardinux-artwork-gtk (1.0~dev2) lucid; urgency=low
 
   * Rebuilt to fix the conflict problem with ubiquity.

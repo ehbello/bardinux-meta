@@ -1,3 +1,10 @@
+apport-hooks-bardinux (1bardinux2) precise; urgency=low
+
+  * Rebuild for 'precise'.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 15 Jun 2012 12:33:06 +0100
+
+
 apport-hooks-bardinux (1bardinux1) lucid; urgency=low
 
   * Initial release based on appport-hooks-medibuntu from\n Medibuntu. Thanks to Lionel Le Folgoc <mrpouit@ubuntu.com>

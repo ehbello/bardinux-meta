@@ -1,3 +1,10 @@
+bardinux-minimal (1.3.1) precise; urgency=low
+
+  * Rebuild for 'precise'.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 14 Jun 2012 16:51:42 +0100
+
+
 bardinux-minimal (1.2.4) oneiric; urgency=low
 
   * Added ntfs-3g to dependencies for ntfs fuse mounts.

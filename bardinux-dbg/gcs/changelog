@@ -1,3 +1,10 @@
+bardinux-dbg (1.3.1) precise; urgency=low
+
+  * Rebuild for 'precise'.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 15 Jun 2012 12:35:55 +0100
+
+
 bardinux-dbg (1.0.2) lucid; urgency=low
 
   * Added GNU Debugger (gdb) to dependences.
