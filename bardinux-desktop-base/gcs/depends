@@ -47,7 +47,7 @@ genisoimage
 hpijs-ppds
 hplip
 ijsgutenprint
-im-config
+#im-config
 im-switch
 inputattach
 kerneloops-daemon
