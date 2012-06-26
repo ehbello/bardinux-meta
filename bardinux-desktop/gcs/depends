@@ -9,6 +9,8 @@ bardinux-bookmarks
 bardinux-default-settings
 bardinux-desktop-base
 bluedevil
+#cdrdao
+cryptsetup
 dolphin
 #dragonplayer
 #firefox-kde-support
@@ -17,6 +19,7 @@ gnupg-agent
 gpgsm
 gstreamer0.10-qapt
 gtk2-engines-oxygen
+gtk3-engines-oxygen
 gwenview
 ibus-qt4
 jockey-kde
@@ -40,7 +43,8 @@ kdepim-strigi-plugins
 #kdepim-wizards
 kdesudo
 kde-window-manager
-kde-window-manager-gles
+#kde-window-manager-active-gles
+#kde-window-manager-gles
 kde-workspace-bin
 kde-zeroconf
 kdm
@@ -76,6 +80,7 @@ language-selector-kde
 libqca2-plugin-ossl
 libreoffice-kde
 libreoffice-style-oxygen
+mobile-broadband-provider-info
 muon
 muon-installer
 muon-notifier
@@ -83,7 +88,6 @@ okular
 okular-extra-backends
 oxygen-cursor-theme
 #oxygen-icon-theme
-#oxygen-icon-theme-complete
 partitionmanager
 phonon-backend-gstreamer
 pinentry-qt4
@@ -95,11 +99,12 @@ plasma-widget-kimpanel
 plasma-widget-menubar
 plasma-widget-message-indicator
 plasma-widget-networkmanagement
-plasma-widget-quickaccess
 plasma-widgets-addons
 #plymouth-theme-kubuntu-logo
 #plymouth-theme-kubuntu-text
+polkit-kde-1
 printer-applet
+python-qt4-dbus
 qapt-deb-installer
 #quassel
 #rekonq
@@ -114,3 +119,4 @@ upower
 usb-creator-kde
 userconfig
 virtuoso-minimal
+xsettings-kde
