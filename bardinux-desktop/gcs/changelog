@@ -1,3 +1,10 @@
+bardinux-desktop (1.3.4) precise; urgency=low
+
+  * Readded plasma-widget-quickaccess to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 26 Jun 2012 15:12:48 +0100
+
+
 bardinux-desktop (1.3.3) precise; urgency=low
 
   * Fine tuned the dependencies to lighten the distribution.
