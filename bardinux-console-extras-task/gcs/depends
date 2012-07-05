@@ -12,6 +12,7 @@ pppconfig
 pppoeconf
 rsync
 screen
+smbclient
 strace
 testdisk
 vim

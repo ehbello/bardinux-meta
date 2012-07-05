@@ -110,7 +110,6 @@ qapt-deb-installer
 #quassel
 #rekonq
 #smb4k
-smbclient
 software-properties-kde
 #sunbird
 system-config-printer-kde
