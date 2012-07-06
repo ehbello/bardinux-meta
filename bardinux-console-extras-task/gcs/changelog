@@ -1,3 +1,10 @@
+bardinux-console-extras-task (1.3.2) precise; urgency=low
+
+  * Added smbclient to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 05 Jul 2012 18:05:07 +0100
+
+
 bardinux-console-extras-task (1.3.1) precise; urgency=low
 
   * Rebuild for 'precise'.

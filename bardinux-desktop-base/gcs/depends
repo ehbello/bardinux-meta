@@ -5,8 +5,6 @@ bardinux-menu
 bardinux-minimal
 firefox | chromium-browser | rekonq
 firefox-locale-es | chromium-browser-l10n
-language-pack-gnome-es
-language-pack-kde-es
 libacr38u
 libccid
 libnss3-tools
