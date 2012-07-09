@@ -1,3 +1,10 @@
+bardinux-desktop-base (1.3.6) precise; urgency=low
+
+  * Removed some specific language packs from dependencies to lighten the distribution.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 06 Jul 2012 18:37:09 +0100
+
+
 bardinux-desktop-base (1.3.5) precise; urgency=low
 
   * Removed emesene and psi from dependencies to lighten the distribution.

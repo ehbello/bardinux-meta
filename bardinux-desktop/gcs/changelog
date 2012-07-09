@@ -1,3 +1,10 @@
+bardinux-desktop (1.3.7) precise; urgency=low
+
+  * Added language-pack-kde-es to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 06 Jul 2012 18:34:28 +0100
+
+
 bardinux-desktop (1.3.6) precise; urgency=low
 
   * Deleted smbclient of dependencies to lighten the distribution.
