@@ -1,3 +1,10 @@
+bardinux-console-extras-task (1.3.3) precise; urgency=low
+
+  * Added dialog and deborphan to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 11 Jul 2012 22:37:57 +0100
+
+
 bardinux-console-extras-task (1.3.2) precise; urgency=low
 
   * Added smbclient to dependencies.
