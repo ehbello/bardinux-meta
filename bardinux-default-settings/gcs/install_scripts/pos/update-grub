@@ -1,3 +1,7 @@
+if [ -e /etc/default/grub ]; then
+  sed 's/lsb_release -i/lsb_release -d/g' -i /etc/default/grub || true
+fi
+
 if [ -x /usr/sbin/update-grub ]; then
   update-grub || true
 fi
