@@ -2,5 +2,6 @@ bardinux-desktop
 bardinux-multimedia-task
 bardinux-sigaull-default-settings
 siga-client
+smbclient
 virtualbox-ose-dkms
 virtualbox-ose-qt | vboxgtk | qemu

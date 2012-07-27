@@ -1,5 +1,5 @@
 [Favorites]
-FavoriteURLs=/usr/share/applications/kde4/dolphin.desktop,/usr/share/applications/firefox.desktop,/usr/share/applications/thunderbird.desktop,/usr/share/applications/kde4/amarok.desktop,/usr/share/applications/libreoffice-writer.desktop,/usr/share/applications/emesene.desktop,/usr/share/applications/kde4/systemsettings.desktop,/usr/share/applications/kde4/muon-installer.desktop
+FavoriteURLs=/usr/share/applications/kde4/dolphin.desktop,/usr/share/applications/firefox.desktop,/usr/share/applications/thunderbird.desktop,/usr/share/applications/kde4/amarok.desktop,/usr/share/applications/libreoffice-writer.desktop,/usr/share/applications/kde4/kopete.desktop,/usr/share/applications/kde4/systemsettings.desktop,/usr/share/applications/kde4/muon-installer.desktop
 
 [KRunner]
 loadAll=false
