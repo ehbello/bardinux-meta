@@ -1,2 +1,2 @@
 # m h  dom mon dow   command
-0 */2 * * * 	root	test $(who | wc -l) -eq 0 && /sbin/init 0
+0 */1 * * * 	root	test $(who | wc -l) -eq 0 && /sbin/init 0
