@@ -32,6 +32,8 @@ pgplot5
 pspp
 python
 python-matplotlib
+python-numpy
+python-sympy
 python-tk
 r-recommended
 scilab
