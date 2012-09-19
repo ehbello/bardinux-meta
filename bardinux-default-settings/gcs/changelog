@@ -1,3 +1,10 @@
+bardinux-default-settings (1.3.9) precise; urgency=low
+
+  * Fixed broken links of Favorites menu of KDE kickoff.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 31 Jul 2012 13:25:57 +0100
+
+
 bardinux-default-settings (1.3.8) precise; urgency=low
 
   * Deleted divert of /etc/default/grub.
