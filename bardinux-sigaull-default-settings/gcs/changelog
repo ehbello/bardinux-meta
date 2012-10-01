@@ -1,3 +1,12 @@
+bardinux-sigaull-default-settings (1.3.6) precise; urgency=low
+
+  * Added akonadi configuration to reduze the size of mysql database.
+  * Forget last user at KDM login.
+  * Mini-refactorization of cron script for shutdown when idle.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 21 Sep 2012 12:41:12 +0100
+
+
 bardinux-sigaull-default-settings (1.3.5) precise; urgency=low
 
   * Decreased time of shutdown when idle.

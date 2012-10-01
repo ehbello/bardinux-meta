@@ -1,6 +1,6 @@
 # This file is sourced by Xsession(5), not executed.
 
-if id $(whoami) | grep -q '(Domain Users)'; then
+if id $(whoami) | grep -q '(Domain Users)\|(users)'; then
 	KDEDIRS="/usr/share/bardinux-cajacanarias-default-settings/kde-profile/default/:$KDEDIRS"
 fi
 # Does not overlay Domain Guests profile.

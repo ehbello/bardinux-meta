@@ -19,10 +19,8 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.3.6
+version: 1.3.7
 
 # Cambios en esta versión
 changes:
-    - Added akonadi configuration to reduze the size of mysql database.
-    - Forget last user at KDM login.
-    - Mini-refactorization of cron script for shutdown when idle.
+    - Fix for test logged users when try to shutdown.

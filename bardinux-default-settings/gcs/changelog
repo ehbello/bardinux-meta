@@ -1,3 +1,10 @@
+bardinux-default-settings (1.3.11) precise; urgency=low
+
+  * Removes Adobe Flash acceleration tunes due instability problems.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 21 Sep 2012 13:26:35 +0100
+
+
 bardinux-default-settings (1.3.10) precise; urgency=low
 
   * Enabled USESESSREG variable in kdm.conf to register gui logged users.
