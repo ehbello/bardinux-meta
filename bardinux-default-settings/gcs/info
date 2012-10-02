@@ -19,9 +19,10 @@ shortdesc: "Default settings and artwork for the Bardinux desktop system (KDE Ve
 longdesc: "This package contains the default settings and used by Bardinux. It also\n includes artwork and Bardinux branding."
 
 # Versión del paquete
-version: 1.0.33
+version: 1.0.34
 
 # Cambios en esta versión
 changes:
-    - Added script to reload kdm configuration.
-    - Disabled kwallet daemon by default.
+    - Removes Adobe Flash acceleration tunes due instability problems.
+    - Enabled USESESSREG variable in kdm.conf to register gui logged users.
+    - Added support to overlay PreselectUser variable of KDM configuration.

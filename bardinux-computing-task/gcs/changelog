@@ -1,3 +1,10 @@
+bardinux-computing-task (1.0.9) oneiric; urgency=low
+
+  * Deleted sun-java6-jdk dependency.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 23 Mar 2012 14:12:35 +0000
+
+
 bardinux-computing-task (1.0.8) lucid; urgency=low
 
   * Deleted some useless dependencies.

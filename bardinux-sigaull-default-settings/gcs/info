@@ -19,8 +19,9 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0.13
+version: 1.0.14
 
 # Cambios en esta versión
 changes:
-    - Wrong permissions for /etc/grub.d/00_acl. Need to be executable.
+    - Decreased time of shutdown when idle.
+    - Fix for test logged users when try to shutdown.

@@ -1,3 +1,10 @@
+bardinux-desktop-base (1.0.9) oneiric; urgency=low
+
+  * Added web browsers localizations for Spanish.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 07 Feb 2012 09:34:39 +0000
+
+
 bardinux-desktop-base (1.0.8) lucid; urgency=low
 
   * Added menu dependence to install Debian menu in desktop.

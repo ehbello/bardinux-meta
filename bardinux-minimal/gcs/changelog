@@ -1,3 +1,10 @@
+bardinux-minimal (1.0.5) oneiric; urgency=low
+
+  * Added ntfs-3g to dependencies for ntfs fuse mounts.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 23 Jan 2012 21:14:47 +0000
+
+
 bardinux-minimal (1.0.4) lucid; urgency=low
 
   * Changed again vim-tiny by vim.

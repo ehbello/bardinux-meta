@@ -1,3 +1,11 @@
+bardinux-default-settings (1.0.33) oneiric; urgency=low
+
+  * Added script to reload kdm configuration.
+  * Disabled kwallet daemon by default.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 25 Nov 2011 19:24:30 +0000
+
+
 bardinux-default-settings (1.0.31) oneiric; urgency=low
 
   * Changed the way of customize the firefox homepage without dependency of firefox version.
