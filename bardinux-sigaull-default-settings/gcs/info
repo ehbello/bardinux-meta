@@ -19,9 +19,9 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0.14
+version: 1.0.15
 
 # Cambios en esta versión
 changes:
-    - Decreased time of shutdown when idle.
-    - Fix for test logged users when try to shutdown.
+    - Configured unattended-upgrade to install on shutdown and mail only when error.
+    - Changed mail of error notifications.

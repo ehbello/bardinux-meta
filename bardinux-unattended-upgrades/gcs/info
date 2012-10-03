@@ -19,8 +19,8 @@ shortdesc: "automatic installation of package upgrades for Bardinux"
 longdesc: "This package configures the backend script for the APT::Periodic::Unattended-Upgrade for download and install all package upgrades automatically\n and unattended, taking care to only install packages from the\n configured APT source, recognizing also the Bardinux repositories."
 
 # Versión del paquete
-version: 1.0.1
+version: 1.0.2
 
 # Cambios en esta versión
 changes:
-    - Initial package
+    - Run unattended upgrades on network up.

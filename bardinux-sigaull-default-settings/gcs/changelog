@@ -1,3 +1,11 @@
+bardinux-sigaull-default-settings (1.0.14) lucid; urgency=low
+
+  * Decreased time of shutdown when idle.
+  * Fix for test logged users when try to shutdown.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 02 Oct 2012 16:57:14 +0100
+
+
 bardinux-sigaull-default-settings (1.0.13) oneiric; urgency=low
 
   * Wrong permissions for /etc/grub.d/00_acl. Need to be executable.
