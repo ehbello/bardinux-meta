@@ -19,10 +19,8 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.0.6
+version: 1.0.7
 
 # Cambios en esta versión
 changes:
-    - Redesigned wallpapers with new logo of CajaCanarias.
-    - Wallpapers images converted to PNG format.
-    - Forced to load CajaCanarias wallpaper diverting bardinux-sigaull wallpaper.
+    - Force to load CajaCanarias default settings for KDE to all users.

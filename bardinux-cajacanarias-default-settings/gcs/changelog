@@ -1,3 +1,10 @@
+bardinux-cajacanarias-default-settings (1.0.7) lucid; urgency=low
+
+  * Force to load CajaCanarias default settings for KDE to all users.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 05 Oct 2012 11:30:50 +0100
+
+
 bardinux-cajacanarias-default-settings (1.0.6) lucid; urgency=low
 
   * Redesigned wallpapers with new logo of CajaCanarias.
