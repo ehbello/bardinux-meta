@@ -19,8 +19,8 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.3.2
+version: 1.3.3
 
 # Cambios en esta versión
 changes:
-    - CajaCanarias wallpaper didn't load correctly.
+    - Force to load CajaCanarias default settings for KDE to all users.
