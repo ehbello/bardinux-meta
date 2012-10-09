@@ -35,7 +35,9 @@ python-matplotlib
 python-numpy
 python-sympy
 python-tk
+r-cran-rcmdr
 r-recommended
+rkward
 scilab
 scrollkeeper
 texlive
