@@ -4,4 +4,4 @@ bardinux-sigaull-default-settings
 siga-client
 smbclient
 virtualbox-ose-dkms
-virtualbox-ose-qt | vboxgtk | qemu
+virtualbox-ose-qt
