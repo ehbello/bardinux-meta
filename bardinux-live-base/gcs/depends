@@ -1,15 +1,11 @@
 casper
 discover
-groff-base
 jfsutils
 laptop-detect
 linux-image-generic
 localepurge
-man-db
-manpages
 ntfsprogs
 xfsprogs
 xresprobe
 bardinux-desktop
 bardinux-live
-plymouth-theme-bardinux-logo
