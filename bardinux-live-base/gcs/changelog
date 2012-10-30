@@ -1,3 +1,10 @@
+bardinux-live-base (1.3.2) precise; urgency=low
+
+  * Deleted some unuseful dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 23 Oct 2012 16:37:56 +0100
+
+
 bardinux-live-base (1.3.1) precise; urgency=low
 
   * Rebuild for 'precise'.
