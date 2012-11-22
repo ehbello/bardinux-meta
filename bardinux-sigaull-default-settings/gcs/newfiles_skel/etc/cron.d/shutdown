@@ -1,2 +1,2 @@
 # m h  dom mon dow   command
-0 */1 * * * 	root	test -z "$(who)" && /sbin/shutdown -h now
+0 */1 * * * 	root	test -z "$(who)" && test -z "$(rawtmp -b 0:15 | tail -n +2)" && /sbin/shutdown -h now
