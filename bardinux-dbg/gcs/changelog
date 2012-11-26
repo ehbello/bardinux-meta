@@ -1,3 +1,10 @@
+bardinux-dbg (1.3.2) precise; urgency=low
+
+  * Added script to list packages symbols of a proccess.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 22 Nov 2012 19:14:26 +0000
+
+
 bardinux-dbg (1.3.1) precise; urgency=low
 
   * Rebuild for 'precise'.
