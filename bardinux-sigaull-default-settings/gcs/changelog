@@ -1,3 +1,10 @@
+bardinux-sigaull-default-settings (1.0.17) lucid; urgency=low
+
+  * Changed cron to shutdown after 15 minutes of last user logout.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 22 Nov 2012 19:31:40 +0000
+
+
 bardinux-sigaull-default-settings (1.0.16) lucid; urgency=low
 
   * Force to load SIGAULL default settings for KDE to all users.
