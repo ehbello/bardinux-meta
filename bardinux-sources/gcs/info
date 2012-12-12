@@ -22,8 +22,8 @@ shortdesc: "Paquete de repositorios."
 longdesc: "Instala archivos fuente para permitir al gestor de paquetes instalar software desde los repositorios de Bardinux."
 
 # Versión del paquete
-version: 1.0.6
+version: 1.0.7
 
 # Cambios en esta versión
 changes:
-    - Disabled automatic reinstallation of a package when install.
+    - Enabling update manager to upgrade the system to the next LTS.
