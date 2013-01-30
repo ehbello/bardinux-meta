@@ -33,6 +33,7 @@ pspp
 python
 python-matplotlib
 python-numpy
+python-scipy
 python-sympy
 python-tk
 r-cran-rcmdr
