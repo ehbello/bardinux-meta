@@ -61,16 +61,16 @@ notreleased: $(patsubst %/gcs,%/notreleased,$(wildcard */gcs))
 %/commit: %/clean
 	bzr diff $(PKGNAME)/gcs/changelog  | grep '^+.*urgency=' | sed -e 's/\(.* (.*)\).*/\1/g' -e '1s/.*/Not released packages:\n&/' | tee $(TMPFILE)
 	bzr diff $(PKGNAME)/gcs/info | grep "^+" | sed -e 's#+++ \(.*\)/gcs/info.*#\n\1:#g' -e 's#^+version: \(.*\)#(New version: \1)#' -e 's#^+##' | sed '1d' | tee -a $(TMPFILE)
-	$(info Press [ENTER] to continue or ctrl-c to cancel commit)
-	read
+	echo Press [ENTER] to continue or ctrl-c to cancel commit
+	read dummy
 	bzr ci $(PKGNAME) -F $(TMPFILE)
 	-rm -f $(TMPFILE)
 
 commit: clean
 	bzr diff */gcs/changelog  | grep '^+.*urgency=' | sed -e 's/\(.* (.*)\).*/\1/g' -e 's/^+/    - /g' -e '1s/.*/Not released packages:\n&/' | tee $(TMPFILE)
 	bzr diff */gcs/info | grep "^+" | sed -e 's#+++ \(.*\)/gcs/info.*#\n\1:#g' -e 's#^+version: \(.*\)#(New version: \1)#' -e 's#^+##' | sed '1d' | tee -a $(TMPFILE)
-	$(info Press [ENTER] to continue or ctrl-c to cancel commit)
-	read
+	echo Press [ENTER] to continue or ctrl-c to cancel commit
+	read dummy
 	bzr ci -x Makefile -F $(TMPFILE)
 	-rm -f $(TMPFILE)
 
