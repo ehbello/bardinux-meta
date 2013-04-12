@@ -19,8 +19,9 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.3.12
+version: 1.3.14
 
 # Cambios en esta versión
 changes:
-    - Moved mysql configuration for akonadi to right path.
+    - Fixed (again) disabling of recovery entries of GRUB.
+    - Moved udev rules to /lib/udev/rules.d/

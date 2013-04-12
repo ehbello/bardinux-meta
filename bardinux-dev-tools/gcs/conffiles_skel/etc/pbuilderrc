@@ -1,5 +1,6 @@
 DISTRIBUTION="${DISTRIB:-$(lsb_release -cs)}"
 ARCH="${ARCH:-$(dpkg --print-architecture)}"
+TYPE="${TYPE:-$(lsb_release -is)}"
 
 NAME="${DISTRIBUTION}"
 case ${TYPE} in

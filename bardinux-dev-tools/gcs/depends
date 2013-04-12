@@ -1,7 +1,8 @@
 build-essential
+bzr
 ccache
 cdbs
-cowdancer
+cowbuilder
 debhelper
 devscripts
 dput
