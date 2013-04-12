@@ -3,6 +3,7 @@
 .SILENT:
 
 DEBTOOL ?= dpkg-buildpackage -rfakeroot
+STATUS_CMD ?= bzr st
 PKGNAME = $*
 DATE = $(shell date +"%b %d %T")
 TMPFILE := $(shell mktemp)
@@ -10,6 +11,7 @@ TMPFILE := $(shell mktemp)
 .PHONY: all status
 all: $(patsubst %/gcs,%.build,$(wildcard */gcs))
 status: $(patsubst %/gcs,%/status,$(wildcard */gcs))
+notreleased: $(patsubst %/gcs,%/notreleased,$(wildcard */gcs))
 
 %.build: %/debian/changelog
 	$(info [$(DATE)] $(PKGNAME): starting build process...)
@@ -47,19 +49,24 @@ status: $(patsubst %/gcs,%/status,$(wildcard */gcs))
 	-rm -f $(PKGNAME)*.tar.gz
 	-rm -f $(PKGNAME)*.deb
 
-%/status:
+%/status: %/notreleased
 	$(info ~~~~~ $(PKGNAME) ~~~~~)
-	bzr st $(PKGNAME)
+	$(STATUS_CMD) $(PKGNAME)
+
+%/notreleased:
+	if ! grep -q "($(shell awk '$$1 == "version:" { print $$2 }' $(PKGNAME)/gcs/info))" $(PKGNAME)/gcs/changelog; then \
+		echo $(PKGNAME) not notreleased ; \
+	fi
 
 %/commit: %/clean
-	bzr diff $(PKGNAME)/gcs/changelog  | grep '^+.*urgency=' | sed -e 's/\(.* (.*)\).*/\1/g' -e '1s/.*/Released packages:\n&/' | tee $(TMPFILE)
+	bzr diff $(PKGNAME)/gcs/changelog  | grep '^+.*urgency=' | sed -e 's/\(.* (.*)\).*/\1/g' -e '1s/.*/Not released packages:\n&/' | tee $(TMPFILE)
 	bzr diff $(PKGNAME)/gcs/info | grep "^+" | sed -e 's#+++ \(.*\)/gcs/info.*#\n\1:#g' -e 's#^+version: \(.*\)#(New version: \1)#' -e 's#^+##' | sed '1d' | tee -a $(TMPFILE)
 	#read -p "Do you want to commit? [y/N] " answer
 	bzr ci $(PKGNAME) -F $(TMPFILE)
 	-rm -f $(TMPFILE)
 
 commit: clean
-	bzr diff */gcs/changelog  | grep '^+.*urgency=' | sed -e 's/\(.* (.*)\).*/\1/g' -e 's/^+/    - /g' -e '1s/.*/Released packages:\n&/' | tee $(TMPFILE)
+	bzr diff */gcs/changelog  | grep '^+.*urgency=' | sed -e 's/\(.* (.*)\).*/\1/g' -e 's/^+/    - /g' -e '1s/.*/Not released packages:\n&/' | tee $(TMPFILE)
 	bzr diff */gcs/info | grep "^+" | sed -e 's#+++ \(.*\)/gcs/info.*#\n\1:#g' -e 's#^+version: \(.*\)#(New version: \1)#' -e 's#^+##' | sed '1d' | tee -a $(TMPFILE)
 	#read -p "Do you want to commit? [y/N] " answer
 	bzr ci -x Makefile -F $(TMPFILE)
