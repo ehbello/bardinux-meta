@@ -1,3 +1,10 @@
+bardinux-dev-tools (1.3.4) precise; urgency=low
+
+  * Fixed a syntax bug at pbuilderrc.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 12 Apr 2013 15:58:14 +0100
+
+
 bardinux-dev-tools (1.3.3) precise; urgency=low
 
   * Added 'bzr' (Bazaar) to dependencies.
