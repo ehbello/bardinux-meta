@@ -19,10 +19,10 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.3.2
+version: 1.3.3
 
 #config_extension: .bsrt.gcs
 
 # Cambios en esta versión
 changes:
-    - Disabled FRAMEBUFFER in initramfs to workaround problems with dialog menus.
+    - Changed the way of disable other grub entries.
