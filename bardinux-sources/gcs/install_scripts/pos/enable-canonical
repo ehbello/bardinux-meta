@@ -2,5 +2,13 @@
 
 if grep -q '^ *#.*deb.*archive\.canonical\.com/ubuntu.*' /etc/apt/sources.list; then
 	echo "Enabling Canonical sources ..."
-	sed '/^ *#.*deb.*archive\.canonical\.com/ s|^.*\(deb.*\)|\1|' -i /etc/apt/sources.list
+	sed 's|^ *#.*\(deb.*archive\.canonical\.com.*\)|&|' -i /etc/apt/sources.list
+fi
+
+
+if grep -q '^ *.*deb.*archive\.canonical\.com/ubuntu.*' /etc/apt/sources.list \
+	&& test -e /etc/apt/sources.list.d/canonical.list \
+	&& grep -q '^ *.*deb.*archive\.canonical\.com/ubuntu.*' /etc/apt/sources.list.d/canonical.list; then
+		echo "Removing old Canonical sources ..."
+		rm -f /etc/apt/sources.list.d/canonical.list*
 fi
