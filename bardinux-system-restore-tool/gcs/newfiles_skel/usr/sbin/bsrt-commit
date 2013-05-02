@@ -6,12 +6,6 @@ ID=$(getSystemId --service-tag | sed "s/Service Tag: *//")
 VERSION=$(lsb_release -ds | tr " " "-")
 PPNAME=$(ps -p $PPID -o comm=)
 
-if echo "$PPNAME" | grep -q dpkg; then
-	MODE=automatic
-else
-	MODE=manual
-fi
-
 echo Committing system changes... This may take some time.
 test -e /etc/rsnapshot.conf && test -x /usr/bin/rsnapshot && rsnapshot last
-wget -q -t 2 "http://osl.ull.es/bull/log.php?id=${ID}&update=${VERSION}&ok=${MODE}" -O /dev/null || true
+wget -q -t 2 "http://osl.ull.es/bull/log.php?id=${ID}&update=${VERSION}&ok=${PPNAME}" -O /dev/null || true
