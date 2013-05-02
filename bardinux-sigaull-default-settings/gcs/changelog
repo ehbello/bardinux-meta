@@ -1,3 +1,10 @@
+bardinux-sigaull-default-settings (1.3.14.1) precise; urgency=low
+
+  * Rebuild.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 02 May 2013 17:01:58 +0100
+
+
 bardinux-sigaull-default-settings (1.3.14) precise; urgency=low
 
   * Fixed (again) disabling of recovery entries of GRUB.
