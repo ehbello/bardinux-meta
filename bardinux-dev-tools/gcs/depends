@@ -12,3 +12,19 @@ reprepro
 rsync
 sudo
 debconf-doc
+live-build
+
+# Kernel compilation
+fakeroot
+build-essential
+crash
+kexec-tools
+makedumpfile
+kernel-wedge
+git-core
+libncurses5
+libncurses5-dev
+libelf-dev
+asciidoc
+binutils-dev
+xmlto
