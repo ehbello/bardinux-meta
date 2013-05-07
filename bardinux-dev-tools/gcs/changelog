@@ -1,3 +1,10 @@
+bardinux-dev-tools (1.3.5) precise; urgency=low
+
+  * Changed DISTRIB by DIST to define compilation distribution.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 02 May 2013 18:25:55 +0100
+
+
 bardinux-dev-tools (1.3.4) precise; urgency=low
 
   * Fixed a syntax bug at pbuilderrc.
