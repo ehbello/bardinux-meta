@@ -64,6 +64,8 @@ ruby
 scilab
 subversion
 #sun-java6-jdk
+openjdk-7-jdk
+icedtea-7-plugin
 swi-prolog
 tcm
 tora
