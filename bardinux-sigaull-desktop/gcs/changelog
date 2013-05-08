@@ -1,3 +1,10 @@
+bardinux-sigaull-desktop (1.3.4) precise; urgency=low
+
+  * Added 'icedtea-7-plugin' and 'openjdk-7-jre' to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 08 May 2013 17:23:59 +0100
+
+
 bardinux-sigaull-desktop (1.3.3) precise; urgency=low
 
   * Force to install virtualbox-qt instead of others.
