@@ -2,7 +2,7 @@
 DIST=${DIST:-$(lsb_release -cs)}
 ARCH=${ARCH:-$(dpkg --print-architecture)}
 COMPONENTS=${COMPONENTS:-"main universe multiverse restricted partner free non-free"}
-MIRRORS=${MIRRORS:-"http://archive.ubuntu.com/ubuntu http://archive.canonical.com http://packages.medibuntu.org http://archive.osl.ull.es/bardinux"}
+MIRRORS=${MIRRORS:-"http://archive.ubuntu.com/ubuntu http://archive.canonical.com http://archive.osl.ull.es/bardinux"}
 FILELIST=$(tempfile)
 
 echo -e "Using the following mirrors: \n - ${MIRRORS// /\n - }"

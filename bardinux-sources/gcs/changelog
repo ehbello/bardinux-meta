@@ -1,3 +1,10 @@
+bardinux-sources (1.3.4) precise; urgency=low
+
+  * Removed Medibuntu repository due closing of that project.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 17 May 2013 18:12:37 +0100
+
+
 bardinux-sources (1.3.3) precise; urgency=low
 
   * Removes old canonical sources to avoid duplicated.
