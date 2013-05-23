@@ -1,28 +1,7 @@
-bardinux-bookmarks (1.3.1) precise; urgency=low
+xul-conf-bardinux (1.3.1) precise; urgency=low
 
-  * Rebuild for 'precise'.
+  * Initial version.
 
- -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 14 Jun 2012 16:29:39 +0100
-
-
-bardinux-bookmarks (1.0.2.1) oneiric; urgency=low
-
-  * Rebuild.
-
- -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 13 Sep 2011 21:00:13 +0100
-
-
-bardinux-bookmarks (1.0.2) lucid; urgency=low
-
-  * Customized the content of the bookmarks file.
-
- -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 29 Mar 2011 19:53:20 +0100
-
-
-bardinux-bookmarks (1.0~dev1) lucid; urgency=low
-
-  * Initial release
-
- -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 01 Mar 2011 18:46:23 +0000
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 23 May 2013 17:50:04 +0100
 
 
