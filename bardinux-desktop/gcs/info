@@ -24,3 +24,4 @@ version: 1.3.9
 # Cambios en esta versión
 changes:
     - Removed bardinux-bookmarks of dependencies.
+    - Deleted all recommends.
