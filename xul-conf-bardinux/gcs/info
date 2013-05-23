@@ -1,7 +1,7 @@
 # YAML 1.1
 
 # Nombre del paquete (minúsculas-separado-con-guiones)
-name: bardinux-bookmarks
+name: xul-conf-bardinux
 
 # Autor
 author: Enrique Hernández Bello <quique@osl.ull.es>
@@ -10,17 +10,17 @@ author: Enrique Hernández Bello <quique@osl.ull.es>
 priority: optional
 
 # Section
-section: seccion_de_la_aplicacion
+section: web
 
 # Descripción corta
-shortdesc: "Firefox bookmarks for Bardinux related services."
+shortdesc: "Bardinux-specific configuration defaults and apt support for Firefox"
 
 # Descipción larga, las lineas han de estar separadas por "\n "
-longdesc: "This package doesnt have description yet"
+longdesc: "Adds Bardinux-specific modifications to Firefox.\n .\n You can uninstall this if you prefer to use a pristine Firefox install."
 
 # Versión del paquete
-version: 1.3.2
+version: 1.3.1
 
 # Cambios en esta versión
 changes:
-    - Fixed bookmarks moving them to a new compatible path.
+    - Initial version.
