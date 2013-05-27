@@ -24,3 +24,4 @@ version: 1.3.16
 # Cambios en esta versión
 changes:
     - Moved again Firefox configuration to right path.
+    - Forced to use old_max_size of Smart Cache in Firefox.
