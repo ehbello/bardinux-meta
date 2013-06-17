@@ -1,3 +1,10 @@
+bardinux-first-start (1.3.4) precise; urgency=low
+
+  * Fixed compatibility of this application with Firefox disabling MaxVersion.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 14 Jun 2013 14:03:29 +0100
+
+
 bardinux-first-start (1.3.3) precise; urgency=low
 
   * Changed Firefox compatibility of this application.

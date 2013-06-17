@@ -24,8 +24,8 @@ shortdesc: "Bardinux First Start dialog and webpage"
 longdesc: "This package contains the application and webpage that is showed on the first \n  Bardinux start."
 
 # Versión del paquete
-version: 1.3.4
+version: 1.3.5
 
 # Cambios en esta versión
 changes:
-    - Fixed compatibility of this application with Firefox disabling MaxVersion.
+    - Fixed default profile for AptUrl compatibility in Firefox.
