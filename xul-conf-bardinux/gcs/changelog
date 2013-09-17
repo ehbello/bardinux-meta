@@ -1,3 +1,10 @@
+xul-conf-bardinux (1.3.3) precise; urgency=low
+
+  * Updated mimeTypes.rdf file for Firefox profile.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 17 Jun 2013 16:11:30 +0100
+
+
 xul-conf-bardinux (1.3.2) precise; urgency=low
 
   * Fixed AptUrl configuration for Firefox.
