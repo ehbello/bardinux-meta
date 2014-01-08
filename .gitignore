@@ -1,0 +1,8 @@
+*.svgz
+*.gcs
+debian
+/*.build
+/*.dsc
+/*.changes
+/*.tar.gz
+/*.deb
