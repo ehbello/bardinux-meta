@@ -1,3 +1,10 @@
+bardinux-education-task (1.3.3) precise; urgency=low
+
+  * Added 'geogebra' to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 09 Jan 2014 20:09:44 +0000
+
+
 bardinux-education-task (1.3.2) precise; urgency=low
 
   * Added 'jclic' to dependencies.

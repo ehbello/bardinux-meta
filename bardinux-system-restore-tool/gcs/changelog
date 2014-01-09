@@ -1,3 +1,11 @@
+bardinux-system-restore-tool (1.3.6) precise; urgency=low
+
+  * Fixed the name of the variable INACTIVITY_LIMIT in the sample\n configuration file.
+  * Check if bsrt configuration file exists before import in\n cleanusers script.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 08 Jan 2014 18:16:46 +0000
+
+
 bardinux-system-restore-tool (1.3.5) precise; urgency=low
 
   * Changed script to report when unattended upgrades success.
