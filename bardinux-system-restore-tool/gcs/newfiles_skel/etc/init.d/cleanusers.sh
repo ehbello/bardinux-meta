@@ -10,7 +10,8 @@
 ### END INIT INFO
 
 . /lib/lsb/init-functions
-. /etc/default/bsrt
+
+[ -e /etc/default/bsrt ] && . /etc/default/bsrt
 
 [ ${INACTIVITY_LIMIT} ] || exit 0
 

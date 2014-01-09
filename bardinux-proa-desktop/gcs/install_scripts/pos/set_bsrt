@@ -1,0 +1,12 @@
+BSRT_CONFFILE=/etc/default/bsrt
+
+if [ -e "$BSRT_CONFFILE" ]; then
+	echo "Updating Bardinux System Restore Tool configuration file..."
+	sed 's% *#*\(ACCOUNT\|INACTIVITY\)_LIMIT=.*%INACTIVITY_LIMIT=15%g' -i $BSRT_CONFFILE
+
+	sed 's% *#*\(SCREEN_BACKTITLE\)=.*%\1="Préstamo de Ordenadores Portátiles para Alumnos (PROA)"%g' -i $BSRT_CONFFILE
+	sed 's% *#*\(USER_GROUPS\)=.*%\1="dialout,cdrom,plugdev,sambashare"%g' -i $BSRT_CONFFILE
+	sed 's% *#*\(USER_SHELL\)=.*%\1="/bin/bash"%g' -i $BSRT_CONFFILE
+	sed 's% *#*\(USER_HOMEDIR_MODE\)=.*%\1=700%g' -i $BSRT_CONFFILE
+	update-initramfs -u
+fi

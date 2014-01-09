@@ -8,7 +8,7 @@
 
 ## Maxium days of inactivity before remove
 ## (Default: No remove)
-#ACCOUNT_LIMIT=0
+#INACTIVITY_LIMIT=0
 
 ## No remove these inactive users
 #NOREMOVE_INACTIVE=""
