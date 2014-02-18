@@ -9,9 +9,13 @@ bochs
 bochs-doc
 bochsbios
 bochs-x
+bouml
 build-essential
 byacc
 clisp
+codelite
+codelite-plugins
+cppcheck
 ddd
 dia
 dosemu
