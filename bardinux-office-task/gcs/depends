@@ -4,5 +4,5 @@ libreoffice-help-es
 libreoffice-l10n-es
 libreoffice-ogltrans
 libreoffice-pdfimport
-libreoffice-writer2latex
+#libreoffice-writer2latex
 scribus
