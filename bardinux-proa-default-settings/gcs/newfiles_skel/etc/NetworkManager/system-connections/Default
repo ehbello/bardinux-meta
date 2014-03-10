@@ -1,0 +1,14 @@
+
+[802-3-ethernet]
+port=mii
+
+[connection]
+id=Default
+uuid=0e732f34-67fb-4b38-a399-24e0be9d6d8b
+type=802-3-ethernet
+
+[ipv6]
+method=ignore
+
+[ipv4]
+method=auto

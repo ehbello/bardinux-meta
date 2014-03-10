@@ -1,3 +1,10 @@
+bardinux-office-task (1.3.2) precise; urgency=low
+
+  * Removed 'libreoffice-writer2latex' from dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 10 Mar 2014 17:20:12 +0000
+
+
 bardinux-office-task (1.3.1) precise; urgency=low
 
   * Rebuild for 'precise'.

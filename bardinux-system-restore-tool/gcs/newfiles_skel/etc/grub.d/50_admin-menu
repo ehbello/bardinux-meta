@@ -19,6 +19,10 @@ menuentry "Crear punto de restauración" {
         linux /vmlinuz root=${GRUB_DEVICE} ro quiet boot=backup
         initrd /initrd.img
 }
+menuentry "Forzar actualización del sistema" {
+        linux /vmlinuz root=${GRUB_DEVICE} ro quiet boot=forceupdate ip=:::::eth0:dhcp
+        initrd /initrd.img
+}
 #menuentry --users="master" "Clonar sistema" {
 #        linux /vmlinuz root=${GRUB_DEVICE} ro quiet boot=udpcast
 #        initrd /initrd.img

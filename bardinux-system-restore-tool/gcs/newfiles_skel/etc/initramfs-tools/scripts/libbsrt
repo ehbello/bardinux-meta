@@ -21,7 +21,7 @@ check_dev () {
 	TEXT="Esperando por el dispositivo $1..."
 	WIDTH=50
 	slumber=0
-	while ! /bin/readlink -e $1 > /dev/null; do
+	while ! /bin/readlink -f $1 > /dev/null; do
 		/bin/sleep 1
 		slumber=$(( ${slumber} + 10 ))
 		echo ${slumber}
@@ -60,7 +60,10 @@ chroot_dev () {
 	local devpt=$1; shift
 	local mntpt=$(mount_dev rw $devpt)
 
+	echo > $mntpt/etc/mtab || true
 	mount -o bind /dev $mntpt/dev/
+	chroot $mntpt mount -t devpts devpts /dev/pts
+	chroot $mntpt mount -t sysfs sysfs /sys
 	chroot $mntpt mount -a
 	chroot $mntpt $@
 	ERROR=$?

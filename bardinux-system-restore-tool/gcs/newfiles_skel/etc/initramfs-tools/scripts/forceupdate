@@ -1,0 +1,62 @@
+#!/bin/sh
+# Local filesystem mounting			-*- shell-script -*-
+
+# Parameter: Where to mount the filesystem
+#
+
+. /scripts/functions
+. /scripts/libbsrt
+
+TITLE="Forzar actualizacion del sistema"
+TEXT="Se va a iniciar el proceso para actualizar los paquetes del sistema a su última versión. \n\n\
+Este proceso puede tardar varios minutos. Asegurese de tener el equipo conectado a la corriente antes de continuar.\n\n\
+¿Desea continuar? \n"
+WIDTH=60
+HEIGHT=10
+draw yesno || cancel_msg
+
+wait_for_udev 10
+configure_networking || configure_networking || configure_networking || error_msg "No se ha podido configurar la conexión de red. Compruebe el cableado y reintente el proceso."
+
+TARGET=$(mount_dev rw ${ROOTDEV})
+
+rm -f $TARGET/etc/resolv.conf
+[ -n "$IPVDNS0" ] && echo nameserver $IPV4DNS0 >  $TARGET/etc/resolv.conf || error_msg "No se ha podido establecer el servidor de nombres."
+[ -n "$IPVDNS1" ] && echo nameserver $IPV4DNS1 >> $TARGET/etc/resolv.conf
+
+TITLE="Continuando posibles actualizaciones pendientes"
+TEXT="No desconecte el equipo y, por favor, espere a que el proceso termine."
+WIDTH=80
+HEIGHT=20
+chroot_dev ${ROOTDEV} dpkg --configure -a | \
+	dialog ${SCREEN_BACKTITLE:+--backtitle "${SCREEN_BACKTITLE}"} \
+	--no-collapse \
+	--cr-wrap \
+	${TITLE:+--title "${TITLE}"} \
+	--progressbox "${TEXT}" \
+	${HEIGHT:-0} ${WIDTH:-0} || cancel_msg
+	
+TITLE="Actualizando lista de paquetes disponibles"
+TEXT="No desconecte el equipo y, por favor, espere a que el proceso termine."
+WIDTH=80
+HEIGHT=20
+chroot_dev ${ROOTDEV} apt-get update | \
+	dialog ${SCREEN_BACKTITLE:+--backtitle "${SCREEN_BACKTITLE}"} \
+	--no-collapse \
+	--cr-wrap \
+	${TITLE:+--title "${TITLE}"} \
+	--progressbox "${TEXT}" \
+	${HEIGHT:-0} ${WIDTH:-0} || cancel_msg
+
+TITLE="Actualizando paquetes del sistema"
+TEXT="No desconecte el equipo y, por favor, espere a que el proceso termine."
+WIDTH=80
+HEIGHT=20
+chroot_dev ${ROOTDEV}  apt-get dist-upgrade -y --force-yes | \
+	dialog ${SCREEN_BACKTITLE:+--backtitle "${SCREEN_BACKTITLE}"} \
+	--no-collapse \
+	--cr-wrap \
+	${TITLE:+--title "${TITLE}"} \
+	--progressbox "${TEXT}" \
+	${HEIGHT:-0} ${WIDTH:-0} || cancel_msg
+success_msg

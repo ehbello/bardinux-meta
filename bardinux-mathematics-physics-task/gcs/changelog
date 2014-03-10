@@ -1,3 +1,10 @@
+bardinux-mathematics-physics-task (1.3.7) precise; urgency=low
+
+  * Fixed unavailable dependencies of 'eagle' for amd64 architecture.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 10 Mar 2014 17:51:42 +0000
+
+
 bardinux-mathematics-physics-task (1.3.6) precise; urgency=low
 
   * Added 'texlive-latex-extra' to dependencies.

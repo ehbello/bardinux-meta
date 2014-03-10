@@ -19,10 +19,8 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.3.4
+version: 1.3.5
 
 # Cambios en esta versión
 changes:
-    - Forget last user at KDM login.
-    - Forced to disable MinimalSteps on UnattendedUpgrades.
-    - Changed theme color to purple.
+    - Added default cable connection to NetworkManager.

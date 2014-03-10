@@ -1,3 +1,10 @@
+bardinux-computing-task (1.3.4) precise; urgency=low
+
+  * Added 'bouml'. 'codelite', 'codelite-plugins' and 'cppcheck' to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 18 Feb 2014 19:17:12 +0000
+
+
 bardinux-computing-task (1.3.3) precise; urgency=low
 
   * Added 'icedtea-7-plugin' and 'openjdk-7-jdk' to dependencies.
