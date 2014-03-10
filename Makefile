@@ -3,7 +3,7 @@
 .SILENT:
 
 DEBTOOL ?= dpkg-buildpackage -rfakeroot
-STATUS_CMD ?= bzr st
+STATUS_CMD ?= git status
 PKGNAME = $*
 DATE = $(shell date +"%b %d %T")
 TMPFILE := $(shell mktemp)
