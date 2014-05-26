@@ -8,22 +8,13 @@ Enrique Hernández Bello, quique@osl.ull.es 2010-10-11
 Copyright OSL-ULL, may be copied under the GNU GPL 2 or later
 */
 
-for (var i = 0; i < panelIds.length; ++i) {
-    var panel = panelById(panelIds[i]);
-    panel.remove();
-} // for panel
+for (i in activityIds) {
+	activityById(activityIds[i]).remove()
+}
 
-for (var i = 0; i < activityIds.length; ++i) {
-    var activity = activityById(activityIds[i]);
-
-    if (activity) {
-        activity.screen=1; // ugly workaround to avoid
-                           // the segmentation fault
-        activity.remove();
-    }
-} // for activity
-
-var activity = new Activity("folderview");
+for (i in panelIds) {
+	panelById(panelIds[i]).remove()
+}
 
 var panel = new Panel("panel");
 panel.location = "bottom";
@@ -50,4 +41,21 @@ clock = panel.addWidget("digital-clock");
 
 panel.addWidget("trash");
 
+for (var i = 0; i < screenCount; ++i) {
+    var desktop = new Activity("folderview")
+    desktop.name = i18n("Desktop")
+    desktop.screen = i
+    desktop.wallpaperPlugin = 'image'
+    desktop.wallpaperMode = 'SingleImage'
+
+    //Create more panels for other screens
+    if (i > 0) {
+        var panel = new Panel
+        panel.screen = i
+        panel.location = 'bottom'
+        panel.height = panels()[i].height = screenGeometry(0).height > 1024 ? 35 : 27
+        var tasks = panel.addWidget("tasks")
+        tasks.writeConfig("showOnlyCurrentScreen", true);
+    }
+}
 locked = true

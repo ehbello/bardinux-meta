@@ -1,3 +1,10 @@
+bardinux-mathematics-physics-task (1.3.8) precise; urgency=low
+
+  * Replaced dependence 'octave-3.2' by 'octave'.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 26 May 2014 21:04:26 +0100
+
+
 bardinux-mathematics-physics-task (1.3.7) precise; urgency=low
 
   * Fixed unavailable dependencies of 'eagle' for amd64 architecture.

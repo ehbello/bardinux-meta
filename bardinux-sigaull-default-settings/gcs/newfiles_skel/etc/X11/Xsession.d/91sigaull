@@ -3,4 +3,9 @@
 #if id $(whoami) | grep -q '(Domain Users)'; then
 	KDEDIRS="/usr/share/bardinux-sigaull-default-settings/kde-profile/default/:$KDEDIRS"
 #fi
+
+if mountpoint -q /tmp/${USER}-remote; then
+	KDEDIRS="/usr/share/bardinux-sigaull-default-settings/kde-profile/newdefault/:$KDEDIRS"
+fi
+
 export KDEDIRS

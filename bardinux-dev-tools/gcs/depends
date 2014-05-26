@@ -10,6 +10,7 @@ reprepro
 rsync
 sudo
 debconf-doc
+debsums
 live-build
 
 # Kernel compilation
