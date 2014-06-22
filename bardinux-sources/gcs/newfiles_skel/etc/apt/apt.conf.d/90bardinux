@@ -7,5 +7,11 @@ APT {
 		Purge "true";
 		ReInstall "false";
 	};
+
+	NeverAutoRemove
+	{
+		"^bardinux-minimal$";
+		"^bardinux-.*desktop$";
+	};
 };
 Aptitude::Recommends-Important "false";
