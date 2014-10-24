@@ -1,0 +1,11 @@
+Template: wine-systemwide-conf/no_configuration
+Type: boolean
+Default: false
+Description: Omit WINE configuration?
+ If you enable this option, no initial configuration or installation will be
+ created for you.
+
+Template: wine-systemwide-conf/purge_installation
+Type: boolean
+Default: false
+Description: Do you want the Wine installation to be removed when this package is purged?

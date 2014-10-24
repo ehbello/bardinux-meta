@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Run in Wine as superuser
+Name[es]=Ejecutar en Wine como Administrador
+Exec=winesu %f
+Terminal=false
+Icon=wine
+Type=Application
+Categories=Wine;

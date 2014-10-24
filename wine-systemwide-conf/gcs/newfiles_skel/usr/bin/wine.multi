@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -e
+
+WINEHOME=/var/lib/winesw
+
+if [ "$USER" = "root" ] && [ -n "$WINEHOME" ]; then
+	if [ ! -e "$XAUTHORITY" ]; then
+		export XAUTHORITY=$HOME/.Xauthority
+	fi
+	export XDG_DATA_HOME=$WINEHOME/.local/share
+	export HOME=$WINEHOME
+	
+	mkdir -p $WINEHOME
+	$(dirname $0)/wine.single "$@"
+	chmod o+t,o+w $WINEHOME/.wine/drive_c/users/
+	chmod o+r $WINEHOME/.config/ -R || true
+else
+	exec $(dirname $0)/wine.single "$@"
+fi

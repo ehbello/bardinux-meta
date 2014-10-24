@@ -1,0 +1,5 @@
+findutils
+rsync
+upstart
+wine (>= 1.4)
+wine-gecko

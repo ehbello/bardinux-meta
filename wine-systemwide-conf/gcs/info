@@ -1,0 +1,27 @@
+
+# YAML 1.1
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: wine-systemwide-conf
+
+# Autor
+author: Oficina de Software Libre de la Universidad de La Laguna <bardinux@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+section: universe/otherosfs
+
+# Descripción corta
+shortdesc: "System-Wide configuration for Wine."
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "This packages configures a unique installation of Wine for all users of system."
+
+# Versión del paquete
+version: 1.0
+
+# Cambios en esta versión
+changes:
+    - Initial version

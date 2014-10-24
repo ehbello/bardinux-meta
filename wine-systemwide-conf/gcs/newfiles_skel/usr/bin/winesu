@@ -1,0 +1,28 @@
+#!/bin/sh
+
+set -e
+
+usage() {
+	echo "Usage: $0 [file.exe]"
+	exit 0
+}
+
+[ "$1" = "--help" ] && usage
+
+FILE=$1
+
+if [ -z "$FILE" ]; then
+	TITLE="Wine-SuperUser"
+	MESSAGE="Este asistente ejecutará la aplicación seleccionada con permisos de administración."
+
+	kdialog --title "$TITLE" --yesno "$MESSAGE" --yes-label "Seleccionar..." --no-label "Salir" || exit 0
+
+	TITLE="Wine-SuperUser: Seleccionar ejecutable"
+	FILE=$(kdialog --title "$TITLE" --getopenfilename ~)
+fi
+
+if kdesudo "wine $FILE"; then
+	TITLE="Wine-SuperUser: Success"
+	MESSAGE="Instalación completeada satisfactoriamente."
+	kdialog --title "$TITLE" --msgbox "$MESSAGE"
+fi

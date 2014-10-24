@@ -1,0 +1,36 @@
+set -e
+
+dpkg-divert --package wine-systemwide-conf --divert /usr/bin/wine.single --rename --quiet --add /usr/bin/wine
+ln -sf /usr/bin/wine.multi /usr/bin/wine
+
+is_empty_dir() {
+# Usage: if is_empty_dir "$dir"; then ... fi
+
+        output=`find "$1" -mindepth 1 -maxdepth 1 2>/dev/null`
+        if [ -n "$output" ]; then
+                return 1
+        else
+                return 0
+        fi
+}
+
+db_get wine-systemwide-conf/no_configuration
+if [ "$RET" = "true" ]; then
+	echo "Omitting initial configuration for Wine."
+	exit 0
+fi
+
+WINEHOME=/var/lib/winesw
+
+if [ -d "$WINEHOME" ] && ! is_empty_dir $WINEHOME; then
+	echo -n "An installation of Wine exists: updating... "
+	DISPLAY= wineboot --update 2> /dev/null
+	echo "Done."
+	exit 0
+fi
+
+echo -n "Building WINE installation... this may take some time. "
+
+DISPLAY= wineboot --init 2> /dev/null
+
+echo "Done."

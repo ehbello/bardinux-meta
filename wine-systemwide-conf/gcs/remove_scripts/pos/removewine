@@ -1,0 +1,24 @@
+is_empty_dir() {
+# Usage: if is_empty_dir "$dir"; then ... fi
+
+        output=`find "$1" -mindepth 1 -maxdepth 1 2>/dev/null`
+        if [ -n "$output" ]; then
+                return 1
+        else
+                return 0
+        fi
+}
+
+WINEHOME=/var/lib/winesw
+
+case "$1" in
+purge)
+	db_get wine-systemwide-conf/purge_installation
+	if [ "$RET" = "true" ]; then
+		echo "Purging Wine installation..."
+		if [ -d "$WINEHOME" ] && ! is_empty_dir $WINEHOME; then
+			rm -rf "$WINEHOME"
+		fi
+	fi
+	;;
+esac

@@ -1,0 +1,2 @@
+rm -f /usr/bin/wine
+dpkg-divert --rename --quiet --remove /usr/bin/wine
