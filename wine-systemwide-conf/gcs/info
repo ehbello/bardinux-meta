@@ -20,8 +20,8 @@ shortdesc: "System-Wide configuration for Wine."
 longdesc: "This packages configures a unique installation of Wine for all users of system."
 
 # Versión del paquete
-version: 1.0.2
+version: 1.0.3
 
 # Cambios en esta versión
 changes:
-    - Fixed export of XDG variables at Xsession.
+    - Fixed X session break when no WINEHOME exists.

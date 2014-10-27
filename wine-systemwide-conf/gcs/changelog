@@ -1,3 +1,10 @@
+wine-systemwide-conf (1.0.2) precise; urgency=low
+
+  * Fixed export of XDG variables at Xsession.
+
+ -- Oficina de Software Libre de la Universidad de La Laguna <bardinux@osl.ull.es>  Mon, 27 Oct 2014 14:31:32 +0000
+
+
 wine-systemwide-conf (1.0.1) precise; urgency=low
 
   * Avoid to copy menu information to user home.
