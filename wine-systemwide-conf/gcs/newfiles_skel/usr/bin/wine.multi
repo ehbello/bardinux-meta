@@ -14,7 +14,7 @@ if [ "$USER" = "root" ] && [ -n "$WINEHOME" ]; then
 	mkdir -p $WINEHOME
 	$(dirname $0)/wine.single "$@"
 	chmod o+t,o+w $WINEHOME/.wine/drive_c/users/
-	chmod o+r $WINEHOME/.config/ -R || true
+	update-winesw-directory
 else
 	exec $(dirname $0)/wine.single "$@"
 fi

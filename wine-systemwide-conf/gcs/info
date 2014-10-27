@@ -20,8 +20,9 @@ shortdesc: "System-Wide configuration for Wine."
 longdesc: "This packages configures a unique installation of Wine for all users of system."
 
 # Versión del paquete
-version: 1.0
+version: 1.0.1
 
 # Cambios en esta versión
 changes:
-    - Initial version
+    - Avoid to copy menu information to user home.
+    - Check if WINEROOTDIR exists before spawn Wine for unprivileged user.
