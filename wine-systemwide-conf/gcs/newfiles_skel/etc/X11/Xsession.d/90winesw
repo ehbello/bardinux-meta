@@ -4,8 +4,8 @@ WINEHOME=/var/lib/winesw
 WINEROOTDIR=$WINEHOME/.wine
 WINEUSERDIR=$HOME/.wine
 
-export XDG_DATA_DIRS="$XDG_DATA_DIRS:$WINEROOTDIR/.local/share/"
-export XDG_CONFIG_DIRS="$XDG_CONFIG_DIRS:$WINEROOTDIR/.config/"
+export XDG_DATA_DIRS="$XDG_DATA_DIRS:$WINEHOME/.local/share/"
+export XDG_CONFIG_DIRS="$XDG_CONFIG_DIRS:$WINEHOME/.config/"
 
 [ -d "$WINEROOTDIR" ] || exit 0
 

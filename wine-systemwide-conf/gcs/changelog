@@ -1,3 +1,11 @@
+wine-systemwide-conf (1.0.1) precise; urgency=low
+
+  * Avoid to copy menu information to user home.
+  * Check if WINEROOTDIR exists before spawn Wine for unprivileged user.
+
+ -- Oficina de Software Libre de la Universidad de La Laguna <bardinux@osl.ull.es>  Mon, 27 Oct 2014 13:46:51 +0000
+
+
 wine-systemwide-conf (1.0) precise; urgency=low
 
   * Initial version
