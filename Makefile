@@ -12,7 +12,8 @@ COMMIT = git commit
 
 .PHONY: all status
 all: $(patsubst %/gcs,%.build,$(wildcard */gcs))
-status: $(patsubst %/gcs,%/status,$(wildcard */gcs))
+status:
+	$(STATUS_CMD)
 notreleased: $(patsubst %/gcs,%/notreleased,$(wildcard */gcs))
 
 %.build: %/debian/changelog
@@ -43,7 +44,7 @@ notreleased: $(patsubst %/gcs,%/notreleased,$(wildcard */gcs))
 	-find $(PKGNAME) -iname "*.~?~" -delete
 	-rm -rf $(PKGNAME)/debian
 
-%/realclean: %/clean
+%/fullclean: %/clean
 	$(info [$(DATE)] $(PKGNAME): removing all output files...)
 	-rm -f $(PKGNAME)*.build
 	-rm -f $(PKGNAME)*.dsc
@@ -57,7 +58,7 @@ notreleased: $(patsubst %/gcs,%/notreleased,$(wildcard */gcs))
 
 %/notreleased:
 	if ! grep -q "($(shell awk '$$1 == "version:" { print $$2 }' $(PKGNAME)/gcs/info))" $(PKGNAME)/gcs/changelog; then \
-		echo $(PKGNAME) not notreleased ; \
+		echo $(PKGNAME) not released ; \
 	fi
 
 %/commit: %/clean
@@ -79,6 +80,6 @@ commit: clean
 .PHONY: clean
 clean: $(patsubst %/gcs,%/clean,$(wildcard */gcs))
 
-.PHONY: realclean
-realclean: $(patsubst %/gcs,%/realclean,$(wildcard */gcs)) clean
+.PHONY: fullclean
+fullclean: $(patsubst %/gcs,%/fullclean,$(wildcard */gcs)) clean
 
