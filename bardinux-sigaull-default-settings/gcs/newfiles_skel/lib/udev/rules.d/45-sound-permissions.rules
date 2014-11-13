@@ -1,2 +1,0 @@
-# Sound devices
-SUBSYSTEM=="sound",                     GROUP="audio", MODE="0666"
