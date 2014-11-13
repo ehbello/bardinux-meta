@@ -11,18 +11,46 @@ usage() {
 
 FILE=$1
 
+if which kdialog > /dev/null; then
+	WM=kde
+elif which zenity > /dev/null; then
+	WM=gtk
+fi
+
 if [ -z "$FILE" ]; then
 	TITLE="Wine-SuperUser"
 	MESSAGE="Este asistente ejecutará la aplicación seleccionada con permisos de administración."
 
-	kdialog --title "$TITLE" --yesno "$MESSAGE" --yes-label "Seleccionar..." --no-label "Salir" || exit 0
+	case "$WM" in
+		kde)
+			kdialog --title "$TITLE" --yesno "$MESSAGE" --yes-label "Seleccionar..." --no-label "Salir" || exit 0
+			;;
+		gtk)
+			zenity --title "$TITLE" --question --ok-label "Seleccionar..." --cancel-label "Salir" --text "$MESSAGE" || exit 0
+			;;
+	esac
 
 	TITLE="Wine-SuperUser: Seleccionar ejecutable"
-	FILE=$(kdialog --title "$TITLE" --getopenfilename ~)
+
+	case "$WM" in
+		kde)
+			FILE=$(kdialog --title "$TITLE" --getopenfilename ~)
+			;;
+		gtk)
+			;;
+	esac
 fi
 
-if kdesudo "wine $FILE"; then
-	TITLE="Wine-SuperUser: Success"
-	MESSAGE="Instalación completeada satisfactoriamente."
-	kdialog --title "$TITLE" --msgbox "$MESSAGE"
+TITLE="Wine-SuperUser: Success"
+MESSAGE="Instalación completeada satisfactoriamente."
+
+if kdesudo "wine $FILE" 2> /dev/null || gksudo "wine $FILE" 2> /dev/null; then
+	case "$WM" in
+		kde)
+			kdialog --title "$TITLE" --msgbox "$MESSAGE"
+			;;
+		gtk)
+			zenity --title "$TITLE" --text "$MESSAGE"
+			;;
+	esac
 fi

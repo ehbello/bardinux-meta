@@ -2,9 +2,12 @@
 
 set -e
 
+# Moves root's wine directory to WINEHOME
+
 WINEHOME=/var/lib/winesw
 
 if [ "$USER" = "root" ] && [ -n "$WINEHOME" ]; then
+	# Keep display permissions when sudo
 	if [ ! -e "$XAUTHORITY" ]; then
 		export XAUTHORITY=$HOME/.Xauthority
 	fi
@@ -13,8 +16,13 @@ if [ "$USER" = "root" ] && [ -n "$WINEHOME" ]; then
 	
 	mkdir -p $WINEHOME
 	$(dirname $0)/wine.single "$@"
-	chmod o+t,o+w $WINEHOME/.wine/drive_c/users/
-	update-winesw-directory
+	winesw-rootdir-update
 else
-	exec $(dirname $0)/wine.single "$@"
+	winesw-userdir-update
+	$(dirname $0)/wine.single "$@"
+fi
+
+# Support for reload Desktop menu.
+if which xdg-desktop-menu > /dev/null; then
+        xdg-desktop-menu forceupdate
 fi

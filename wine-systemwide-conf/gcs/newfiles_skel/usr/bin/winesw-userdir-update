@@ -1,0 +1,47 @@
+#!/bin/sh
+
+WINEHOME=/var/lib/winesw
+WINEROOTDIR=$WINEHOME/.wine
+WINEUSERDIR=$HOME/.wine
+
+if [ "$USER" = "root" ]; then
+	echo "This script must NOT be run as root" 1>&2
+	exit 1
+fi
+
+# Do nothing if there is no root installation.
+[ -d "$WINEROOTDIR" ] || exit 0
+
+# Sync wine directory except drive_c.
+if [ ! -d "$WINEUSERDIR" ]; then
+	rsync -ax --delete --delete-excluded --exclude=drive_c $WINEROOTDIR/ $WINEUSERDIR/
+
+	sed -i 's#\\\\users\\\\root\\\\#\\\\users\\\\'$USER'\\\\#g' $WINEUSERDIR/*.reg
+
+	ln -snf $WINEROOTDIR/drive_c $WINEUSERDIR/dosdevices/c:
+fi
+
+# Load default user dirs if it exists.
+if [ -r /etc/xdg/user-dirs.defaults ]; then
+	. /etc/xdg/user-dirs.defaults
+	XDG_DESKTOP_DIR=$HOME/$DESKTOP
+	XDG_MUSIC_DIR=$HOME/$MUSIC
+	XDG_DOCUMENTS_DIR=$HOME/$DOCUMENTS
+	XDG_PICTURES_DIR=$HOME/$PICTURES
+	XDG_VIDEOS_DIR=$HOME/$VIDEOS
+fi
+
+# Load localized user dirs if it exists.
+if [ -r $HOME/.config/user-dirs.dirs ]; then
+	. $HOME/.config/user-dirs.dirs
+fi
+
+# Create personal directory for unprivileged user.
+EXCLUDE=$(basename $XDG_DESKTOP_DIR)
+rsync -rx --exclude="$EXCLUDE" --delete-excluded $WINEROOTDIR/drive_c/users/root/ $WINEROOTDIR/drive_c/users/$USER/
+
+[ -n "$XDG_DESKTOP_DIR"   ] && ln -snf $XDG_DESKTOP_DIR   $WINEROOTDIR/drive_c/users/$USER/
+[ -n "$XDG_MUSIC_DIR"     ] && ln -snf $XDG_MUSIC_DIR     $WINEROOTDIR/drive_c/users/$USER/
+[ -n "$XDG_DOCUMENTS_DIR" ] && ln -snf $XDG_DOCUMENTS_DIR $WINEROOTDIR/drive_c/users/$USER/
+[ -n "$XDG_PICTURES_DIR"  ] && ln -snf $XDG_PICTURES_DIR  $WINEROOTDIR/drive_c/users/$USER/
+[ -n "$XDG_VIDEOS_DIR"    ] && ln -snf $XDG_VIDEOS_DIR    $WINEROOTDIR/drive_c/users/$USER/

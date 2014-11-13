@@ -1,33 +1,6 @@
 #!/bin/sh
 
 WINEHOME=/var/lib/winesw
-WINEROOTDIR=$WINEHOME/.wine
-WINEUSERDIR=$HOME/.wine
 
 export XDG_DATA_DIRS="$XDG_DATA_DIRS:$WINEHOME/.local/share/"
 export XDG_CONFIG_DIRS="$XDG_CONFIG_DIRS:$WINEHOME/.config/"
-
-if [ -d "$WINEROOTDIR" ]; then
-	if [ ! -d "$WINEUSERDIR" ]; then
-		(
-			rsync -ax --delete --delete-excluded --exclude=drive_c $WINEROOTDIR/ $WINEUSERDIR/
-
-			sed -i 's#\\\\users\\\\root\\\\#\\\\users\\\\'$USER'\\\\#g' $WINEUSERDIR/*.reg
-
-			ln -snf $WINEROOTDIR/drive_c $WINEUSERDIR/dosdevices/c:
-		) &
-	fi
-
-	[ -r /etc/xdg/user-dirs.defaults  ] &&	. /etc/xdg/user-dirs.defaults
-	[ -r $HOME/.config/user-dirs.dirs ] &&	. $HOME/.config/user-dirs.dirs
-
-	(
-		rsync -rx --exclude="$(basename $XDG_DESKTOP_DIR)" --delete-excluded $WINEROOTDIR/drive_c/users/root/ $WINEROOTDIR/drive_c/users/$USER/
-
-		ln -snf $XDG_DESKTOP_DIR $WINEROOTDIR/drive_c/users/$USER/
-		ln -snf $XDG_MUSIC_DIR $WINEROOTDIR/drive_c/users/$USER/
-		ln -snf $XDG_DOCUMENTS_DIR $WINEROOTDIR/drive_c/users/$USER/
-		ln -snf $XDG_PICTURES_DIR $WINEROOTDIR/drive_c/users/$USER/
-		ln -snf $XDG_VIDEOS_DIR $WINEROOTDIR/drive_c/users/$USER/
-	) &
-fi

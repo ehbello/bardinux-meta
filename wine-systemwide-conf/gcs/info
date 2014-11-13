@@ -20,8 +20,13 @@ shortdesc: "System-Wide configuration for Wine."
 longdesc: "This packages configures a unique installation of Wine for all users of system."
 
 # Versión del paquete
-version: 1.0.3
+version: 1.0.4
 
 # Cambios en esta versión
 changes:
-    - Fixed X session break when no WINEHOME exists.
+    - Used new scripts to update root and user directories.
+    - Fixed scripts to run when XDG variables are not defined.
+    - Forced to reload Desktop menus after each wine execution.
+    - Added kde-baseapps-bin | zenity to dependencies.
+    - Added kdesudo | gksu to dependencies.
+    - Support for gtk interfaces.

@@ -1,0 +1,25 @@
+#!/bin/sh
+
+set -e
+
+if [ "$USER" != "root" ]; then
+	echo "You must be root to run this command." 1>&2
+	exit 1
+fi
+
+WINEHOME=/var/lib/winesw
+
+# Allow users to create its personal directory.
+if [ -d "$WINEHOME/.wine/drive_c/users/" ]; then
+	chmod o+t,o+w $WINEHOME/.wine/drive_c/users/
+fi
+
+# Remove WINEPREFIX environment variable of Desktop files.
+if [ -d "$WINEHOME/.local" ]; then
+	find $WINEHOME/.local -type f -iname "*.desktop" -exec sed 's|env WINEPREFIX=".*" *||g' -i {} \;
+fi
+
+# Config directory must be accesible by unprivileged users.
+if [ -d "$WINEHOME/.config" ]; then
+	chmod o+r $WINEHOME/.config -R
+fi
