@@ -30,6 +30,7 @@ oregano
 perl
 pgplot5
 pspp
+ipython
 python
 python-matplotlib
 python-numpy

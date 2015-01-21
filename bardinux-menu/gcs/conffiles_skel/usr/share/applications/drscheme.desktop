@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Programación Scheme (DrScheme)
-Comment=Entorno de programación de Scheme
-TryExec=drscheme
-Exec=drscheme
-Terminal=false
-Type=Application
-Categories=Education;Development;
-Icon=/usr/share/pixmaps/bardinux/development.png

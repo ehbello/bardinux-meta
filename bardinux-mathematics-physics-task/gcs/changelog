@@ -1,3 +1,10 @@
+bardinux-mathematics-physics-task (1.3.9) precise; urgency=low
+
+  * Added conflict with 'octave3.2'.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 15 Jan 2015 14:40:49 +0000
+
+
 bardinux-mathematics-physics-task (1.3.8) precise; urgency=low
 
   * Replaced dependence 'octave-3.2' by 'octave'.

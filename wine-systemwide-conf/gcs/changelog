@@ -1,3 +1,22 @@
+wine-systemwide-conf (1.0.4) precise; urgency=low
+
+  * Used new scripts to update root and user directories.
+  * Fixed scripts to run when XDG variables are not defined.
+  * Forced to reload Desktop menus after each wine execution.
+  * Added kde-baseapps-bin | zenity to dependencies.
+  * Added kdesudo | gksu to dependencies.
+  * Support for gtk interfaces.
+
+ -- Oficina de Software Libre de la Universidad de La Laguna <bardinux@osl.ull.es>  Mon, 27 Oct 2014 20:53:59 +0000
+
+
+wine-systemwide-conf (1.0.3) precise; urgency=low
+
+  * Fixed X session break when no WINEHOME exists.
+
+ -- Oficina de Software Libre de la Universidad de La Laguna <bardinux@osl.ull.es>  Mon, 27 Oct 2014 14:52:09 +0000
+
+
 wine-systemwide-conf (1.0.2) precise; urgency=low
 
   * Fixed export of XDG variables at Xsession.

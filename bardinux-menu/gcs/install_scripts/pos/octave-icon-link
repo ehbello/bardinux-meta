@@ -1,0 +1,1 @@
+ln -sfT /usr/share/octave/*/imagelib/octave-logo.svg /usr/share/pixmaps/bardinux/octave-logo.svg || true

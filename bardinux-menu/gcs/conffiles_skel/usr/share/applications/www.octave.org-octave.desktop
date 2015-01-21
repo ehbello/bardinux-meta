@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=GNU Octave
+Comment=Scientific Computing using GNU Octave
+TryExec=/usr/bin/octave
+Exec=/usr/bin/octave --force-gui
+Icon=/usr/share/pixmaps/bardinux/octave-logo.svg
+Type=Application
+Categories=Education;Science;Math;
+StartupNotify=false
+X-Desktop-File-Install-Version=0.20

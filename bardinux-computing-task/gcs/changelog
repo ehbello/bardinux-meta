@@ -1,3 +1,10 @@
+bardinux-computing-task (1.3.6) precise; urgency=low
+
+  * Added conflict with 'octave3.2'.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 15 Jan 2015 14:40:13 +0000
+
+
 bardinux-computing-task (1.3.5) precise; urgency=low
 
   * Replaced dependence 'octave-3.2' by 'octave'.
