@@ -62,7 +62,7 @@ notreleased: $(patsubst %/gcs,%/notreleased,$(wildcard */gcs))
 	fi
 
 %/commit: %/clean
-	$(DIFF) $(PKGNAME)/gcs/changelog  | grep '^+.*urgency=' | sed -e 's/\(.* (.*)\).*/\1/g' -e '1s/.*/Not released packages:\n&/' | tee $(TMPFILE)
+	$(DIFF) $(PKGNAME)/gcs/changelog  | grep '^+.*urgency=' | sed -e 's/\(.* (.*)\).*/\1/g' -e '1s/.*/Released packages:\n&/' | tee $(TMPFILE)
 	$(DIFF) $(PKGNAME)/gcs/info | grep "^+" | sed -e 's#+++ \(.*\)/gcs/info.*#\n\1:#g' -e 's#^+version: \(.*\)#(New version: \1)#' -e 's#^+##' | sed '1d' | tee -a $(TMPFILE)
 	echo Press [ENTER] to continue or ctrl-c to cancel commit
 	read dummy
@@ -70,7 +70,7 @@ notreleased: $(patsubst %/gcs,%/notreleased,$(wildcard */gcs))
 	-rm -f $(TMPFILE)
 
 commit: clean
-	$(DIFF) */gcs/changelog  | grep '^+.*urgency=' | sed -e 's/\(.* (.*)\).*/\1/g' -e 's/^+/    - /g' -e '1s/.*/Not released packages:\n&/' | tee $(TMPFILE)
+	$(DIFF) */gcs/changelog  | grep '^+.*urgency=' | sed -e 's/\(.* (.*)\).*/\1/g' -e 's/^+/    - /g' -e '1s/.*/Released packages:\n&/' | tee $(TMPFILE)
 	$(DIFF) */gcs/info | grep "^+" | sed -e 's#+++ \(.*\)/gcs/info.*#\n\1:#g' -e 's#^+version: \(.*\)#(New version: \1)#' -e 's#^+##' | sed '1d' | tee -a $(TMPFILE)
 	echo Press [ENTER] to continue or ctrl-c to cancel commit
 	read dummy
