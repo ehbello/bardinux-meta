@@ -15,7 +15,7 @@ ACCOUNT_LIMIT=10
 
 ## Default groups for new users
 # Example: group1,group2,group3
-USER_GROUPS="dialout,cdrom,plugdev,sambashare"
+USER_GROUPS="dialout,cdrom,plugdev,sambashare,lp"
 
 ## Default login shell for new users
 USER_SHELL="/bin/bash"
