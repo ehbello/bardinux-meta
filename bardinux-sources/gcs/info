@@ -22,8 +22,9 @@ shortdesc: "Paquete de repositorios."
 longdesc: "Instala archivos fuente para permitir al gestor de paquetes instalar software desde los repositorios de Bardinux."
 
 # Versión del paquete
-version: 1.3.5
+version: 1.3.6
 
 # Cambios en esta versión
 changes:
-    - Protected some minimal Bardinux packages to never autoremove.
+    - Added *.ubuntu.com origin to APT preferences with priority 1001.
+    - Incremented priority of archive.osl.ull.es in APT preferences to 1002.
