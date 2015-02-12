@@ -1,7 +1,11 @@
-Package: * 
+Package: *
 Pin: origin archive.osl.ull.es
-Pin-Priority: 1002
+Pin-Priority: 1020
 
-Package: * 
-Pin: origin "*ubuntu.com"
+Package: *
+Pin: release o=Ubuntu
+Pin-Priority: 1010
+
+Package: *
+Pin: origin *.*
 Pin-Priority: 1001
