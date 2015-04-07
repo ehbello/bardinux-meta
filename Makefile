@@ -16,6 +16,9 @@ status:
 	$(STATUS_CMD)
 notreleased: $(patsubst %/gcs,%/notreleased,$(wildcard */gcs))
 
+%/build: %.build
+	$(info [$(DATE)] $(PKGNAME): Finished.)
+
 %.build: %/debian/changelog
 	$(info [$(DATE)] $(PKGNAME): starting build process...)
 	(cd $(PKGNAME); $(DEBTOOL))

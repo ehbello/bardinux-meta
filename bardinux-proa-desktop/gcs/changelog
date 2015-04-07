@@ -1,3 +1,17 @@
+bardinux-proa-desktop (1.3.6) precise; urgency=low
+
+  * Added 'linux-image-current-generic' to dependencies. Provides network to new PROA devices.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 26 Mar 2015 12:43:03 +0000
+
+
+bardinux-proa-desktop (1.3.5) precise; urgency=low
+
+  * Added 'firmware-b43-installer' to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 06 Mar 2015 18:05:33 +0000
+
+
 bardinux-proa-desktop (1.3.4) precise; urgency=low
 
   * Added 'google-talkplugin' to dependencies.

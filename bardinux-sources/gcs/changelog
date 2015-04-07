@@ -1,3 +1,34 @@
+bardinux-sources (1.3.9) precise; urgency=low
+
+  * Deleted old preferences named 'bardinux' in favor of 'zz_bardinux'
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 12 Mar 2015 13:17:56 +0000
+
+
+bardinux-sources (1.3.8) precise; urgency=low
+
+  * Renamed 'bardinux' file to 'zz_bardinux' in apt_preferences to lower the priority.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 12 Mar 2015 13:06:17 +0000
+
+
+bardinux-sources (1.3.7) precise; urgency=low
+
+  * Changed *.ubuntu.com origin to release Ubuntu with priority 1010.
+  * Incremented priority of archive.osl.ull.es in APT preferences to 1020.
+  * Added origin *.* (non-local) with priority 1001.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 12 Feb 2015 16:46:52 +0000
+
+
+bardinux-sources (1.3.6) precise; urgency=low
+
+  * Added *.ubuntu.com origin to APT preferences with priority 1001.
+  * Incremented priority of archive.osl.ull.es in APT preferences to 1002.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 09 Feb 2015 18:52:23 +0000
+
+
 bardinux-sources (1.3.5) precise; urgency=low
 
   * Protected some minimal Bardinux packages to never autoremove.
