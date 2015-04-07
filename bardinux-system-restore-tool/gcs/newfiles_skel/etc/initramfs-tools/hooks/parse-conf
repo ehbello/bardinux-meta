@@ -25,7 +25,7 @@ echo -n "Parsing configuration... "
 
 cp /etc/default/bsrt ${DESTDIR}/etc/default/bsrt 
 
-interval=$(awk '$0 !~ /^ *#/ && $1 == "interval" { print $2 }' /etc/rsnapshot.conf)
+interval=$(awk '$0 !~ /^ *#/ && $1 == "retain" { print $2 }' /etc/rsnapshot.conf)
 
 cat >> ${DESTDIR}/etc/default/bsrt << EOF
 # Internal variables

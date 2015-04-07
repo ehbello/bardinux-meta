@@ -21,8 +21,12 @@ configure_networking || configure_networking || configure_networking || error_ms
 TARGET=$(mount_dev rw ${ROOTDEV})
 
 rm -f $TARGET/etc/resolv.conf
-[ -n "$IPVDNS0" ] && echo nameserver $IPV4DNS0 >  $TARGET/etc/resolv.conf || error_msg "No se ha podido establecer el servidor de nombres."
-[ -n "$IPVDNS1" ] && echo nameserver $IPV4DNS1 >> $TARGET/etc/resolv.conf
+[ -n "$IPV4DNS0" ] && echo nameserver $IPV4DNS0 >> $TARGET/etc/resolv.conf
+[ -n "$IPV4DNS1" ] && echo nameserver $IPV4DNS1 >> $TARGET/etc/resolv.conf
+
+if [ ! -e $TARGET/etc/resolv.conf ]; then
+	error_msg "No se ha podido establecer el servidor de nombres."
+fi
 
 TITLE="Continuando posibles actualizaciones pendientes"
 TEXT="No desconecte el equipo y, por favor, espere a que el proceso termine."

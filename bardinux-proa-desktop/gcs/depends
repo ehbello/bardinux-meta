@@ -2,4 +2,6 @@ bardinux-desktop
 bardinux-proa-default-settings
 bardinux-unattended-upgrades
 linux-firmware-nonfree
+linux-image-current-generic
+firmware-b43-installer
 google-talkplugin

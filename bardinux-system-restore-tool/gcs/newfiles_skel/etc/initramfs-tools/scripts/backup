@@ -14,7 +14,7 @@ TITLE="Creando punto de restauracion..."
 TEXT="No apague ni desconecte el equipo y, por favor, espere a que el proceso termine."
 WIDTH=60
 HEIGHT=10
-chroot_dev ${ROOTDEV} rsnapshot -v ${INTERVAL} | \
+chroot_dev ${ROOTDEV} /usr/sbin/bsrt-commit -v | \
 	dialog ${SCREEN_BACKTITLE:+--backtitle "${SCREEN_BACKTITLE}"} \
 	--no-collapse \
 	--cr-wrap \

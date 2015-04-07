@@ -6,14 +6,15 @@ APT::Periodic::Unattended-Upgrade "1";
 
 // Automatically upgrade packages from these (origin:archive) pairs
 Unattended-Upgrade::Allowed-Origins {
+	"${distro_id}:${distro_codename}-backports";
 	"${distro_id}:${distro_codename}-security";
 	"${distro_id}:${distro_codename}-updates";
 	"${distro_id}:${distro_codename}";
+	"Bardinux:${distro_codename}-backports";
 	"Bardinux:${distro_codename}-security";
 	"Bardinux:${distro_codename}-updates";
 	"Bardinux:${distro_codename}";
 	"Canonical:${distro_codename}";
-	"Medibuntu:${distro_codename}";
 };
 
 // List of packages to not update

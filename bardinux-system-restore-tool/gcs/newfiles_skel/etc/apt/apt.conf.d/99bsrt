@@ -1,1 +1,1 @@
-Dpkg::Post-Invoke { "/usr/sbin/bsrt-commit"; };
+Dpkg::Post-Invoke { "/usr/bin/touch /do-snapshot"; };
