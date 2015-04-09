@@ -1,3 +1,0 @@
-if [ -x /usr/sbin/update-rc.d ]; then
-    update-rc.d -f cleanusers.sh remove > /dev/null
-fi

@@ -2,6 +2,7 @@ bardinux-desktop
 bardinux-proa-default-settings
 bardinux-unattended-upgrades
 linux-firmware-nonfree
-linux-image-current-generic
+linux-image-generic-lts-trusty | linux-image-current-generic
+linux-headers-generic-lts-trusty
 firmware-b43-installer
 google-talkplugin

@@ -1,1 +1,0 @@
-rm -f /etc/init.d/clearusers.sh || true

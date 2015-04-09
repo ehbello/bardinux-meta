@@ -1,3 +1,31 @@
+bardinux-proa-desktop (1.3.10) precise; urgency=low
+
+  * Removed again 'bcmwl-kernel-source' to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 08 Apr 2015 15:41:50 +0100
+
+
+bardinux-proa-desktop (1.3.9) precise; urgency=low
+
+  * Removed 'bcmwl-kernel-source' to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 08 Apr 2015 15:05:13 +0100
+
+
+bardinux-proa-desktop (1.3.8) precise; urgency=low
+
+  * Added 'bcmwl-kernel-source' to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 08 Apr 2015 14:45:47 +0100
+
+
+bardinux-proa-desktop (1.3.7) precise; urgency=low
+
+  * Added 'linux-image-generic-lts-trusty' and 'linux-headers-generic-lts-trusty' to dependencies.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 08 Apr 2015 14:37:29 +0100
+
+
 bardinux-proa-desktop (1.3.6) precise; urgency=low
 
   * Added 'linux-image-current-generic' to dependencies. Provides network to new PROA devices.
