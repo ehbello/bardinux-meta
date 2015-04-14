@@ -1,3 +1,10 @@
+bardinux-proa-desktop (1.3.11) precise; urgency=low
+
+  * Moved 'linux-headers-generic-lts-trusty' to predepends.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 09 Apr 2015 14:12:32 +0100
+
+
 bardinux-proa-desktop (1.3.10) precise; urgency=low
 
   * Removed again 'bcmwl-kernel-source' to dependencies.
