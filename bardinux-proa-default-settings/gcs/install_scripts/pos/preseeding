@@ -1,0 +1,6 @@
+echo "Preseeding debconf keys..."
+debconf-set-selections -v /usr/share/bardinux-proa-default-settings/preseeds/*.preseed 2>&1 | grep -v "\[.*\]"
+
+echo "Reconfiguring resolvconf"
+dpkg-reconfigure resolvconf --frontend=noninteractive
+resolvconf -u

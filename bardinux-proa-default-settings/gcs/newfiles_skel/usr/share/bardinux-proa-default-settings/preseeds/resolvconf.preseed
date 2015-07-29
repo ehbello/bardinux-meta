@@ -1,0 +1,2 @@
+resolvconf	resolvconf/linkify-resolvconf	boolean	true
+resolvconf	resolvconf/link-tail-to-original	boolean	false

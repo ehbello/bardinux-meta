@@ -19,8 +19,8 @@ shortdesc: "This package doesnt have description yet"
 longdesc: "This package doesnt have description yet"
 
 # Versión del paquete
-version: 1.3.9
+version: 1.3.10
 
 # Cambios en esta versión
 changes:
-    - Added environment variables to move usercache to a temporary directory.
+    - Fixed resolvconf's linkify process.
