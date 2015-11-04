@@ -19,8 +19,8 @@ shortdesc: "Metapaquete de Software para Informática."
 longdesc: "Paquetes para desarrollo de software, específicos \n para areas de conocimiento relacionadas con la informática. \n Contiene IDE's, compiladores, herramientas matemáticas, \n frameworks y librerias."
 
 # Versión del paquete
-version: 1.3.7
+version: 1.3.8
 
 # Cambios en esta versión
 changes:
-    - Added version to octave3.2 conflict.
+    - Added eclipse-cdt y qtcreator to dependencies.

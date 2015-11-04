@@ -4,6 +4,7 @@ build-essential
 cmake
 ddd
 eclipse
+eclipse-cdt
 eric
 gdb
 kdesvn
@@ -12,4 +13,5 @@ kdevelop
 lokalize
 monodevelop
 monodevelop-versioncontrol
+qtcreator
 valgrind

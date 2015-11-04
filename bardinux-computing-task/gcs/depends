@@ -21,6 +21,7 @@ dia
 dosemu
 doxygen
 eclipse
+eclipse-cdt
 flex
 fp-compiler
 fp-docs
@@ -60,6 +61,7 @@ perl
 perl-tk
 pvm
 qemu | virtualbox-ose-qt | vboxgtk
+qtcreator
 qt4-designer
 qt4-dev-tools
 qt4-doc
