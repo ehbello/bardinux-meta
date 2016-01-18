@@ -7,23 +7,23 @@ name: bardinux-version
 author: Enrique Hernández Bello <quique@osl.ull.es>
 
 # Priority
-priority: optional
+priority: required
 
 # Section
-section: config
+section: misc
 
 # Task
 task: bardinux-desktop
 
 # Descripción corta
-shortdesc: "Paquete de versión."
+shortdesc: "Release package"
 
 # Descipción larga, las lineas han de estar separadas por "\n "
-longdesc: "Contiene las configuraciones necesarias para determinar \n que Bardinux es la distribución instalada."
+longdesc: "It contains the necessary configuration to determine \n that Bardinux distribution is installed."
 
 # Versión del paquete
-version: 1.3.5
+version: 4.0.1
 
 # Cambios en esta versión
 changes:
-    - Changed version of Bardinux to 3.4 Final.
+    - Changed version of Bardinux to 4.0.

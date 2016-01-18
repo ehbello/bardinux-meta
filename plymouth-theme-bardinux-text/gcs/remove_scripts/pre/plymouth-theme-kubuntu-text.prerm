@@ -1,0 +1,16 @@
+#!/bin/sh -e
+
+error()
+{
+    RET=$?
+    MSG=$1
+    echo "E: $MSG";
+    exit $RET
+}
+
+if [ "x$1" = xremove ]; then
+    update-alternatives \
+        --remove text.plymouth /usr/share/plymouth/themes/bardinux-text/bardinux-text.plymouth  || error "Failed to update-alternatives"
+
+    rm -f /usr/share/plymouth/themes/bardinux-text/bardinux-text.plymouth
+fi

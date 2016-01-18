@@ -7,7 +7,7 @@ name: bardinux-sources
 author: Enrique Hernández Bello <quique@osl.ull.es>
 
 # Priority
-priority: optional
+priority: required
 
 # Section
 section: misc
@@ -16,14 +16,14 @@ section: misc
 task: bardinux-desktop
 
 # Descripción corta
-shortdesc: "Paquete de repositorios."
+shortdesc: "Bardinux package repositories"
 
 # Descipción larga, las lineas han de estar separadas por "\n "
-longdesc: "Instala archivos fuente para permitir al gestor de paquetes instalar software desde los repositorios de Bardinux."
+longdesc: "Install Bardinux repositories to sources list to \n allow the package manager to install distribution packages."
 
 # Versión del paquete
-version: 1.3.9
+version: 4.0.1
 
 # Cambios en esta versión
 changes:
-    - Deleted old preferences named 'bardinux' in favor of 'zz_bardinux'
+    - Rebuild for 'xenial'.

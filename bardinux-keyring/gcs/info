@@ -7,10 +7,10 @@ name: bardinux-keyring
 author: Enrique Hernández Bello <quique@osl.ull.es>
 
 # Priority
-priority: optional
+priority: important
 
 # Section
-section: base
+section: misc
 
 # Task
 task: bardinux-desktop
@@ -22,8 +22,8 @@ shortdesc: "GnuPG key of the Bardinux repository"
 longdesc: "The Bardinux repository digitally signs its Release files. This package\n contains the repository key used for that."
 
 # Versión del paquete
-version: 1.3.1
+version: 4.0.1
 
 # Cambios en esta versión
 changes:
-    - Rebuild for 'precise'.
+    - Rebuild for 'xenial'.

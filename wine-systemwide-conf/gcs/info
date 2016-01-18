@@ -14,14 +14,15 @@ priority: optional
 section: universe/otherosfs
 
 # Descripción corta
-shortdesc: "System-Wide configuration for Wine."
+shortdesc: "System-Wide configuration for Wine"
 
 # Descipción larga, las lineas han de estar separadas por "\n "
-longdesc: "This packages configures a unique installation of Wine for all users of system."
+longdesc: "This package configures a unique installation of Wine for all users of system."
 
 # Versión del paquete
-version: 1.0.5
+version: 1.0.6
 
 # Cambios en esta versión
 changes:
-    - Fixed bug when trying to browse C: drive under wine. (#LP:70652)
+    - Rebuild for 'xenial'.
+    - Removed 'upstart' of predepends.

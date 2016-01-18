@@ -1,0 +1,15 @@
+[Plymouth Theme]
+Name=Bardinux Text
+Description=Text mode theme based on kubuntu-text theme
+ModuleName=ubuntu-text
+
+[ubuntu-text]
+title=Bardinux 4.0
+# Background
+black=0x000000
+# Title Text + Additional messages such as key interrupt
+white=0xFFFFFF
+# Dot coloring
+brown=0x461835
+# Status message (fsck)
+blue=0x461835

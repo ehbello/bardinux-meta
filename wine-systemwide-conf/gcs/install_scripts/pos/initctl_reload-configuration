@@ -1,4 +1,4 @@
-if [ -x /sbin/initctl ]; then
+if [ $( which initctl ) ]; then
 	echo "Reloading init configuration..."
 	initctl reload-configuration || true
 fi
