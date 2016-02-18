@@ -49,6 +49,7 @@ notreleased: $(patsubst %/gcs,%/notreleased,$(wildcard */gcs))
 
 %/fullclean: %/clean
 	$(info [$(DATE)] $(PKGNAME): removing all output files...)
+	$(DIFF) $(PKGNAME)/gcs/changelog | patch -R -p1
 	-rm -f $(PKGNAME)*.build
 	-rm -f $(PKGNAME)*.dsc
 	-rm -f $(PKGNAME)*.changes
