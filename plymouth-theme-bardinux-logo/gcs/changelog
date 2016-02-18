@@ -1,3 +1,12 @@
+plymouth-theme-bardinux-logo (4.0.1) xenial; urgency=low
+
+  * Rebuild for 'xenial'.
+  * Updated postinst/postrm scripts.
+  * Added bardinux-logo.grub configuration.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 15 Jan 2016 20:26:58 +0000
+
+
 plymouth-theme-bardinux-logo (1.3.1) precise; urgency=low
 
   * Rebuild for 'precise'.

@@ -1,3 +1,11 @@
+wine-systemwide-conf (1.0.6) xenial; urgency=low
+
+  * Rebuild for 'xenial'.
+  * Removed 'upstart' of predepends.
+
+ -- Oficina de Software Libre de la Universidad de La Laguna <bardinux@osl.ull.es>  Fri, 13 Nov 2015 12:44:20 +0000
+
+
 wine-systemwide-conf (1.0.5) precise; urgency=low
 
   * {'Fixed bug when trying to browse C': 'drive under wine. (#LP:70652)'}

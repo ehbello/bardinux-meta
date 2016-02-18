@@ -10,17 +10,22 @@ author: Enrique Hernández Bello <quique@osl.ull.es>
 priority: optional
 
 # Section
-section: universe/devel
+section: devel
 
 # Descripción corta
 shortdesc: "useful tools for Bardinux developers"
 
 # Descipción larga, las lineas han de estar separadas por "\n "
-longdesc: " This is a collection of useful tools that Bardinux developers use to make their\n packaging work a lot easier."
+longdesc: "This is a collection of useful tools that Bardinux developers use to make their\n packaging work a lot easier."
 
 # Versión del paquete
-version: 1.3.8
+version: 4.0.1
 
 # Cambios en esta versión
 changes:
-    - Added 'debusms' to dependencies.
+    - Rebuild for 'xenial'
+    - Updated 'make-ubuntu-kernel.sh'
+    - Replaced 'git-core' dependency by 'git'
+    - Changed section of package to 'devel'
+    - Removed useless files.
+    - Updated apt-get parameters of pbuilder-hooks.

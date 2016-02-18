@@ -1,0 +1,10 @@
+NAME="Bardinux"
+VERSION="4.0"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Bardinux 4.0"
+VERSION_ID="16.04"
+HOME_URL="http://bardinux.ull.es/"
+SUPPORT_URL="http://bardinux.ull.es/forum"
+BUG_REPORT_URL="http://bugs.launchpad.net/bardinux/"
+UBUNTU_CODENAME=xenial

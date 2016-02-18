@@ -22,8 +22,10 @@ shortdesc: "Release package"
 longdesc: "It contains the necessary configuration to determine \n that Bardinux distribution is installed."
 
 # Versión del paquete
-version: 4.0.1
+version: 4.0.2
 
 # Cambios en esta versión
 changes:
-    - Changed version of Bardinux to 4.0.
+    - Added os-release info about Bardinux.
+    - Moved motd message to /etc/legal and /etc/update-motd.d/11-bardinux-url
+    - Set GRUB_DISTRIBUTOR configuration for Bardinux.

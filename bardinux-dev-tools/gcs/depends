@@ -5,6 +5,7 @@ cowbuilder
 debhelper
 devscripts
 dput
+git
 pbuilder
 reprepro
 rsync
@@ -20,7 +21,6 @@ crash
 kexec-tools
 makedumpfile
 kernel-wedge
-git-core
 libncurses5
 libncurses5-dev
 libelf-dev
