@@ -20,8 +20,8 @@ shortdesc: "System-Wide configuration for Wine."
 longdesc: "This packages configures a unique installation of Wine for all users of system."
 
 # Versión del paquete
-version: 1.0.5
+version: 1.0.6
 
 # Cambios en esta versión
 changes:
-    - Fixed bug when trying to browse C: drive under wine. (#LP:70652)
+    - Added alternative names for wine predependency.

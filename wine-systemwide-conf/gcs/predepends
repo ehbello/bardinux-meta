@@ -1,5 +1,5 @@
 findutils
 rsync
 upstart
-wine (>= 1.4)
+wine (>= 1.4) | wine1.7 | wine1.6 | wine1.5
 wine-gecko
