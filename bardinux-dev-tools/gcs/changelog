@@ -1,3 +1,15 @@
+bardinux-dev-tools (4.0.1) xenial; urgency=low
+
+  * Rebuild for 'xenial'
+  * Updated 'make-ubuntu-kernel.sh'
+  * Replaced 'git-core' dependency by 'git'
+  * Changed section of package to 'devel'
+  * Removed useless files.
+  * Updated apt-get parameters of pbuilder-hooks.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Wed, 17 Feb 2016 17:51:40 +0000
+
+
 bardinux-dev-tools (1.3.8) precise; urgency=low
 
   * Added 'debusms' to dependencies.
