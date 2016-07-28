@@ -3,8 +3,9 @@
 #
 # 343894: a script to run debc command, contributed from q-funk.
 
-apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages devscripts
-cd /tmp/buildd/*/debian
+BUILDDIR="${BUILDDIR:-/tmp/buildd}"
+apt-get install -y "${APTGETOPT[@]}" devscripts
+cd "$BUILDDIR"/*/debian
 cd ..
 debc
 #EOF

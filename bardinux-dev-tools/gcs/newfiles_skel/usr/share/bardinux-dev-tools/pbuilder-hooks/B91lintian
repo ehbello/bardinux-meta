@@ -1,9 +1,0 @@
-#!/bin/bash
-# example file to be used with --hookdir
-#
-# run lintian on generated deb files
-
-apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages lintian
-echo -e "\nChecking the package with lintian\n\n"
-lintian -IE --pedantic --allow-root /tmp/buildd/*.changes || exit 0
-#EOF

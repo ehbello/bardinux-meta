@@ -44,14 +44,4 @@ fi
 PBUILDERSATISFYDEPENDSCMD="/usr/lib/pbuilder/pbuilder-satisfydepends-classic"
 PDEBUILD_PBUILDER="cowbuilder"
 
-# CCache setup
-export CCACHE_DIR="/var/cache/pbuilder/ccache"
-export PATH="/usr/lib/ccache:${PATH}"
-
-if [ ! -d ${CCACHE_DIR} ]; then
-	sudo mkdir -p ${CCACHE_DIR}
-	sudo chown 1234 ${CCACHE_DIR}
-fi
-
-EXTRAPACKAGES="ccache"
 BINDMOUNTS="${CCACHE_DIR}"

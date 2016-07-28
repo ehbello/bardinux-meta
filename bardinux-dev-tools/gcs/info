@@ -19,13 +19,10 @@ shortdesc: "useful tools for Bardinux developers"
 longdesc: "This is a collection of useful tools that Bardinux developers use to make their\n packaging work a lot easier."
 
 # Versión del paquete
-version: 4.0.1
+version: 4.0.2
 
 # Cambios en esta versión
 changes:
-    - Rebuild for 'xenial'
-    - Updated 'make-ubuntu-kernel.sh'
-    - Replaced 'git-core' dependency by 'git'
-    - Changed section of package to 'devel'
-    - Removed useless files.
-    - Updated apt-get parameters of pbuilder-hooks.
+    - Updated pbuilder hooks scripts.
+    - Removed cache setup of pbuilder config.
+    - Removed old create-suplement-desktops scripts.
