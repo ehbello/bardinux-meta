@@ -16,13 +16,11 @@ status:
 	$(STATUS_CMD)
 notreleased: $(patsubst %/gcs,%/notreleased,$(wildcard */gcs))
 
-%/build: %.build
-	$(info [$(DATE)] $(PKGNAME): Finished.)
-
-%.build: %/debian/changelog
+%/build: %/debian/changelog
 	$(info [$(DATE)] $(PKGNAME): starting build process...)
 	(cd $(PKGNAME); $(DEBTOOL))
-	touch $(PKGNAME).build
+	touch $(PKGNAME)/build
+	-echo "[$(DATE)] $(PKGNAME): Finished."
 
 %/debian/changelog: %/gcs/info %/svgz
 	$(info [$(DATE)] $(PKGNAME): building debian files...)
