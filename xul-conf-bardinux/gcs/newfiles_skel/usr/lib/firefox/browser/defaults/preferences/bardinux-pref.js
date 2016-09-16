@@ -8,3 +8,6 @@ pref("print.print_paper_size", 3);
 pref("print.print_paper_size_type", 1);
 pref("print.print_paper_size_unit", 1);
 pref("print.print_paper_width", "210,00");
+
+// Fix for HTML5 Video sound in Facebook
+pref("media.fragmented-mp4.gmp.enabled", true);
