@@ -1,3 +1,10 @@
+wine-systemwide-conf (1.0.6) precise; urgency=low
+
+  * Added alternative names for wine predependency.
+
+ -- Oficina de Software Libre de la Universidad de La Laguna <bardinux@osl.ull.es>  Thu, 11 Feb 2016 18:07:49 +0000
+
+
 wine-systemwide-conf (1.0.5) precise; urgency=low
 
   * {'Fixed bug when trying to browse C': 'drive under wine. (#LP:70652)'}
