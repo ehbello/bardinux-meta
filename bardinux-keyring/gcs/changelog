@@ -1,3 +1,10 @@
+bardinux-keyring (1.3.2) precise; urgency=low
+
+  * Updated GPG keys.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 16 Sep 2016 15:39:17 +0100
+
+
 bardinux-keyring (1.3.1) precise; urgency=low
 
   * Rebuild for 'precise'.

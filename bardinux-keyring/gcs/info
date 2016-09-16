@@ -22,8 +22,8 @@ shortdesc: "GnuPG key of the Bardinux repository"
 longdesc: "The Bardinux repository digitally signs its Release files. This package\n contains the repository key used for that."
 
 # Versión del paquete
-version: 1.3.2
+version: 1.3.3
 
 # Cambios en esta versión
 changes:
-    - Updated GPG keys.
+    - Fixed apt-key add for latest GPG key.
