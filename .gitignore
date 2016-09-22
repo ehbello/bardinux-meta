@@ -6,3 +6,4 @@ debian
 /*.changes
 /*.tar.gz
 /*.deb
+*/build
