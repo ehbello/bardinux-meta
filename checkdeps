@@ -5,7 +5,7 @@ COMPONENTS=${COMPONENTS:-"main universe multiverse restricted partner free non-f
 MIRRORS=${MIRRORS:-"http://archive.ubuntu.com/ubuntu http://archive.canonical.com http://archive.osl.ull.es/bardinux"}
 FILELIST=$(tempfile)
 
-echo -e "Using the following mirrors: \n - ${MIRRORS// /\n - }"
+echo -e "Using the following mirrors: \n - ${MIRRORS// /\\n - }"
 
 PACKAGES_ENABLED=$(grep -vh "^#" */gcs/{depends,recommends,suggests} 2> /dev/null | cut -d " " -f 1 | sort -u)
 PACKAGES_DISABLED=$(grep -h "^#" */gcs/{depends,recommends,suggests} 2> /dev/null | cut -d " " -f 1 | sort -u | sed 's/#//g')
