@@ -1,3 +1,12 @@
+bardinux-dev-tools (4.0.2) xenial; urgency=low
+
+  * Updated pbuilder hooks scripts.
+  * Removed cache setup of pbuilder config.
+  * Removed old create-suplement-desktops scripts.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 29 Jul 2016 13:47:10 +0100
+
+
 bardinux-dev-tools (4.0.1) xenial; urgency=low
 
   * Rebuild for 'xenial'

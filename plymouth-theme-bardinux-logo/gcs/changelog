@@ -1,3 +1,10 @@
+plymouth-theme-bardinux-logo (4.0.2) xenial; urgency=low
+
+  * Fixed path for ImageDir and ScriptFile.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Thu, 22 Sep 2016 14:47:49 +0100
+
+
 plymouth-theme-bardinux-logo (4.0.1) xenial; urgency=low
 
   * Rebuild for 'xenial'.
