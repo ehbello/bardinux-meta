@@ -4,5 +4,7 @@ case "$1" in
     remove|purge)
 		apt-key del C4673343
 		apt-key del 64E96C06
+		apt-key del 7FAC5991
+		apt-key del D38B4796
 	;;
 esac
