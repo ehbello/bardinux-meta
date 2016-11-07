@@ -1,3 +1,10 @@
+bardinux-dev-tools (4.0.3) xenial; urgency=low
+
+  * Added dput.cf configuration.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Mon, 07 Nov 2016 18:24:00 +0000
+
+
 bardinux-dev-tools (4.0.2) xenial; urgency=low
 
   * Updated pbuilder hooks scripts.
