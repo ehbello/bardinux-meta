@@ -1,0 +1,27 @@
+[bardinux]
+login = gesosl
+method = scp
+fqdn = archive.osl.ull.es
+incoming = /var/www/archive/bardinux/incoming
+post_upload_command = ssh gesosl@archive.osl.ull.es reprepro --ask-passphrase -V -b /var/www/archive/bardinux/ processincoming incoming
+
+[bardinux-dev]
+login = gesosl
+method = scp
+fqdn = archive.osl.ull.es
+incoming = /var/www/archive/bardinux.dev/incoming
+post_upload_command = ssh gesosl@archive.osl.ull.es reprepro --ask-passphrase -V -b /var/www/archive/bardinux.dev/ processincoming incoming
+
+[bardinux-old]
+login = gesosl
+method = scp
+fqdn = archive.osl.ull.es
+incoming = /var/www/archive/bardinux.old/incoming
+post_upload_command = ssh gesosl@archive.osl.ull.es reprepro --ask-passphrase -V -b /var/www/archive/bardinux.old/ processincoming incoming
+
+[bardinux-legacy]
+login = gesosl
+method = scp
+fqdn = archive.osl.ull.es
+incoming = /var/www/archive/bardinux/incoming
+post_upload_command = ssh gesosl@archive.osl.ull.es reprepro --ask-passphrase -V -b /var/www/archive/bardinux/ processincoming incoming_legacy

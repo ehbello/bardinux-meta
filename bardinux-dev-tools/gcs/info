@@ -19,10 +19,8 @@ shortdesc: "useful tools for Bardinux developers"
 longdesc: "This is a collection of useful tools that Bardinux developers use to make their\n packaging work a lot easier."
 
 # Versión del paquete
-version: 4.0.2
+version: 4.0.3
 
 # Cambios en esta versión
 changes:
-    - Updated pbuilder hooks scripts.
-    - Removed cache setup of pbuilder config.
-    - Removed old create-suplement-desktops scripts.
+    - Added dput.cf configuration.
