@@ -1,0 +1,27 @@
+# YAML 1.1
+# Fichero de configuración de paquetes de personalización de Bardinux
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: sddm-theme-bardinux
+
+# Autor 
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+package-section: universe/kde
+
+# Descripción corta
+shortdesc: "Bardinux SDDM theme"
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "Bardinux SDDM theme\n Plasma Workspace for KF5. Workspaces provide\n support for KDE Plasma Widgets, integrated search,\n hardware management and a high degree of customizability.\n Taskmanager library.\n .\n This package contains the files for the Bardinux SDDM theme."
+
+# Versión del paquete
+version: 4.0.0
+
+# Cambios en esta versión
+changes:
+    - Initial release for Bardinux 4.0
