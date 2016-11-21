@@ -1,3 +1,10 @@
+xul-conf-bardinux (4.0.0) xenial; urgency=low
+
+  * Rebuild for Bardinux 4.0.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Fri, 18 Nov 2016 17:01:37 +0000
+
+
 xul-conf-bardinux (1.3.3) precise; urgency=low
 
   * Updated mimeTypes.rdf file for Firefox profile.
