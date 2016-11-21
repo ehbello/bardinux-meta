@@ -1,3 +1,5 @@
-kubuntu-default-settings (>= 1:10.04~)
-oxygen-icon-theme
+kubuntu-settings-desktop (>= 1:16.04~)
+breeze-cursor-theme
+breeze-icon-theme
+plasma-look-and-feel-org-ull-bardinux-desktop
 xul-conf-bardinux

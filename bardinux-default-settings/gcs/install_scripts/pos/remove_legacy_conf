@@ -1,2 +1,0 @@
-rm -f /etc/init/network-manager-pidfix.conf
-rm -f /etc/adobe/mms.cfg

@@ -19,8 +19,13 @@ shortdesc: "Default settings and artwork for the Bardinux desktop system (KDE Ve
 longdesc: "This package contains the default settings and used by Bardinux. It also\n includes artwork and Bardinux branding."
 
 # Versión del paquete
-version: 1.3.18
+version: 4.0.0
 
 # Cambios en esta versión
 changes:
-    - Refactorized plasma script for Bardinux default desktop.
+    - Removed kdm and ksplash themes.
+    - Removed old gcds wallpaper.
+    - Removed old init scripts.
+    - Removed legacy workarounds.
+    - Added kcm-about-distrorc info.
+    - Rebuild for 'xenial'
