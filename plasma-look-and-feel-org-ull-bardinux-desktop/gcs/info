@@ -1,0 +1,27 @@
+# YAML 1.1
+# Fichero de configuración de paquetes de personalización de Bardinux
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: plasma-look-and-feel-org-ull-bardinux-desktop
+
+# Autor 
+author: Enrique Hernández Bello <quique@osl.ull.es>
+
+# Priority
+priority: optional
+
+# Section
+package-section: universal/kde
+
+# Descripción corta
+shortdesc: "Bardinux look-and-feel for Plasma"
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "Bardinux look-and-feel for Plasma\n This is the Bardinux look-and-feel package for Plasma.\n .\n This package is part of the Bardinux theme module."
+
+# Versión del paquete
+version: 4.0.0
+
+# Cambios en esta versión
+changes:
+    - Initial release for Bardinux 4.0
