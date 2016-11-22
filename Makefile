@@ -12,15 +12,16 @@ COMMIT = git commit
 
 .PHONY: all status
 all: $(patsubst %/gcs,%.build,$(wildcard */gcs))
-status:
-	$(STATUS_CMD)
+status: $(patsubst %/gcs,%/status,$(wildcard */gcs))
 notreleased: $(patsubst %/gcs,%/notreleased,$(wildcard */gcs))
 
-%/build: %/debian/changelog
+%/build: %.build
+	$(info [$(DATE)] $(PKGNAME): Finished.)
+
+%.build: %/debian/changelog
 	$(info [$(DATE)] $(PKGNAME): starting build process...)
 	(cd $(PKGNAME); $(DEBTOOL))
-	touch $(PKGNAME)/build
-	-echo "[$(DATE)] $(PKGNAME): Finished."
+	touch $(PKGNAME).build
 
 %/debian/changelog: %/gcs/info %/svgz
 	$(info [$(DATE)] $(PKGNAME): building debian files...)
