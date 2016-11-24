@@ -1,5 +1,2 @@
-[Icons]
-Theme=oxygen
-
-[General]
-BrowserApplication[$e]=!firefox
+[KDE]
+LookAndFeelPackage=es.ull.bardinux.desktop

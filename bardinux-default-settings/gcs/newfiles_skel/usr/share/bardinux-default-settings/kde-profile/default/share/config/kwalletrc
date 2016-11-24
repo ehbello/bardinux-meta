@@ -1,9 +1,0 @@
-[Auto Allow]
-kdewallet=kwalletmanager
-
-[Auto Deny]
-kdewallet=
-
-[Wallet]
-Default Wallet[$d]
-Enabled=false

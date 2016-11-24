@@ -27,5 +27,8 @@ changes:
     - Removed old gcds wallpaper.
     - Removed old init scripts.
     - Removed legacy workarounds.
+    - Removed old kiosk configurations.
+    - Removed old oxygen icons.
     - Added kcm-about-distrorc info.
+    - Enabled es.ull.bardinux as default plasma look-and-feel.
     - Rebuild for 'xenial'
