@@ -1,3 +1,10 @@
+plymouth-theme-bardinux-logo (4.0.3) xenial; urgency=low
+
+  * Updated Bardinux logo.
+
+ -- Enrique Hernández Bello <quique@osl.ull.es>  Tue, 22 Nov 2016 14:17:43 +0000
+
+
 plymouth-theme-bardinux-logo (4.0.2) xenial; urgency=low
 
   * Fixed path for ImageDir and ScriptFile.

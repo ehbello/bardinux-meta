@@ -33,10 +33,19 @@ Row {
         connectedSources: ["Battery", "AC Adapter"]
     }
 
+    function getBatteryData(key, def) {
+        var value = pmSource.data.Battery[key]
+        if (typeof value === "undefined") {
+            return def;
+        } else {
+            return value;
+        }
+    }
+
     PW.BatteryIcon {
         id: battery
-        hasBattery: true
-        percent: pmSource.data["Battery"]["Percent"]
+        hasBattery: getBatteryData("Has Battery", false)
+        percent: getBatteryData("Percent", 100)
         pluggedIn: pmSource.data["AC Adapter"] ? pmSource.data["AC Adapter"]["Plugged in"] : false
 
         height: batteryLabel.height

@@ -2,7 +2,7 @@
 # Fichero de configuración de paquetes de personalización de Bardinux
 
 # Nombre del paquete (minúsculas-separado-con-guiones)
-name: plasma-look-and-feel-org-ull-bardinux-desktop
+name: plasma-look-and-feel-es-ull-bardinux-desktop
 
 # Autor 
 author: Enrique Hernández Bello <quique@osl.ull.es>
